@@ -273,7 +273,7 @@ def main():
         # Write the initial part of the problem
 
         f.write("(define (problem " + problem_name + ")\n")
-        f.write("(:domain uav-domain)\n")
+        f.write("(:domain uav_domain)\n")
         f.write("(:objects\n")
 
         ######################################################################
@@ -283,7 +283,7 @@ def main():
         # to suit your domain.
 
         for objname in uav:
-            f.write("\t" + objname + " - uav\n")
+            f.write("\t" + objname + " - helicopter\n")
 
         for objname in location:
             f.write("\t" + objname + " - location\n")
@@ -292,7 +292,7 @@ def main():
             f.write("\t" + objname + " - crate\n")
 
         for objname in content_types:
-            f.write("\t" + objname + " - contents\n")
+            f.write("\t" + objname + " - content\n")
 
         for objname in person:
             f.write("\t" + objname + " - person\n")
@@ -308,6 +308,18 @@ def main():
         f.write("(:init\n")
 
         # TODO: Initialize all facts here!
+        for objname in uav:
+            f.write("\t(obj_at " + objname + " depot)\n")
+            f.write("\t(heli_free " + objname + ")\n")
+        
+        for i in range(len(crates_with_contents)):
+            for objname in crates_with_contents[i]:
+                f.write("\t(obj_at " + objname + " depot)\n")
+                f.write("\t(crate_content " + objname + " "+ content_types[i] + ")\n")
+        
+        for objname in person:
+            randloc = location[random.randint(1, len(location))]
+            f.write("\t(obj_at " + objname + " " + randloc + ")\n")
 
         f.write(")\n")
 
@@ -319,7 +331,10 @@ def main():
         # All UAVs should end up at the depot
         for objname in uav:
             f.write("\n")
+
             # TODO: Write a goal that the UAV x is at the depot
+            for objname in uav:
+                f.write("\t(obj_at " + objname + " depot)\n")
 
         for person_num in range(options.persons):
             for contenttype_num in range(len(content_types)):
@@ -328,6 +343,8 @@ def main():
                     contenttype_name = content_types[contenttype_num]
                     # TODO: write a goal that the person needs a crate
                     #  with this specific content
+
+                    f.write("\t(preson_crate " + person_name + " " + contenttype_name +" )\n")
 
         f.write("\t))\n")
         f.write(")\n")

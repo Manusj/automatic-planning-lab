@@ -1,0 +1,58 @@
+Using single default version of MRW
+
+MRW Param 0:
+Walk Type: PURE
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: none
+Length STDev: 0
+
+
+Shared MRW Parameters: BASIC
+Iterative search: true
+UCB Constant Value: 0.2
+Use Aras: true
+	regression graph: true
+	Aras Memory Limit: -1
+	Aras Time Limit: -1
+seed: 1649713198
+Simplifying transitions... done!
+Read 430 operators
+build regression graph: true
+Initial plan size: 24 Initial plan cost: 24
+After action elimination Plan size: 24Plan Validated
+Total time: 0.01s
+Plan cost: 24.
+Plan Validated
+Step: 0 n: 1000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 0.06s Total_Time: 0.07s Size: 5484 Number_goals: 15 Memory usage: 2723
+Plan Validated
+Step: 1 n: 2000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 0.06s Total_Time: 0.13s Size: 7129 Number_goals: 86 Memory usage: 3995
+Plan Validated
+Step: 2 n: 4000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 0.1s Total_Time: 0.23s Size: 15355 Number_goals: 331 Memory usage: 8164
+Plan Validated
+Step: 3 n: 8000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 0.15s Total_Time: 0.38s Size: 29829 Number_goals: 513 Memory usage: 16169
+Plan Validated
+Step: 4 n: 16000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 0.29s Total_Time: 0.67s Size: 76994 Number_goals: 681 Memory usage: 35717
+Plan Validated
+Step: 5 n: 32000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 0.54s Total_Time: 1.21s Size: 159733 Number_goals: 1971 Memory usage: 75492
+Plan Validated
+Step: 6 n: 64000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 1.28s Total_Time: 2.49s Size: 250414 Number_goals: 4308 Memory usage: 138709
+Plan Validated
+Step: 7 n: 128000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 2.26s Total_Time: 4.75s Size: 397090 Number_goals: 5862 Memory usage: 240163
+Plan Validated
+Step: 8 n: 256000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 4.42s Total_Time: 9.17s Size: 890641 Number_goals: 12763 Memory usage: 509806
+Plan Validated
+Step: 9 n: 512000 Plan_size: 24 Plan_cost: 24 Iteration_Time: 8.95s Total_Time: 18.12s Size: 2065635 Number_goals: 22913 Memory usage: 1081443
+bad alloc in any_time_neighborhood_search_star is found

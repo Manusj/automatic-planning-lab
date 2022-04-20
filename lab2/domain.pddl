@@ -1,6 +1,6 @@
 (define (domain uav_domain)
 
-(:requirements :strips :typing)
+(:requirements :strips :typing :action-costs)
 
 
 (:types person helicopter res_storage - object ; Creating objects that require location information as a subtype so as to have a common predicate
@@ -19,6 +19,10 @@
              (next_num ?n1 ?n2 - num)                        ; Denotes the next number for a given number
 )
 
+(:functions (total-cost) - number
+            (fly-cost ?from ?to - location) - number
+)
+
 ; Action to pick up crate from a location
 ; Preconditions - check if helicopter is free, check if crate and helicopter are in the same location 
 ;                 and check if crate associtaed with a content(if not the whole input(problem init) is invalid)
@@ -30,7 +34,8 @@
     :precondition (and (heli_free ?h) (obj_at ?h ?l) (obj_at ?c ?l) (crate_content ?c ?co))
     :effect (and (not (obj_at ?c ?l))
                  (heli_content ?h ?c) 
-                 (not (heli_free ?h)))
+                 (not (heli_free ?h))
+                 (increase (total-cost) 10))    ; adding constant action cost
 )
 ; Action to make helicopter fly to a specific location
 ; Precondition - Check if helicopter at any location (if not the whole input(problem init) is invalid)
@@ -40,7 +45,8 @@
     :parameters (?h - helicopter ?cl - location ?nl - location) 
     :precondition (obj_at ?h ?cl)
     :effect (and (not (obj_at ?h ?cl)) 
-                 (obj_at ?h ?nl))
+                 (obj_at ?h ?nl)
+                 (increase (total-cost) (fly-cost ?cl ?nl)))    ; adding action cost of flying based on current and new location
 )
 
 ; Action to make helicopter deliver crates
@@ -53,7 +59,8 @@
     :precondition (and (obj_at ?h ?l) (obj_at ?p ?l) (heli_content ?h ?c) (crate_content ?c ?co))
     :effect (and (not (heli_content ?h ?c))
                  (preson_crate ?p ?co)
-                 (heli_free ?h))
+                 (heli_free ?h)
+                 (increase (total-cost) 10))    ; adding constant action cost
 )
 
 (:action load_crate_on_carrier
@@ -65,8 +72,10 @@
     )
     :effect (and (not (heli_content ?h ?cr)) ; remove helicopter crate association
                  (carrier_crate ?ca ?cr) ; assocaite crate with carrier
+                 (not (carrier_freespace ?ca ?occupied_space)) ; removing current free space assocaited with carrier
                  (carrier_freespace ?ca ?dec_free_space) ; decrement free space in carrier 
                  (heli_free ?h) ; free helicopter 
+                 (increase (total-cost) 10)    ; adding constant action cost
     )
 )
 
@@ -83,6 +92,7 @@
                  (obj_at ?ca ?nl)       ; set carrier location as new location
                  (heli_free ?h)         ; set heli as free to do delivers or other actions **************
                  (not (heli_content ?h ?ca)) ; remove carrier from helicopter *************
+                 (increase (total-cost) (fly-cost ?cl ?nl))    ; adding action cost of flying based on current and new location
     )
 )
 
@@ -97,7 +107,9 @@
     :effect (and (not (heli_free ?h))   ; set helicopter as not free 
                  (heli_content ?h ?cr) ; assign crate to helicopter
                  (not (carrier_crate ?ca ?cr)) ; remove crate from carrier 
+                 (not (carrier_freespace ?ca ?occupied_space)) ; removing current free space assocaited with carrier
                  (carrier_freespace ?ca ?inc_free_space) ; increment carrier free space
+                 (increase (total-cost) 10)    ; adding constant action cost
     )
 )
 

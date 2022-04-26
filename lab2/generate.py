@@ -37,6 +37,7 @@ import sys
 # You can change this to generate other contents if you want.
 from typing import List, Tuple
 
+
 content_types = ["food", "medicine"]
 
 
@@ -254,9 +255,9 @@ def main():
     for objname in range(options.carriers):
         carrier.append("carrier" + str(objname + 1))
     for objname in range(options.carrier_space + 1):    # +1 added to account for the 0th element to be considered empty
-        num.append("num" + str(objname + 1))
+        num.append("num" + str(objname))
 
-    # Determine the set of crates for each content.
+    # Determine the set of crates for each content.sss
     # If content_types[0] is "food",
     # then crates_with_contents[0] is a list
     # containing the names of all crates that contain food.
@@ -341,7 +342,18 @@ def main():
         for i in range(len(num)-1):
             f.write("\t(next_num " + num[i] + " "+ num[i+1] + ")\n")
 
+        # Initlizing cost
 
+        f.write("\t(= (total-cost) 0)\n")
+
+        for i in range(len(location)):
+            for j in range(len(location)):
+                if(i == j):
+                    cost = 0
+                else:
+                    cost = flight_cost(location_coords, i, j)
+                f.write("\t(= (fly-cost " + str(location[i]) + " " + str(location[j]) + ")" + str(cost) +" )\n")
+            
 
         f.write(")\n")
 
@@ -369,6 +381,7 @@ def main():
                     f.write("\t(preson_crate " + person_name + " " + contenttype_name +" )\n")
 
         f.write("\t))\n")
+        f.write("(:metric minimize (total-cost))\n")
         f.write(")\n")
 
 

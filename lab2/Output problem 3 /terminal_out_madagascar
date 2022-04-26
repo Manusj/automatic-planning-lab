@@ -1,0 +1,31 @@
+Madagascar v0.998 16/02/2012 11:52:16
+Options: file:domain.pddl file:uav_problem_u1_r1_l7_p7_c7_g7_ct2.pddl -o output_madagascar
+Special no-VSIDS version.
+Domain: uav_domain
+Problem: uav_problem_u1_r1_l7_p7_c7_g7_ct2
+Parser: 1024 ground actions and 174 state variables
+Invariants: 0 1 2 3  0.00 secs
+Goal: conjunctive
+Simplified: 624 ground actions and 58 state variables
+Actions: STRIPS
+Disabling graph:  0.01 secs
+Plan type: E-step
+Horizon 0
+0 UNSAT (0 decisions 0 conflicts)
+Horizon 5
+Allocated a 32 MB block (memory used 273 MB).
+Horizon 10
+5 UNSAT (152 decisions 127 conflicts)
+Horizon 15
+Horizon 20
+SAT (38 decisions 10 conflicts)
+PLAN FOUND: 20 steps
+34 actions in the plan.
+total time 0.03 preprocess 0.01 
+total size 241.39 MB
+t val conflicts decisions
+0 0 0 0
+5 0 127 152
+10 -1 180 243
+15 -1 120 161
+20 1 10 38

@@ -1,0 +1,241 @@
+Using single default version of MRW
+
+MRW Param 0:
+Walk Type: PURE
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: none
+Length STDev: 0
+
+
+Shared MRW Parameters: BASIC
+Iterative search: true
+UCB Constant Value: 0.2
+Use Aras: true
+	regression graph: true
+	Aras Memory Limit: -1
+	Aras Time Limit: -1
+seed: 1650815781
+Simplifying transitions... done!
+Read 616 operators
+build regression graph: true
+Initial plan size: 28 Initial plan cost: 1796
+After action elimination Plan size: 28Plan Validated
+Total time: 0.02s
+Plan cost: 1796.
+Plan Validated
+Total time: 0.12s
+Plan cost: 1748.
+Step: 0 n: 1000 Plan_size: 31 Plan_cost: 1748 Iteration_Time: 0.1s Total_Time: 0.12s Size: 15048 Number_goals: 8 Memory usage: 6126
+Plan Validated
+Plan Validated
+Step: 1 n: 2000 Plan_size: 31 Plan_cost: 1748 Iteration_Time: 0.11s Total_Time: 0.23s Size: 28508 Number_goals: 8 Memory usage: 12150
+Plan Validated
+Total time: 0.39s
+Plan cost: 1679.
+Step: 2 n: 4000 Plan_size: 34 Plan_cost: 1679 Iteration_Time: 0.16s Total_Time: 0.39s Size: 48436 Number_goals: 8 Memory usage: 20628
+Plan Validated
+Plan Validated
+Total time: 0.79s
+Plan cost: 1429.
+Step: 3 n: 8000 Plan_size: 34 Plan_cost: 1429 Iteration_Time: 0.4s Total_Time: 0.79s Size: 97171 Number_goals: 8 Memory usage: 44521
+Plan Validated
+Plan Validated
+Total time: 1.64s
+Plan cost: 1415.
+Step: 4 n: 16000 Plan_size: 36 Plan_cost: 1415 Iteration_Time: 0.85s Total_Time: 1.64s Size: 186572 Number_goals: 8 Memory usage: 90929
+Plan Validated
+Plan Validated
+Total time: 3.3s
+Plan cost: 1145.
+Step: 5 n: 32000 Plan_size: 36 Plan_cost: 1145 Iteration_Time: 1.66s Total_Time: 3.3s Size: 313888 Number_goals: 8 Memory usage: 160801
+Plan Validated
+Plan Validated
+Total time: 7.1s
+Plan cost: 1108.
+Step: 6 n: 64000 Plan_size: 36 Plan_cost: 1108 Iteration_Time: 3.8s Total_Time: 7.1s Size: 592054 Number_goals: 8 Memory usage: 327913
+Plan Validated
+Plan Validated
+Step: 7 n: 128000 Plan_size: 36 Plan_cost: 1108 Iteration_Time: 7.11s Total_Time: 14.21s Size: 1019046 Number_goals: 8 Memory usage: 588707
+Plan Validated
+Total time: 24.7s
+Plan cost: 1048.
+Step: 8 n: 256000 Plan_size: 35 Plan_cost: 1048 Iteration_Time: 10.49s Total_Time: 24.7s Size: 1388549 Number_goals: 8 Memory usage: 790675
+Plan Validated
+Plan Validated
+Total time: 42.95s
+Plan cost: 977.
+Step: 9 n: 512000 Plan_size: 35 Plan_cost: 977 Iteration_Time: 18.25s Total_Time: 42.95s Size: 2217672 Number_goals: 8 Memory usage: 1273321
+Plan Validated
+Using single default version of MRW
+
+MRW Param 0:
+Walk Type: PURE
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: none
+Length STDev: 0
+
+
+Shared MRW Parameters: BASIC
+Iterative search: true
+UCB Constant Value: 0.2
+Use Aras: true
+	regression graph: true
+	Aras Memory Limit: -1
+	Aras Time Limit: -1
+seed: 1650815843
+Simplifying transitions... done!
+Read 616 operators
+build regression graph: true
+Initial plan size: 28 Initial plan cost: 1796
+After action elimination Plan size: 28Plan Validated
+Total time: 0.02s
+Plan cost: 1796.
+Plan Validated
+Step: 0 n: 1000 Plan_size: 28 Plan_cost: 1796 Iteration_Time: 0.08s Total_Time: 0.1s Size: 14421 Number_goals: 8 Memory usage: 5829
+Plan Validated
+Step: 1 n: 2000 Plan_size: 28 Plan_cost: 1796 Iteration_Time: 0.1s Total_Time: 0.2s Size: 24105 Number_goals: 8 Memory usage: 9701
+Plan Validated
+Total time: 0.35s
+Plan cost: 1597.
+Step: 2 n: 4000 Plan_size: 34 Plan_cost: 1597 Iteration_Time: 0.15s Total_Time: 0.35s Size: 42347 Number_goals: 8 Memory usage: 17766
+Plan Validated
+Plan Validated
+Total time: 0.72s
+Plan cost: 1530.
+Step: 3 n: 8000 Plan_size: 32 Plan_cost: 1530 Iteration_Time: 0.37s Total_Time: 0.72s Size: 87923 Number_goals: 8 Memory usage: 40849
+Plan Validated
+Plan Validated
+Total time: 1.47s
+Plan cost: 1345.
+Step: 4 n: 16000 Plan_size: 36 Plan_cost: 1345 Iteration_Time: 0.75s Total_Time: 1.47s Size: 153389 Number_goals: 8 Memory usage: 74941
+Plan Validated
+Plan Validated
+Total time: 3.19s
+Plan cost: 1095.
+Step: 5 n: 32000 Plan_size: 36 Plan_cost: 1095 Iteration_Time: 1.72s Total_Time: 3.19s Size: 326924 Number_goals: 8 Memory usage: 165727
+Plan Validated
+Plan Validated
+Total time: 6.77s
+Plan cost: 1091.
+Step: 6 n: 64000 Plan_size: 35 Plan_cost: 1091 Iteration_Time: 3.58s Total_Time: 6.77s Size: 584914 Number_goals: 8 Memory usage: 313775
+Plan Validated
+Plan Validated
+Total time: 13.69s
+Plan cost: 1066.
+Step: 7 n: 128000 Plan_size: 34 Plan_cost: 1066 Iteration_Time: 6.92s Total_Time: 13.69s Size: 1040362 Number_goals: 8 Memory usage: 595329
+Plan Validated
+Plan Validated
+Total time: 25.24s
+Plan cost: 977.
+Step: 8 n: 256000 Plan_size: 35 Plan_cost: 977 Iteration_Time: 11.55s Total_Time: 25.24s Size: 1646014 Number_goals: 8 Memory usage: 959984
+Plan Validated
+Using single default version of MRW
+
+MRW Param 0:
+Walk Type: PURE
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: none
+Length STDev: 0
+
+
+Shared MRW Parameters: BASIC
+Iterative search: true
+UCB Constant Value: 0.2
+Use Aras: true
+	regression graph: true
+	Aras Memory Limit: -1
+	Aras Time Limit: -1
+seed: 1650815892
+Simplifying transitions... done!
+Read 616 operators
+build regression graph: true
+Initial plan size: 28 Initial plan cost: 1796
+After action elimination Plan size: 28Plan Validated
+Total time: 0.02s
+Plan cost: 1796.
+Plan Validated
+Total time: 0.1s
+Plan cost: 1748.
+Step: 0 n: 1000 Plan_size: 31 Plan_cost: 1748 Iteration_Time: 0.08s Total_Time: 0.1s Size: 15048 Number_goals: 8 Memory usage: 6126
+Plan Validated
+Plan Validated
+Step: 1 n: 2000 Plan_size: 31 Plan_cost: 1748 Iteration_Time: 0.11s Total_Time: 0.21s Size: 28508 Number_goals: 8 Memory usage: 12150
+Plan Validated
+Total time: 0.36s
+Plan cost: 1679.
+Step: 2 n: 4000 Plan_size: 34 Plan_cost: 1679 Iteration_Time: 0.15s Total_Time: 0.36s Size: 48436 Number_goals: 8 Memory usage: 20628
+Plan Validated
+Plan Validated
+Total time: 0.76s
+Plan cost: 1429.
+Step: 3 n: 8000 Plan_size: 34 Plan_cost: 1429 Iteration_Time: 0.4s Total_Time: 0.76s Size: 97171 Number_goals: 8 Memory usage: 44521
+Plan Validated
+Plan Validated
+Total time: 1.58s
+Plan cost: 1415.
+Step: 4 n: 16000 Plan_size: 36 Plan_cost: 1415 Iteration_Time: 0.82s Total_Time: 1.58s Size: 186572 Number_goals: 8 Memory usage: 90929
+Plan Validated
+Plan Validated
+Total time: 3.27s
+Plan cost: 1145.
+Step: 5 n: 32000 Plan_size: 36 Plan_cost: 1145 Iteration_Time: 1.69s Total_Time: 3.27s Size: 313888 Number_goals: 8 Memory usage: 160801
+Plan Validated
+Plan Validated
+Total time: 7.09s
+Plan cost: 1108.
+Step: 6 n: 64000 Plan_size: 36 Plan_cost: 1108 Iteration_Time: 3.82s Total_Time: 7.09s Size: 592054 Number_goals: 8 Memory usage: 327913
+Plan Validated
+Plan Validated
+Step: 7 n: 128000 Plan_size: 36 Plan_cost: 1108 Iteration_Time: 7.16s Total_Time: 14.25s Size: 1019046 Number_goals: 8 Memory usage: 588707
+Plan Validated
+Total time: 23.96s
+Plan cost: 1048.
+Step: 8 n: 256000 Plan_size: 35 Plan_cost: 1048 Iteration_Time: 9.71s Total_Time: 23.96s Size: 1388549 Number_goals: 8 Memory usage: 790675
+Plan Validated
+Plan Validated
+Total time: 40.25s
+Plan cost: 977.
+Step: 9 n: 512000 Plan_size: 35 Plan_cost: 977 Iteration_Time: 16.29s Total_Time: 40.25s Size: 2217672 Number_goals: 8 Memory usage: 1273321
+Plan Validated
+Plan Validated
+Step: 10 n: 1024000 Plan_size: 35 Plan_cost: 977 Iteration_Time: 26.13s Total_Time: 66.38s Size: 3261666 Number_goals: 8 Memory usage: 1851017
+bad alloc in any_time_neighborhood_search_star is found

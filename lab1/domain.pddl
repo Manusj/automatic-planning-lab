@@ -8,7 +8,7 @@
 )
 
 (:predicates (obj_at ?o - object ?l - location)     ; holding position for crate, person and uav 
-             (preson_crate ?p - person ?co - content)      ; associating a crate of specific type to a person
+             (person_crate ?p - person ?co - content)      ; associating a crate of specific type to a person
              (crate_content ?cr - crate ?co - content)    ; holding contents of a crate
              (heli_crate ?h - helicopter ?c - crate); Storing crate held by uav so as to have checks while delivering
              (heli_free ?h - helicopter)            ; Denotes if uav is free or has a crate
@@ -47,7 +47,7 @@
     :parameters (?h - helicopter ?p - person ?l - location ?c - crate ?co - content) 
     :precondition (and (obj_at ?h ?l) (obj_at ?p ?l) (heli_crate ?h ?c) (crate_content ?c ?co))
     :effect (and (not (heli_crate ?h ?c))
-                 (preson_crate ?p ?co)
+                 (person_crate ?p ?co)
                  (heli_free ?h))
 )
 

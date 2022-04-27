@@ -1,4 +1,4 @@
-(define (problem uav_problem_u1_r0_l10_p15_c20_g6_ct2)
+(define (problem uav_problem_u1_r0_l10_p15_c30_g6_ct2)
 (:domain uav_domain)
 (:objects
 	uav1 - helicopter
@@ -33,6 +33,16 @@
 	crate18 - crate
 	crate19 - crate
 	crate20 - crate
+	crate21 - crate
+	crate22 - crate
+	crate23 - crate
+	crate24 - crate
+	crate25 - crate
+	crate26 - crate
+	crate27 - crate
+	crate28 - crate
+	crate29 - crate
+	crate30 - crate
 	food - content
 	medicine - content
 	person1 - person
@@ -75,9 +85,9 @@
 	(obj_at crate10 depot)
 	(crate_content crate10 food)
 	(obj_at crate11 depot)
-	(crate_content crate11 food)
+	(crate_content crate11 medicine)
 	(obj_at crate12 depot)
-	(crate_content crate12 food)
+	(crate_content crate12 medicine)
 	(obj_at crate13 depot)
 	(crate_content crate13 medicine)
 	(obj_at crate14 depot)
@@ -94,30 +104,50 @@
 	(crate_content crate19 medicine)
 	(obj_at crate20 depot)
 	(crate_content crate20 medicine)
-	(obj_at person1 loc3)
-	(obj_at person2 loc6)
-	(obj_at person3 loc7)
-	(obj_at person4 loc7)
+	(obj_at crate21 depot)
+	(crate_content crate21 medicine)
+	(obj_at crate22 depot)
+	(crate_content crate22 medicine)
+	(obj_at crate23 depot)
+	(crate_content crate23 medicine)
+	(obj_at crate24 depot)
+	(crate_content crate24 medicine)
+	(obj_at crate25 depot)
+	(crate_content crate25 medicine)
+	(obj_at crate26 depot)
+	(crate_content crate26 medicine)
+	(obj_at crate27 depot)
+	(crate_content crate27 medicine)
+	(obj_at crate28 depot)
+	(crate_content crate28 medicine)
+	(obj_at crate29 depot)
+	(crate_content crate29 medicine)
+	(obj_at crate30 depot)
+	(crate_content crate30 medicine)
+	(obj_at person1 loc4)
+	(obj_at person2 loc4)
+	(obj_at person3 loc8)
+	(obj_at person4 loc2)
 	(obj_at person5 loc2)
-	(obj_at person6 loc10)
-	(obj_at person7 loc4)
-	(obj_at person8 loc8)
-	(obj_at person9 loc1)
+	(obj_at person6 loc6)
+	(obj_at person7 loc5)
+	(obj_at person8 loc4)
+	(obj_at person9 loc3)
 	(obj_at person10 loc9)
-	(obj_at person11 loc6)
-	(obj_at person12 loc9)
-	(obj_at person13 loc3)
-	(obj_at person14 loc4)
-	(obj_at person15 loc10)
+	(obj_at person11 loc2)
+	(obj_at person12 loc5)
+	(obj_at person13 loc9)
+	(obj_at person14 loc6)
+	(obj_at person15 loc6)
 )
 (:goal (and
 
 	(obj_at uav1 depot)
-	(person_crate person4 food )
-	(person_crate person5 food )
+	(person_crate person1 food )
+	(person_crate person3 food )
 	(person_crate person9 food )
-	(person_crate person11 food )
-	(person_crate person11 medicine )
-	(person_crate person14 medicine )
+	(person_crate person10 medicine )
+	(person_crate person12 medicine )
+	(person_crate person14 food )
 	))
 )

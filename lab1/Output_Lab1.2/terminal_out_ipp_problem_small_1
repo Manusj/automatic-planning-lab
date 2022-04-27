@@ -1,0 +1,56 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'UAV_DOMAIN' defined
+ ... done.
+ipp: parsing problem file
+problem 'PROBLEM1' defined
+ ... done.
+
+
+instantiated 4 actions
+
+
+time:   0,     6 facts and       0 exclusive pairs (    3,       0 positives)
+               8 ops   and       6 exclusive pairs
+time:   1,    11 facts and      14 exclusive pairs (    5,       4 positives)
+              14 ops   and      41 exclusive pairs
+time:   2,    11 facts and       8 exclusive pairs (    5,       3 positives)
+              15 ops   and      43 exclusive pairs
+time:   3,    12 facts and      11 exclusive pairs (    6,       6 positives)
+              16 ops   and      50 exclusive pairs
+time:   4,    12 facts and       9 exclusive pairs (    6,       5 positives)
+
+goals first reachable in 4 time steps
+
+
+found plan as follows:
+
+time step    0: PICKUP_CRATE H1 C1 DEPOT MEDICINE
+time step    1: FLY_TO H1 DEPOT L1
+time step    2: DELIVER H1 P1 L1 C1 MEDICINE
+time step    3: FLY_TO H1 L1 DEPOT
+
+
+
+number of actions tried:          4
+number of noops tried  :          4
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 4 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.01 MBytes for domain representation
+               0.22 MBytes for graph
+               0.00 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+

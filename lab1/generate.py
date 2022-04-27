@@ -344,7 +344,7 @@ def main():
                     # TODO: write a goal that the person needs a crate
                     #  with this specific content
 
-                    f.write("\t(preson_crate " + person_name + " " + contenttype_name +" )\n")
+                    f.write("\t(person_crate " + person_name + " " + contenttype_name +" )\n")
 
         f.write("\t))\n")
         f.write(")\n")

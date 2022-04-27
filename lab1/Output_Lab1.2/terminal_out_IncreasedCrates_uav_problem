@@ -1,0 +1,106 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'UAV_DOMAIN' defined
+ ... done.
+ipp: parsing problem file
+problem 'UAV_PROBLEM_U1_R0_L10_P15_C30_G6_CT2' defined
+ ... done.
+
+
+instantiated 590 actions
+
+
+time:   0,   102 facts and       0 exclusive pairs (   32,       0 positives)
+             142 ops   and     890 exclusive pairs
+time:   1,   174 facts and    2586 exclusive pairs (   72,     850 positives)
+             314 ops   and   22168 exclusive pairs
+time:   2,   174 facts and    1915 exclusive pairs (   72,     550 positives)
+             764 ops   and  213172 exclusive pairs
+time:   3,   204 facts and    4000 exclusive pairs (  102,    2185 positives)
+             794 ops   and  231817 exclusive pairs
+time:   4,   204 facts and    2365 exclusive pairs (  102,    1885 positives)
+             794 ops   and  213232 exclusive pairs
+time:   5,   204 facts and     985 exclusive pairs (  102,     985 positives)
+             794 ops   and  198802 exclusive pairs
+time:   6,   204 facts and     550 exclusive pairs (  102,     550 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             794 ops   and  198367 exclusive pairs
+time:   7,   204 facts and     550 exclusive pairs (  102,     550 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+expanding wave front to level   21
+expanding wave front to level   22
+expanding wave front to level   23
+expanding wave front to level   24
+
+
+found plan as follows:
+
+time step    0: PICKUP_CRATE UAV1 CRATE12 DEPOT MEDICINE
+time step    1: FLY_TO UAV1 DEPOT LOC9
+time step    2: DELIVER UAV1 PERSON10 LOC9 CRATE12 MEDICINE
+time step    3: FLY_TO UAV1 LOC9 DEPOT
+time step    4: PICKUP_CRATE UAV1 CRATE4 DEPOT FOOD
+time step    5: FLY_TO UAV1 DEPOT LOC8
+time step    6: DELIVER UAV1 PERSON3 LOC8 CRATE4 FOOD
+time step    7: FLY_TO UAV1 LOC8 DEPOT
+time step    8: PICKUP_CRATE UAV1 CRATE3 DEPOT FOOD
+time step    9: FLY_TO UAV1 DEPOT LOC6
+time step   10: DELIVER UAV1 PERSON14 LOC6 CRATE3 FOOD
+time step   11: FLY_TO UAV1 LOC6 DEPOT
+time step   12: PICKUP_CRATE UAV1 CRATE11 DEPOT MEDICINE
+time step   13: FLY_TO UAV1 DEPOT LOC5
+time step   14: DELIVER UAV1 PERSON12 LOC5 CRATE11 MEDICINE
+time step   15: FLY_TO UAV1 LOC5 DEPOT
+time step   16: PICKUP_CRATE UAV1 CRATE2 DEPOT FOOD
+time step   17: FLY_TO UAV1 DEPOT LOC4
+time step   18: DELIVER UAV1 PERSON1 LOC4 CRATE2 FOOD
+time step   19: FLY_TO UAV1 LOC4 DEPOT
+time step   20: PICKUP_CRATE UAV1 CRATE1 DEPOT FOOD
+time step   21: FLY_TO UAV1 DEPOT LOC3
+time step   22: DELIVER UAV1 PERSON9 LOC3 CRATE1 FOOD
+time step   23: FLY_TO UAV1 LOC3 DEPOT
+
+
+
+number of actions tried:  112024798
+number of noops tried  :  358372985
+
+had 46103463 simple memoizing hits
+had  320430 partial memoizing hits
+had 4390882 subset memoizing hits
+
+time spent:    0.02 seconds instantiating 590 operators
+               0.00 seconds building graph
+               0.05 seconds calculating exclusions
+             223.42 seconds searching graph
+             223.49 seconds total time
+
+Memory used:   0.72 MBytes for domain representation
+               7.50 MBytes for graph
+               4.29 MBytes for exclusions
+             239.42 MBytes for memoization
+             -1121.92 MBytes for wave front
+
+
+

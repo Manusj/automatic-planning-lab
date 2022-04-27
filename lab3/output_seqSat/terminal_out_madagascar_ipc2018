@@ -1,0 +1,16 @@
+Madagascar 0.99999 18/03/2022 08:36:09 amd64 1-core (no VSIDS)
+Options: file:domain.pddl file:uav_problem_u4_r2_l8_p10_c10_g10_ct2.pddl -b /tmp/17.output
+Domain: uav_domain
+Problem: uav_problem_u4_r2_l8_p10_c10_g10_ct2
+Parser: 10692 ground actions and 350 state variables
+Invariants: 0 1  0.01 secs
+Goal: conjunctive
+Simplified: 7136 ground actions and 166 state variables
+Actions: STRIPS
+Disabling graph %: 10 20 30 40 50 60 70 80 90 100 0.29 secs (max SCC size 440)
+Plan type: E-step
+Separated DIMACS output
+Writing /tmp/17.output.cnf
+total time 0.50 preprocess 0.37 
+total size 126.000 MB
+max. learned clause length 0

@@ -1,0 +1,26 @@
+suboptimal yahsp search, threads : 1, teams : 1, strategy : 0
+anytime behavior
+temporal precision : 0.01,0.01
+domain file : rover_domain.pddl
+problem file : rover_problem1.pddl
+output file : output_yahsp3
+
+Parsing domain.................... done : 0.000          
+Parsing problem................... done : 0.000          
+domain : simplerover2
+problem : rover1
+Instantiating operators........... done : 0.000          
+Creating initial structures....... done : 0.000          
+Computing bound................... done : 0.000          
+Refreshing structures............. done : 0.000          
+Finalizing structures............. done : 0.000          
+plan found : makespan 12 -- search time 0.001 -- total time 0.002
+Computed nodes : 441
+Evaluated nodes : 64
+Expanded nodes : 63
+Evaluated nodes/sec : 175609.971
+Search us time : 0.001
+Search wc time : 0.003
+Total us time : 0.002
+Total wc time : 0.014
+

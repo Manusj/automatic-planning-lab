@@ -1,0 +1,60 @@
+{
+    "carj": [
+        {
+            "storeOverhead": 0.00592377875000238
+        }
+    ],
+    "incplan": {
+        "parameters": {
+            "allSolutions": 0,
+            "cleanLitearl": false,
+            "exhaustMakeSpan": 2,
+            "exponentialStepBasis": 0.0,
+            "exponentialStepOffset": 0.0,
+            "frozen": false,
+            "icaps2017": false,
+            "inputFile": "/tmp/17.output.cnf",
+            "intermediateSolveStep": false,
+            "learnMakeSpan": 2,
+            "linearStepSize": 1,
+            "loose": false,
+            "maxSizeLearnedClause": 2,
+            "nonIncrementalSolving": false,
+            "outputSolverLike": true,
+            "pathSearchPrefix": [],
+            "ratio": 0.5,
+            "reEncode": false,
+            "seed": -2,
+            "singleEnded": false,
+            "timeout": 2.0,
+            "transformLearned": false,
+            "unitInGoal2Assume": false,
+            "useAddLearned": false,
+            "usePDR": false
+        },
+        "result": {
+            "solves": [
+                {
+                    "makespan": 0,
+                    "time": 0.000411988003179431
+                },
+                {
+                    "makespan": 1,
+                    "time": 0.000447122001787648
+                },
+                {
+                    "makespan": 2,
+                    "time": 0.263268917798996
+                },
+                {
+                    "makespan": 3,
+                    "time": 0.285433888435364
+                },
+                {
+                    "makespan": 4,
+                    "time": 35.9459495544434
+                }
+            ]
+        }
+    }
+}

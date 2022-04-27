@@ -1,0 +1,314 @@
+1. Running translator
+Parsing... [0.000s CPU, 0.004s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.010s wall-clock]
+Preparing model... [0.010s CPU, 0.001s wall-clock]
+Generated 61 rules.
+Computing model... [0.090s CPU, 0.088s wall-clock]
+7501 relevant atoms
+2428 auxiliary atoms
+9929 final queue length
+27941 total queue pushes
+Completing instantiation... [0.370s CPU, 0.367s wall-clock]
+Instantiating: [0.470s CPU, 0.469s wall-clock]
+Computing fact groups...
+Finding invariants... 17 initial candidates
+[0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+112 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.020s CPU, 0.019s wall-clock]
+Translating task: [0.260s CPU, 0.259s wall-clock]
+828 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information... [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+36 operators removed
+28 propositions removed
+Detecting unreachable propositions: [0.040s CPU, 0.044s wall-clock]
+Writing translation key... [0.000s CPU, 0.003s wall-clock]
+Writing mutex key... [0.000s CPU, 0.003s wall-clock]
+Writing output... [0.030s CPU, 0.045s wall-clock]
+Done! [0.830s CPU, 0.848s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+92 variables of 110 necessary
+7064 of 7136 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+MRW Param 0:
+Walk Type: MHA
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 10
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 10
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: g_prunning
+Length STDev: 0
+
+
+MRW Param 1:
+Walk Type: MDA
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 2
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 0.5
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: g_prunning
+Length STDev: 0
+
+
+MRW Param 2:
+Walk Type: MHA
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: g_prunning
+Length STDev: 0
+
+
+Shared MRW Parameters: SMART
+	Pool Size: 50
+	Activation Level: 50
+Iterative search: true
+UCB Constant Value: 0.5
+Use Aras: true
+regression graph: true
+	Aras Memory Limit: 2000000
+	Aras Time Limit: NONE
+seed: 2011
+Simplifying transitions... done!
+UCB Constant: 0.5
+Initializing HSP/FF heuristic...
+Simplifying 25600 unary operators... done! [21424 unary operators]
+MRW ...
+Initial heuristic value from heuristic FD FF: 17
+Selecting config 0
+h: 16 walk#: 72
+h: 15 walk#: 91
+h: 14 walk#: 12
+h: 13 walk#: 58
+h: 12 walk#: 63
+h: 11 walk#: 3
+h: 10 walk#: 25
+h: 9 walk#: 55
+h: 8 walk#: 8
+h: 6 walk#: 23
+h: 5 walk#: 4
+h: 4 walk#: 6
+h: 3 walk#: 26
+h: 2 walk#: 4
+Plan Validated
+Total time: 0.46s
+cost: 22189.
+build regression graph: true
+Initial plan size: 192 Initial plan cost: 22189
+After action elimination Plan size: 49 plan cost: 4480
+Plan Validated
+Total time: 0.46s
+cost: 4480.
+Plan Validated
+Total time: 0.76s
+cost: 3781.
+Step: 0 n: 1000 Plan_size: 44 Plan_cost: 3781 Iteration_Time: 0.3s Total_Time: 0.76s Size: 69530 Number_goals: 5 Memory usage: 26783
+Plan Validated
+Plan Validated
+Step: 1 n: 2000 Plan_size: 44 Plan_cost: 3781 Iteration_Time: 0.54s Total_Time: 1.3s Size: 143640 Number_goals: 5 Memory usage: 55482
+Plan Validated
+Total time: 2.34s
+cost: 3673.
+Step: 2 n: 4000 Plan_size: 43 Plan_cost: 3673 Iteration_Time: 1.04s Total_Time: 2.34s Size: 255344 Number_goals: 5 Memory usage: 98385
+Plan Validated
+Plan Validated
+Total time: 4.48s
+cost: 3420.
+Step: 3 n: 8000 Plan_size: 42 Plan_cost: 3420 Iteration_Time: 2.14s Total_Time: 4.48s Size: 508338 Number_goals: 5 Memory usage: 195551
+Plan Validated
+Plan Validated
+Step: 4 n: 16000 Plan_size: 42 Plan_cost: 3420 Iteration_Time: 3.98s Total_Time: 8.46s Size: 939790 Number_goals: 8 Memory usage: 363069
+Plan Validated
+Step: 5 n: 32000 Plan_size: 42 Plan_cost: 3420 Iteration_Time: 8.02s Total_Time: 16.48s Size: 1703268 Number_goals: 12 Memory usage: 663892
+Plan Validated
+Step: 6 n: 64000 Plan_size: 42 Plan_cost: 3420 Iteration_Time: 16.92s Total_Time: 33.4s Size: 3420363 Number_goals: 19 Memory usage: 1340338
+Memory Usage: 1800012
+Memory-limit is exceeded, estimated memory usage: 1.80001e+06 KB
+h_ratio: 0
+current pool size: 1
+
+ 0: 3420, h_ratio: 0
+Starting with action index 0 with h_ratio value  1
+MHA-10:1 MDA-1:0 MHA-1:0 
+Selecting config 2
+h: 16 walk#: 27
+h: 15 walk#: 9
+h: 14 walk#: 51
+h: 13 walk#: 3
+h: 12 walk#: 8
+h: 11 walk#: 50
+h: 10 walk#: 15
+h: 9 walk#: 32
+h: 8 walk#: 69
+h: 7 walk#: 81
+h: 6 walk#: 2
+h: 5 walk#: 50
+h: 4 walk#: 7
+h: 3 walk#: 54
+h: 2 walk#: 4
+h: 1 walk#: 38
+Plan Validated
+build regression graph: true
+Initial plan size: 60 Initial plan cost: 5480
+After action elimination Plan size: 41 plan cost: 3027
+Plan Validated
+Total time: 46.84s
+cost: 3027.
+Plan Validated
+Total time: 47.08s
+cost: 3010.
+Step: 0 n: 1000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 0.24s Total_Time: 47.08s Size: 62012 Number_goals: 5 Memory usage: 23974
+Plan Validated
+Plan Validated
+Step: 1 n: 2000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 0.44s Total_Time: 47.52s Size: 140953 Number_goals: 5 Memory usage: 54290
+Plan Validated
+Step: 2 n: 4000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 0.96s Total_Time: 48.48s Size: 274376 Number_goals: 5 Memory usage: 105674
+Plan Validated
+Step: 3 n: 8000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 1.88s Total_Time: 50.36s Size: 501901 Number_goals: 5 Memory usage: 194379
+Plan Validated
+Step: 4 n: 16000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 4.02s Total_Time: 54.38s Size: 1013937 Number_goals: 8 Memory usage: 394292
+Plan Validated
+Step: 5 n: 32000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 8.78s Total_Time: 63.16s Size: 1914175 Number_goals: 12 Memory usage: 744486
+Plan Validated
+Step: 6 n: 64000 Plan_size: 40 Plan_cost: 3010 Iteration_Time: 16.6s Total_Time: 79.76s Size: 3447448 Number_goals: 19 Memory usage: 1346141
+Memory Usage: 1800008
+Memory-limit is exceeded, estimated memory usage: 1.80001e+06 KB
+h_ratio: 0
+current pool size: 2
+
+ 0: 3420, h_ratio: 0 1: 3010, h_ratio: 0
+Starting with action index 0 with h_ratio value  1
+MHA-10:1 MDA-1:0 MHA-1:1 
+Selecting config 1
+h: 16 walk#: 57
+h: 15 walk#: 61
+h_ratio: 0.882353
+current pool size: 3
+Starting with action index 0 with h_ratio value  1
+MHA-10:1 MDA-1:1 MHA-1:1 
+Selecting config 2
+h_ratio: 1
+current pool size: 4
+Starting with action index 0 with h_ratio value  1
+MHA-10:1 MDA-1:1 MHA-1:2 
+Selecting config 0
+h: 16 walk#: 119
+h: 15 walk#: 6
+h: 14 walk#: 8
+h: 13 walk#: 7
+h: 12 walk#: 33
+h_ratio: 0.705882
+current pool size: 5
+Starting with action index 0 with h_ratio value  1
+MHA-10:2 MDA-1:1 MHA-1:2 
+Selecting config 0
+h: 16 walk#: 4
+h: 14 walk#: 8
+h: 13 walk#: 7
+h: 12 walk#: 52
+h_ratio: 0.705882
+current pool size: 6
+Starting with action index 0 with h_ratio value  1
+MHA-10:3 MDA-1:1 MHA-1:2 
+Selecting config 2
+h: 16 walk#: 1219
+h: 15 walk#: 2
+h: 14 walk#: 663
+h: 13 walk#: 1
+h: 12 walk#: 594
+h_ratio: 0.705882
+current pool size: 7
+Starting with action index 0 with h_ratio value  1
+MHA-10:3 MDA-1:1 MHA-1:3 
+Selecting config 1
+h: 16 walk#: 728
+h: 15 walk#: 14
+h: 14 walk#: 223
+h: 13 walk#: 37
+h: 12 walk#: 511
+h: 11 walk#: 24
+h: 10 walk#: 775
+h: 9 walk#: 275
+h: 8 walk#: 47
+h: 7 walk#: 975
+h: 6 walk#: 15
+h: 5 walk#: 628
+h: 4 walk#: 23
+h: 3 walk#: 65
+h: 2 walk#: 12
+h: 1 walk#: 563
+Plan Validated
+build regression graph: true
+Initial plan size: 64 Initial plan cost: 5182
+After action elimination Plan size: 51 plan cost: 3718
+Plan Validated
+Plan Validated
+Step: 0 n: 1000 Plan_size: 43 Plan_cost: 3049 Iteration_Time: 0.26s Total_Time: 100.5s Size: 71276 Number_goals: 5 Memory usage: 27306
+Plan Validated
+Plan Validated
+Step: 1 n: 2000 Plan_size: 42 Plan_cost: 3030 Iteration_Time: 0.46s Total_Time: 100.96s Size: 139132 Number_goals: 5 Memory usage: 53647
+Plan Validated
+Plan Validated
+Step: 2 n: 4000 Plan_size: 42 Plan_cost: 3030 Iteration_Time: 0.9s Total_Time: 101.86s Size: 245596 Number_goals: 5 Memory usage: 94586
+Plan Validated
+Step: 3 n: 8000 Plan_size: 42 Plan_cost: 3030 Iteration_Time: 1.7s Total_Time: 103.56s Size: 459239 Number_goals: 5 Memory usage: 176495
+Plan Validated
+Step: 4 n: 16000 Plan_size: 42 Plan_cost: 3030 Iteration_Time: 3.52s Total_Time: 107.08s Size: 886477 Number_goals: 8 Memory usage: 341827

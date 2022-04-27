@@ -1,0 +1,2048 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.011s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.005s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 24 rules.
+Computing model... [0.460s CPU, 0.464s wall-clock]
+48726 relevant atoms
+2797 auxiliary atoms
+51523 final queue length
+116579 total queue pushes
+Completing instantiation... [1.780s CPU, 1.783s wall-clock]
+Instantiating: [2.280s CPU, 2.284s wall-clock]
+Computing fact groups...
+Finding invariants... 11 initial candidates
+[0.010s CPU, 0.013s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.003s wall-clock]
+Instantiating groups... [0.260s CPU, 0.260s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+388 uncovered facts
+Choosing groups: [0.010s CPU, 0.003s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.280s CPU, 0.283s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.070s CPU, 0.074s wall-clock]
+Translating task: [1.230s CPU, 1.250s wall-clock]
+236 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.004s wall-clock]
+Detecting unreachable propositions...
+236 operators removed
+198 propositions removed
+Detecting unreachable propositions: [0.160s CPU, 0.158s wall-clock]
+Writing translation key... [0.010s CPU, 0.004s wall-clock]
+Writing mutex key... [0.000s CPU, 0.005s wall-clock]
+Writing output... [0.230s CPU, 0.228s wall-clock]
+Done! [4.260s CPU, 4.299s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+198 variables of 295 necessary
+46624 of 46624 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Dispatcher selected state size 1.
+This is a unit task.
+Simplifying transitions... done!
+path_all_groups: all.groups
+Initializing Exploration...
+Reading invariants from file...
+all.groups: all.groups
+done
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 1.06166s
+Discovered 245 landmarks, of which 49 are disjunctive and 0 are conjunctive 
+194 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+99 initial landmarks, 99 goal landmarks
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff,hlm,preferred=(hff,hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 146/148 [g=0, 1 evaluated, 0 expanded, t=1.4s]
+Best heuristic value: 146/147 [g=9, 673 evaluated, 672 expanded, t=2.02s]
+improvement got by local GBFS
+Best heuristic value: 145/147 [g=11, 815 evaluated, 814 expanded, t=2.17s]
+Best heuristic value: 144/147 [g=12, 816 evaluated, 815 expanded, t=2.17s]
+Best heuristic value: 143/146 [g=14, 1009 evaluated, 1008 expanded, t=2.35s]
+Best heuristic value: 143/145 [g=15, 1010 evaluated, 1009 expanded, t=2.35s]
+Best heuristic value: 142/145 [g=17, 1578 evaluated, 1577 expanded, t=2.88s]
+Best heuristic value: 142/144 [g=18, 1579 evaluated, 1578 expanded, t=2.88s]
+Best heuristic value: 141/143 [g=19, 1580 evaluated, 1579 expanded, t=2.89s]
+improvement got by local GBFS
+Best heuristic value: 140/143 [g=25, 3001 evaluated, 3000 expanded, t=4.4s]
+Best heuristic value: 139/143 [g=26, 3002 evaluated, 3001 expanded, t=4.4s]
+improvement got by local GBFS
+Best heuristic value: 138/143 [g=29, 3378 evaluated, 3377 expanded, t=4.9s]
+Best heuristic value: 137/140 [g=31, 3612 evaluated, 3611 expanded, t=5.27s]
+Best heuristic value: 137/139 [g=33, 3699 evaluated, 3698 expanded, t=5.43s]
+Best heuristic value: 137/138 [g=40, 4048 evaluated, 4047 expanded, t=5.81s]
+improvement got by local GBFS
+Best heuristic value: 136/138 [g=42, 4243 evaluated, 4242 expanded, t=6.14s]
+Best heuristic value: 135/138 [g=43, 4244 evaluated, 4243 expanded, t=6.14s]
+Best heuristic value: 134/137 [g=45, 5161 evaluated, 5160 expanded, t=7.51s]
+Best heuristic value: 134/136 [g=46, 5163 evaluated, 5162 expanded, t=7.51s]
+improvement got by local GBFS
+Best heuristic value: 133/136 [g=62, 6291 evaluated, 6290 expanded, t=9.16s]
+Best heuristic value: 132/136 [g=63, 6292 evaluated, 6291 expanded, t=9.16s]
+Best heuristic value: 131/134 [g=65, 6459 evaluated, 6458 expanded, t=9.41s]
+Best heuristic value: 131/133 [g=66, 6460 evaluated, 6459 expanded, t=9.41s]
+Best heuristic value: 130/133 [g=77, 7473 evaluated, 7472 expanded, t=10.6s]
+Best heuristic value: 129/133 [g=78, 7474 evaluated, 7473 expanded, t=10.61s]
+improvement got by local GBFS
+Best heuristic value: 128/131 [g=80, 7660 evaluated, 7659 expanded, t=10.78s]
+Best heuristic value: 128/130 [g=81, 7661 evaluated, 7660 expanded, t=10.78s]
+Best heuristic value: 128/129 [g=90, 8197 evaluated, 8196 expanded, t=11.26s]
+improvement got by local GBFS
+Best heuristic value: 127/129 [g=92, 8321 evaluated, 8320 expanded, t=11.37s]
+Best heuristic value: 126/129 [g=93, 8322 evaluated, 8321 expanded, t=11.37s]
+Best heuristic value: 125/127 [g=95, 8853 evaluated, 8852 expanded, t=11.82s]
+Best heuristic value: 124/126 [g=96, 8854 evaluated, 8853 expanded, t=11.82s]
+Best heuristic value: 124/125 [g=108, 9449 evaluated, 9448 expanded, t=12.35s]
+improvement got by local GBFS
+Best heuristic value: 123/125 [g=110, 9632 evaluated, 9631 expanded, t=12.51s]
+Best heuristic value: 122/125 [g=111, 9633 evaluated, 9632 expanded, t=12.51s]
+Best heuristic value: 122/124 [g=116, 10564 evaluated, 10563 expanded, t=13.31s]
+improvement got by local GBFS
+Best heuristic value: 121/124 [g=113, 10628 evaluated, 10627 expanded, t=13.37s]
+Best heuristic value: 121/123 [g=114, 10630 evaluated, 10629 expanded, t=13.37s]
+Best heuristic value: 121/122 [g=123, 11423 evaluated, 11422 expanded, t=14.07s]
+improvement got by local GBFS
+Best heuristic value: 120/122 [g=125, 11525 evaluated, 11524 expanded, t=14.17s]
+Best heuristic value: 119/122 [g=126, 11526 evaluated, 11525 expanded, t=14.17s]
+Best heuristic value: 118/121 [g=128, 12275 evaluated, 12274 expanded, t=15.07s]
+Best heuristic value: 118/120 [g=129, 12276 evaluated, 12275 expanded, t=15.07s]
+Best heuristic value: 118/119 [g=137, 12956 evaluated, 12955 expanded, t=15.95s]
+improvement got by local GBFS
+Best heuristic value: 117/119 [g=139, 13044 evaluated, 13043 expanded, t=16.08s]
+Best heuristic value: 116/119 [g=141, 13764 evaluated, 13763 expanded, t=17.04s]
+Best heuristic value: 116/118 [g=143, 13767 evaluated, 13766 expanded, t=17.04s]
+Best heuristic value: 116/117 [g=149, 14253 evaluated, 14252 expanded, t=17.5s]
+improvement got by local GBFS
+Best heuristic value: 115/117 [g=151, 14368 evaluated, 14367 expanded, t=17.61s]
+Best heuristic value: 114/117 [g=152, 14369 evaluated, 14368 expanded, t=17.61s]
+Best heuristic value: 114/116 [g=155, 15485 evaluated, 15484 expanded, t=18.63s]
+improvement got by local GBFS
+Best heuristic value: 113/116 [g=154, 15540 evaluated, 15539 expanded, t=18.68s]
+Best heuristic value: 113/115 [g=155, 15542 evaluated, 15541 expanded, t=18.69s]
+Best heuristic value: 112/115 [g=173, 16370 evaluated, 16369 expanded, t=19.47s]
+improvement got by local GBFS
+Best heuristic value: 111/114 [g=175, 16730 evaluated, 16729 expanded, t=19.78s]
+Best heuristic value: 111/113 [g=177, 16784 evaluated, 16783 expanded, t=19.83s]
+Best heuristic value: 110/113 [g=188, 17594 evaluated, 17593 expanded, t=20.53s]
+Best heuristic value: 109/113 [g=189, 17595 evaluated, 17594 expanded, t=20.53s]
+Best heuristic value: 108/110 [g=191, 17702 evaluated, 17701 expanded, t=20.62s]
+Best heuristic value: 107/109 [g=192, 17703 evaluated, 17702 expanded, t=20.62s]
+Best heuristic value: 106/108 [g=195, 20308 evaluated, 20307 expanded, t=22.93s]
+Best heuristic value: 105/107 [g=196, 20309 evaluated, 20308 expanded, t=22.93s]
+improvement got by local GBFS
+Best heuristic value: 104/107 [g=199, 20839 evaluated, 20838 expanded, t=23.4s]
+Best heuristic value: 104/106 [g=200, 20840 evaluated, 20839 expanded, t=23.4s]
+Best heuristic value: 103/106 [g=202, 21354 evaluated, 21353 expanded, t=23.84s]
+Best heuristic value: 103/105 [g=204, 21357 evaluated, 21356 expanded, t=23.84s]
+improvement got by local GBFS
+Best heuristic value: 102/105 [g=217, 22436 evaluated, 22435 expanded, t=24.93s]
+Best heuristic value: 101/105 [g=218, 22437 evaluated, 22436 expanded, t=24.93s]
+Best heuristic value: 100/103 [g=220, 22537 evaluated, 22536 expanded, t=25.03s]
+Best heuristic value: 100/102 [g=221, 22538 evaluated, 22537 expanded, t=25.04s]
+Best heuristic value: 99/102 [g=239, 24249 evaluated, 24248 expanded, t=26.95s]
+improvement got by local GBFS
+Best heuristic value: 98/101 [g=241, 24524 evaluated, 24523 expanded, t=27.29s]
+Best heuristic value: 98/100 [g=242, 24525 evaluated, 24524 expanded, t=27.29s]
+Best heuristic value: 97/100 [g=246, 25138 evaluated, 25137 expanded, t=27.91s]
+improvement got by local GBFS
+Best heuristic value: 97/99 [g=248, 25189 evaluated, 25188 expanded, t=27.96s]
+Best heuristic value: 97/98 [g=258, 25550 evaluated, 25549 expanded, t=28.29s]
+improvement got by local GBFS
+Best heuristic value: 96/98 [g=260, 25710 evaluated, 25709 expanded, t=28.43s]
+Best heuristic value: 95/98 [g=261, 25711 evaluated, 25710 expanded, t=28.43s]
+Best heuristic value: 94/97 [g=263, 25816 evaluated, 25815 expanded, t=28.53s]
+Best heuristic value: 94/96 [g=264, 25817 evaluated, 25816 expanded, t=28.53s]
+Best heuristic value: 93/96 [g=274, 26947 evaluated, 26946 expanded, t=29.62s]
+Best heuristic value: 92/96 [g=275, 26948 evaluated, 26947 expanded, t=29.62s]
+Best heuristic value: 91/94 [g=277, 27310 evaluated, 27309 expanded, t=29.96s]
+Best heuristic value: 91/93 [g=278, 27311 evaluated, 27310 expanded, t=29.96s]
+Best heuristic value: 91/92 [g=289, 27878 evaluated, 27877 expanded, t=30.5s]
+improvement got by local GBFS
+Best heuristic value: 90/92 [g=291, 27922 evaluated, 27921 expanded, t=30.54s]
+Best heuristic value: 89/91 [g=293, 28099 evaluated, 28098 expanded, t=30.7s]
+Best heuristic value: 88/91 [g=294, 28100 evaluated, 28099 expanded, t=30.7s]
+Best heuristic value: 88/90 [g=295, 28101 evaluated, 28100 expanded, t=30.7s]
+Best heuristic value: 88/89 [g=305, 28688 evaluated, 28687 expanded, t=31.25s]
+improvement got by local GBFS
+Best heuristic value: 87/89 [g=307, 28783 evaluated, 28782 expanded, t=31.34s]
+Best heuristic value: 86/89 [g=308, 28784 evaluated, 28783 expanded, t=31.34s]
+Best heuristic value: 85/88 [g=310, 28877 evaluated, 28876 expanded, t=31.43s]
+Best heuristic value: 85/87 [g=311, 28878 evaluated, 28877 expanded, t=31.43s]
+Best heuristic value: 85/86 [g=328, 29656 evaluated, 29655 expanded, t=32.16s]
+improvement got by local GBFS
+Best heuristic value: 84/86 [g=330, 29718 evaluated, 29717 expanded, t=32.23s]
+Best heuristic value: 83/86 [g=331, 29719 evaluated, 29718 expanded, t=32.23s]
+Best heuristic value: 82/85 [g=333, 29795 evaluated, 29794 expanded, t=32.3s]
+Best heuristic value: 82/84 [g=334, 29796 evaluated, 29795 expanded, t=32.3s]
+Best heuristic value: 82/83 [g=344, 30663 evaluated, 30662 expanded, t=33.15s]
+improvement got by local GBFS
+Best heuristic value: 81/83 [g=338, 31992 evaluated, 31991 expanded, t=34.39s]
+Best heuristic value: 80/83 [g=339, 31997 evaluated, 31996 expanded, t=34.39s]
+Best heuristic value: 80/82 [g=340, 31999 evaluated, 31998 expanded, t=34.39s]
+improvement got by local GBFS
+Best heuristic value: 79/82 [g=343, 33851 evaluated, 33850 expanded, t=36.07s]
+Best heuristic value: 79/81 [g=344, 33852 evaluated, 33851 expanded, t=36.07s]
+improvement got by local GBFS
+Best heuristic value: 79/80 [g=350, 34509 evaluated, 34508 expanded, t=36.66s]
+improvement got by local GBFS
+Best heuristic value: 78/80 [g=352, 34575 evaluated, 34574 expanded, t=36.73s]
+Best heuristic value: 77/80 [g=354, 34760 evaluated, 34759 expanded, t=36.9s]
+Best heuristic value: 77/79 [g=356, 34789 evaluated, 34788 expanded, t=36.93s]
+Best heuristic value: 76/79 [g=373, 35214 evaluated, 35213 expanded, t=37.33s]
+Best heuristic value: 75/79 [g=374, 35215 evaluated, 35214 expanded, t=37.33s]
+improvement got by local GBFS
+Best heuristic value: 74/77 [g=376, 35293 evaluated, 35292 expanded, t=37.41s]
+Best heuristic value: 74/76 [g=377, 35294 evaluated, 35293 expanded, t=37.41s]
+Best heuristic value: 74/75 [g=391, 35911 evaluated, 35910 expanded, t=38.02s]
+improvement got by local GBFS
+Best heuristic value: 73/75 [g=383, 37377 evaluated, 37376 expanded, t=39.68s]
+improvement got by local GBFS
+Best heuristic value: 72/75 [g=397, 38273 evaluated, 38272 expanded, t=40.53s]
+Best heuristic value: 71/75 [g=398, 38274 evaluated, 38273 expanded, t=40.53s]
+improvement got by local GBFS
+Best heuristic value: 70/73 [g=400, 38360 evaluated, 38359 expanded, t=40.61s]
+Best heuristic value: 70/72 [g=401, 38361 evaluated, 38360 expanded, t=40.61s]
+Best heuristic value: 70/71 [g=412, 39612 evaluated, 39611 expanded, t=41.8s]
+improvement got by local GBFS
+Best heuristic value: 69/71 [g=406, 39840 evaluated, 39839 expanded, t=42.02s]
+improvement got by local GBFS
+Best heuristic value: 68/71 [g=412, 41768 evaluated, 41767 expanded, t=43.73s]
+Best heuristic value: 68/70 [g=413, 41772 evaluated, 41771 expanded, t=43.73s]
+improvement got by local GBFS
+Best heuristic value: 68/69 [g=422, 42915 evaluated, 42914 expanded, t=45.17s]
+improvement got by local GBFS
+Best heuristic value: 67/69 [g=422, 42962 evaluated, 42961 expanded, t=45.21s]
+Best heuristic value: 66/68 [g=424, 43058 evaluated, 43057 expanded, t=45.29s]
+Best heuristic value: 65/68 [g=425, 43059 evaluated, 43058 expanded, t=45.29s]
+Best heuristic value: 65/67 [g=426, 43060 evaluated, 43059 expanded, t=45.29s]
+Best heuristic value: 64/67 [g=430, 44744 evaluated, 44743 expanded, t=46.8s]
+Best heuristic value: 64/66 [g=431, 44746 evaluated, 44745 expanded, t=46.8s]
+Best heuristic value: 63/65 [g=432, 44747 evaluated, 44746 expanded, t=46.8s]
+improvement got by local GBFS
+Best heuristic value: 63/64 [g=439, 45429 evaluated, 45428 expanded, t=47.43s]
+improvement got by local GBFS
+Best heuristic value: 62/64 [g=435, 46183 evaluated, 46182 expanded, t=48.12s]
+Best heuristic value: 62/63 [g=442, 47356 evaluated, 47355 expanded, t=49.2s]
+improvement got by local GBFS
+Best heuristic value: 61/63 [g=449, 47519 evaluated, 47518 expanded, t=49.34s]
+Best heuristic value: 61/62 [g=454, 47541 evaluated, 47540 expanded, t=49.36s]
+improvement got by local GBFS
+Best heuristic value: 60/62 [g=451, 47734 evaluated, 47733 expanded, t=49.53s]
+Best heuristic value: 60/61 [g=465, 48324 evaluated, 48323 expanded, t=50.08s]
+improvement got by local GBFS
+Best heuristic value: 59/61 [g=455, 48592 evaluated, 48591 expanded, t=50.42s]
+improvement got by local GBFS
+Best heuristic value: 58/61 [g=462, 49171 evaluated, 49170 expanded, t=51.23s]
+improvement got by local GBFS
+Best heuristic value: 57/60 [g=464, 49263 evaluated, 49262 expanded, t=51.36s]
+Best heuristic value: 57/59 [g=466, 49288 evaluated, 49287 expanded, t=51.39s]
+Best heuristic value: 56/59 [g=469, 51244 evaluated, 51243 expanded, t=53.54s]
+improvement got by local GBFS
+Best heuristic value: 56/58 [g=471, 51285 evaluated, 51284 expanded, t=53.57s]
+Best heuristic value: 55/57 [g=474, 52122 evaluated, 52121 expanded, t=54.55s]
+Best heuristic value: 54/56 [g=475, 52123 evaluated, 52122 expanded, t=54.56s]
+improvement got by local GBFS
+Best heuristic value: 53/55 [g=486, 52733 evaluated, 52732 expanded, t=55.25s]
+improvement got by local GBFS
+Best heuristic value: 53/54 [g=494, 53577 evaluated, 53576 expanded, t=56.2s]
+improvement got by local GBFS
+Best heuristic value: 52/54 [g=492, 54004 evaluated, 54003 expanded, t=56.7s]
+Best heuristic value: 51/54 [g=493, 54005 evaluated, 54004 expanded, t=56.7s]
+Best heuristic value: 51/53 [g=494, 54007 evaluated, 54006 expanded, t=56.7s]
+improvement got by local GBFS
+Best heuristic value: 50/52 [g=498, 54488 evaluated, 54487 expanded, t=57.34s]
+Best heuristic value: 49/52 [g=499, 54489 evaluated, 54488 expanded, t=57.35s]
+Best heuristic value: 49/51 [g=500, 54490 evaluated, 54489 expanded, t=57.35s]
+improvement got by local GBFS
+Best heuristic value: 48/50 [g=504, 55086 evaluated, 55085 expanded, t=57.87s]
+Best heuristic value: 47/50 [g=505, 55087 evaluated, 55086 expanded, t=57.87s]
+Best heuristic value: 47/49 [g=506, 55088 evaluated, 55087 expanded, t=57.87s]
+improvement got by local GBFS
+Best heuristic value: 46/48 [g=512, 55840 evaluated, 55839 expanded, t=58.52s]
+Best heuristic value: 45/48 [g=513, 55841 evaluated, 55840 expanded, t=58.52s]
+Best heuristic value: 45/47 [g=514, 55843 evaluated, 55842 expanded, t=58.52s]
+improvement got by local GBFS
+Best heuristic value: 45/46 [g=519, 56752 evaluated, 56751 expanded, t=59.5s]
+Best heuristic value: 44/46 [g=518, 56770 evaluated, 56769 expanded, t=59.51s]
+Best heuristic value: 43/46 [g=519, 56775 evaluated, 56774 expanded, t=59.52s]
+Best heuristic value: 43/45 [g=521, 56776 evaluated, 56775 expanded, t=59.52s]
+improvement got by local GBFS
+Best heuristic value: 43/44 [g=526, 57247 evaluated, 57246 expanded, t=60.04s]
+improvement got by local GBFS
+Best heuristic value: 42/44 [g=524, 57399 evaluated, 57398 expanded, t=60.22s]
+Best heuristic value: 41/44 [g=529, 58327 evaluated, 58326 expanded, t=61.31s]
+improvement got by local GBFS
+Best heuristic value: 41/43 [g=531, 58348 evaluated, 58347 expanded, t=61.33s]
+Best heuristic value: 40/43 [g=534, 59387 evaluated, 59386 expanded, t=62.48s]
+improvement got by local GBFS
+Best heuristic value: 40/42 [g=536, 59407 evaluated, 59406 expanded, t=62.51s]
+Best heuristic value: 39/42 [g=540, 59528 evaluated, 59527 expanded, t=62.64s]
+Best heuristic value: 38/41 [g=541, 59529 evaluated, 59528 expanded, t=62.64s]
+Best heuristic value: 38/40 [g=542, 59531 evaluated, 59530 expanded, t=62.64s]
+Best heuristic value: 37/40 [g=544, 59569 evaluated, 59568 expanded, t=62.68s]
+Best heuristic value: 36/39 [g=545, 59570 evaluated, 59569 expanded, t=62.68s]
+Best heuristic value: 36/38 [g=546, 59572 evaluated, 59571 expanded, t=62.68s]
+Best heuristic value: 35/38 [g=548, 59609 evaluated, 59608 expanded, t=62.71s]
+Best heuristic value: 35/37 [g=550, 59644 evaluated, 59643 expanded, t=62.75s]
+Best heuristic value: 34/37 [g=550, 59673 evaluated, 59672 expanded, t=62.77s]
+Best heuristic value: 34/36 [g=552, 59697 evaluated, 59696 expanded, t=62.79s]
+Best heuristic value: 33/36 [g=556, 59922 evaluated, 59921 expanded, t=63.03s]
+Best heuristic value: 33/35 [g=557, 59923 evaluated, 59922 expanded, t=63.03s]
+Best heuristic value: 33/34 [g=558, 59927 evaluated, 59926 expanded, t=63.03s]
+Best heuristic value: 32/34 [g=560, 59961 evaluated, 59960 expanded, t=63.07s]
+Best heuristic value: 31/33 [g=561, 59962 evaluated, 59961 expanded, t=63.07s]
+Best heuristic value: 31/32 [g=562, 59965 evaluated, 59964 expanded, t=63.07s]
+Best heuristic value: 30/32 [g=563, 59996 evaluated, 59995 expanded, t=63.1s]
+Best heuristic value: 29/31 [g=564, 59997 evaluated, 59996 expanded, t=63.1s]
+Best heuristic value: 29/30 [g=566, 60017 evaluated, 60016 expanded, t=63.12s]
+Best heuristic value: 28/30 [g=568, 60048 evaluated, 60047 expanded, t=63.16s]
+Best heuristic value: 28/29 [g=569, 60049 evaluated, 60048 expanded, t=63.16s]
+Best heuristic value: 28/28 [g=570, 60053 evaluated, 60052 expanded, t=63.16s]
+Best heuristic value: 27/28 [g=572, 60081 evaluated, 60080 expanded, t=63.19s]
+Best heuristic value: 26/27 [g=573, 60082 evaluated, 60081 expanded, t=63.19s]
+Best heuristic value: 26/26 [g=574, 60085 evaluated, 60084 expanded, t=63.19s]
+Best heuristic value: 25/26 [g=575, 60110 evaluated, 60109 expanded, t=63.21s]
+Best heuristic value: 24/26 [g=576, 60111 evaluated, 60110 expanded, t=63.22s]
+Best heuristic value: 24/25 [g=577, 60115 evaluated, 60114 expanded, t=63.22s]
+Best heuristic value: 24/24 [g=578, 60122 evaluated, 60121 expanded, t=63.23s]
+Best heuristic value: 23/24 [g=580, 60148 evaluated, 60147 expanded, t=63.26s]
+Best heuristic value: 22/23 [g=581, 60149 evaluated, 60148 expanded, t=63.26s]
+Best heuristic value: 22/22 [g=582, 60151 evaluated, 60150 expanded, t=63.26s]
+Best heuristic value: 21/22 [g=584, 60174 evaluated, 60173 expanded, t=63.29s]
+Best heuristic value: 20/21 [g=585, 60175 evaluated, 60174 expanded, t=63.29s]
+Best heuristic value: 20/20 [g=586, 60178 evaluated, 60177 expanded, t=63.29s]
+Best heuristic value: 19/20 [g=587, 60197 evaluated, 60196 expanded, t=63.31s]
+Best heuristic value: 18/20 [g=588, 60198 evaluated, 60197 expanded, t=63.31s]
+Best heuristic value: 18/19 [g=589, 60202 evaluated, 60201 expanded, t=63.31s]
+Best heuristic value: 18/18 [g=590, 60209 evaluated, 60208 expanded, t=63.32s]
+Best heuristic value: 17/18 [g=592, 60229 evaluated, 60228 expanded, t=63.34s]
+Best heuristic value: 16/17 [g=593, 60230 evaluated, 60229 expanded, t=63.34s]
+Best heuristic value: 16/16 [g=594, 60232 evaluated, 60231 expanded, t=63.35s]
+Best heuristic value: 15/16 [g=596, 60249 evaluated, 60248 expanded, t=63.36s]
+Best heuristic value: 14/15 [g=597, 60250 evaluated, 60249 expanded, t=63.36s]
+Best heuristic value: 14/14 [g=598, 60253 evaluated, 60252 expanded, t=63.37s]
+Best heuristic value: 13/14 [g=599, 60266 evaluated, 60265 expanded, t=63.38s]
+Best heuristic value: 12/14 [g=600, 60267 evaluated, 60266 expanded, t=63.38s]
+Best heuristic value: 12/13 [g=601, 60271 evaluated, 60270 expanded, t=63.38s]
+Best heuristic value: 12/12 [g=602, 60282 evaluated, 60281 expanded, t=63.39s]
+Best heuristic value: 11/12 [g=604, 60296 evaluated, 60295 expanded, t=63.41s]
+Best heuristic value: 10/11 [g=605, 60297 evaluated, 60296 expanded, t=63.41s]
+Best heuristic value: 10/10 [g=606, 60299 evaluated, 60298 expanded, t=63.41s]
+Best heuristic value: 9/10 [g=608, 60309 evaluated, 60308 expanded, t=63.42s]
+Best heuristic value: 8/9 [g=609, 60310 evaluated, 60309 expanded, t=63.42s]
+Best heuristic value: 8/8 [g=610, 60312 evaluated, 60311 expanded, t=63.42s]
+Best heuristic value: 7/8 [g=612, 60320 evaluated, 60319 expanded, t=63.43s]
+Best heuristic value: 6/7 [g=613, 60321 evaluated, 60320 expanded, t=63.43s]
+Best heuristic value: 6/6 [g=614, 60323 evaluated, 60322 expanded, t=63.43s]
+Best heuristic value: 5/6 [g=616, 60330 evaluated, 60329 expanded, t=63.44s]
+Best heuristic value: 4/5 [g=617, 60331 evaluated, 60330 expanded, t=63.44s]
+Best heuristic value: 4/4 [g=618, 60334 evaluated, 60333 expanded, t=63.44s]
+Best heuristic value: 3/4 [g=619, 60337 evaluated, 60336 expanded, t=63.45s]
+Best heuristic value: 2/3 [g=620, 60338 evaluated, 60337 expanded, t=63.45s]
+Best heuristic value: 2/2 [g=621, 60340 evaluated, 60339 expanded, t=63.45s]
+Best heuristic value: 1/1 [g=623, 60343 evaluated, 60342 expanded, t=63.45s]
+Solution found!
+Actual search time: 62.05s [t=63.45s]
+Real Plan cost: 624.
+Real Total time: 63s
+fly_to uav2 depot loc72 (1)
+fly_to uav1 depot loc108 (1)
+fly_to uav2 loc72 loc56 (1)
+fly_to uav1 loc108 loc59 (1)
+fly_to uav1 loc59 loc99 (1)
+fly_to uav2 loc56 depot (1)
+pickup_crate uav2 crate89 depot medicine (1)
+fly_to uav1 loc99 depot (1)
+pickup_crate uav1 crate70 depot medicine (1)
+fly_to uav1 depot loc16 (1)
+deliver uav1 person20 loc16 crate70 medicine (1)
+fly_to uav1 loc16 depot (1)
+fly_to uav2 depot loc108 (1)
+deliver uav2 person9 loc108 crate89 medicine (1)
+pickup_crate uav1 crate1 depot food (1)
+fly_to uav1 depot loc103 (1)
+deliver uav1 person64 loc103 crate1 food (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav1 loc103 depot (1)
+fly_to uav2 depot loc105 (1)
+pickup_crate uav1 crate2 depot food (1)
+fly_to uav1 depot loc114 (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate42 depot medicine (1)
+deliver uav1 person88 loc114 crate2 food (1)
+fly_to uav1 loc114 depot (1)
+pickup_crate uav1 crate38 depot food (1)
+fly_to uav1 depot loc59 (1)
+deliver uav1 person97 loc59 crate38 food (1)
+fly_to uav2 depot loc43 (1)
+deliver uav2 person83 loc43 crate42 medicine (1)
+fly_to uav1 loc59 loc102 (1)
+fly_to uav2 loc43 loc71 (1)
+fly_to uav1 loc102 loc105 (1)
+fly_to uav1 loc105 loc67 (1)
+fly_to uav1 loc67 loc2 (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate73 depot medicine (1)
+fly_to uav1 loc2 depot (1)
+pickup_crate uav1 crate45 depot medicine (1)
+fly_to uav1 depot loc115 (1)
+fly_to uav2 depot loc5 (1)
+deliver uav1 person44 loc115 crate45 medicine (1)
+fly_to uav1 loc115 depot (1)
+deliver uav2 person33 loc5 crate73 medicine (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 depot loc39 (1)
+fly_to uav2 depot loc77 (1)
+fly_to uav1 loc39 loc10 (1)
+fly_to uav2 loc77 depot (1)
+fly_to uav2 depot loc72 (1)
+fly_to uav1 loc10 loc68 (1)
+fly_to uav1 loc68 loc51 (1)
+fly_to uav1 loc51 loc16 (1)
+fly_to uav2 loc72 depot (1)
+pickup_crate uav2 crate37 depot food (1)
+fly_to uav1 loc16 depot (1)
+pickup_crate uav1 crate10 depot food (1)
+fly_to uav2 depot loc117 (1)
+fly_to uav1 depot loc31 (1)
+fly_to uav2 loc117 depot (1)
+deliver uav1 person60 loc31 crate10 food (1)
+fly_to uav1 loc31 depot (1)
+fly_to uav2 depot loc41 (1)
+deliver uav2 person38 loc41 crate37 food (1)
+fly_to uav2 loc41 depot (1)
+fly_to uav2 depot loc102 (1)
+fly_to uav1 depot loc48 (1)
+fly_to uav1 loc48 loc47 (1)
+fly_to uav2 loc102 depot (1)
+pickup_crate uav2 crate35 depot food (1)
+fly_to uav1 loc47 depot (1)
+fly_to uav2 depot loc72 (1)
+pickup_crate uav1 crate30 depot food (1)
+fly_to uav2 loc72 depot (1)
+fly_to uav1 depot loc7 (1)
+deliver uav1 person63 loc7 crate30 food (1)
+fly_to uav1 loc7 depot (1)
+fly_to uav2 depot loc72 (1)
+deliver uav2 person90 loc72 crate35 food (1)
+fly_to uav1 depot loc56 (1)
+fly_to uav2 loc72 depot (1)
+fly_to uav2 depot loc7 (1)
+fly_to uav2 loc7 loc20 (1)
+fly_to uav1 loc56 loc14 (1)
+fly_to uav2 loc20 depot (1)
+pickup_crate uav2 crate64 depot medicine (1)
+fly_to uav1 loc14 loc36 (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav1 crate61 depot medicine (1)
+fly_to uav1 depot loc18 (1)
+deliver uav1 person84 loc18 crate61 medicine (1)
+fly_to uav1 loc18 depot (1)
+fly_to uav2 depot loc56 (1)
+deliver uav2 person2 loc56 crate64 medicine (1)
+fly_to uav2 loc56 depot (1)
+fly_to uav2 depot loc28 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc28 depot (1)
+fly_to uav2 depot loc76 (1)
+fly_to uav2 loc76 loc25 (1)
+fly_to uav2 loc25 loc59 (1)
+fly_to uav1 loc77 loc60 (1)
+fly_to uav2 loc59 depot (1)
+fly_to uav1 loc60 loc97 (1)
+pickup_crate uav2 crate85 depot medicine (1)
+fly_to uav1 loc97 depot (1)
+pickup_crate uav1 crate77 depot medicine (1)
+fly_to uav1 depot loc22 (1)
+deliver uav1 person17 loc22 crate77 medicine (1)
+fly_to uav1 loc22 depot (1)
+fly_to uav2 depot loc112 (1)
+deliver uav2 person19 loc112 crate85 medicine (1)
+fly_to uav1 depot loc104 (1)
+fly_to uav2 loc112 loc8 (1)
+fly_to uav1 loc104 loc21 (1)
+fly_to uav2 loc8 loc87 (1)
+fly_to uav2 loc87 loc109 (1)
+fly_to uav1 loc21 loc66 (1)
+fly_to uav2 loc109 depot (1)
+pickup_crate uav2 crate74 depot medicine (1)
+fly_to uav1 loc66 depot (1)
+pickup_crate uav1 crate93 depot medicine (1)
+fly_to uav1 depot loc35 (1)
+deliver uav1 person56 loc35 crate93 medicine (1)
+fly_to uav1 loc35 depot (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person52 loc28 crate74 medicine (1)
+fly_to uav1 depot loc102 (1)
+fly_to uav2 loc28 loc82 (1)
+fly_to uav1 loc102 loc89 (1)
+fly_to uav1 loc89 loc5 (1)
+fly_to uav1 loc5 loc11 (1)
+fly_to uav2 loc82 depot (1)
+pickup_crate uav2 crate67 depot medicine (1)
+fly_to uav1 loc11 depot (1)
+pickup_crate uav1 crate56 depot medicine (1)
+fly_to uav1 depot loc44 (1)
+deliver uav1 person26 loc44 crate56 medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person62 loc57 crate67 medicine (1)
+fly_to uav2 loc57 depot (1)
+fly_to uav1 loc44 depot (1)
+fly_to uav2 depot loc98 (1)
+fly_to uav1 depot loc28 (1)
+fly_to uav2 loc98 depot (1)
+pickup_crate uav2 crate75 depot medicine (1)
+fly_to uav1 loc28 depot (1)
+pickup_crate uav1 crate47 depot medicine (1)
+fly_to uav1 depot loc62 (1)
+deliver uav1 person47 loc62 crate47 medicine (1)
+fly_to uav1 loc62 depot (1)
+fly_to uav2 depot loc40 (1)
+deliver uav2 person72 loc40 crate75 medicine (1)
+fly_to uav2 loc40 depot (1)
+fly_to uav2 depot loc89 (1)
+fly_to uav1 depot loc40 (1)
+fly_to uav1 loc40 loc15 (1)
+fly_to uav2 loc89 depot (1)
+fly_to uav2 depot loc43 (1)
+fly_to uav1 loc15 loc32 (1)
+fly_to uav2 loc43 depot (1)
+fly_to uav2 depot loc114 (1)
+fly_to uav2 loc114 loc80 (1)
+fly_to uav1 loc32 loc36 (1)
+fly_to uav2 loc80 depot (1)
+pickup_crate uav2 crate28 depot food (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav1 crate12 depot food (1)
+fly_to uav2 depot loc40 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc40 depot (1)
+deliver uav1 person3 loc77 crate12 food (1)
+fly_to uav2 depot loc102 (1)
+deliver uav2 person31 loc102 crate28 food (1)
+fly_to uav1 loc77 loc71 (1)
+fly_to uav2 loc102 loc17 (1)
+fly_to uav2 loc17 loc85 (1)
+fly_to uav1 loc71 loc117 (1)
+fly_to uav2 loc85 depot (1)
+pickup_crate uav2 crate17 depot food (1)
+fly_to uav1 loc117 loc68 (1)
+fly_to uav1 loc68 depot (1)
+fly_to uav2 depot loc94 (1)
+pickup_crate uav1 crate29 depot food (1)
+fly_to uav2 loc94 depot (1)
+fly_to uav1 depot loc53 (1)
+deliver uav1 person45 loc53 crate29 food (1)
+fly_to uav1 loc53 depot (1)
+fly_to uav2 depot loc104 (1)
+deliver uav2 person46 loc104 crate17 food (1)
+fly_to uav2 loc104 depot (1)
+pickup_crate uav2 crate3 depot food (1)
+fly_to uav2 depot loc112 (1)
+deliver uav2 person19 loc112 crate3 food (1)
+fly_to uav2 loc112 depot (1)
+pickup_crate uav1 crate18 depot food (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person21 loc105 crate18 food (1)
+pickup_crate uav2 crate43 depot medicine (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person10 loc5 crate43 medicine (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc105 depot (1)
+fly_to uav2 depot loc105 (1)
+fly_to uav1 depot loc46 (1)
+fly_to uav2 loc105 depot (1)
+fly_to uav2 depot loc78 (1)
+fly_to uav2 loc78 loc100 (1)
+fly_to uav1 loc46 loc77 (1)
+fly_to uav2 loc100 depot (1)
+fly_to uav1 loc77 loc4 (1)
+pickup_crate uav2 crate6 depot food (1)
+fly_to uav1 loc4 depot (1)
+pickup_crate uav1 crate31 depot food (1)
+fly_to uav1 depot loc8 (1)
+deliver uav1 person13 loc8 crate31 food (1)
+fly_to uav1 loc8 depot (1)
+fly_to uav2 depot loc98 (1)
+deliver uav2 person15 loc98 crate6 food (1)
+fly_to uav2 loc98 depot (1)
+fly_to uav2 depot loc108 (1)
+fly_to uav1 depot loc40 (1)
+fly_to uav1 loc40 loc16 (1)
+fly_to uav1 loc16 loc82 (1)
+fly_to uav1 loc82 loc38 (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav1 loc38 loc104 (1)
+pickup_crate uav2 crate34 depot food (1)
+fly_to uav1 loc104 depot (1)
+pickup_crate uav1 crate27 depot food (1)
+fly_to uav2 depot loc77 (1)
+fly_to uav1 depot loc68 (1)
+fly_to uav2 loc77 depot (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person41 loc28 crate34 food (1)
+fly_to uav2 loc28 loc31 (1)
+fly_to uav2 loc31 depot (1)
+fly_to uav1 loc68 depot (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person91 loc105 crate27 food (1)
+fly_to uav1 loc105 depot (1)
+pickup_crate uav2 crate4 depot food (1)
+fly_to uav1 depot loc48 (1)
+fly_to uav2 depot loc77 (1)
+deliver uav2 person27 loc77 crate4 food (1)
+fly_to uav1 loc48 loc111 (1)
+fly_to uav2 loc77 loc26 (1)
+fly_to uav1 loc111 loc68 (1)
+fly_to uav2 loc26 depot (1)
+fly_to uav2 depot loc44 (1)
+fly_to uav1 loc68 loc4 (1)
+fly_to uav2 loc44 depot (1)
+pickup_crate uav2 crate84 depot medicine (1)
+fly_to uav1 loc4 depot (1)
+fly_to uav2 depot loc8 (1)
+pickup_crate uav1 crate91 depot medicine (1)
+fly_to uav2 loc8 depot (1)
+fly_to uav1 depot loc86 (1)
+deliver uav1 person22 loc86 crate91 medicine (1)
+fly_to uav1 loc86 depot (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person61 loc89 crate84 medicine (1)
+fly_to uav2 loc89 depot (1)
+fly_to uav2 depot loc5 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav2 crate14 depot food (1)
+fly_to uav1 loc77 depot (1)
+fly_to uav2 depot loc58 (1)
+pickup_crate uav1 crate9 depot food (1)
+fly_to uav2 loc58 depot (1)
+fly_to uav1 depot loc43 (1)
+deliver uav1 person83 loc43 crate9 food (1)
+fly_to uav1 loc43 depot (1)
+fly_to uav2 depot loc45 (1)
+deliver uav2 person37 loc45 crate14 food (1)
+fly_to uav2 loc45 depot (1)
+fly_to uav2 depot loc70 (1)
+fly_to uav1 depot loc57 (1)
+fly_to uav1 loc57 loc98 (1)
+fly_to uav2 loc70 loc111 (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate78 depot medicine (1)
+fly_to uav1 loc98 depot (1)
+fly_to uav2 depot loc2 (1)
+fly_to uav2 loc2 loc98 (1)
+pickup_crate uav1 crate92 depot medicine (1)
+fly_to uav2 loc98 depot (1)
+fly_to uav1 depot loc90 (1)
+deliver uav1 person78 loc90 crate92 medicine (1)
+fly_to uav2 depot loc72 (1)
+deliver uav2 person90 loc72 crate78 medicine (1)
+fly_to uav2 loc72 depot (1)
+fly_to uav1 loc90 depot (1)
+fly_to uav2 depot loc40 (1)
+fly_to uav1 depot loc17 (1)
+fly_to uav2 loc40 depot (1)
+fly_to uav1 loc17 loc113 (1)
+pickup_crate uav2 crate71 depot medicine (1)
+fly_to uav1 loc113 depot (1)
+fly_to uav2 depot loc92 (1)
+pickup_crate uav1 crate86 depot medicine (1)
+fly_to uav2 loc92 loc83 (1)
+fly_to uav2 loc83 depot (1)
+fly_to uav1 depot loc93 (1)
+deliver uav1 person43 loc93 crate86 medicine (1)
+fly_to uav1 loc93 depot (1)
+fly_to uav2 depot loc92 (1)
+deliver uav2 person89 loc92 crate71 medicine (1)
+fly_to uav2 loc92 depot (1)
+fly_to uav2 depot loc85 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc85 loc81 (1)
+fly_to uav1 loc77 loc45 (1)
+fly_to uav1 loc45 loc12 (1)
+fly_to uav2 loc81 depot (1)
+fly_to uav1 loc12 loc19 (1)
+fly_to uav2 depot loc102 (1)
+fly_to uav1 loc19 loc56 (1)
+fly_to uav1 loc56 loc68 (1)
+fly_to uav1 loc68 loc81 (1)
+fly_to uav2 loc102 depot (1)
+pickup_crate uav2 crate97 depot medicine (1)
+fly_to uav1 loc81 depot (1)
+fly_to uav2 depot loc71 (1)
+pickup_crate uav1 crate80 depot medicine (1)
+fly_to uav2 loc71 depot (1)
+fly_to uav1 depot loc107 (1)
+deliver uav1 person75 loc107 crate80 medicine (1)
+fly_to uav1 loc107 depot (1)
+fly_to uav2 depot loc71 (1)
+deliver uav2 person35 loc71 crate97 medicine (1)
+fly_to uav2 loc71 depot (1)
+fly_to uav2 depot loc94 (1)
+pickup_crate uav1 crate44 depot medicine (1)
+fly_to uav1 depot loc44 (1)
+deliver uav1 person65 loc44 crate44 medicine (1)
+fly_to uav1 loc44 depot (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate46 depot medicine (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person49 loc94 crate46 medicine (1)
+fly_to uav2 loc94 depot (1)
+fly_to uav2 depot loc90 (1)
+fly_to uav1 depot loc17 (1)
+fly_to uav2 loc90 depot (1)
+pickup_crate uav2 crate82 depot medicine (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav1 crate55 depot medicine (1)
+fly_to uav1 depot loc116 (1)
+deliver uav1 person54 loc116 crate55 medicine (1)
+fly_to uav2 depot loc108 (1)
+deliver uav2 person81 loc108 crate82 medicine (1)
+fly_to uav1 loc116 loc36 (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav2 depot loc21 (1)
+fly_to uav1 loc36 loc83 (1)
+fly_to uav1 loc83 loc116 (1)
+fly_to uav1 loc116 loc65 (1)
+fly_to uav1 loc65 loc1 (1)
+fly_to uav2 loc21 depot (1)
+fly_to uav1 loc1 loc32 (1)
+pickup_crate uav2 crate39 depot food (1)
+fly_to uav1 loc32 depot (1)
+pickup_crate uav1 crate8 depot food (1)
+fly_to uav2 depot loc70 (1)
+fly_to uav1 depot loc94 (1)
+fly_to uav1 loc94 loc49 (1)
+fly_to uav2 loc70 loc108 (1)
+deliver uav2 person9 loc108 crate39 food (1)
+fly_to uav2 loc108 loc91 (1)
+fly_to uav2 loc91 depot (1)
+fly_to uav1 loc49 depot (1)
+fly_to uav1 depot loc70 (1)
+deliver uav1 person70 loc70 crate8 food (1)
+fly_to uav1 loc70 depot (1)
+fly_to uav2 depot loc111 (1)
+fly_to uav1 depot loc48 (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate48 depot medicine (1)
+fly_to uav2 depot loc90 (1)
+deliver uav2 person1 loc90 crate48 medicine (1)
+fly_to uav1 loc48 loc26 (1)
+fly_to uav2 loc90 depot (1)
+fly_to uav1 loc26 depot (1)
+fly_to uav2 depot loc40 (1)
+fly_to uav1 depot loc70 (1)
+fly_to uav1 loc70 loc30 (1)
+fly_to uav2 loc40 loc66 (1)
+fly_to uav1 loc30 loc92 (1)
+fly_to uav2 loc66 depot (1)
+pickup_crate uav2 crate13 depot food (1)
+fly_to uav1 loc92 depot (1)
+pickup_crate uav1 crate7 depot food (1)
+fly_to uav1 depot loc77 (1)
+deliver uav1 person68 loc77 crate7 food (1)
+fly_to uav1 loc77 depot (1)
+fly_to uav2 depot loc111 (1)
+deliver uav2 person39 loc111 crate13 food (1)
+fly_to uav2 loc111 depot (1)
+fly_to uav2 depot loc70 (1)
+pickup_crate uav1 crate49 depot medicine (1)
+fly_to uav1 depot loc70 (1)
+fly_to uav2 loc70 depot (1)
+deliver uav1 person69 loc70 crate49 medicine (1)
+fly_to uav1 loc70 depot (1)
+fly_to uav2 depot loc5 (1)
+pickup_crate uav1 crate5 depot food (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 depot loc5 (1)
+deliver uav1 person77 loc5 crate5 food (1)
+fly_to uav1 loc5 depot (1)
+fly_to uav2 depot loc70 (1)
+pickup_crate uav1 crate50 depot medicine (1)
+fly_to uav2 loc70 depot (1)
+fly_to uav1 depot loc94 (1)
+fly_to uav2 depot loc68 (1)
+fly_to uav1 loc94 loc36 (1)
+fly_to uav2 loc68 depot (1)
+pickup_crate uav2 crate60 depot medicine (1)
+deliver uav1 person86 loc36 crate50 medicine (1)
+fly_to uav2 depot loc85 (1)
+deliver uav2 person5 loc85 crate60 medicine (1)
+fly_to uav2 loc85 depot (1)
+fly_to uav1 loc36 depot (1)
+fly_to uav2 depot loc5 (1)
+pickup_crate uav1 crate11 depot food (1)
+fly_to uav1 depot loc36 (1)
+deliver uav1 person86 loc36 crate11 food (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav2 crate15 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person10 loc5 crate15 food (1)
+fly_to uav1 depot loc117 (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc117 loc12 (1)
+pickup_crate uav2 crate53 depot medicine (1)
+fly_to uav1 loc12 loc3 (1)
+fly_to uav1 loc3 depot (1)
+pickup_crate uav1 crate52 depot medicine (1)
+fly_to uav2 depot loc78 (1)
+fly_to uav1 depot loc11 (1)
+fly_to uav2 loc78 depot (1)
+fly_to uav1 loc11 loc39 (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person12 loc94 crate53 medicine (1)
+fly_to uav1 loc39 depot (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person21 loc105 crate52 medicine (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate51 depot medicine (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person41 loc28 crate51 medicine (1)
+fly_to uav1 loc105 loc90 (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav2 crate62 depot medicine (1)
+fly_to uav1 loc90 depot (1)
+fly_to uav2 depot loc105 (1)
+pickup_crate uav1 crate41 depot food (1)
+deliver uav2 person91 loc105 crate62 medicine (1)
+fly_to uav1 depot loc40 (1)
+deliver uav1 person40 loc40 crate41 food (1)
+fly_to uav1 loc40 loc59 (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate54 depot medicine (1)
+fly_to uav2 depot loc17 (1)
+deliver uav2 person6 loc17 crate54 medicine (1)
+fly_to uav2 loc17 depot (1)
+fly_to uav1 loc59 depot (1)
+pickup_crate uav2 crate57 depot medicine (1)
+fly_to uav2 depot loc41 (1)
+deliver uav2 person38 loc41 crate57 medicine (1)
+fly_to uav2 loc41 depot (1)
+fly_to uav2 depot loc71 (1)
+fly_to uav1 depot loc92 (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate83 depot medicine (1)
+fly_to uav1 loc92 depot (1)
+fly_to uav2 depot loc48 (1)
+fly_to uav1 depot loc67 (1)
+fly_to uav1 loc67 loc63 (1)
+deliver uav2 person30 loc48 crate83 medicine (1)
+fly_to uav2 loc48 depot (1)
+fly_to uav1 loc63 depot (1)
+fly_to uav2 depot loc78 (1)
+fly_to uav1 depot loc71 (1)
+fly_to uav2 loc78 depot (1)
+pickup_crate uav2 crate58 depot medicine (1)
+fly_to uav2 depot loc45 (1)
+deliver uav2 person37 loc45 crate58 medicine (1)
+fly_to uav2 loc45 depot (1)
+fly_to uav1 loc71 depot (1)
+pickup_crate uav2 crate59 depot medicine (1)
+fly_to uav1 depot loc92 (1)
+fly_to uav2 depot loc48 (1)
+deliver uav2 person71 loc48 crate59 medicine (1)
+fly_to uav2 loc48 depot (1)
+fly_to uav1 loc92 depot (1)
+pickup_crate uav2 crate63 depot medicine (1)
+fly_to uav1 depot loc5 (1)
+fly_to uav2 depot loc90 (1)
+deliver uav2 person85 loc90 crate63 medicine (1)
+fly_to uav2 loc90 depot (1)
+fly_to uav1 loc5 depot (1)
+fly_to uav2 depot loc89 (1)
+fly_to uav1 depot loc82 (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav2 crate16 depot food (1)
+fly_to uav2 depot loc78 (1)
+deliver uav2 person95 loc78 crate16 food (1)
+fly_to uav2 loc78 depot (1)
+fly_to uav1 loc82 depot (1)
+fly_to uav2 depot loc94 (1)
+pickup_crate uav1 crate65 depot medicine (1)
+fly_to uav1 depot loc40 (1)
+deliver uav1 person40 loc40 crate65 medicine (1)
+fly_to uav2 loc94 depot (1)
+fly_to uav1 loc40 loc74 (1)
+fly_to uav1 loc74 depot (1)
+pickup_crate uav2 crate19 depot food (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person12 loc94 crate19 food (1)
+fly_to uav1 depot loc82 (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate20 depot food (1)
+fly_to uav2 depot loc26 (1)
+deliver uav2 person29 loc26 crate20 food (1)
+fly_to uav1 loc82 loc17 (1)
+fly_to uav2 loc26 depot (1)
+pickup_crate uav2 crate21 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person33 loc5 crate21 food (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav2 crate22 depot food (1)
+pickup_crate uav1 crate66 depot medicine (1)
+fly_to uav2 depot loc82 (1)
+deliver uav2 person25 loc82 crate22 food (1)
+fly_to uav2 loc82 depot (1)
+pickup_crate uav2 crate23 depot food (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person50 loc28 crate23 food (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav2 crate24 depot food (1)
+fly_to uav2 depot loc17 (1)
+deliver uav2 person6 loc17 crate24 food (1)
+fly_to uav1 depot loc26 (1)
+deliver uav1 person66 loc26 crate66 medicine (1)
+fly_to uav2 loc17 depot (1)
+fly_to uav1 loc26 depot (1)
+pickup_crate uav2 crate68 depot medicine (1)
+pickup_crate uav1 crate25 depot food (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person7 loc89 crate68 medicine (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav2 crate69 depot medicine (1)
+fly_to uav1 depot loc92 (1)
+deliver uav1 person89 loc92 crate25 food (1)
+fly_to uav1 loc92 depot (1)
+fly_to uav2 depot loc59 (1)
+deliver uav2 person80 loc59 crate69 medicine (1)
+fly_to uav2 loc59 depot (1)
+pickup_crate uav2 crate26 depot food (1)
+pickup_crate uav1 crate72 depot medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person62 loc57 crate26 food (1)
+fly_to uav2 loc57 depot (1)
+pickup_crate uav2 crate32 depot food (1)
+fly_to uav1 depot loc98 (1)
+deliver uav1 person15 loc98 crate72 medicine (1)
+fly_to uav1 loc98 depot (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person61 loc89 crate32 food (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav2 crate76 depot medicine (1)
+pickup_crate uav1 crate33 depot food (1)
+fly_to uav2 depot loc71 (1)
+deliver uav2 person92 loc71 crate76 medicine (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate79 depot medicine (1)
+fly_to uav2 depot loc70 (1)
+deliver uav2 person70 loc70 crate79 medicine (1)
+fly_to uav2 loc70 depot (1)
+fly_to uav1 depot loc17 (1)
+deliver uav1 person53 loc17 crate33 food (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav2 crate81 depot medicine (1)
+pickup_crate uav1 crate36 depot food (1)
+fly_to uav2 depot loc105 (1)
+deliver uav2 person67 loc105 crate81 medicine (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate87 depot medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person58 loc57 crate87 medicine (1)
+fly_to uav2 loc57 depot (1)
+fly_to uav1 depot loc94 (1)
+deliver uav1 person49 loc94 crate36 food (1)
+fly_to uav1 loc94 depot (1)
+pickup_crate uav2 crate88 depot medicine (1)
+pickup_crate uav1 crate40 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person77 loc5 crate88 medicine (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav2 crate90 depot medicine (1)
+fly_to uav2 depot loc26 (1)
+deliver uav2 person29 loc26 crate90 medicine (1)
+fly_to uav2 loc26 depot (1)
+pickup_crate uav2 crate94 depot medicine (1)
+fly_to uav2 depot loc111 (1)
+deliver uav2 person39 loc111 crate94 medicine (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate95 depot medicine (1)
+fly_to uav2 depot loc117 (1)
+deliver uav2 person79 loc117 crate95 medicine (1)
+fly_to uav2 loc117 depot (1)
+fly_to uav1 depot loc116 (1)
+deliver uav1 person54 loc116 crate40 food (1)
+fly_to uav1 loc116 depot (1)
+pickup_crate uav2 crate96 depot medicine (1)
+fly_to uav2 depot loc102 (1)
+deliver uav2 person31 loc102 crate96 medicine (1)
+fly_to uav2 loc102 depot (1)
+Plan length: 624 step(s).
+Plan cost: 624.
+plan_id: 1
+fly_to uav2 depot loc72 (1)
+fly_to uav1 depot loc108 (1)
+fly_to uav2 loc72 loc56 (1)
+fly_to uav1 loc108 loc59 (1)
+fly_to uav1 loc59 loc99 (1)
+fly_to uav2 loc56 depot (1)
+pickup_crate uav2 crate89 depot medicine (1)
+fly_to uav1 loc99 depot (1)
+pickup_crate uav1 crate70 depot medicine (1)
+fly_to uav1 depot loc16 (1)
+deliver uav1 person20 loc16 crate70 medicine (1)
+fly_to uav1 loc16 depot (1)
+fly_to uav2 depot loc108 (1)
+deliver uav2 person9 loc108 crate89 medicine (1)
+pickup_crate uav1 crate1 depot food (1)
+fly_to uav1 depot loc103 (1)
+deliver uav1 person64 loc103 crate1 food (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav1 loc103 depot (1)
+fly_to uav2 depot loc105 (1)
+pickup_crate uav1 crate2 depot food (1)
+fly_to uav1 depot loc114 (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate42 depot medicine (1)
+deliver uav1 person88 loc114 crate2 food (1)
+fly_to uav1 loc114 depot (1)
+pickup_crate uav1 crate38 depot food (1)
+fly_to uav1 depot loc59 (1)
+deliver uav1 person97 loc59 crate38 food (1)
+fly_to uav2 depot loc43 (1)
+deliver uav2 person83 loc43 crate42 medicine (1)
+fly_to uav1 loc59 loc102 (1)
+fly_to uav2 loc43 loc71 (1)
+fly_to uav1 loc102 loc105 (1)
+fly_to uav1 loc105 loc67 (1)
+fly_to uav1 loc67 loc2 (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate73 depot medicine (1)
+fly_to uav1 loc2 depot (1)
+pickup_crate uav1 crate45 depot medicine (1)
+fly_to uav1 depot loc115 (1)
+fly_to uav2 depot loc5 (1)
+deliver uav1 person44 loc115 crate45 medicine (1)
+fly_to uav1 loc115 depot (1)
+deliver uav2 person33 loc5 crate73 medicine (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 depot loc39 (1)
+fly_to uav2 depot loc77 (1)
+fly_to uav1 loc39 loc10 (1)
+fly_to uav2 loc77 depot (1)
+fly_to uav2 depot loc72 (1)
+fly_to uav1 loc10 loc68 (1)
+fly_to uav1 loc68 loc51 (1)
+fly_to uav1 loc51 loc16 (1)
+fly_to uav2 loc72 depot (1)
+pickup_crate uav2 crate37 depot food (1)
+fly_to uav1 loc16 depot (1)
+pickup_crate uav1 crate10 depot food (1)
+fly_to uav2 depot loc117 (1)
+fly_to uav1 depot loc31 (1)
+fly_to uav2 loc117 depot (1)
+deliver uav1 person60 loc31 crate10 food (1)
+fly_to uav1 loc31 depot (1)
+fly_to uav2 depot loc41 (1)
+deliver uav2 person38 loc41 crate37 food (1)
+fly_to uav2 loc41 depot (1)
+fly_to uav2 depot loc102 (1)
+fly_to uav1 depot loc48 (1)
+fly_to uav1 loc48 loc47 (1)
+fly_to uav2 loc102 depot (1)
+pickup_crate uav2 crate35 depot food (1)
+fly_to uav1 loc47 depot (1)
+fly_to uav2 depot loc72 (1)
+pickup_crate uav1 crate30 depot food (1)
+fly_to uav2 loc72 depot (1)
+fly_to uav1 depot loc7 (1)
+deliver uav1 person63 loc7 crate30 food (1)
+fly_to uav1 loc7 depot (1)
+fly_to uav2 depot loc72 (1)
+deliver uav2 person90 loc72 crate35 food (1)
+fly_to uav1 depot loc56 (1)
+fly_to uav2 loc72 depot (1)
+fly_to uav2 depot loc7 (1)
+fly_to uav2 loc7 loc20 (1)
+fly_to uav1 loc56 loc14 (1)
+fly_to uav2 loc20 depot (1)
+pickup_crate uav2 crate64 depot medicine (1)
+fly_to uav1 loc14 loc36 (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav1 crate61 depot medicine (1)
+fly_to uav1 depot loc18 (1)
+deliver uav1 person84 loc18 crate61 medicine (1)
+fly_to uav1 loc18 depot (1)
+fly_to uav2 depot loc56 (1)
+deliver uav2 person2 loc56 crate64 medicine (1)
+fly_to uav2 loc56 depot (1)
+fly_to uav2 depot loc28 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc28 depot (1)
+fly_to uav2 depot loc76 (1)
+fly_to uav2 loc76 loc25 (1)
+fly_to uav2 loc25 loc59 (1)
+fly_to uav1 loc77 loc60 (1)
+fly_to uav2 loc59 depot (1)
+fly_to uav1 loc60 loc97 (1)
+pickup_crate uav2 crate85 depot medicine (1)
+fly_to uav1 loc97 depot (1)
+pickup_crate uav1 crate77 depot medicine (1)
+fly_to uav1 depot loc22 (1)
+deliver uav1 person17 loc22 crate77 medicine (1)
+fly_to uav1 loc22 depot (1)
+fly_to uav2 depot loc112 (1)
+deliver uav2 person19 loc112 crate85 medicine (1)
+fly_to uav1 depot loc104 (1)
+fly_to uav2 loc112 loc8 (1)
+fly_to uav1 loc104 loc21 (1)
+fly_to uav2 loc8 loc87 (1)
+fly_to uav2 loc87 loc109 (1)
+fly_to uav1 loc21 loc66 (1)
+fly_to uav2 loc109 depot (1)
+pickup_crate uav2 crate74 depot medicine (1)
+fly_to uav1 loc66 depot (1)
+pickup_crate uav1 crate93 depot medicine (1)
+fly_to uav1 depot loc35 (1)
+deliver uav1 person56 loc35 crate93 medicine (1)
+fly_to uav1 loc35 depot (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person52 loc28 crate74 medicine (1)
+fly_to uav1 depot loc102 (1)
+fly_to uav2 loc28 loc82 (1)
+fly_to uav1 loc102 loc89 (1)
+fly_to uav1 loc89 loc5 (1)
+fly_to uav1 loc5 loc11 (1)
+fly_to uav2 loc82 depot (1)
+pickup_crate uav2 crate67 depot medicine (1)
+fly_to uav1 loc11 depot (1)
+pickup_crate uav1 crate56 depot medicine (1)
+fly_to uav1 depot loc44 (1)
+deliver uav1 person26 loc44 crate56 medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person62 loc57 crate67 medicine (1)
+fly_to uav2 loc57 depot (1)
+fly_to uav1 loc44 depot (1)
+fly_to uav2 depot loc98 (1)
+fly_to uav1 depot loc28 (1)
+fly_to uav2 loc98 depot (1)
+pickup_crate uav2 crate75 depot medicine (1)
+fly_to uav1 loc28 depot (1)
+pickup_crate uav1 crate47 depot medicine (1)
+fly_to uav1 depot loc62 (1)
+deliver uav1 person47 loc62 crate47 medicine (1)
+fly_to uav1 loc62 depot (1)
+fly_to uav2 depot loc40 (1)
+deliver uav2 person72 loc40 crate75 medicine (1)
+fly_to uav2 loc40 depot (1)
+fly_to uav2 depot loc89 (1)
+fly_to uav1 depot loc40 (1)
+fly_to uav1 loc40 loc15 (1)
+fly_to uav2 loc89 depot (1)
+fly_to uav2 depot loc43 (1)
+fly_to uav1 loc15 loc32 (1)
+fly_to uav2 loc43 depot (1)
+fly_to uav2 depot loc114 (1)
+fly_to uav2 loc114 loc80 (1)
+fly_to uav1 loc32 loc36 (1)
+fly_to uav2 loc80 depot (1)
+pickup_crate uav2 crate28 depot food (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav1 crate12 depot food (1)
+fly_to uav2 depot loc40 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc40 depot (1)
+deliver uav1 person3 loc77 crate12 food (1)
+fly_to uav2 depot loc102 (1)
+deliver uav2 person31 loc102 crate28 food (1)
+fly_to uav1 loc77 loc71 (1)
+fly_to uav2 loc102 loc17 (1)
+fly_to uav2 loc17 loc85 (1)
+fly_to uav1 loc71 loc117 (1)
+fly_to uav2 loc85 depot (1)
+pickup_crate uav2 crate17 depot food (1)
+fly_to uav1 loc117 loc68 (1)
+fly_to uav1 loc68 depot (1)
+fly_to uav2 depot loc94 (1)
+pickup_crate uav1 crate29 depot food (1)
+fly_to uav2 loc94 depot (1)
+fly_to uav1 depot loc53 (1)
+deliver uav1 person45 loc53 crate29 food (1)
+fly_to uav1 loc53 depot (1)
+fly_to uav2 depot loc104 (1)
+deliver uav2 person46 loc104 crate17 food (1)
+fly_to uav2 loc104 depot (1)
+pickup_crate uav2 crate3 depot food (1)
+fly_to uav2 depot loc112 (1)
+deliver uav2 person19 loc112 crate3 food (1)
+fly_to uav2 loc112 depot (1)
+pickup_crate uav1 crate18 depot food (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person21 loc105 crate18 food (1)
+pickup_crate uav2 crate43 depot medicine (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person10 loc5 crate43 medicine (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc105 depot (1)
+fly_to uav2 depot loc105 (1)
+fly_to uav1 depot loc46 (1)
+fly_to uav2 loc105 depot (1)
+fly_to uav2 depot loc78 (1)
+fly_to uav2 loc78 loc100 (1)
+fly_to uav1 loc46 loc77 (1)
+fly_to uav2 loc100 depot (1)
+fly_to uav1 loc77 loc4 (1)
+pickup_crate uav2 crate6 depot food (1)
+fly_to uav1 loc4 depot (1)
+pickup_crate uav1 crate31 depot food (1)
+fly_to uav1 depot loc8 (1)
+deliver uav1 person13 loc8 crate31 food (1)
+fly_to uav1 loc8 depot (1)
+fly_to uav2 depot loc98 (1)
+deliver uav2 person15 loc98 crate6 food (1)
+fly_to uav2 loc98 depot (1)
+fly_to uav2 depot loc108 (1)
+fly_to uav1 depot loc40 (1)
+fly_to uav1 loc40 loc16 (1)
+fly_to uav1 loc16 loc82 (1)
+fly_to uav1 loc82 loc38 (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav1 loc38 loc104 (1)
+pickup_crate uav2 crate34 depot food (1)
+fly_to uav1 loc104 depot (1)
+pickup_crate uav1 crate27 depot food (1)
+fly_to uav2 depot loc77 (1)
+fly_to uav1 depot loc68 (1)
+fly_to uav2 loc77 depot (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person41 loc28 crate34 food (1)
+fly_to uav2 loc28 loc31 (1)
+fly_to uav2 loc31 depot (1)
+fly_to uav1 loc68 depot (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person91 loc105 crate27 food (1)
+fly_to uav1 loc105 depot (1)
+pickup_crate uav2 crate4 depot food (1)
+fly_to uav1 depot loc48 (1)
+fly_to uav2 depot loc77 (1)
+deliver uav2 person27 loc77 crate4 food (1)
+fly_to uav1 loc48 loc111 (1)
+fly_to uav2 loc77 loc26 (1)
+fly_to uav1 loc111 loc68 (1)
+fly_to uav2 loc26 depot (1)
+fly_to uav2 depot loc44 (1)
+fly_to uav1 loc68 loc4 (1)
+fly_to uav2 loc44 depot (1)
+pickup_crate uav2 crate84 depot medicine (1)
+fly_to uav1 loc4 depot (1)
+fly_to uav2 depot loc8 (1)
+pickup_crate uav1 crate91 depot medicine (1)
+fly_to uav2 loc8 depot (1)
+fly_to uav1 depot loc86 (1)
+deliver uav1 person22 loc86 crate91 medicine (1)
+fly_to uav1 loc86 depot (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person61 loc89 crate84 medicine (1)
+fly_to uav2 loc89 depot (1)
+fly_to uav2 depot loc5 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav2 crate14 depot food (1)
+fly_to uav1 loc77 depot (1)
+fly_to uav2 depot loc58 (1)
+pickup_crate uav1 crate9 depot food (1)
+fly_to uav2 loc58 depot (1)
+fly_to uav1 depot loc43 (1)
+deliver uav1 person83 loc43 crate9 food (1)
+fly_to uav1 loc43 depot (1)
+fly_to uav2 depot loc45 (1)
+deliver uav2 person37 loc45 crate14 food (1)
+fly_to uav2 loc45 depot (1)
+fly_to uav2 depot loc70 (1)
+fly_to uav1 depot loc57 (1)
+fly_to uav1 loc57 loc98 (1)
+fly_to uav2 loc70 loc111 (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate78 depot medicine (1)
+fly_to uav1 loc98 depot (1)
+fly_to uav2 depot loc2 (1)
+fly_to uav2 loc2 loc98 (1)
+pickup_crate uav1 crate92 depot medicine (1)
+fly_to uav2 loc98 depot (1)
+fly_to uav1 depot loc90 (1)
+deliver uav1 person78 loc90 crate92 medicine (1)
+fly_to uav2 depot loc72 (1)
+deliver uav2 person90 loc72 crate78 medicine (1)
+fly_to uav2 loc72 depot (1)
+fly_to uav1 loc90 depot (1)
+fly_to uav2 depot loc40 (1)
+fly_to uav1 depot loc17 (1)
+fly_to uav2 loc40 depot (1)
+fly_to uav1 loc17 loc113 (1)
+pickup_crate uav2 crate71 depot medicine (1)
+fly_to uav1 loc113 depot (1)
+fly_to uav2 depot loc92 (1)
+pickup_crate uav1 crate86 depot medicine (1)
+fly_to uav2 loc92 loc83 (1)
+fly_to uav2 loc83 depot (1)
+fly_to uav1 depot loc93 (1)
+deliver uav1 person43 loc93 crate86 medicine (1)
+fly_to uav1 loc93 depot (1)
+fly_to uav2 depot loc92 (1)
+deliver uav2 person89 loc92 crate71 medicine (1)
+fly_to uav2 loc92 depot (1)
+fly_to uav2 depot loc85 (1)
+fly_to uav1 depot loc77 (1)
+fly_to uav2 loc85 loc81 (1)
+fly_to uav1 loc77 loc45 (1)
+fly_to uav1 loc45 loc12 (1)
+fly_to uav2 loc81 depot (1)
+fly_to uav1 loc12 loc19 (1)
+fly_to uav2 depot loc102 (1)
+fly_to uav1 loc19 loc56 (1)
+fly_to uav1 loc56 loc68 (1)
+fly_to uav1 loc68 loc81 (1)
+fly_to uav2 loc102 depot (1)
+pickup_crate uav2 crate97 depot medicine (1)
+fly_to uav1 loc81 depot (1)
+fly_to uav2 depot loc71 (1)
+pickup_crate uav1 crate80 depot medicine (1)
+fly_to uav2 loc71 depot (1)
+fly_to uav1 depot loc107 (1)
+deliver uav1 person75 loc107 crate80 medicine (1)
+fly_to uav1 loc107 depot (1)
+fly_to uav2 depot loc71 (1)
+deliver uav2 person35 loc71 crate97 medicine (1)
+fly_to uav2 loc71 depot (1)
+fly_to uav2 depot loc94 (1)
+pickup_crate uav1 crate44 depot medicine (1)
+fly_to uav1 depot loc44 (1)
+deliver uav1 person65 loc44 crate44 medicine (1)
+fly_to uav1 loc44 depot (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate46 depot medicine (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person49 loc94 crate46 medicine (1)
+fly_to uav2 loc94 depot (1)
+fly_to uav2 depot loc90 (1)
+fly_to uav1 depot loc17 (1)
+fly_to uav2 loc90 depot (1)
+pickup_crate uav2 crate82 depot medicine (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav1 crate55 depot medicine (1)
+fly_to uav1 depot loc116 (1)
+deliver uav1 person54 loc116 crate55 medicine (1)
+fly_to uav2 depot loc108 (1)
+deliver uav2 person81 loc108 crate82 medicine (1)
+fly_to uav1 loc116 loc36 (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav2 depot loc21 (1)
+fly_to uav1 loc36 loc83 (1)
+fly_to uav1 loc83 loc116 (1)
+fly_to uav1 loc116 loc65 (1)
+fly_to uav1 loc65 loc1 (1)
+fly_to uav2 loc21 depot (1)
+fly_to uav1 loc1 loc32 (1)
+pickup_crate uav2 crate39 depot food (1)
+fly_to uav1 loc32 depot (1)
+pickup_crate uav1 crate8 depot food (1)
+fly_to uav2 depot loc70 (1)
+fly_to uav1 depot loc94 (1)
+fly_to uav1 loc94 loc49 (1)
+fly_to uav2 loc70 loc108 (1)
+deliver uav2 person9 loc108 crate39 food (1)
+fly_to uav2 loc108 loc91 (1)
+fly_to uav2 loc91 depot (1)
+fly_to uav1 loc49 depot (1)
+fly_to uav1 depot loc70 (1)
+deliver uav1 person70 loc70 crate8 food (1)
+fly_to uav1 loc70 depot (1)
+fly_to uav2 depot loc111 (1)
+fly_to uav1 depot loc48 (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate48 depot medicine (1)
+fly_to uav2 depot loc90 (1)
+deliver uav2 person1 loc90 crate48 medicine (1)
+fly_to uav1 loc48 loc26 (1)
+fly_to uav2 loc90 depot (1)
+fly_to uav1 loc26 depot (1)
+fly_to uav2 depot loc40 (1)
+fly_to uav1 depot loc70 (1)
+fly_to uav1 loc70 loc30 (1)
+fly_to uav2 loc40 loc66 (1)
+fly_to uav1 loc30 loc92 (1)
+fly_to uav2 loc66 depot (1)
+pickup_crate uav2 crate13 depot food (1)
+fly_to uav1 loc92 depot (1)
+pickup_crate uav1 crate7 depot food (1)
+fly_to uav1 depot loc77 (1)
+deliver uav1 person68 loc77 crate7 food (1)
+fly_to uav1 loc77 depot (1)
+fly_to uav2 depot loc111 (1)
+deliver uav2 person39 loc111 crate13 food (1)
+fly_to uav2 loc111 depot (1)
+fly_to uav2 depot loc70 (1)
+pickup_crate uav1 crate49 depot medicine (1)
+fly_to uav1 depot loc70 (1)
+fly_to uav2 loc70 depot (1)
+deliver uav1 person69 loc70 crate49 medicine (1)
+fly_to uav1 loc70 depot (1)
+fly_to uav2 depot loc5 (1)
+pickup_crate uav1 crate5 depot food (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 depot loc5 (1)
+deliver uav1 person77 loc5 crate5 food (1)
+fly_to uav1 loc5 depot (1)
+fly_to uav2 depot loc70 (1)
+pickup_crate uav1 crate50 depot medicine (1)
+fly_to uav2 loc70 depot (1)
+fly_to uav1 depot loc94 (1)
+fly_to uav2 depot loc68 (1)
+fly_to uav1 loc94 loc36 (1)
+fly_to uav2 loc68 depot (1)
+pickup_crate uav2 crate60 depot medicine (1)
+deliver uav1 person86 loc36 crate50 medicine (1)
+fly_to uav2 depot loc85 (1)
+deliver uav2 person5 loc85 crate60 medicine (1)
+fly_to uav2 loc85 depot (1)
+fly_to uav1 loc36 depot (1)
+fly_to uav2 depot loc5 (1)
+pickup_crate uav1 crate11 depot food (1)
+fly_to uav1 depot loc36 (1)
+deliver uav1 person86 loc36 crate11 food (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav2 crate15 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person10 loc5 crate15 food (1)
+fly_to uav1 depot loc117 (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc117 loc12 (1)
+pickup_crate uav2 crate53 depot medicine (1)
+fly_to uav1 loc12 loc3 (1)
+fly_to uav1 loc3 depot (1)
+pickup_crate uav1 crate52 depot medicine (1)
+fly_to uav2 depot loc78 (1)
+fly_to uav1 depot loc11 (1)
+fly_to uav2 loc78 depot (1)
+fly_to uav1 loc11 loc39 (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person12 loc94 crate53 medicine (1)
+fly_to uav1 loc39 depot (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person21 loc105 crate52 medicine (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate51 depot medicine (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person41 loc28 crate51 medicine (1)
+fly_to uav1 loc105 loc90 (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav2 crate62 depot medicine (1)
+fly_to uav1 loc90 depot (1)
+fly_to uav2 depot loc105 (1)
+pickup_crate uav1 crate41 depot food (1)
+deliver uav2 person91 loc105 crate62 medicine (1)
+fly_to uav1 depot loc40 (1)
+deliver uav1 person40 loc40 crate41 food (1)
+fly_to uav1 loc40 loc59 (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate54 depot medicine (1)
+fly_to uav2 depot loc17 (1)
+deliver uav2 person6 loc17 crate54 medicine (1)
+fly_to uav2 loc17 depot (1)
+fly_to uav1 loc59 depot (1)
+pickup_crate uav2 crate57 depot medicine (1)
+fly_to uav2 depot loc41 (1)
+deliver uav2 person38 loc41 crate57 medicine (1)
+fly_to uav2 loc41 depot (1)
+fly_to uav2 depot loc71 (1)
+fly_to uav1 depot loc92 (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate83 depot medicine (1)
+fly_to uav1 loc92 depot (1)
+fly_to uav2 depot loc48 (1)
+fly_to uav1 depot loc67 (1)
+fly_to uav1 loc67 loc63 (1)
+deliver uav2 person30 loc48 crate83 medicine (1)
+fly_to uav2 loc48 depot (1)
+fly_to uav1 loc63 depot (1)
+fly_to uav2 depot loc78 (1)
+fly_to uav1 depot loc71 (1)
+fly_to uav2 loc78 depot (1)
+pickup_crate uav2 crate58 depot medicine (1)
+fly_to uav2 depot loc45 (1)
+deliver uav2 person37 loc45 crate58 medicine (1)
+fly_to uav2 loc45 depot (1)
+fly_to uav1 loc71 depot (1)
+pickup_crate uav2 crate59 depot medicine (1)
+fly_to uav1 depot loc92 (1)
+fly_to uav2 depot loc48 (1)
+deliver uav2 person71 loc48 crate59 medicine (1)
+fly_to uav2 loc48 depot (1)
+fly_to uav1 loc92 depot (1)
+pickup_crate uav2 crate63 depot medicine (1)
+fly_to uav1 depot loc5 (1)
+fly_to uav2 depot loc90 (1)
+deliver uav2 person85 loc90 crate63 medicine (1)
+fly_to uav2 loc90 depot (1)
+fly_to uav1 loc5 depot (1)
+fly_to uav2 depot loc89 (1)
+fly_to uav1 depot loc82 (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav2 crate16 depot food (1)
+fly_to uav2 depot loc78 (1)
+deliver uav2 person95 loc78 crate16 food (1)
+fly_to uav2 loc78 depot (1)
+fly_to uav1 loc82 depot (1)
+fly_to uav2 depot loc94 (1)
+pickup_crate uav1 crate65 depot medicine (1)
+fly_to uav1 depot loc40 (1)
+deliver uav1 person40 loc40 crate65 medicine (1)
+fly_to uav2 loc94 depot (1)
+fly_to uav1 loc40 loc74 (1)
+fly_to uav1 loc74 depot (1)
+pickup_crate uav2 crate19 depot food (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person12 loc94 crate19 food (1)
+fly_to uav1 depot loc82 (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate20 depot food (1)
+fly_to uav2 depot loc26 (1)
+deliver uav2 person29 loc26 crate20 food (1)
+fly_to uav1 loc82 loc17 (1)
+fly_to uav2 loc26 depot (1)
+pickup_crate uav2 crate21 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person33 loc5 crate21 food (1)
+fly_to uav2 loc5 depot (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav2 crate22 depot food (1)
+pickup_crate uav1 crate66 depot medicine (1)
+fly_to uav2 depot loc82 (1)
+deliver uav2 person25 loc82 crate22 food (1)
+fly_to uav2 loc82 depot (1)
+pickup_crate uav2 crate23 depot food (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person50 loc28 crate23 food (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav2 crate24 depot food (1)
+fly_to uav2 depot loc17 (1)
+deliver uav2 person6 loc17 crate24 food (1)
+fly_to uav1 depot loc26 (1)
+deliver uav1 person66 loc26 crate66 medicine (1)
+fly_to uav2 loc17 depot (1)
+fly_to uav1 loc26 depot (1)
+pickup_crate uav2 crate68 depot medicine (1)
+pickup_crate uav1 crate25 depot food (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person7 loc89 crate68 medicine (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav2 crate69 depot medicine (1)
+fly_to uav1 depot loc92 (1)
+deliver uav1 person89 loc92 crate25 food (1)
+fly_to uav1 loc92 depot (1)
+fly_to uav2 depot loc59 (1)
+deliver uav2 person80 loc59 crate69 medicine (1)
+fly_to uav2 loc59 depot (1)
+pickup_crate uav2 crate26 depot food (1)
+pickup_crate uav1 crate72 depot medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person62 loc57 crate26 food (1)
+fly_to uav2 loc57 depot (1)
+pickup_crate uav2 crate32 depot food (1)
+fly_to uav1 depot loc98 (1)
+deliver uav1 person15 loc98 crate72 medicine (1)
+fly_to uav1 loc98 depot (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person61 loc89 crate32 food (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav2 crate76 depot medicine (1)
+pickup_crate uav1 crate33 depot food (1)
+fly_to uav2 depot loc71 (1)
+deliver uav2 person92 loc71 crate76 medicine (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate79 depot medicine (1)
+fly_to uav2 depot loc70 (1)
+deliver uav2 person70 loc70 crate79 medicine (1)
+fly_to uav2 loc70 depot (1)
+fly_to uav1 depot loc17 (1)
+deliver uav1 person53 loc17 crate33 food (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav2 crate81 depot medicine (1)
+pickup_crate uav1 crate36 depot food (1)
+fly_to uav2 depot loc105 (1)
+deliver uav2 person67 loc105 crate81 medicine (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate87 depot medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person58 loc57 crate87 medicine (1)
+fly_to uav2 loc57 depot (1)
+fly_to uav1 depot loc94 (1)
+deliver uav1 person49 loc94 crate36 food (1)
+fly_to uav1 loc94 depot (1)
+pickup_crate uav2 crate88 depot medicine (1)
+pickup_crate uav1 crate40 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person77 loc5 crate88 medicine (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav2 crate90 depot medicine (1)
+fly_to uav2 depot loc26 (1)
+deliver uav2 person29 loc26 crate90 medicine (1)
+fly_to uav2 loc26 depot (1)
+pickup_crate uav2 crate94 depot medicine (1)
+fly_to uav2 depot loc111 (1)
+deliver uav2 person39 loc111 crate94 medicine (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate95 depot medicine (1)
+fly_to uav2 depot loc117 (1)
+deliver uav2 person79 loc117 crate95 medicine (1)
+fly_to uav2 loc117 depot (1)
+fly_to uav1 depot loc116 (1)
+deliver uav1 person54 loc116 crate40 food (1)
+fly_to uav1 loc116 depot (1)
+pickup_crate uav2 crate96 depot medicine (1)
+fly_to uav2 depot loc102 (1)
+deliver uav2 person31 loc102 crate96 medicine (1)
+fly_to uav2 loc102 depot (1)
+Plan length: 624 step(s).
+Plan cost: 624.
+4445; 4058;357
+cmd: pwd; ulimit -v 2000000;ulimit -t 357;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_1min--1 output_jasper_1min-output_bound -o output_jasper_1min-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_1min_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab1
+run system error or terminated by time or memory!
+**************end aras***************
+pickup_crate uav2 crate89 depot medicine (1)
+pickup_crate uav1 crate70 depot medicine (1)
+fly_to uav1 depot loc16 (1)
+deliver uav1 person20 loc16 crate70 medicine (1)
+fly_to uav2 depot loc108 (1)
+fly_to uav1 loc16 depot (1)
+deliver uav2 person9 loc108 crate89 medicine (1)
+pickup_crate uav1 crate1 depot food (1)
+fly_to uav1 depot loc103 (1)
+deliver uav1 person64 loc103 crate1 food (1)
+fly_to uav1 loc103 depot (1)
+pickup_crate uav1 crate2 depot food (1)
+fly_to uav2 loc108 depot (1)
+fly_to uav1 depot loc114 (1)
+deliver uav1 person88 loc114 crate2 food (1)
+pickup_crate uav2 crate42 depot medicine (1)
+fly_to uav1 loc114 depot (1)
+pickup_crate uav1 crate38 depot food (1)
+fly_to uav1 depot loc59 (1)
+deliver uav1 person97 loc59 crate38 food (1)
+fly_to uav2 depot loc43 (1)
+fly_to uav1 loc59 depot (1)
+deliver uav2 person83 loc43 crate42 medicine (1)
+fly_to uav2 loc43 depot (1)
+pickup_crate uav1 crate45 depot medicine (1)
+pickup_crate uav2 crate73 depot medicine (1)
+fly_to uav1 depot loc115 (1)
+fly_to uav2 depot loc5 (1)
+deliver uav1 person44 loc115 crate45 medicine (1)
+fly_to uav1 loc115 depot (1)
+deliver uav2 person33 loc5 crate73 medicine (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav1 crate10 depot food (1)
+pickup_crate uav2 crate37 depot food (1)
+fly_to uav1 depot loc31 (1)
+deliver uav1 person60 loc31 crate10 food (1)
+fly_to uav1 loc31 depot (1)
+fly_to uav2 depot loc41 (1)
+deliver uav2 person38 loc41 crate37 food (1)
+fly_to uav2 loc41 depot (1)
+pickup_crate uav1 crate30 depot food (1)
+pickup_crate uav2 crate35 depot food (1)
+fly_to uav1 depot loc7 (1)
+deliver uav1 person63 loc7 crate30 food (1)
+fly_to uav1 loc7 depot (1)
+fly_to uav2 depot loc72 (1)
+deliver uav2 person90 loc72 crate35 food (1)
+fly_to uav2 loc72 depot (1)
+pickup_crate uav1 crate61 depot medicine (1)
+pickup_crate uav2 crate64 depot medicine (1)
+fly_to uav1 depot loc18 (1)
+deliver uav1 person84 loc18 crate61 medicine (1)
+fly_to uav1 loc18 depot (1)
+fly_to uav2 depot loc56 (1)
+deliver uav2 person2 loc56 crate64 medicine (1)
+fly_to uav2 loc56 depot (1)
+pickup_crate uav1 crate77 depot medicine (1)
+pickup_crate uav2 crate85 depot medicine (1)
+fly_to uav1 depot loc22 (1)
+deliver uav1 person17 loc22 crate77 medicine (1)
+fly_to uav1 loc22 depot (1)
+fly_to uav2 depot loc112 (1)
+deliver uav2 person19 loc112 crate85 medicine (1)
+fly_to uav2 loc112 depot (1)
+pickup_crate uav1 crate93 depot medicine (1)
+pickup_crate uav2 crate74 depot medicine (1)
+fly_to uav1 depot loc35 (1)
+deliver uav1 person56 loc35 crate93 medicine (1)
+fly_to uav1 loc35 depot (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person52 loc28 crate74 medicine (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav1 crate56 depot medicine (1)
+pickup_crate uav2 crate67 depot medicine (1)
+fly_to uav1 depot loc44 (1)
+deliver uav1 person26 loc44 crate56 medicine (1)
+fly_to uav1 loc44 depot (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person62 loc57 crate67 medicine (1)
+fly_to uav2 loc57 depot (1)
+pickup_crate uav1 crate47 depot medicine (1)
+pickup_crate uav2 crate75 depot medicine (1)
+fly_to uav1 depot loc62 (1)
+deliver uav1 person47 loc62 crate47 medicine (1)
+fly_to uav1 loc62 depot (1)
+fly_to uav2 depot loc40 (1)
+deliver uav2 person72 loc40 crate75 medicine (1)
+fly_to uav2 loc40 depot (1)
+pickup_crate uav2 crate28 depot food (1)
+pickup_crate uav1 crate12 depot food (1)
+fly_to uav1 depot loc77 (1)
+deliver uav1 person3 loc77 crate12 food (1)
+fly_to uav1 loc77 depot (1)
+fly_to uav2 depot loc102 (1)
+deliver uav2 person31 loc102 crate28 food (1)
+fly_to uav2 loc102 depot (1)
+pickup_crate uav1 crate29 depot food (1)
+pickup_crate uav2 crate17 depot food (1)
+fly_to uav1 depot loc53 (1)
+deliver uav1 person45 loc53 crate29 food (1)
+fly_to uav1 loc53 depot (1)
+fly_to uav2 depot loc104 (1)
+deliver uav2 person46 loc104 crate17 food (1)
+fly_to uav2 loc104 depot (1)
+pickup_crate uav2 crate3 depot food (1)
+fly_to uav2 depot loc112 (1)
+deliver uav2 person19 loc112 crate3 food (1)
+pickup_crate uav1 crate18 depot food (1)
+fly_to uav2 loc112 depot (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person21 loc105 crate18 food (1)
+fly_to uav1 loc105 depot (1)
+pickup_crate uav2 crate43 depot medicine (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person10 loc5 crate43 medicine (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav2 crate6 depot food (1)
+pickup_crate uav1 crate31 depot food (1)
+fly_to uav1 depot loc8 (1)
+deliver uav1 person13 loc8 crate31 food (1)
+fly_to uav1 loc8 depot (1)
+fly_to uav2 depot loc98 (1)
+deliver uav2 person15 loc98 crate6 food (1)
+fly_to uav2 loc98 depot (1)
+pickup_crate uav1 crate27 depot food (1)
+pickup_crate uav2 crate34 depot food (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person41 loc28 crate34 food (1)
+fly_to uav1 depot loc105 (1)
+fly_to uav2 loc28 depot (1)
+deliver uav1 person91 loc105 crate27 food (1)
+fly_to uav1 loc105 depot (1)
+pickup_crate uav2 crate4 depot food (1)
+fly_to uav2 depot loc77 (1)
+deliver uav2 person27 loc77 crate4 food (1)
+fly_to uav2 loc77 depot (1)
+pickup_crate uav1 crate91 depot medicine (1)
+pickup_crate uav2 crate84 depot medicine (1)
+fly_to uav1 depot loc86 (1)
+deliver uav1 person22 loc86 crate91 medicine (1)
+fly_to uav1 loc86 depot (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person61 loc89 crate84 medicine (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav1 crate9 depot food (1)
+pickup_crate uav2 crate14 depot food (1)
+fly_to uav1 depot loc43 (1)
+deliver uav1 person83 loc43 crate9 food (1)
+fly_to uav1 loc43 depot (1)
+fly_to uav2 depot loc45 (1)
+deliver uav2 person37 loc45 crate14 food (1)
+fly_to uav2 loc45 depot (1)
+pickup_crate uav1 crate92 depot medicine (1)
+pickup_crate uav2 crate78 depot medicine (1)
+fly_to uav1 depot loc90 (1)
+deliver uav1 person78 loc90 crate92 medicine (1)
+fly_to uav1 loc90 depot (1)
+fly_to uav2 depot loc72 (1)
+deliver uav2 person90 loc72 crate78 medicine (1)
+fly_to uav2 loc72 depot (1)
+pickup_crate uav1 crate86 depot medicine (1)
+pickup_crate uav2 crate71 depot medicine (1)
+fly_to uav1 depot loc93 (1)
+deliver uav1 person43 loc93 crate86 medicine (1)
+fly_to uav1 loc93 depot (1)
+fly_to uav2 depot loc92 (1)
+deliver uav2 person89 loc92 crate71 medicine (1)
+fly_to uav2 loc92 depot (1)
+pickup_crate uav1 crate80 depot medicine (1)
+pickup_crate uav2 crate97 depot medicine (1)
+fly_to uav1 depot loc107 (1)
+deliver uav1 person75 loc107 crate80 medicine (1)
+fly_to uav2 depot loc71 (1)
+fly_to uav1 loc107 depot (1)
+deliver uav2 person35 loc71 crate97 medicine (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav1 crate44 depot medicine (1)
+fly_to uav1 depot loc44 (1)
+deliver uav1 person65 loc44 crate44 medicine (1)
+fly_to uav1 loc44 depot (1)
+pickup_crate uav2 crate46 depot medicine (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person49 loc94 crate46 medicine (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav1 crate55 depot medicine (1)
+pickup_crate uav2 crate82 depot medicine (1)
+fly_to uav1 depot loc116 (1)
+deliver uav1 person54 loc116 crate55 medicine (1)
+fly_to uav2 depot loc108 (1)
+fly_to uav1 loc116 depot (1)
+deliver uav2 person81 loc108 crate82 medicine (1)
+fly_to uav2 loc108 depot (1)
+pickup_crate uav1 crate8 depot food (1)
+pickup_crate uav2 crate39 depot food (1)
+fly_to uav2 depot loc108 (1)
+deliver uav2 person9 loc108 crate39 food (1)
+fly_to uav1 depot loc70 (1)
+fly_to uav2 loc108 depot (1)
+deliver uav1 person70 loc70 crate8 food (1)
+fly_to uav1 loc70 depot (1)
+pickup_crate uav2 crate48 depot medicine (1)
+fly_to uav2 depot loc90 (1)
+deliver uav2 person1 loc90 crate48 medicine (1)
+fly_to uav2 loc90 depot (1)
+pickup_crate uav1 crate7 depot food (1)
+pickup_crate uav2 crate13 depot food (1)
+fly_to uav1 depot loc77 (1)
+deliver uav1 person68 loc77 crate7 food (1)
+fly_to uav1 loc77 depot (1)
+fly_to uav2 depot loc111 (1)
+deliver uav2 person39 loc111 crate13 food (1)
+pickup_crate uav1 crate49 depot medicine (1)
+fly_to uav2 loc111 depot (1)
+fly_to uav1 depot loc70 (1)
+deliver uav1 person69 loc70 crate49 medicine (1)
+fly_to uav1 loc70 depot (1)
+pickup_crate uav1 crate5 depot food (1)
+fly_to uav1 depot loc5 (1)
+deliver uav1 person77 loc5 crate5 food (1)
+fly_to uav1 loc5 depot (1)
+pickup_crate uav1 crate50 depot medicine (1)
+fly_to uav1 depot loc36 (1)
+deliver uav1 person86 loc36 crate50 medicine (1)
+pickup_crate uav2 crate60 depot medicine (1)
+fly_to uav1 loc36 depot (1)
+fly_to uav2 depot loc85 (1)
+deliver uav2 person5 loc85 crate60 medicine (1)
+pickup_crate uav1 crate11 depot food (1)
+fly_to uav2 loc85 depot (1)
+fly_to uav1 depot loc36 (1)
+deliver uav1 person86 loc36 crate11 food (1)
+fly_to uav1 loc36 depot (1)
+pickup_crate uav2 crate15 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person10 loc5 crate15 food (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav1 crate52 depot medicine (1)
+pickup_crate uav2 crate53 depot medicine (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person12 loc94 crate53 medicine (1)
+fly_to uav1 depot loc105 (1)
+deliver uav1 person21 loc105 crate52 medicine (1)
+fly_to uav1 loc105 depot (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate51 depot medicine (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person41 loc28 crate51 medicine (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav2 crate62 depot medicine (1)
+fly_to uav2 depot loc105 (1)
+deliver uav2 person91 loc105 crate62 medicine (1)
+pickup_crate uav1 crate41 depot food (1)
+fly_to uav1 depot loc40 (1)
+deliver uav1 person40 loc40 crate41 food (1)
+fly_to uav1 loc40 depot (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate54 depot medicine (1)
+fly_to uav2 depot loc17 (1)
+deliver uav2 person6 loc17 crate54 medicine (1)
+fly_to uav2 loc17 depot (1)
+pickup_crate uav2 crate57 depot medicine (1)
+fly_to uav2 depot loc41 (1)
+deliver uav2 person38 loc41 crate57 medicine (1)
+fly_to uav2 loc41 depot (1)
+pickup_crate uav2 crate83 depot medicine (1)
+fly_to uav2 depot loc48 (1)
+deliver uav2 person30 loc48 crate83 medicine (1)
+fly_to uav2 loc48 depot (1)
+pickup_crate uav2 crate58 depot medicine (1)
+fly_to uav2 depot loc45 (1)
+deliver uav2 person37 loc45 crate58 medicine (1)
+fly_to uav2 loc45 depot (1)
+pickup_crate uav2 crate59 depot medicine (1)
+fly_to uav2 depot loc48 (1)
+deliver uav2 person71 loc48 crate59 medicine (1)
+fly_to uav2 loc48 depot (1)
+pickup_crate uav2 crate63 depot medicine (1)
+fly_to uav2 depot loc90 (1)
+deliver uav2 person85 loc90 crate63 medicine (1)
+fly_to uav2 loc90 depot (1)
+pickup_crate uav2 crate16 depot food (1)
+fly_to uav2 depot loc78 (1)
+deliver uav2 person95 loc78 crate16 food (1)
+fly_to uav2 loc78 depot (1)
+pickup_crate uav1 crate65 depot medicine (1)
+fly_to uav1 depot loc40 (1)
+deliver uav1 person40 loc40 crate65 medicine (1)
+fly_to uav1 loc40 depot (1)
+pickup_crate uav2 crate19 depot food (1)
+fly_to uav2 depot loc94 (1)
+deliver uav2 person12 loc94 crate19 food (1)
+fly_to uav2 loc94 depot (1)
+pickup_crate uav2 crate20 depot food (1)
+fly_to uav2 depot loc26 (1)
+deliver uav2 person29 loc26 crate20 food (1)
+fly_to uav2 loc26 depot (1)
+pickup_crate uav2 crate21 depot food (1)
+fly_to uav2 depot loc5 (1)
+deliver uav2 person33 loc5 crate21 food (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav1 crate66 depot medicine (1)
+pickup_crate uav2 crate22 depot food (1)
+fly_to uav2 depot loc82 (1)
+deliver uav2 person25 loc82 crate22 food (1)
+fly_to uav2 loc82 depot (1)
+pickup_crate uav2 crate23 depot food (1)
+fly_to uav2 depot loc28 (1)
+deliver uav2 person50 loc28 crate23 food (1)
+fly_to uav2 loc28 depot (1)
+pickup_crate uav2 crate24 depot food (1)
+fly_to uav2 depot loc17 (1)
+deliver uav2 person6 loc17 crate24 food (1)
+fly_to uav1 depot loc26 (1)
+deliver uav1 person66 loc26 crate66 medicine (1)
+fly_to uav1 loc26 depot (1)
+fly_to uav2 loc17 depot (1)
+pickup_crate uav1 crate25 depot food (1)
+pickup_crate uav2 crate68 depot medicine (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person7 loc89 crate68 medicine (1)
+fly_to uav2 loc89 depot (1)
+fly_to uav1 depot loc92 (1)
+pickup_crate uav2 crate69 depot medicine (1)
+deliver uav1 person89 loc92 crate25 food (1)
+fly_to uav1 loc92 depot (1)
+fly_to uav2 depot loc59 (1)
+deliver uav2 person80 loc59 crate69 medicine (1)
+fly_to uav2 loc59 depot (1)
+pickup_crate uav1 crate72 depot medicine (1)
+pickup_crate uav2 crate26 depot food (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person62 loc57 crate26 food (1)
+fly_to uav2 loc57 depot (1)
+fly_to uav1 depot loc98 (1)
+pickup_crate uav2 crate32 depot food (1)
+deliver uav1 person15 loc98 crate72 medicine (1)
+fly_to uav1 loc98 depot (1)
+fly_to uav2 depot loc89 (1)
+deliver uav2 person61 loc89 crate32 food (1)
+fly_to uav2 loc89 depot (1)
+pickup_crate uav1 crate33 depot food (1)
+pickup_crate uav2 crate76 depot medicine (1)
+fly_to uav2 depot loc71 (1)
+deliver uav2 person92 loc71 crate76 medicine (1)
+fly_to uav2 loc71 depot (1)
+pickup_crate uav2 crate79 depot medicine (1)
+fly_to uav2 depot loc70 (1)
+deliver uav2 person70 loc70 crate79 medicine (1)
+fly_to uav1 depot loc17 (1)
+fly_to uav2 loc70 depot (1)
+deliver uav1 person53 loc17 crate33 food (1)
+fly_to uav1 loc17 depot (1)
+pickup_crate uav1 crate36 depot food (1)
+pickup_crate uav2 crate81 depot medicine (1)
+fly_to uav2 depot loc105 (1)
+deliver uav2 person67 loc105 crate81 medicine (1)
+fly_to uav2 loc105 depot (1)
+pickup_crate uav2 crate87 depot medicine (1)
+fly_to uav2 depot loc57 (1)
+deliver uav2 person58 loc57 crate87 medicine (1)
+fly_to uav1 depot loc94 (1)
+fly_to uav2 loc57 depot (1)
+deliver uav1 person49 loc94 crate36 food (1)
+fly_to uav1 loc94 depot (1)
+pickup_crate uav2 crate88 depot medicine (1)
+fly_to uav2 depot loc5 (1)
+pickup_crate uav1 crate40 depot food (1)
+deliver uav2 person77 loc5 crate88 medicine (1)
+fly_to uav2 loc5 depot (1)
+pickup_crate uav2 crate90 depot medicine (1)
+fly_to uav2 depot loc26 (1)
+deliver uav2 person29 loc26 crate90 medicine (1)
+fly_to uav2 loc26 depot (1)
+pickup_crate uav2 crate94 depot medicine (1)
+fly_to uav2 depot loc111 (1)
+deliver uav2 person39 loc111 crate94 medicine (1)
+fly_to uav2 loc111 depot (1)
+pickup_crate uav2 crate95 depot medicine (1)
+fly_to uav2 depot loc117 (1)
+deliver uav2 person79 loc117 crate95 medicine (1)
+fly_to uav1 depot loc116 (1)
+fly_to uav2 loc117 depot (1)
+deliver uav1 person54 loc116 crate40 food (1)
+fly_to uav1 loc116 depot (1)
+pickup_crate uav2 crate96 depot medicine (1)
+fly_to uav2 depot loc102 (1)
+deliver uav2 person31 loc102 crate96 medicine (1)
+fly_to uav2 loc102 depot (1)
+Plan length: 388 step(s).
+Plan cost: 388.
+aras_plan_bound: 388 68
+[t=64.28]
+Plan-cost: 624 .
+Total-time: 68s
+Real Plan cost: 388.
+Real Total time: 68s
+plan_id: 2
+Initial state h value: 146/148.
+Expanded 60343 state(s).
+Reopened 0 state(s).
+Evaluated 60344 state(s).
+Evaluations: 120688
+Generated 14658371 state(s).
+Best solution cost so far: 624
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=5)
+Conducting lazy best first search, (real) bound = 624
+Best heuristic value: 146/148 [g=0, 1 evaluated, 0 expanded, t=64.28s]

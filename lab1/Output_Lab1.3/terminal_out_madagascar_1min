@@ -1,0 +1,76 @@
+Madagascar v0.998 16/02/2012 11:52:16
+Options: file:domain.pddl file:uav_problem_u2_r0_l112_p82_c82_g82_ct2.pddl -o output_madagascar_1min
+Special no-VSIDS version.
+Domain: uav_domain
+Problem: uav_problem_u2_r0_l112_p82_c82_g82_ct2
+Increased max. actions to 200000.
+Increased max. actions to 400000.
+Increased max. actions to 800000.
+Increased max. actions to 1600000.
+Parser: 1563694 ground actions and 19170 state variables
+Invariants: 0 1 2  1.10 secs
+Goal: conjunctive
+Simplified: 38924 ground actions and 638 state variables
+Actions: STRIPS
+Disabling graph: ...................................... 0.55 secs
+Plan type: E-step
+Horizon 0
+0 UNSAT (0 decisions 0 conflicts)
+Horizon 5
+Allocated a 32 MB block (memory used 355 MB).
+Horizon 10
+Horizon 15
+Horizon 20
+Horizon 25
+Horizon 30
+Allocated a 32 MB block (memory used 538 MB).
+Collecting garbage.  Freed 0.00 MB.
+Horizon 35
+Horizon 40
+Allocated a 32 MB block (memory used 684 MB).
+Horizon 45
+Horizon 50
+Allocated a 32 MB block (memory used 859 MB).
+Horizon 55
+Allocated a 32 MB block (memory used 974 MB).
+Collecting garbage.  Freed 0.05 MB.
+Horizon 60
+Horizon 65
+Allocated a 32 MB block (memory used 1195 MB).
+Horizon 70
+Allocated a 32 MB block (memory used 1332 MB).
+Horizon 75
+Allocated a 32 MB block (memory used 1478 MB).
+Horizon 80
+Allocated a 32 MB block (memory used 1630 MB).
+Horizon 85
+Allocated a 32 MB block (memory used 1791 MB).
+Collecting garbage.  Freed 0.29 MB.
+Horizon 90
+Allocated a 32 MB block (memory used 1959 MB).
+Collecting garbage.  Freed 7.25 MB.
+SAT (1715 decisions 360 conflicts)
+PLAN FOUND: 90 steps
+343 actions in the plan.
+total time 56.76 preprocess 4.10 
+total size 3893.36 MB
+t val conflicts decisions
+0 0 0 0
+5 -1 2340 2889
+10 -1 2100 2967
+15 -1 1920 2996
+20 -1 1680 2983
+25 -1 1560 3187
+30 -1 1380 2963
+35 -1 1260 2849
+40 -1 1140 2901
+45 -1 1020 2709
+50 -1 900 2625
+55 -1 840 2552
+60 -1 720 2268
+65 -1 660 2356
+70 -1 600 2080
+75 -1 540 2083
+80 -1 480 1933
+85 -1 420 1749
+90 1 360 1715

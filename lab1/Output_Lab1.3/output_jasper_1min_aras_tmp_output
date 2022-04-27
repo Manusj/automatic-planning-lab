@@ -1,0 +1,42 @@
+Using single default version of MRW
+
+MRW Param 0:
+Walk Type: PURE
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: none
+Length STDev: 0
+
+
+Shared MRW Parameters: BASIC
+Iterative search: true
+UCB Constant Value: 0.2
+Use Aras: true
+	regression graph: true
+	Aras Memory Limit: -1
+	Aras Time Limit: -1
+seed: 1651084058
+Simplifying transitions... done!
+Read 46624 operators
+build regression graph: true
+Initial plan size: 624 Initial plan cost: 624
+After action elimination Plan size: 415Plan Validated
+Total time: 1.54s
+Plan cost: 415.
+Plan Validated
+Total time: 4.29s
+Plan cost: 388.
+Step: 0 n: 1000 Plan_size: 388 Plan_cost: 388 Iteration_Time: 2.75s Total_Time: 4.29s Size: 357220 Number_goals: 1 Memory usage: 310935
+Plan Validated

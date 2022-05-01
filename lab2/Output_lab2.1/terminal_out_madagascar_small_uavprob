@@ -1,0 +1,23 @@
+Madagascar v0.998 16/02/2012 11:52:16
+Options: file:domain.pddl file:small_uav_problem_u1_r1_l1_p2_c2_g2_ct2.pddl -o output_madagascar_small_uavprob_lab2.1
+Special no-VSIDS version.
+Domain: uav_domain
+Problem: uav_problem_u1_r1_l1_p2_c2_g2_ct2
+Parser: 36 ground actions and 29 state variables
+Invariants: 0 1 2 3  0.00 secs
+Goal: conjunctive
+Simplified: 28 ground actions and 19 state variables
+Actions: STRIPS
+Disabling graph:  0.00 secs
+Plan type: E-step
+Horizon 0
+0 UNSAT (0 decisions 0 conflicts)
+Horizon 5
+SAT (5 decisions 0 conflicts)
+PLAN FOUND: 5 steps
+8 actions in the plan.
+total time 0.01 preprocess 0.00 
+total size 203.22 MB
+t val conflicts decisions
+0 0 0 0
+5 1 0 5

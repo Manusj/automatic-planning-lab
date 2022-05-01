@@ -1,0 +1,493 @@
+1. Running translator
+Parsing... [0.000s CPU, 0.004s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.006s wall-clock]
+Preparing model... [0.010s CPU, 0.001s wall-clock]
+Generated 61 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+98 relevant atoms
+111 auxiliary atoms
+209 final queue length
+266 total queue pushes
+Completing instantiation... [0.000s CPU, 0.002s wall-clock]
+Instantiating: [0.010s CPU, 0.014s wall-clock]
+Computing fact groups...
+Finding invariants... 17 initial candidates
+[0.000s CPU, 0.004s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+14 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.001s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.002s wall-clock]
+10 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+2 operators removed
+7 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
+Writing translation key... [0.000s CPU, 0.002s wall-clock]
+Writing mutex key... [0.000s CPU, 0.002s wall-clock]
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.020s CPU, 0.033s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+12 variables of 15 necessary
+26 of 28 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Dispatcher selected state size 1.
+This is a unit task.
+Simplifying transitions... done!
+path_all_groups: all.groups
+Initializing Exploration...
+Reading invariants from file...
+all.groups: all.groups
+done
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.000945668s
+Discovered 13 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+15 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+8 initial landmarks, 3 goal landmarks
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff,hlm,preferred=(hff,hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0s]
+Solution found!
+Actual search time: 0s [t=0s]
+Real Plan cost: 8.
+Real Total time: 0s
+pickup_crate uav1 crate2 depot medicine (1)
+fly_to uav1 depot loc1 (1)
+deliver uav1 person1 loc1 crate2 medicine (1)
+fly_to uav1 loc1 depot (1)
+pickup_crate uav1 crate1 depot food (1)
+fly_to uav1 depot loc1 (1)
+deliver uav1 person1 loc1 crate1 food (1)
+fly_to uav1 loc1 depot (1)
+Plan length: 8 step(s).
+Plan cost: 8.
+plan_id: 1
+pickup_crate uav1 crate2 depot medicine (1)
+fly_to uav1 depot loc1 (1)
+deliver uav1 person1 loc1 crate2 medicine (1)
+fly_to uav1 loc1 depot (1)
+pickup_crate uav1 crate1 depot food (1)
+fly_to uav1 depot loc1 (1)
+deliver uav1 person1 loc1 crate1 food (1)
+fly_to uav1 loc1 depot (1)
+Plan length: 8 step(s).
+Plan cost: 8.
+2346; 1896;420
+cmd: pwd; ulimit -v 2000000;ulimit -t 420;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_small_uavprob_lab2.1--1 output_jasper_small_uavprob_lab2.1-output_bound -o output_jasper_small_uavprob_lab2.1-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_small_uavprob_lab2.1_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+**************end aras***************
+aras_plan_bound: 8 0
+ARAS is disabled by FIRST_RUN_CHECK!!
+Initial state h value: 5/5.
+Expanded 12 state(s).
+Reopened 0 state(s).
+Evaluated 13 state(s).
+Evaluations: 26
+Generated 28 state(s).
+Best solution cost so far: 8
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=5)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0s]
+Completely explored state space -- no solution!
+Actual search time: 0.01s [t=0.01s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=3)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.01s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.01s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.01s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.01s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.01s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=2)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.01s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.01s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.01s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.01s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.01s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=1)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.01s]
+Best heuristic value: 3/3 [g=3, 11 evaluated, 10 expanded, t=0.01s]
+Best heuristic value: 2/2 [g=5, 23 evaluated, 22 expanded, t=0.01s]
+Best heuristic value: 1/1 [g=7, 37 evaluated, 36 expanded, t=0.01s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.01s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff,hlm,preferred=(hff,hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.01s]
+Best heuristic value: 3/3 [g=3, 7 evaluated, 6 expanded, t=0.01s]
+Best heuristic value: 2/2 [g=5, 9 evaluated, 8 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 11 evaluated, 10 expanded, t=0.02s]
+Solution found!
+Actual search time: 0.01s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 11 state(s).
+Reopened 0 state(s).
+Evaluated 12 state(s).
+Evaluations: 24
+Generated 24 state(s).
+Best solution cost so far: 8
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=5)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 8 evaluated, 7 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 10 evaluated, 9 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 12 evaluated, 11 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 14 evaluated, 13 expanded, t=0.02s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=3)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 7 evaluated, 6 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.02s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=2)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 7 evaluated, 6 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.02s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=1)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 11 evaluated, 10 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 23 evaluated, 22 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 36 evaluated, 35 expanded, t=0.02s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff,hlm,preferred=(hff,hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.02s]
+Solution found!
+Actual search time: 0s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 12 state(s).
+Reopened 0 state(s).
+Evaluated 13 state(s).
+Evaluations: 26
+Generated 28 state(s).
+Best solution cost so far: 8
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=5)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 7 evaluated, 6 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.02s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.02s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=3)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.02s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.03s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.03s]
+Completely explored state space -- no solution!
+Actual search time: 0.01s [t=0.03s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=2)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.03s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.03s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.03s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.03s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.03s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.03s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=1)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.03s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.03s]
+Best heuristic value: 3/3 [g=3, 11 evaluated, 10 expanded, t=0.03s]
+Best heuristic value: 2/2 [g=5, 23 evaluated, 22 expanded, t=0.03s]
+Best heuristic value: 1/1 [g=7, 36 evaluated, 35 expanded, t=0.03s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.03s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff,hlm,preferred=(hff,hlm))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.03s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.03s]
+Best heuristic value: 3/3 [g=3, 7 evaluated, 6 expanded, t=0.03s]
+Best heuristic value: 2/2 [g=5, 9 evaluated, 8 expanded, t=0.03s]
+Best heuristic value: 1/1 [g=7, 11 evaluated, 10 expanded, t=0.03s]
+Solution found!
+Actual search time: 0s [t=0.03s]
+Initial state h value: 5/5.
+Expanded 11 state(s).
+Reopened 0 state(s).
+Evaluated 12 state(s).
+Evaluations: 24
+Generated 24 state(s).
+Best solution cost so far: 8
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=5)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.03s]
+Best heuristic value: 5/4 [g=2, 7 evaluated, 6 expanded, t=0.03s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.03s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.03s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.03s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.03s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=3)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.03s]
+Best heuristic value: 5/4 [g=2, 7 evaluated, 6 expanded, t=0.03s]
+Best heuristic value: 3/3 [g=3, 8 evaluated, 7 expanded, t=0.03s]
+Best heuristic value: 2/2 [g=5, 10 evaluated, 9 expanded, t=0.03s]
+Best heuristic value: 1/1 [g=7, 12 evaluated, 11 expanded, t=0.03s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.03s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=2)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.04s]
+Best heuristic value: 5/4 [g=2, 6 evaluated, 5 expanded, t=0.04s]
+Best heuristic value: 3/3 [g=3, 7 evaluated, 6 expanded, t=0.04s]
+Best heuristic value: 2/2 [g=5, 9 evaluated, 8 expanded, t=0.04s]
+Best heuristic value: 1/1 [g=7, 11 evaluated, 10 expanded, t=0.04s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.04s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff,hlm,preferred=(hff,hlm),w=1)
+Conducting lazy best first search, (real) bound = 8
+Best heuristic value: 5/5 [g=0, 1 evaluated, 0 expanded, t=0.04s]
+Best heuristic value: 5/4 [g=2, 7 evaluated, 6 expanded, t=0.04s]
+Best heuristic value: 4/4 [g=3, 11 evaluated, 10 expanded, t=0.04s]
+Best heuristic value: 3/3 [g=3, 12 evaluated, 11 expanded, t=0.04s]
+Best heuristic value: 2/2 [g=5, 23 evaluated, 22 expanded, t=0.04s]
+Best heuristic value: 1/1 [g=7, 35 evaluated, 34 expanded, t=0.04s]
+Completely explored state space -- no solution!
+Actual search time: 0s [t=0.04s]
+Initial state h value: 5/5.
+Expanded 53 state(s).
+Reopened 0 state(s).
+Evaluated 63 state(s).
+Evaluations: 126
+Generated 123 state(s).
+Best solution cost so far: 8
+No solution found - keep searching
+Actual search time: 0.04s [t=0.04s]
+Cumulative statistics:
+Initial state h value: .
+Expanded 894 state(s).
+Reopened 0 state(s).
+Evaluated 1058 state(s).
+Evaluations: 2116
+Generated 2072 state(s).
+Search time: 0.04s
+Total time: 0.04s
+Peak memory: -1 KB

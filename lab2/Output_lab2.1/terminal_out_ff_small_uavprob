@@ -1,0 +1,43 @@
+
+ff: parsing domain file
+domain 'UAV_DOMAIN' defined
+ ... done.
+ff: parsing problem file
+problem 'UAV_PROBLEM_U1_R1_L1_P2_C2_G2_CT2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    5 into depth [1]
+                                   4            [1][2]
+                                   3            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PICKUP_CRATE UAV1 CRATE1 DEPOT FOOD
+        1: FLY_TO UAV1 DEPOT LOC1
+        2: DELIVER UAV1 PERSON1 LOC1 CRATE1 FOOD
+        3: FLY_TO UAV1 LOC1 DEPOT
+        4: PICKUP_CRATE UAV1 CRATE2 DEPOT MEDICINE
+        5: FLY_TO UAV1 DEPOT LOC1
+        6: DELIVER UAV1 PERSON1 LOC1 CRATE2 MEDICINE
+        7: FLY_TO UAV1 LOC1 DEPOT
+     
+
+time spent:    0.00 seconds instantiating 36 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 21 facts and 30 actions
+               0.00 seconds creating final representation with 19 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 28 states, to a max depth of 2
+               0.00 seconds total time
+

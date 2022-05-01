@@ -1,0 +1,78 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'UAV_DOMAIN' defined
+ ... done.
+ipp: parsing problem file
+problem 'UAV_PROBLEM_U1_R1_L1_P2_C2_G2_CT2' defined
+ ... done.
+
+
+warning: detected A, neg A tautology
+warning: parameter x2 of op FLY_CARRIER is not used. skipping it
+warning: parameter x2 of op FLY_CARRIER is not used. skipping it
+warning: op FLY_CARRIER has contradicting unconditional effect. skipping it.
+instantiated 16 actions
+
+
+time:   0,    16 facts and       0 exclusive pairs (    5,       0 positives)
+              19 ops   and      11 exclusive pairs
+time:   1,    23 facts and      24 exclusive pairs (    8,       8 positives)
+              29 ops   and     103 exclusive pairs
+time:   2,    27 facts and      41 exclusive pairs (   11,      21 positives)
+              39 ops   and     270 exclusive pairs
+time:   3,    31 facts and      68 exclusive pairs (   15,      48 positives)
+              45 ops   and     382 exclusive pairs
+time:   4,    32 facts and      51 exclusive pairs (   16,      44 positives)
+              48 ops   and     430 exclusive pairs
+time:   5,    32 facts and      36 exclusive pairs (   16,      35 positives)
+              48 ops   and     392 exclusive pairs
+time:   6,    32 facts and      28 exclusive pairs (   16,      27 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+              48 ops   and     380 exclusive pairs
+time:   7,    32 facts and      28 exclusive pairs (   16,      27 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+
+
+found plan as follows:
+
+time step    0: PICKUP_CRATE UAV1 CRATE1 DEPOT FOOD
+time step    1: FLY_TO UAV1 DEPOT LOC1
+time step    2: DELIVER UAV1 PERSON1 LOC1 CRATE1 FOOD
+time step    3: FLY_TO UAV1 LOC1 DEPOT
+time step    4: PICKUP_CRATE UAV1 CRATE2 DEPOT MEDICINE
+time step    5: FLY_TO UAV1 DEPOT LOC1
+time step    6: DELIVER UAV1 PERSON1 LOC1 CRATE2 MEDICINE
+time step    7: FLY_TO UAV1 LOC1 DEPOT
+
+
+
+number of actions tried:         14
+number of noops tried  :         32
+
+had       4 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 16 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.03 MBytes for domain representation
+               0.76 MBytes for graph
+               0.01 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.02 MBytes for wave front
+
+
+

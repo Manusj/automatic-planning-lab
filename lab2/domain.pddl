@@ -84,14 +84,10 @@
     :precondition (and (obj_at ?h ?cl) (obj_at ?ca ?cl) ; check if carrier and helicopter at same location
                   (heli_free ?h)    ; check if helicopter free
     )
-    :effect (and (heli_content ?h ?ca)  ; assign carrier to helicopter *********************
-                 (not (heli_free ?h))   ; set helicopter as not free *******************
-                 (not (obj_at ?ca ?cl)) ; remove assoication of current location with carrier
+    :effect (and (not (obj_at ?ca ?cl)) ; remove assoication of current location with carrier
                  (not (obj_at ?h ?cl))  ; remove helicopter from current location
                  (obj_at ?h ?nl)        ; set helicopter location to new location
                  (obj_at ?ca ?nl)       ; set carrier location as new location
-                 (heli_free ?h)         ; set heli as free to do delivers or other actions **************
-                 (not (heli_content ?h ?ca)) ; remove carrier from helicopter *************
                  (increase (total-cost) (fly-cost ?cl ?nl))    ; adding action cost of flying based on current and new location
     )
 )

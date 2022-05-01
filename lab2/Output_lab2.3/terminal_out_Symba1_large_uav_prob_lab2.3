@@ -1,0 +1,1475 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 61 rules.
+Computing model... [0.010s CPU, 0.011s wall-clock]
+765 relevant atoms
+485 auxiliary atoms
+1250 final queue length
+2532 total queue pushes
+Completing instantiation... [0.020s CPU, 0.023s wall-clock]
+Instantiating: [0.040s CPU, 0.042s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.000s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+62 uncovered facts
+Choosing groups: [0.010s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.020s CPU, 0.021s wall-clock]
+0 implied effects removed
+720 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+23 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.004s wall-clock]
+Translator variables: 55
+Translator derived variables: 0
+Translator facts: 119
+Translator mutex groups: 3
+Translator total mutex groups size: 15
+Translator operators: 555
+Translator task size: 4895
+Translator peak memory: 26144 KB
+Writing output... [0.010s CPU, 0.007s wall-clock]
+Done! [0.080s CPU, 0.088s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+44 variables of 55 necessary
+0 of 3 mutex groups necessary.
+550 of 555 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 97 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=1936, notReached=7331, spurious=142
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=9097, notReached=170, spurious=142
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 170, unreachable: 0
+0 of 550 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=6617, notReached=2480, spurious=312
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=9097, notReached=0, spurious=312
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 0, unreachable: 0
+0 of 550 operators detected as spurious
+Total mutex and disambiguation time: 0.052113
+85 of 85 mutex groups necessary.
+550 of 550 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 550
+Change id of axioms: 0
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 44
+85 of 85 mutex groups necessary.
+550 of 550 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+44 variables of 44 of 55 necessary
+The causal graph is not acyclic.
+85 of 85 mutex groups necessary.
+550 of 550 operators necessary.
+0 of 0 axiom rules necessary.
+Ordering: 44
+previous variable order: var24 - var25 - var26 - var27 - var28 - var29 - var30 - var31 - var32 - var33 - var23 - var0 - var12 - var1 - var13 - var2 - var14 - var3 - var15 - var4 - var16 - var5 - var17 - var6 - var18 - var7 - var19 - var8 - var20 - var9 - var21 - var10 - var22 - var34 - var42 - var36 - var53 - var51 - var47 - var45 - var43 - var41 - var39 - var37 - : 59169
+New value: 23830
+New value: 23610
+New value: 23526
+new variable order: var25 - var33 - var42 - var36 - var28 - var13 - var21 - var29 - var1 - var9 - var4 - var5 - var2 - var0 - var3 - var6 - var7 - var23 - var10 - var8 - var22 - var34 - var16 - var17 - var43 - var37 - var53 - var14 - var12 - var15 - var18 - var19 - var20 - var41 - var51 - var45 - var39 - var47 - var26 - var24 - var27 - var30 - var31 - var32 - : 23526
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 97
+Preprocessor derived variables: 0
+Preprocessor task size: 4940
+Writing output...
+Number of vars: 44
+weighted 44
+done
+
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Simplifying transitions... done!
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Initializing Symbolic Variables
+Num variables: 44 => 50
+Initialize Symbolic Manager(100, 160000, 16000000, 0)
+Generating binary variables
+Generating predicate BDDs
+Symbolic Variables... Done.
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=45000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+SymBA* 
+   Search dir: bd0x83e82e4
+   Time force original: 1500 seconds
+Conducting symbolic search Operator cost: 0 (real) bound = 2147483647
+Initialize abstraction hierarchy
+Mutex BDD BW Size(100000): 1987
+Mutex BDD FW Size(100000):
+TRs cost=10 (1):  17081
+TRs cost=18 (1):  33
+TRs cost=24 (1):  32
+TRs cost=38 (1):  31
+TRs cost=74 (1):  29
+TRs cost=75 (1):  32
+TRs cost=82 (1):  31
+TRs cost=88 (1):  51
+TRs cost=97 (1):  33
+TRs cost=110 (1):  32
+BOUND: 10 < 2147483647, total time: 0.4s
+>> Step: original fw f=10, g=0
+BOUND: 20 < 2147483647, total time: 0.4s
+>> Step: original bw f=20, g=0
+BOUND: 94 < 2147483647, total time: 0.42s
+>> Step: original fw f=94, g=10
+BOUND: 104 < 2147483647, total time: 0.42s
+>> Step: original fw f=104, g=20
+BOUND: 114 < 2147483647, total time: 0.44s
+>> Step: original bw f=114, g=74
+BOUND: 122 < 2147483647, total time: 0.46s
+>> Step: original bw f=122, g=82
+BOUND: 124 < 2147483647, total time: 0.5s
+>> Step: original bw f=124, g=84
+BOUND: 132 < 2147483647, total time: 0.52s
+>> Step: original bw f=132, g=92
+BOUND: 134 < 2147483647, total time: 0.54s
+>> Step: original bw f=134, g=94
+BOUND: 137 < 2147483647, total time: 0.56s
+>> Step: original bw f=137, g=97
+BOUND: 142 < 2147483647, total time: 0.6s
+>> Step: original bw f=142, g=102
+BOUND: 144 < 2147483647, total time: 0.6s
+>> Step: original fw f=144, g=30
+BOUND: 154 < 2147483647, total time: 0.6s
+>> Step: original fw f=154, g=40
+BOUND: 164 < 2147483647, total time: 0.6s
+>> Step: original fw f=164, g=50
+BOUND: 174 < 2147483647, total time: 0.62s
+>> Step: original fw f=174, g=60
+BOUND: 184 < 2147483647, total time: 0.62s
+>> Step: original fw f=184, g=70
+BOUND: 188 < 2147483647, total time: 0.64s
+>> Step: original fw f=188, g=74
+BOUND: 194 < 2147483647, total time: 0.64s
+>> Step: original fw f=194, g=80
+BOUND: 196 < 2147483647, total time: 0.64s
+>> Step: original fw f=196, g=82
+BOUND: 198 < 2147483647, total time: 0.64s
+>> Step: original fw f=198, g=84
+BOUND: 204 < 2147483647, total time: 0.64s
+>> Step: original fw f=204, g=90
+BOUND: 206 < 2147483647, total time: 0.64s
+>> Step: original fw f=206, g=92
+BOUND: 208 < 2147483647, total time: 0.64s
+>> Step: original fw f=208, g=94
+BOUND: 211 < 2147483647, total time: 0.66s
+>> Step: original fw f=211, g=97
+BOUND: 212 < 2147483647, total time: 0.66s
+>> Step: original fw f=212, g=98
+BOUND: 216 < 2147483647, total time: 0.66s
+>> Step: original fw f=216, g=102
+BOUND: 218 < 2147483647, total time: 0.66s
+>> Step: original fw f=218, g=104
+BOUND: 221 < 2147483647, total time: 0.66s
+>> Step: original fw f=221, g=107
+BOUND: 224 < 2147483647, total time: 0.66s
+>> Step: original fw f=224, g=110
+BOUND: 226 < 2147483647, total time: 0.66s
+>> Step: original fw f=226, g=112
+BOUND: 228 < 2147483647, total time: 0.66s
+>> Step: original fw f=228, g=114
+BOUND: 229 < 2147483647, total time: 0.66s
+>> Step: original fw f=229, g=115
+BOUND: 231 < 2147483647, total time: 0.66s
+>> Step: original fw f=231, g=117
+BOUND: 232 < 2147483647, total time: 0.66s
+>> Step: original fw f=232, g=118
+BOUND: 234 < 2147483647, total time: 0.66s
+>> Step: original fw f=234, g=120
+BOUND: 235 < 2147483647, total time: 0.66s
+>> Step: original fw f=235, g=121
+BOUND: 236 < 2147483647, total time: 0.66s
+>> Step: original fw f=236, g=122
+BOUND: 238 < 2147483647, total time: 0.66s
+>> Step: original fw f=238, g=124
+BOUND: 241 < 2147483647, total time: 0.68s
+>> Step: original fw f=241, g=127
+BOUND: 242 < 2147483647, total time: 0.68s
+>> Step: original fw f=242, g=128
+BOUND: 244 < 2147483647, total time: 0.68s
+>> Step: original fw f=244, g=130
+BOUND: 246 < 2147483647, total time: 0.68s
+>> Step: original fw f=246, g=132
+BOUND: 248 < 2147483647, total time: 0.68s
+>> Step: original fw f=248, g=134
+BOUND: 249 < 2147483647, total time: 0.7s
+>> Step: original fw f=249, g=135
+BOUND: 251 < 2147483647, total time: 0.7s
+>> Step: original fw f=251, g=137
+BOUND: 252 < 2147483647, total time: 0.7s
+>> Step: original fw f=252, g=138
+BOUND: 254 < 2147483647, total time: 0.7s
+>> Step: original fw f=254, g=140
+BOUND: 255 < 2147483647, total time: 0.7s
+>> Step: original fw f=255, g=141
+BOUND: 256 < 2147483647, total time: 0.7s
+>> Step: original fw f=256, g=142
+BOUND: 258 < 2147483647, total time: 0.72s
+>> Step: original fw f=258, g=144
+BOUND: 259 < 2147483647, total time: 0.72s
+>> Step: original fw f=259, g=145
+BOUND: 261 < 2147483647, total time: 0.72s
+>> Step: original fw f=261, g=147
+BOUND: 262 < 2147483647, total time: 0.74s
+>> Step: original fw f=262, g=148
+BOUND: 263 < 2147483647, total time: 0.74s
+>> Step: original fw f=263, g=149
+BOUND: 264 < 2147483647, total time: 0.74s
+>> Step: original fw f=264, g=150
+BOUND: 265 < 2147483647, total time: 0.74s
+>> Step: original fw f=265, g=151
+BOUND: 266 < 2147483647, total time: 0.74s
+>> Step: original fw f=266, g=152
+BOUND: 268 < 2147483647, total time: 0.76s
+>> Step: original fw f=268, g=154
+BOUND: 269 < 2147483647, total time: 0.78s
+>> Step: original fw f=269, g=155
+BOUND: 270 < 2147483647, total time: 0.78s
+>> Step: original fw f=270, g=156
+BOUND: 271 < 2147483647, total time: 0.78s
+>> Step: original fw f=271, g=157
+BOUND: 272 < 2147483647, total time: 0.8s
+>> Step: original fw f=272, g=158
+BOUND: 274 < 2147483647, total time: 0.8s
+>> Step: original fw f=274, g=160
+BOUND: 275 < 2147483647, total time: 0.8s
+>> Step: original fw f=275, g=161
+BOUND: 276 < 2147483647, total time: 0.8s
+>> Step: original fw f=276, g=162
+BOUND: 278 < 2147483647, total time: 0.82s
+>> Step: original bw f=278, g=104
+BOUND: 281 < 2147483647, total time: 0.88s
+>> Step: original bw f=281, g=107
+BOUND: 282 < 2147483647, total time: 0.92s
+>> Step: original bw f=282, g=108
+BOUND: 284 < 2147483647, total time: 0.94s
+>> Step: original bw f=284, g=110
+BOUND: 286 < 2147483647, total time: 0.98s
+>> Step: original bw f=286, g=112
+BOUND: 288 < 2147483647, total time: 1s
+>> Step: original bw f=288, g=114
+BOUND: 291 < 2147483647, total time: 1.06s
+>> Step: original bw f=291, g=117
+BOUND: 292 < 2147483647, total time: 1.08s
+>> Step: original bw f=292, g=118
+BOUND: 294 < 2147483647, total time: 1.12s
+>> Step: original bw f=294, g=120
+BOUND: 296 < 2147483647, total time: 1.12s
+>> Step: original bw f=296, g=122
+BOUND: 298 < 2147483647, total time: 1.18s
+>> Step: original fw f=298, g=164
+BOUND: 299 < 2147483647, total time: 1.22s
+>> Step: original fw f=299, g=165
+BOUND: 301 < 2147483647, total time: 1.22s
+>> Step: original fw f=301, g=167
+BOUND: 302 < 2147483647, total time: 1.24s
+>> Step: original fw f=302, g=168
+BOUND: 303 < 2147483647, total time: 1.26s
+>> Step: original fw f=303, g=169
+BOUND: 304 < 2147483647, total time: 1.26s
+>> Step: original fw f=304, g=170
+BOUND: 305 < 2147483647, total time: 1.28s
+>> Step: original fw f=305, g=171
+BOUND: 306 < 2147483647, total time: 1.28s
+>> Step: original fw f=306, g=172
+BOUND: 308 < 2147483647, total time: 1.32s
+>> Step: original fw f=308, g=174
+BOUND: 309 < 2147483647, total time: 1.34s
+>> Step: original fw f=309, g=175
+BOUND: 310 < 2147483647, total time: 1.36s
+>> Step: original fw f=310, g=176
+BOUND: 311 < 2147483647, total time: 1.36s
+>> Step: original fw f=311, g=177
+BOUND: 312 < 2147483647, total time: 1.4s
+>> Step: original fw f=312, g=178
+BOUND: 313 < 2147483647, total time: 1.44s
+>> Step: original fw f=313, g=179
+BOUND: 314 < 2147483647, total time: 1.44s
+>> Step: original fw f=314, g=180
+BOUND: 315 < 2147483647, total time: 1.48s
+>> Step: original fw f=315, g=181
+BOUND: 316 < 2147483647, total time: 1.48s
+>> Step: original fw f=316, g=182
+BOUND: 318 < 2147483647, total time: 1.52s
+>> Step: original fw f=318, g=184
+BOUND: 319 < 2147483647, total time: 1.56s
+>> Step: original fw f=319, g=185
+BOUND: 320 < 2147483647, total time: 1.58s
+>> Step: original fw f=320, g=186
+BOUND: 321 < 2147483647, total time: 1.58s
+>> Step: original fw f=321, g=187
+BOUND: 322 < 2147483647, total time: 1.64s
+>> Step: original fw f=322, g=188
+BOUND: 323 < 2147483647, total time: 1.68s
+>> Step: original fw f=323, g=189
+BOUND: 324 < 2147483647, total time: 1.68s
+>> Step: original fw f=324, g=190
+BOUND: 325 < 2147483647, total time: 1.7s
+>> Step: original fw f=325, g=191
+BOUND: 326 < 2147483647, total time: 1.72s
+>> Step: original fw f=326, g=192
+BOUND: 328 < 2147483647, total time: 1.76s
+>> Step: original fw f=328, g=194
+BOUND: 329 < 2147483647, total time: 1.78s
+>> Step: original fw f=329, g=195
+BOUND: 330 < 2147483647, total time: 1.8s
+>> Step: original fw f=330, g=196
+BOUND: 331 < 2147483647, total time: 1.8s
+>> Step: original fw f=331, g=197
+BOUND: 332 < 2147483647, total time: 1.86s
+>> Step: original fw f=332, g=198
+BOUND: 333 < 2147483647, total time: 1.9s
+>> Step: original fw f=333, g=199
+BOUND: 334 < 2147483647, total time: 1.9s
+>> Step: original fw f=334, g=200
+BOUND: 335 < 2147483647, total time: 1.92s
+>> Step: original fw f=335, g=201
+BOUND: 336 < 2147483647, total time: 1.94s
+>> Step: original fw f=336, g=202
+BOUND: 337 < 2147483647, total time: 1.96s
+>> Step: original fw f=337, g=203
+BOUND: 338 < 2147483647, total time: 1.96s
+>> Step: original fw f=338, g=204
+BOUND: 339 < 2147483647, total time: 1.98s
+>> Step: original fw f=339, g=205
+BOUND: 340 < 2147483647, total time: 2s
+>> Step: original fw f=340, g=206
+BOUND: 341 < 2147483647, total time: 2s
+>> Step: original fw f=341, g=207
+BOUND: 342 < 2147483647, total time: 2.04s
+>> Step: original fw f=342, g=208
+BOUND: 343 < 2147483647, total time: 2.08s
+>> Step: original fw f=343, g=209
+BOUND: 344 < 2147483647, total time: 2.08s
+>> Step: original fw f=344, g=210
+BOUND: 345 < 2147483647, total time: 2.12s
+>> Step: original fw f=345, g=211
+BOUND: 346 < 2147483647, total time: 2.14s
+>> Step: original fw f=346, g=212
+BOUND: 347 < 2147483647, total time: 2.2s
+>> Step: original fw f=347, g=213
+BOUND: 348 < 2147483647, total time: 2.2s
+>> Step: original fw f=348, g=214
+BOUND: 349 < 2147483647, total time: 2.22s
+>> Step: original fw f=349, g=215
+BOUND: 350 < 2147483647, total time: 2.24s
+>> Step: original fw f=350, g=216
+BOUND: 351 < 2147483647, total time: 2.28s
+>> Step: original fw f=351, g=217
+BOUND: 352 < 2147483647, total time: 2.32s
+>> Step: original bw f=352, g=124
+BOUND: 353 < 2147483647, total time: 2.34s
+>> Step: original bw f=353, g=125
+BOUND: 355 < 2147483647, total time: 2.38s
+>> Step: original bw f=355, g=127
+BOUND: 356 < 2147483647, total time: 2.42s
+>> Step: original fw f=356, g=218
+BOUND: 357 < 2147483647, total time: 2.48s
+>> Step: original fw f=357, g=219
+BOUND: 358 < 2147483647, total time: 2.5s
+>> Step: original fw f=358, g=220
+BOUND: 359 < 2147483647, total time: 2.52s
+>> Step: original fw f=359, g=221
+BOUND: 360 < 2147483647, total time: 2.56s
+>> Step: original fw f=360, g=222
+BOUND: 361 < 2147483647, total time: 2.6s
+>> Step: original fw f=361, g=223
+BOUND: 362 < 2147483647, total time: 2.6s
+>> Step: original fw f=362, g=224
+BOUND: 363 < 2147483647, total time: 2.62s
+>> Step: original fw f=363, g=225
+BOUND: 364 < 2147483647, total time: 2.64s
+>> Step: original fw f=364, g=226
+BOUND: 365 < 2147483647, total time: 2.66s
+>> Step: original fw f=365, g=227
+BOUND: 366 < 2147483647, total time: 2.68s
+>> Step: original fw f=366, g=228
+BOUND: 367 < 2147483647, total time: 2.76s
+>> Step: original fw f=367, g=229
+BOUND: 368 < 2147483647, total time: 2.78s
+>> Step: original fw f=368, g=230
+BOUND: 369 < 2147483647, total time: 2.8s
+>> Step: original fw f=369, g=231
+BOUND: 370 < 2147483647, total time: 2.84s
+>> Step: original fw f=370, g=232
+BOUND: 371 < 2147483647, total time: 2.88s
+>> Step: original fw f=371, g=233
+BOUND: 372 < 2147483647, total time: 2.88s
+>> Step: original fw f=372, g=234
+BOUND: 373 < 2147483647, total time: 2.92s
+>> Step: original fw f=373, g=235
+BOUND: 374 < 2147483647, total time: 2.94s
+>> Step: original fw f=374, g=236
+BOUND: 375 < 2147483647, total time: 2.98s
+>> Step: original fw f=375, g=237
+BOUND: 376 < 2147483647, total time: 3s
+>> Step: original bw f=376, g=128
+BOUND: 378 < 2147483647, total time: 3.12s
+>> Step: original bw f=378, g=130
+BOUND: 379 < 2147483647, total time: 3.14s
+>> Step: original bw f=379, g=131
+BOUND: 380 < 2147483647, total time: 3.16s
+>> Step: original bw f=380, g=132
+BOUND: 382 < 2147483647, total time: 3.2s
+>> Step: original bw f=382, g=134
+BOUND: 383 < 2147483647, total time: 3.2s
+>> Step: original bw f=383, g=135
+BOUND: 384 < 2147483647, total time: 3.22s
+>> Step: original bw f=384, g=136
+BOUND: 385 < 2147483647, total time: 3.24s
+>> Step: original bw f=385, g=137
+BOUND: 386 < 2147483647, total time: 3.26s
+>> Step: original bw f=386, g=138
+BOUND: 388 < 2147483647, total time: 3.34s
+>> Step: original bw f=388, g=140
+BOUND: 389 < 2147483647, total time: 3.38s
+>> Step: original bw f=389, g=141
+BOUND: 390 < 2147483647, total time: 3.4s
+>> Step: original fw f=390, g=238
+BOUND: 391 < 2147483647, total time: 3.48s
+>> Step: original fw f=391, g=239
+BOUND: 392 < 2147483647, total time: 3.5s
+>> Step: original fw f=392, g=240
+BOUND: 393 < 2147483647, total time: 3.54s
+>> Step: original fw f=393, g=241
+BOUND: 394 < 2147483647, total time: 3.58s
+>> Step: original fw f=394, g=242
+BOUND: 395 < 2147483647, total time: 3.6s
+>> Step: original fw f=395, g=243
+BOUND: 396 < 2147483647, total time: 3.64s
+>> Step: original fw f=396, g=244
+BOUND: 397 < 2147483647, total time: 3.66s
+>> Step: original fw f=397, g=245
+BOUND: 398 < 2147483647, total time: 3.7s
+>> Step: original fw f=398, g=246
+BOUND: 399 < 2147483647, total time: 3.74s
+>> Step: original fw f=399, g=247
+BOUND: 400 < 2147483647, total time: 3.76s
+>> Step: original fw f=400, g=248
+BOUND: 401 < 2147483647, total time: 3.84s
+>> Step: original fw f=401, g=249
+BOUND: 402 < 2147483647, total time: 3.88s
+>> Step: original fw f=402, g=250
+BOUND: 403 < 2147483647, total time: 3.94s
+>> Step: original fw f=403, g=251
+BOUND: 404 < 2147483647, total time: 4s
+>> Step: original fw f=404, g=252
+BOUND: 405 < 2147483647, total time: 4.06s
+>> Step: original fw f=405, g=253
+BOUND: 406 < 2147483647, total time: 4.1s
+>> Step: original fw f=406, g=254
+BOUND: 407 < 2147483647, total time: 4.16s
+>> Step: original fw f=407, g=255
+BOUND: 408 < 2147483647, total time: 4.2s
+>> Step: original fw f=408, g=256
+BOUND: 409 < 2147483647, total time: 4.24s
+>> Step: original fw f=409, g=257
+BOUND: 410 < 2147483647, total time: 4.26s
+>> Step: original fw f=410, g=258
+BOUND: 411 < 2147483647, total time: 4.36s
+>> Step: original fw f=411, g=259
+BOUND: 412 < 2147483647, total time: 4.4s
+>> Step: original fw f=412, g=260
+BOUND: 413 < 2147483647, total time: 4.48s
+>> Step: original fw f=413, g=261
+BOUND: 414 < 2147483647, total time: 4.5s
+>> Step: original fw f=414, g=262
+BOUND: 415 < 2147483647, total time: 4.52s
+>> Step: original fw f=415, g=263
+BOUND: 416 < 2147483647, total time: 4.54s
+>> Step: original fw f=416, g=264
+BOUND: 417 < 2147483647, total time: 4.6s
+>> Step: original fw f=417, g=265
+BOUND: 418 < 2147483647, total time: 4.64s
+>> Step: original fw f=418, g=266
+BOUND: 419 < 2147483647, total time: 4.66s
+>> Step: original fw f=419, g=267
+BOUND: 420 < 2147483647, total time: 4.68s
+>> Step: original fw f=420, g=268
+BOUND: 421 < 2147483647, total time: 4.74s
+>> Step: original fw f=421, g=269
+BOUND: 422 < 2147483647, total time: 4.78s
+>> Step: original fw f=422, g=270
+BOUND: 423 < 2147483647, total time: 4.86s
+>> Step: original fw f=423, g=271
+BOUND: 424 < 2147483647, total time: 4.86s
+>> Step: original fw f=424, g=272
+BOUND: 425 < 2147483647, total time: 4.92s
+>> Step: original fw f=425, g=273
+BOUND: 426 < 2147483647, total time: 4.94s
+>> Step: original fw f=426, g=274
+BOUND: 427 < 2147483647, total time: 5.02s
+>> Step: original fw f=427, g=275
+BOUND: 428 < 2147483647, total time: 5.08s
+>> Step: original fw f=428, g=276
+BOUND: 429 < 2147483647, total time: 5.1s
+>> Step: original fw f=429, g=277
+BOUND: 430 < 2147483647, total time: 5.12s
+>> Step: original fw f=430, g=278
+BOUND: 431 < 2147483647, total time: 5.24s
+>> Step: original fw f=431, g=279
+BOUND: 432 < 2147483647, total time: 5.28s
+>> Step: original fw f=432, g=280
+BOUND: 433 < 2147483647, total time: 5.36s
+>> Step: original fw f=433, g=281
+BOUND: 434 < 2147483647, total time: 5.38s
+>> Step: original fw f=434, g=282
+BOUND: 435 < 2147483647, total time: 5.4s
+>> Step: original fw f=435, g=283
+BOUND: 436 < 2147483647, total time: 5.42s
+>> Step: original bw f=436, g=142
+BOUND: 439 < 2147483647, total time: 5.54s
+>> Step: original bw f=439, g=145
+BOUND: 440 < 2147483647, total time: 5.58s
+>> Step: original fw f=440, g=284
+BOUND: 441 < 2147483647, total time: 5.68s
+>> Step: original fw f=441, g=285
+BOUND: 442 < 2147483647, total time: 5.74s
+>> Step: original fw f=442, g=286
+BOUND: 443 < 2147483647, total time: 5.78s
+>> Step: original fw f=443, g=287
+BOUND: 444 < 2147483647, total time: 5.8s
+>> Step: original fw f=444, g=288
+BOUND: 445 < 2147483647, total time: 5.9s
+>> Step: original fw f=445, g=289
+BOUND: 446 < 2147483647, total time: 5.94s
+>> Step: original fw f=446, g=290
+BOUND: 447 < 2147483647, total time: 6.02s
+>> Step: original fw f=447, g=291
+BOUND: 448 < 2147483647, total time: 6.04s
+>> Step: original fw f=448, g=292
+BOUND: 449 < 2147483647, total time: 6.08s
+>> Step: original fw f=449, g=293
+BOUND: 450 < 2147483647, total time: 6.12s
+>> Step: original fw f=450, g=294
+BOUND: 451 < 2147483647, total time: 6.22s
+>> Step: original bw f=451, g=146
+BOUND: 452 < 2147483647, total time: 6.32s
+>> Step: original bw f=452, g=147
+BOUND: 453 < 2147483647, total time: 6.38s
+>> Step: original fw f=453, g=295
+BOUND: 454 < 2147483647, total time: 6.48s
+>> Step: original fw f=454, g=296
+BOUND: 455 < 2147483647, total time: 6.5s
+>> Step: original fw f=455, g=297
+BOUND: 456 < 2147483647, total time: 6.54s
+>> Step: original fw f=456, g=298
+BOUND: 457 < 2147483647, total time: 6.64s
+>> Step: original fw f=457, g=299
+BOUND: 458 < 2147483647, total time: 6.66s
+>> Step: original fw f=458, g=300
+BOUND: 459 < 2147483647, total time: 6.74s
+>> Step: original fw f=459, g=301
+BOUND: 460 < 2147483647, total time: 6.78s
+>> Step: original fw f=460, g=302
+BOUND: 461 < 2147483647, total time: 6.8s
+>> Step: original fw f=461, g=303
+BOUND: 462 < 2147483647, total time: 6.84s
+>> Step: original fw f=462, g=304
+BOUND: 463 < 2147483647, total time: 6.94s
+>> Step: original fw f=463, g=305
+BOUND: 464 < 2147483647, total time: 7.06s
+>> Step: original fw f=464, g=306
+BOUND: 465 < 2147483647, total time: 7.1s
+>> Step: original fw f=465, g=307
+BOUND: 466 < 2147483647, total time: 7.12s
+>> Step: original fw f=466, g=308
+BOUND: 467 < 2147483647, total time: 7.24s
+>> Step: original fw f=467, g=309
+BOUND: 468 < 2147483647, total time: 7.26s
+>> Step: original fw f=468, g=310
+BOUND: 469 < 2147483647, total time: 7.34s
+>> Step: original fw f=469, g=311
+BOUND: 470 < 2147483647, total time: 7.38s
+>> Step: original fw f=470, g=312
+BOUND: 471 < 2147483647, total time: 7.44s
+>> Step: original fw f=471, g=313
+BOUND: 472 < 2147483647, total time: 7.48s
+>> Step: original fw f=472, g=314
+BOUND: 473 < 2147483647, total time: 7.58s
+>> Step: original fw f=473, g=315
+BOUND: 474 < 2147483647, total time: 7.72s
+>> Step: original fw f=474, g=316
+BOUND: 475 < 2147483647, total time: 7.76s
+>> Step: original fw f=475, g=317
+BOUND: 476 < 2147483647, total time: 7.78s
+>> Step: original fw f=476, g=318
+BOUND: 477 < 2147483647, total time: 7.9s
+>> Step: original fw f=477, g=319
+BOUND: 478 < 2147483647, total time: 7.92s
+>> Step: original fw f=478, g=320
+BOUND: 479 < 2147483647, total time: 8.04s
+>> Step: original fw f=479, g=321
+BOUND: 480 < 2147483647, total time: 8.08s
+>> Step: original fw f=480, g=322
+BOUND: 481 < 2147483647, total time: 8.16s
+>> Step: original fw f=481, g=323
+BOUND: 482 < 2147483647, total time: 8.2s
+>> Step: original fw f=482, g=324
+BOUND: 483 < 2147483647, total time: 8.3s
+>> Step: original bw f=483, g=148
+BOUND: 485 < 2147483647, total time: 8.48s
+>> Step: original bw f=485, g=150
+BOUND: 486 < 2147483647, total time: 8.5s
+>> Step: original bw f=486, g=151
+BOUND: 487 < 2147483647, total time: 8.6s
+>> Step: original bw f=487, g=152
+BOUND: 488 < 2147483647, total time: 8.72s
+>> Step: original bw f=488, g=153
+BOUND: 490 < 2147483647, total time: 8.74s
+>> Step: original bw f=490, g=155
+BOUND: 491 < 2147483647, total time: 8.8s
+>> Step: original bw f=491, g=156
+BOUND: 492 < 2147483647, total time: 8.86s
+>> Step: original bw f=492, g=157
+BOUND: 493 < 2147483647, total time: 8.9s
+>> Step: original bw f=493, g=158
+BOUND: 494 < 2147483647, total time: 9.06s
+>> Step: original bw f=494, g=159
+BOUND: 495 < 2147483647, total time: 9.14s
+>> Step: original bw f=495, g=160
+BOUND: 496 < 2147483647, total time: 9.22s
+>> Step: original bw f=496, g=161
+BOUND: 497 < 2147483647, total time: 9.28s
+>> Step: original bw f=497, g=162
+BOUND: 498 < 2147483647, total time: 9.4s
+>> Step: original bw f=498, g=163
+BOUND: 499 < 2147483647, total time: 9.46s
+>> Step: original bw f=499, g=164
+BOUND: 500 < 2147483647, total time: 9.48s
+>> Step: original bw f=500, g=165
+BOUND: 501 < 2147483647, total time: 9.58s
+>> Step: original fw f=501, g=325
+BOUND: 502 < 2147483647, total time: 9.74s
+>> Step: original fw f=502, g=326
+BOUND: 503 < 2147483647, total time: 9.8s
+>> Step: original fw f=503, g=327
+BOUND: 504 < 2147483647, total time: 9.84s
+>> Step: original fw f=504, g=328
+BOUND: 505 < 2147483647, total time: 9.96s
+>> Step: original fw f=505, g=329
+BOUND: 506 < 2147483647, total time: 10s
+>> Step: original fw f=506, g=330
+BOUND: 507 < 2147483647, total time: 10.12s
+>> Step: original fw f=507, g=331
+BOUND: 508 < 2147483647, total time: 10.2s
+>> Step: original fw f=508, g=332
+BOUND: 509 < 2147483647, total time: 10.34s
+>> Step: original fw f=509, g=333
+BOUND: 510 < 2147483647, total time: 10.38s
+>> Step: original fw f=510, g=334
+BOUND: 511 < 2147483647, total time: 10.54s
+>> Step: original fw f=511, g=335
+BOUND: 512 < 2147483647, total time: 10.72s
+>> Step: original fw f=512, g=336
+BOUND: 513 < 2147483647, total time: 10.8s
+>> Step: original fw f=513, g=337
+BOUND: 514 < 2147483647, total time: 10.84s
+>> Step: original fw f=514, g=338
+BOUND: 515 < 2147483647, total time: 10.96s
+>> Step: original fw f=515, g=339
+BOUND: 516 < 2147483647, total time: 11s
+>> Step: original fw f=516, g=340
+BOUND: 517 < 2147483647, total time: 11.14s
+>> Step: original fw f=517, g=341
+BOUND: 518 < 2147483647, total time: 11.24s
+>> Step: original fw f=518, g=342
+BOUND: 519 < 2147483647, total time: 11.34s
+>> Step: original fw f=519, g=343
+BOUND: 520 < 2147483647, total time: 11.38s
+>> Step: original fw f=520, g=344
+BOUND: 521 < 2147483647, total time: 11.52s
+>> Step: original bw f=521, g=166
+BOUND: 522 < 2147483647, total time: 11.74s
+>> Step: original bw f=522, g=167
+BOUND: 523 < 2147483647, total time: 11.84s
+>> Step: original fw f=523, g=345
+BOUND: 524 < 2147483647, total time: 12.06s
+>> Step: original fw f=524, g=346
+BOUND: 525 < 2147483647, total time: 12.18s
+>> Step: original fw f=525, g=347
+BOUND: 526 < 2147483647, total time: 12.26s
+>> Step: original fw f=526, g=348
+BOUND: 527 < 2147483647, total time: 12.44s
+>> Step: original fw f=527, g=349
+BOUND: 528 < 2147483647, total time: 12.48s
+>> Step: original fw f=528, g=350
+BOUND: 529 < 2147483647, total time: 12.6s
+>> Step: original fw f=529, g=351
+BOUND: 530 < 2147483647, total time: 12.7s
+>> Step: original fw f=530, g=352
+BOUND: 531 < 2147483647, total time: 12.82s
+>> Step: original fw f=531, g=353
+BOUND: 532 < 2147483647, total time: 12.86s
+>> Step: original fw f=532, g=354
+BOUND: 533 < 2147483647, total time: 13.04s
+>> Step: original bw f=533, g=168
+BOUND: 534 < 2147483647, total time: 13.32s
+>> Step: original bw f=534, g=169
+BOUND: 535 < 2147483647, total time: 13.36s
+>> Step: original bw f=535, g=170
+BOUND: 536 < 2147483647, total time: 13.44s
+>> Step: original bw f=536, g=171
+BOUND: 537 < 2147483647, total time: 13.62s
+>> Step: original bw f=537, g=172
+BOUND: 538 < 2147483647, total time: 13.72s
+>> Step: original bw f=538, g=173
+BOUND: 539 < 2147483647, total time: 13.76s
+>> Step: original bw f=539, g=174
+BOUND: 540 < 2147483647, total time: 13.84s
+>> Step: original bw f=540, g=175
+BOUND: 541 < 2147483647, total time: 13.92s
+>> Step: original bw f=541, g=176
+BOUND: 542 < 2147483647, total time: 14.08s
+>> Step: original bw f=542, g=177
+BOUND: 543 < 2147483647, total time: 14.16s
+>> Step: original bw f=543, g=178
+BOUND: 544 < 2147483647, total time: 14.42s
+>> Step: original bw f=544, g=179
+BOUND: 545 < 2147483647, total time: 14.58s
+>> Step: original fw f=545, g=355
+BOUND: 546 < 2147483647, total time: 14.88s
+>> Step: original fw f=546, g=356
+BOUND: 547 < 2147483647, total time: 15.04s
+>> Step: original fw f=547, g=357
+BOUND: 548 < 2147483647, total time: 15.14s
+>> Step: original fw f=548, g=358
+BOUND: 549 < 2147483647, total time: 15.38s
+>> Step: original fw f=549, g=359
+BOUND: 550 < 2147483647, total time: 15.42s
+>> Step: original fw f=550, g=360
+BOUND: 551 < 2147483647, total time: 15.56s
+>> Step: original fw f=551, g=361
+BOUND: 552 < 2147483647, total time: 15.72s
+>> Step: original fw f=552, g=362
+BOUND: 553 < 2147483647, total time: 15.84s
+>> Step: original fw f=553, g=363
+BOUND: 554 < 2147483647, total time: 15.96s
+>> Step: original fw f=554, g=364
+BOUND: 555 < 2147483647, total time: 16.2s
+>> Step: original fw f=555, g=365
+BOUND: 556 < 2147483647, total time: 16.5s
+>> Step: original fw f=556, g=366
+BOUND: 557 < 2147483647, total time: 16.62s
+>> Step: original fw f=557, g=367
+BOUND: 558 < 2147483647, total time: 16.72s
+>> Step: original fw f=558, g=368
+BOUND: 559 < 2147483647, total time: 16.96s
+>> Step: original fw f=559, g=369
+BOUND: 560 < 2147483647, total time: 17s
+>> Step: original fw f=560, g=370
+BOUND: 561 < 2147483647, total time: 17.18s
+>> Step: original fw f=561, g=371
+BOUND: 562 < 2147483647, total time: 17.34s
+>> Step: original fw f=562, g=372
+BOUND: 563 < 2147483647, total time: 17.54s
+>> Step: original fw f=563, g=373
+BOUND: 564 < 2147483647, total time: 17.62s
+>> Step: original fw f=564, g=374
+BOUND: 565 < 2147483647, total time: 17.8s
+>> Step: original fw f=565, g=375
+BOUND: 566 < 2147483647, total time: 18.14s
+>> Step: original fw f=566, g=376
+BOUND: 567 < 2147483647, total time: 18.34s
+>> Step: original fw f=567, g=377
+BOUND: 568 < 2147483647, total time: 18.46s
+>> Step: original fw f=568, g=378
+BOUND: 569 < 2147483647, total time: 18.72s
+>> Step: original fw f=569, g=379
+BOUND: 570 < 2147483647, total time: 18.82s
+>> Step: original fw f=570, g=380
+BOUND: 571 < 2147483647, total time: 19.1s
+>> Step: original fw f=571, g=381
+BOUND: 572 < 2147483647, total time: 19.4s
+>> Step: original fw f=572, g=382
+BOUND: 573 < 2147483647, total time: 19.66s
+>> Step: original fw f=573, g=383
+BOUND: 574 < 2147483647, total time: 19.84s
+>> Step: original fw f=574, g=384
+BOUND: 575 < 2147483647, total time: 20.14s
+>> Step: original bw f=575, g=180
+BOUND: 576 < 2147483647, total time: 20.46s
+>> Step: original bw f=576, g=181
+BOUND: 577 < 2147483647, total time: 20.58s
+>> Step: original bw f=577, g=182
+BOUND: 578 < 2147483647, total time: 20.78s
+>> Step: original bw f=578, g=183
+BOUND: 579 < 2147483647, total time: 20.92s
+>> Step: original bw f=579, g=184
+BOUND: 580 < 2147483647, total time: 21.12s
+>> Step: original bw f=580, g=185
+BOUND: 581 < 2147483647, total time: 21.28s
+>> Step: original bw f=581, g=186
+BOUND: 582 < 2147483647, total time: 21.58s
+>> Step: original bw f=582, g=187
+BOUND: 583 < 2147483647, total time: 21.78s
+>> Step: original bw f=583, g=188
+BOUND: 584 < 2147483647, total time: 22.08s
+>> Step: original bw f=584, g=189
+BOUND: 585 < 2147483647, total time: 22.16s
+>> Step: original bw f=585, g=190
+BOUND: 586 < 2147483647, total time: 22.3s
+>> Step: original bw f=586, g=191
+BOUND: 587 < 2147483647, total time: 22.52s
+>> Step: original bw f=587, g=192
+BOUND: 588 < 2147483647, total time: 22.68s
+>> Step: original bw f=588, g=193
+BOUND: 589 < 2147483647, total time: 22.78s
+>> Step: original bw f=589, g=194
+BOUND: 590 < 2147483647, total time: 22.9s
+>> Step: original bw f=590, g=195
+BOUND: 591 < 2147483647, total time: 23.1s
+>> Step: original bw f=591, g=196
+BOUND: 592 < 2147483647, total time: 23.22s
+>> Step: original bw f=592, g=197
+BOUND: 593 < 2147483647, total time: 23.32s
+>> Step: original bw f=593, g=198
+BOUND: 594 < 2147483647, total time: 23.6s
+>> Step: original bw f=594, g=199
+BOUND: 595 < 2147483647, total time: 23.8s
+>> Step: original bw f=595, g=200
+BOUND: 596 < 2147483647, total time: 24.12s
+>> Step: original bw f=596, g=201
+BOUND: 597 < 2147483647, total time: 25.56s
+>> Step: original fw f=597, g=385
+BOUND: 598 < 2147483647, total time: 26.22s
+>> Step: original fw f=598, g=386
+BOUND: 599 < 2147483647, total time: 26.5s
+>> Step: original fw f=599, g=387
+BOUND: 600 < 2147483647, total time: 26.68s
+>> Step: original fw f=600, g=388
+BOUND: 601 < 2147483647, total time: 27.18s
+>> Step: original fw f=601, g=389
+BOUND: 602 < 2147483647, total time: 27.38s
+>> Step: original fw f=602, g=390
+BOUND: 603 < 2147483647, total time: 27.82s
+>> Step: original fw f=603, g=391
+BOUND: 604 < 2147483647, total time: 28.12s
+>> Step: original fw f=604, g=392
+BOUND: 605 < 2147483647, total time: 28.48s
+>> Step: original fw f=605, g=393
+BOUND: 606 < 2147483647, total time: 28.64s
+>> Step: original fw f=606, g=394
+BOUND: 607 < 2147483647, total time: 29s
+>> Step: original fw f=607, g=395
+BOUND: 608 < 2147483647, total time: 29.5s
+>> Step: original fw f=608, g=396
+BOUND: 609 < 2147483647, total time: 29.88s
+>> Step: original fw f=609, g=397
+BOUND: 610 < 2147483647, total time: 30.12s
+>> Step: original fw f=610, g=398
+BOUND: 611 < 2147483647, total time: 30.5s
+>> Step: original fw f=611, g=399
+BOUND: 612 < 2147483647, total time: 30.82s
+>> Step: original fw f=612, g=400
+BOUND: 613 < 2147483647, total time: 31.28s
+>> Step: original fw f=613, g=401
+BOUND: 614 < 2147483647, total time: 31.62s
+>> Step: original fw f=614, g=402
+BOUND: 615 < 2147483647, total time: 31.96s
+>> Step: original fw f=615, g=403
+BOUND: 616 < 2147483647, total time: 32.18s
+>> Step: original fw f=616, g=404
+BOUND: 617 < 2147483647, total time: 32.62s
+>> Step: original fw f=617, g=405
+BOUND: 618 < 2147483647, total time: 33.14s
+>> Step: original fw f=618, g=406
+BOUND: 619 < 2147483647, total time: 33.56s
+>> Step: original fw f=619, g=407
+BOUND: 620 < 2147483647, total time: 33.78s
+>> Step: original fw f=620, g=408
+BOUND: 621 < 2147483647, total time: 34.3s
+>> Step: original fw f=621, g=409
+BOUND: 622 < 2147483647, total time: 34.54s
+>> Step: original fw f=622, g=410
+BOUND: 623 < 2147483647, total time: 34.84s
+>> Step: original fw f=623, g=411
+BOUND: 624 < 2147483647, total time: 35.2s
+>> Step: original fw f=624, g=412
+BOUND: 625 < 2147483647, total time: 35.64s
+>> Step: original fw f=625, g=413
+BOUND: 626 < 2147483647, total time: 35.8s
+>> Step: original fw f=626, g=414
+BOUND: 627 < 2147483647, total time: 36.24s
+>> Step: original fw f=627, g=415
+BOUND: 628 < 2147483647, total time: 36.82s
+>> Step: original fw f=628, g=416
+BOUND: 629 < 2147483647, total time: 37.4s
+>> Step: original fw f=629, g=417
+BOUND: 630 < 2147483647, total time: 37.72s
+>> Step: original fw f=630, g=418
+BOUND: 631 < 2147483647, total time: 38.18s
+>> Step: original fw f=631, g=419
+BOUND: 632 < 2147483647, total time: 39.64s
+>> Step: original fw f=632, g=420
+BOUND: 633 < 2147483647, total time: 40s
+>> Step: original fw f=633, g=421
+BOUND: 634 < 2147483647, total time: 40.38s
+>> Step: original fw f=634, g=422
+BOUND: 635 < 2147483647, total time: 40.88s
+>> Step: original fw f=635, g=423
+BOUND: 636 < 2147483647, total time: 41.1s
+>> Step: original fw f=636, g=424
+BOUND: 637 < 2147483647, total time: 41.5s
+>> Step: original fw f=637, g=425
+BOUND: 638 < 2147483647, total time: 42.22s
+>> Step: original fw f=638, g=426
+BOUND: 639 < 2147483647, total time: 42.94s
+>> Step: original fw f=639, g=427
+BOUND: 640 < 2147483647, total time: 43.36s
+>> Step: original fw f=640, g=428
+BOUND: 641 < 2147483647, total time: 44.06s
+>> Step: original fw f=641, g=429
+BOUND: 642 < 2147483647, total time: 44.52s
+>> Step: original fw f=642, g=430
+BOUND: 643 < 2147483647, total time: 44.98s
+>> Step: original fw f=643, g=431
+BOUND: 644 < 2147483647, total time: 45.44s
+>> Step: original fw f=644, g=432
+BOUND: 645 < 2147483647, total time: 46.02s
+>> Step: original fw f=645, g=433
+BOUND: 646 < 2147483647, total time: 46.22s
+>> Step: original fw f=646, g=434
+BOUND: 647 < 2147483647, total time: 46.64s
+>> Step: original fw f=647, g=435
+BOUND: 648 < 2147483647, total time: 47.3s
+>> Step: original fw f=648, g=436
+BOUND: 649 < 2147483647, total time: 47.86s
+>> Step: original fw f=649, g=437
+BOUND: 650 < 2147483647, total time: 48.34s
+>> Step: original fw f=650, g=438
+BOUND: 651 < 2147483647, total time: 49.1s
+>> Step: original fw f=651, g=439
+BOUND: 652 < 2147483647, total time: 49.62s
+>> Step: original fw f=652, g=440
+BOUND: 653 < 2147483647, total time: 50.04s
+>> Step: original fw f=653, g=441
+BOUND: 654 < 2147483647, total time: 50.5s
+>> Step: original fw f=654, g=442
+BOUND: 655 < 2147483647, total time: 52.38s
+>> Step: original fw f=655, g=443
+BOUND: 656 < 2147483647, total time: 52.66s
+>> Step: original fw f=656, g=444
+BOUND: 657 < 2147483647, total time: 53.24s
+>> Step: original fw f=657, g=445
+BOUND: 658 < 2147483647, total time: 53.8s
+>> Step: original bw f=658, g=202
+BOUND: 659 < 2147483647, total time: 54.88s
+>> Step: original bw f=659, g=203
+BOUND: 660 < 2147483647, total time: 55.2s
+>> Step: original bw f=660, g=204
+BOUND: 661 < 2147483647, total time: 55.58s
+>> Step: original bw f=661, g=205
+BOUND: 662 < 2147483647, total time: 55.8s
+>> Step: original bw f=662, g=206
+BOUND: 663 < 2147483647, total time: 56.12s
+>> Step: original bw f=663, g=207
+BOUND: 664 < 2147483647, total time: 56.38s
+>> Step: original bw f=664, g=208
+BOUND: 665 < 2147483647, total time: 56.76s
+>> Step: original bw f=665, g=209
+BOUND: 666 < 2147483647, total time: 56.92s
+>> Step: original bw f=666, g=210
+BOUND: 667 < 2147483647, total time: 57.12s
+>> Step: original bw f=667, g=211
+BOUND: 668 < 2147483647, total time: 57.36s
+>> Step: original bw f=668, g=212
+BOUND: 669 < 2147483647, total time: 57.54s
+>> Step: original bw f=669, g=213
+BOUND: 670 < 2147483647, total time: 57.72s
+>> Step: original bw f=670, g=214
+BOUND: 671 < 2147483647, total time: 57.94s
+>> Step: original bw f=671, g=215
+BOUND: 672 < 2147483647, total time: 58.22s
+>> Step: original bw f=672, g=216
+BOUND: 673 < 2147483647, total time: 58.52s
+>> Step: original bw f=673, g=217
+BOUND: 674 < 2147483647, total time: 58.76s
+>> Step: original bw f=674, g=218
+BOUND: 675 < 2147483647, total time: 59.26s
+>> Step: original bw f=675, g=219
+BOUND: 676 < 2147483647, total time: 59.48s
+>> Step: original bw f=676, g=220
+BOUND: 677 < 2147483647, total time: 59.74s
+>> Step: original bw f=677, g=221
+BOUND: 678 < 2147483647, total time: 59.86s
+>> Step: original bw f=678, g=222
+BOUND: 679 < 2147483647, total time: 60.16s
+>> Step: original bw f=679, g=223
+BOUND: 680 < 2147483647, total time: 60.42s
+>> Step: original bw f=680, g=224
+BOUND: 681 < 2147483647, total time: 60.8s
+>> Step: original bw f=681, g=225
+BOUND: 682 < 2147483647, total time: 61.2s
+>> Step: original bw f=682, g=226
+BOUND: 683 < 2147483647, total time: 61.5s
+>> Step: original bw f=683, g=227
+BOUND: 684 < 2147483647, total time: 61.86s
+>> Step: original bw f=684, g=228
+BOUND: 685 < 2147483647, total time: 62.26s
+>> Step: original bw f=685, g=229
+BOUND: 686 < 2147483647, total time: 62.56s
+>> Step: original bw f=686, g=230
+BOUND: 687 < 2147483647, total time: 63.02s
+>> Step: original bw f=687, g=231
+BOUND: 688 < 2147483647, total time: 63.22s
+>> Step: original bw f=688, g=232
+BOUND: 689 < 2147483647, total time: 63.32s
+>> Step: original bw f=689, g=233
+BOUND: 690 < 2147483647, total time: 63.5s
+>> Step: original bw f=690, g=234
+BOUND: 691 < 2147483647, total time: 63.76s
+>> Step: original bw f=691, g=235
+BOUND: 692 < 2147483647, total time: 64.22s
+>> Step: original bw f=692, g=236
+BOUND: 693 < 2147483647, total time: 64.76s
+>> Step: original bw f=693, g=237
+BOUND: 694 < 2147483647, total time: 64.84s
+>> Step: original bw f=694, g=238
+BOUND: 695 < 2147483647, total time: 65.16s
+>> Step: original bw f=695, g=239
+BOUND: 696 < 2147483647, total time: 65.36s
+>> Step: original bw f=696, g=240
+BOUND: 697 < 2147483647, total time: 65.86s
+>> Step: original bw f=697, g=241
+BOUND: 698 < 2147483647, total time: 66.1s
+>> Step: original bw f=698, g=242
+BOUND: 699 < 2147483647, total time: 66.62s
+>> Step: original bw f=699, g=243
+BOUND: 700 < 2147483647, total time: 66.84s
+>> Step: original bw f=700, g=244
+BOUND: 701 < 2147483647, total time: 67.46s
+>> Step: original bw f=701, g=245
+BOUND: 702 < 2147483647, total time: 68.06s
+>> Step: original bw f=702, g=246
+BOUND: 703 < 2147483647, total time: 68.44s
+>> Step: original bw f=703, g=247
+BOUND: 704 < 2147483647, total time: 68.62s
+>> Step: original bw f=704, g=248
+BOUND: 705 < 2147483647, total time: 69.02s
+>> Step: original bw f=705, g=249
+BOUND: 706 < 2147483647, total time: 69.36s
+>> Step: original bw f=706, g=250
+BOUND: 707 < 2147483647, total time: 69.78s
+>> Step: original bw f=707, g=251
+BOUND: 708 < 2147483647, total time: 70.16s
+>> Step: original bw f=708, g=252
+BOUND: 709 < 2147483647, total time: 70.54s
+>> Step: original bw f=709, g=253
+BOUND: 710 < 2147483647, total time: 70.82s
+>> Step: original bw f=710, g=254
+BOUND: 711 < 2147483647, total time: 71.46s
+>> Step: original bw f=711, g=255
+BOUND: 712 < 2147483647, total time: 72.28s
+>> Step: original bw f=712, g=256
+BOUND: 713 < 2147483647, total time: 72.82s
+>> Step: original bw f=713, g=257
+BOUND: 714 < 2147483647, total time: 73.04s
+>> Step: original bw f=714, g=258
+BOUND: 715 < 2147483647, total time: 73.38s
+>> Step: original bw f=715, g=259
+BOUND: 716 < 2147483647, total time: 73.58s
+>> Step: original bw f=716, g=260
+BOUND: 717 < 2147483647, total time: 74s
+>> Step: original bw f=717, g=261
+BOUND: 718 < 2147483647, total time: 74.32s
+>> Step: original bw f=718, g=262
+BOUND: 719 < 2147483647, total time: 74.74s
+>> Step: original bw f=719, g=263
+BOUND: 720 < 2147483647, total time: 75.02s
+>> Step: original bw f=720, g=264
+BOUND: 721 < 2147483647, total time: 75.64s
+>> Step: original bw f=721, g=265
+BOUND: 722 < 2147483647, total time: 76.64s
+>> Step: original bw f=722, g=266
+BOUND: 723 < 2147483647, total time: 77.24s
+>> Step: original bw f=723, g=267
+BOUND: 724 < 2147483647, total time: 77.74s
+>> Step: original bw f=724, g=268
+BOUND: 725 < 2147483647, total time: 78.24s
+>> Step: original bw f=725, g=269
+BOUND: 726 < 2147483647, total time: 78.54s
+>> Step: original bw f=726, g=270
+BOUND: 727 < 2147483647, total time: 78.98s
+>> Step: original bw f=727, g=271
+BOUND: 728 < 2147483647, total time: 81.38s
+>> Step: original fw f=728, g=446
+BOUND: 729 < 2147483647, total time: 83.38s
+>> Step: original fw f=729, g=447
+BOUND: 730 < 2147483647, total time: 84.08s
+>> Step: original fw f=730, g=448
+BOUND: 731 < 2147483647, total time: 84.82s
+>> Step: original fw f=731, g=449
+BOUND: 732 < 2147483647, total time: 85.28s
+>> Step: original fw f=732, g=450
+BOUND: 733 < 2147483647, total time: 85.62s
+>> Step: original fw f=733, g=451
+BOUND: 734 < 2147483647, total time: 86.18s
+>> Step: original fw f=734, g=452
+BOUND: 735 < 2147483647, total time: 87.04s
+>> Step: original fw f=735, g=453
+BOUND: 736 < 2147483647, total time: 87.38s
+>> Step: original fw f=736, g=454
+BOUND: 737 < 2147483647, total time: 87.84s
+>> Step: original fw f=737, g=455
+BOUND: 738 < 2147483647, total time: 88.56s
+>> Step: original fw f=738, g=456
+BOUND: 739 < 2147483647, total time: 89.46s
+>> Step: original fw f=739, g=457
+BOUND: 740 < 2147483647, total time: 90.06s
+>> Step: original fw f=740, g=458
+BOUND: 741 < 2147483647, total time: 90.94s
+>> Step: original fw f=741, g=459
+BOUND: 742 < 2147483647, total time: 91.56s
+>> Step: original fw f=742, g=460
+BOUND: 743 < 2147483647, total time: 92s
+>> Step: original fw f=743, g=461
+BOUND: 744 < 2147483647, total time: 92.64s
+>> Step: original fw f=744, g=462
+BOUND: 745 < 2147483647, total time: 93.92s
+>> Step: original fw f=745, g=463
+BOUND: 746 < 2147483647, total time: 94.42s
+>> Step: original fw f=746, g=464
+BOUND: 747 < 2147483647, total time: 95.04s
+>> Step: original fw f=747, g=465
+BOUND: 748 < 2147483647, total time: 95.76s
+>> Step: original fw f=748, g=466
+BOUND: 749 < 2147483647, total time: 98.98s
+>> Step: original fw f=749, g=467
+BOUND: 750 < 2147483647, total time: 99.7s
+>> Step: original fw f=750, g=468
+BOUND: 751 < 2147483647, total time: 100.66s
+>> Step: original fw f=751, g=469
+BOUND: 752 < 2147483647, total time: 101.3s
+>> Step: original fw f=752, g=470
+BOUND: 753 < 2147483647, total time: 101.74s
+>> Step: original fw f=753, g=471
+BOUND: 754 < 2147483647, total time: 102.44s
+>> Step: original bw f=754, g=272
+BOUND: 755 < 2147483647, total time: 103.56s
+>> Step: original bw f=755, g=273
+BOUND: 756 < 2147483647, total time: 104.08s
+>> Step: original bw f=756, g=274
+BOUND: 757 < 2147483647, total time: 105.16s
+>> Step: original bw f=757, g=275
+BOUND: 758 < 2147483647, total time: 106.48s
+>> Step: original bw f=758, g=276
+BOUND: 759 < 2147483647, total time: 107.62s
+>> Step: original bw f=759, g=277
+BOUND: 760 < 2147483647, total time: 108.12s
+>> Step: original bw f=760, g=278
+BOUND: 761 < 2147483647, total time: 108.78s
+>> Step: original bw f=761, g=279
+BOUND: 762 < 2147483647, total time: 109.16s
+>> Step: original bw f=762, g=280
+BOUND: 763 < 2147483647, total time: 109.84s
+>> Step: original bw f=763, g=281
+BOUND: 764 < 2147483647, total time: 110.4s
+>> Step: original bw f=764, g=282
+BOUND: 765 < 2147483647, total time: 111.06s
+>> Step: original bw f=765, g=283
+BOUND: 766 < 2147483647, total time: 111.52s
+>> Step: original bw f=766, g=284
+BOUND: 767 < 2147483647, total time: 112.26s
+>> Step: original bw f=767, g=285
+BOUND: 768 < 2147483647, total time: 113.44s
+>> Step: original bw f=768, g=286
+BOUND: 769 < 2147483647, total time: 114.36s
+>> Step: original bw f=769, g=287
+BOUND: 770 < 2147483647, total time: 115.16s
+>> Step: original bw f=770, g=288
+BOUND: 771 < 2147483647, total time: 116.14s
+>> Step: original bw f=771, g=289
+BOUND: 772 < 2147483647, total time: 116.58s
+>> Step: original bw f=772, g=290
+BOUND: 773 < 2147483647, total time: 117.28s
+>> Step: original bw f=773, g=291
+BOUND: 774 < 2147483647, total time: 121.06s
+>> Step: original bw f=774, g=292
+BOUND: 775 < 2147483647, total time: 121.9s
+>> Step: original bw f=775, g=293
+BOUND: 776 < 2147483647, total time: 122.52s
+>> Step: original bw f=776, g=294
+BOUND: 777 < 2147483647, total time: 123.26s
+>> Step: original bw f=777, g=295
+BOUND: 778 < 2147483647, total time: 124.64s
+>> Step: original bw f=778, g=296
+BOUND: 779 < 2147483647, total time: 125.68s
+>> Step: original bw f=779, g=297
+BOUND: 780 < 2147483647, total time: 126.48s
+>> Step: original bw f=780, g=298
+BOUND: 781 < 2147483647, total time: 127.38s
+>> Step: original bw f=781, g=299
+BOUND: 782 < 2147483647, total time: 127.7s
+>> Step: original bw f=782, g=300
+BOUND: 783 < 2147483647, total time: 128.68s
+>> Step: original bw f=783, g=301
+BOUND: 784 < 2147483647, total time: 129.58s
+>> Step: original bw f=784, g=302
+BOUND: 785 < 2147483647, total time: 130.58s
+>> Step: original bw f=785, g=303
+BOUND: 786 < 2147483647, total time: 131.2s
+>> Step: original bw f=786, g=304
+BOUND: 787 < 2147483647, total time: 131.68s
+>> Step: original bw f=787, g=305
+BOUND: 788 < 2147483647, total time: 133.2s
+>> Step: original bw f=788, g=306
+BOUND: 789 < 2147483647, total time: 134.36s
+>> Step: original bw f=789, g=307
+BOUND: 790 < 2147483647, total time: 135.74s
+>> Step: original bw f=790, g=308
+BOUND: 791 < 2147483647, total time: 137.24s
+>> Step: original bw f=791, g=309
+BOUND: 792 < 2147483647, total time: 137.7s
+>> Step: original bw f=792, g=310
+BOUND: 793 < 2147483647, total time: 139s
+>> Step: original bw f=793, g=311
+BOUND: 794 < 2147483647, total time: 139.84s
+>> Step: original bw f=794, g=312
+BOUND: 795 < 2147483647, total time: 141.24s
+>> Step: original bw f=795, g=313
+BOUND: 796 < 2147483647, total time: 141.94s
+>> Step: original bw f=796, g=314
+BOUND: 797 < 2147483647, total time: 142.94s
+>> Step: original bw f=797, g=315
+BOUND: 798 < 2147483647, total time: 144.36s
+>> Step: original bw f=798, g=316
+BOUND: 799 < 2147483647, total time: 145.84s
+>> Step: original bw f=799, g=317
+BOUND: 800 < 2147483647, total time: 146.76s
+>> Step: original bw f=800, g=318
+BOUND: 801 < 2147483647, total time: 148s
+>> Step: original bw f=801, g=319
+BOUND: 802 < 2147483647, total time: 151.6s
+>> Step: original bw f=802, g=320
+BOUND: 803 < 2147483647, total time: 152.6s
+>> Step: original bw f=803, g=321
+BOUND: 804 < 2147483647, total time: 153.52s
+>> Step: original bw f=804, g=322
+BOUND: 805 < 2147483647, total time: 154.34s
+>> Step: original bw f=805, g=323
+BOUND: 806 < 2147483647, total time: 154.96s
+>> Step: original bw f=806, g=324
+BOUND: 807 < 2147483647, total time: 155.84s
+>> Step: original bw f=807, g=325
+BOUND: 808 < 2147483647, total time: 157.48s
+>> Step: original bw f=808, g=326
+BOUND: 809 < 2147483647, total time: 159.54s
+>> Step: original bw f=809, g=327
+BOUND: 810 < 2147483647, total time: 161.28s
+>> Step: original bw f=810, g=328
+BOUND: 811 < 2147483647, total time: 162.76s
+>> Step: original bw f=811, g=329
+BOUND: 812 < 2147483647, total time: 163.52s
+>> Step: original bw f=812, g=330
+BOUND: 813 < 2147483647, total time: 164.64s
+>> Step: original bw f=813, g=331
+BOUND: 814 < 2147483647, total time: 165.76s
+>> Step: original bw f=814, g=332
+BOUND: 815 < 2147483647, total time: 167.52s
+>> Step: original bw f=815, g=333
+BOUND: 816 < 2147483647, total time: 168.52s
+>> Step: original bw f=816, g=334
+BOUND: 817 < 2147483647, total time: 169.78s
+>> Step: original bw f=817, g=335
+BOUND: 818 < 2147483647, total time: 175.08s
+>> Step: original fw f=818, g=472
+BOUND: 819 < 2147483647, total time: 179.94s
+>> Step: original fw f=819, g=473
+BOUND: 820 < 2147483647, total time: 180.64s
+>> Step: original fw f=820, g=474
+BOUND: 821 < 2147483647, total time: 181.4s
+>> Step: original fw f=821, g=475
+BOUND: 822 < 2147483647, total time: 182.44s
+>> Step: original fw f=822, g=476
+BOUND: 823 < 2147483647, total time: 183.56s
+>> Step: original fw f=823, g=477
+BOUND: 824 < 2147483647, total time: 184.64s
+>> Step: original fw f=824, g=478
+BOUND: 825 < 2147483647, total time: 186.46s
+>> Step: original fw f=825, g=479
+BOUND: 826 < 2147483647, total time: 187.56s
+>> Step: original fw f=826, g=480
+BOUND: 827 < 2147483647, total time: 188.32s
+>> Step: original fw f=827, g=481
+BOUND: 828 < 2147483647, total time: 189.3s
+>> Step: original fw f=828, g=482
+BOUND: 829 < 2147483647, total time: 190.62s
+>> Step: original fw f=829, g=483
+BOUND: 830 < 2147483647, total time: 191.48s
+>> Step: original fw f=830, g=484
+BOUND: 831 < 2147483647, total time: 192.44s
+>> Step: original fw f=831, g=485
+BOUND: 832 < 2147483647, total time: 193.42s
+>> Step: original fw f=832, g=486
+BOUND: 833 < 2147483647, total time: 194.64s
+>> Step: original fw f=833, g=487
+BOUND: 834 < 2147483647, total time: 195.62s
+>> Step: original fw f=834, g=488
+BOUND: 835 < 2147483647, total time: 197.26s
+>> Step: original fw f=835, g=489
+BOUND: 836 < 2147483647, total time: 198.2s
+>> Step: original fw f=836, g=490
+BOUND: 837 < 2147483647, total time: 198.78s
+>> Step: original fw f=837, g=491
+BOUND: 838 < 2147483647, total time: 199.68s
+>> Step: original fw f=838, g=492
+BOUND: 839 < 2147483647, total time: 201.36s
+>> Step: original fw f=839, g=493
+BOUND: 840 < 2147483647, total time: 202.16s
+>> Step: original fw f=840, g=494
+BOUND: 841 < 2147483647, total time: 203.06s
+>> Step: original fw f=841, g=495
+BOUND: 842 < 2147483647, total time: 204.28s
+>> Step: original fw f=842, g=496
+BOUND: 843 < 2147483647, total time: 205.48s
+>> Step: original fw f=843, g=497
+BOUND: 844 < 2147483647, total time: 206.46s
+>> Step: original fw f=844, g=498
+BOUND: 845 < 2147483647, total time: 208s
+>> Step: original fw f=845, g=499
+BOUND: 846 < 2147483647, total time: 214.08s
+>> Step: original fw f=846, g=500
+BOUND: 847 < 2147483647, total time: 215.06s
+>> Step: original fw f=847, g=501
+BOUND: 848 < 2147483647, total time: 215.92s
+>> Step: original bw f=848, g=336
+BOUND: 849 < 2147483647, total time: 219.38s
+>> Step: original bw f=849, g=337
+BOUND: 850 < 2147483647, total time: 220.66s
+>> Step: original bw f=850, g=338
+BOUND: 851 < 2147483647, total time: 222.66s
+>> Step: original bw f=851, g=339
+BOUND: 852 < 2147483647, total time: 224.42s
+>> Step: original bw f=852, g=340
+BOUND: 853 < 2147483647, total time: 225.46s
+>> Step: original bw f=853, g=341
+BOUND: 854 < 2147483647, total time: 226.8s
+>> Step: original bw f=854, g=342
+BOUND: 855 < 2147483647, total time: 228.6s
+>> Step: original bw f=855, g=343
+BOUND: 856 < 2147483647, total time: 229.56s
+>> Step: original bw f=856, g=344
+BOUND: 857 < 2147483647, total time: 231.78s
+>> Step: original bw f=857, g=345
+BOUND: 858 < 2147483647, total time: 234s
+>> Step: original bw f=858, g=346
+BOUND: 859 < 2147483647, total time: 236.62s
+>> Step: original bw f=859, g=347
+BOUND: 860 < 2147483647, total time: 239s
+>> Step: original bw f=860, g=348
+Peak memory: 901620 KB
+caught signal 2 -- exiting

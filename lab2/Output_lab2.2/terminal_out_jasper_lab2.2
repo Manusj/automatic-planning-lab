@@ -1,0 +1,1198 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.005s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.007s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
+Generated 61 rules.
+Computing model... [0.010s CPU, 0.014s wall-clock]
+481 relevant atoms
+361 auxiliary atoms
+842 final queue length
+1608 total queue pushes
+Completing instantiation... [0.020s CPU, 0.024s wall-clock]
+Instantiating: [0.040s CPU, 0.049s wall-clock]
+Computing fact groups...
+Finding invariants... 17 initial candidates
+[0.010s CPU, 0.007s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+38 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.010s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.010s CPU, 0.014s wall-clock]
+40 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+5 operators removed
+15 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.004s wall-clock]
+Writing translation key... [0.000s CPU, 0.003s wall-clock]
+Writing mutex key... [0.000s CPU, 0.003s wall-clock]
+Writing output... [0.000s CPU, 0.005s wall-clock]
+Done! [0.080s CPU, 0.095s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+28 variables of 35 necessary
+322 of 327 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Simplifying transitions... done!
+path_all_groups: all.groups
+Initializing Exploration...
+Reading invariants from file...
+all.groups: all.groups
+done
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00332788s
+Discovered 20 landmarks, of which 2 are disjunctive and 0 are conjunctive 
+26 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+8 initial landmarks, 7 goal landmarks
+Initializing Exploration...
+Reading invariants from file...
+all.groups: all.groups
+done
+Generating landmarks using the RPG/SAS+ approach
+Switch from bucket-based to heap-based queue at key = 115, num_pushes = 28
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00307042s
+Discovered 20 landmarks, of which 2 are disjunctive and 0 are conjunctive 
+26 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+8 initial landmarks, 7 goal landmarks
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff1,hlm1,preferred=(hff1,hlm1))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 12/12 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Best heuristic value: 12/11 [g=124, 12 evaluated, 11 expanded, t=0.01s]
+Best heuristic value: 11/11 [g=134, 14 evaluated, 13 expanded, t=0.01s]
+Best heuristic value: 10/11 [g=258, 23 evaluated, 22 expanded, t=0.01s]
+Best heuristic value: 10/10 [g=351, 28 evaluated, 27 expanded, t=0.02s]
+Best heuristic value: 9/9 [g=454, 31 evaluated, 30 expanded, t=0.02s]
+Best heuristic value: 8/9 [g=464, 32 evaluated, 31 expanded, t=0.02s]
+Best heuristic value: 8/8 [g=635, 35 evaluated, 34 expanded, t=0.02s]
+Best heuristic value: 7/7 [g=816, 42 evaluated, 41 expanded, t=0.02s]
+Best heuristic value: 6/7 [g=826, 43 evaluated, 42 expanded, t=0.02s]
+Best heuristic value: 6/6 [g=940, 46 evaluated, 45 expanded, t=0.02s]
+Best heuristic value: 5/5 [g=1064, 50 evaluated, 49 expanded, t=0.02s]
+Best heuristic value: 4/5 [g=1074, 51 evaluated, 50 expanded, t=0.02s]
+Best heuristic value: 3/3 [g=1279, 57 evaluated, 56 expanded, t=0.02s]
+Best heuristic value: 2/2 [g=1484, 59 evaluated, 58 expanded, t=0.02s]
+Best heuristic value: 1/1 [g=1689, 61 evaluated, 60 expanded, t=0.02s]
+Solution found!
+Actual search time: 0.01s [t=0.02s]
+Real Plan cost: 1884.
+Real Total time: 0s
+pickup_crate uav1 crate1 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate1 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate2 food (10)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate4 food (10)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate6 depot medicine (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 depot (195)
+Plan length: 24 step(s).
+Plan cost: 1884.
+plan_id: 1
+pickup_crate uav1 crate1 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate1 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate2 food (10)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate4 food (10)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate6 depot medicine (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 depot (195)
+Plan length: 24 step(s).
+Plan cost: 1884.
+888; 438;420
+cmd: pwd; ulimit -v 2000000;ulimit -t 420;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+pickup_crate uav1 crate2 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate2 num2 num1 (10)
+pickup_crate uav1 crate5 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate5 num1 num0 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+take_crate_from_carrier uav1 carrier1 loc1 crate2 num0 num1 (10)
+deliver uav1 person2 loc1 crate2 food (10)
+take_crate_from_carrier uav1 carrier1 loc1 crate1 num1 num2 (10)
+deliver uav1 person4 loc1 crate1 food (10)
+fly_carrier uav1 loc1 depot carrier1 (114)
+pickup_crate uav1 crate4 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate4 num2 num1 (10)
+pickup_crate uav1 crate3 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate3 num1 num0 (10)
+fly_carrier uav1 depot loc3 carrier1 (93)
+take_crate_from_carrier uav1 carrier1 loc3 crate5 num0 num1 (10)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_carrier uav1 loc3 loc2 carrier1 (106)
+take_crate_from_carrier uav1 carrier1 loc2 crate4 num1 num2 (10)
+deliver uav1 person5 loc2 crate4 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num2 num3 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_carrier uav1 loc2 loc4 carrier1 (27)
+take_crate_from_carrier uav1 carrier1 loc4 crate3 num3 num4 (10)
+deliver uav1 person6 loc4 crate3 food (10)
+fly_carrier uav1 loc4 depot carrier1 (171)
+Plan length: 30 step(s).
+Plan cost: 865.
+aras_plan_bound: 1361 0
+[t=0.02]
+Plan-cost: 1884 .
+Total-time: 0s
+Real Plan cost: 1361.
+Real Total time: 0s
+plan_id: 2
+aras_plan_bound: 1239 0
+[t=0.03]
+Plan-cost: 1884 .
+Total-time: 0s
+Real Plan cost: 1239.
+Real Total time: 0s
+plan_id: 2
+aras_plan_bound: 1080 0
+[t=0.03]
+Plan-cost: 1884 .
+Total-time: 0s
+Real Plan cost: 1080.
+Real Total time: 0s
+plan_id: 2
+aras_plan_bound: 920 0
+[t=0.03]
+Plan-cost: 1884 .
+Total-time: 0s
+Real Plan cost: 920.
+Real Total time: 0s
+plan_id: 2
+aras_plan_bound: 865 1
+[t=0.03]
+Plan-cost: 1884 .
+Total-time: 1s
+Real Plan cost: 865.
+Real Total time: 1s
+plan_id: 2
+Initial state h value: 12/12.
+Expanded 61 state(s).
+Reopened 0 state(s).
+Evaluated 62 state(s).
+Evaluations: 124
+Generated 373 state(s).
+Best solution cost so far: 1884
+Solution found - keep searching
+insert bound
+Starting search: lazy_greedy(hff2,hlm2,preferred=(hff2,hlm2),reopen_closed=false)
+Conducting lazy best first search, (real) bound = 1884
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=0.03s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=0.03s]
+Best heuristic value: 181/460 [g=124, 3 evaluated, 2 expanded, t=0.03s]
+Best heuristic value: 180/460 [g=134, 4 evaluated, 3 expanded, t=0.03s]
+Best heuristic value: 180/421 [g=179, 11 evaluated, 10 expanded, t=0.03s]
+Best heuristic value: 152/355 [g=342, 25 evaluated, 24 expanded, t=0.03s]
+Best heuristic value: 152/335 [g=387, 27 evaluated, 26 expanded, t=0.03s]
+Best heuristic value: 142/335 [g=533, 28 evaluated, 27 expanded, t=0.03s]
+Best heuristic value: 141/335 [g=543, 29 evaluated, 28 expanded, t=0.03s]
+Best heuristic value: 141/313 [g=588, 34 evaluated, 33 expanded, t=0.03s]
+Best heuristic value: 131/313 [g=781, 64 evaluated, 63 expanded, t=0.03s]
+Best heuristic value: 130/313 [g=791, 65 evaluated, 64 expanded, t=0.03s]
+Best heuristic value: 129/313 [g=905, 66 evaluated, 65 expanded, t=0.03s]
+Best heuristic value: 119/313 [g=915, 68 evaluated, 67 expanded, t=0.03s]
+Best heuristic value: 92/313 [g=1110, 69 evaluated, 68 expanded, t=0.03s]
+Best heuristic value: 80/313 [g=1120, 70 evaluated, 69 expanded, t=0.03s]
+Best heuristic value: 80/312 [g=1325, 73 evaluated, 72 expanded, t=0.03s]
+Best heuristic value: 62/234 [g=1226, 74 evaluated, 73 expanded, t=0.03s]
+Best heuristic value: 51/223 [g=1418, 75 evaluated, 74 expanded, t=0.03s]
+Best heuristic value: 50/218 [g=1521, 78 evaluated, 77 expanded, t=0.03s]
+Best heuristic value: 39/207 [g=1531, 79 evaluated, 78 expanded, t=0.03s]
+Best heuristic value: 12/207 [g=1726, 80 evaluated, 79 expanded, t=0.03s]
+Best heuristic value: 1/196 [g=1736, 81 evaluated, 80 expanded, t=0.03s]
+Best heuristic value: 1/116 [g=1729, 84 evaluated, 83 expanded, t=0.03s]
+Best heuristic value: 1/105 [g=1739, 85 evaluated, 84 expanded, t=0.03s]
+Best heuristic value: 1/94 [g=1842, 87 evaluated, 86 expanded, t=0.03s]
+Solution found!
+Actual search time: 0.07s [t=0.1s]
+pickup_crate uav1 crate1 depot food (10)
+fly_to uav1 depot loc1 (114)
+fly_to uav1 loc1 loc4 (104)
+deliver uav1 person6 loc4 crate1 food (10)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate2 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc1 (114)
+fly_to uav1 loc1 loc3 (45)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate3 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate3 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+fly_carrier uav1 depot loc2 carrier1 (195)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num2 num3 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate4 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate3 num3 num4 (10)
+fly_to uav1 loc2 loc1 (116)
+deliver uav1 person2 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 29 step(s).
+Plan cost: 1844.
+888; 451;407
+cmd: pwd; ulimit -v 2000000;ulimit -t 407;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1372 13
+[t=0.1]
+Plan-cost: 1844 .
+Total-time: 13s
+aras_plan_bound: 1199 13
+[t=0.1]
+Plan-cost: 1844 .
+Total-time: 13s
+aras_plan_bound: 1184 14
+[t=0.1]
+Plan-cost: 1844 .
+Total-time: 14s
+aras_plan_bound: 1058 14
+[t=0.1]
+Plan-cost: 1844 .
+Total-time: 14s
+aras_plan_bound: 1023 16
+[t=0.1]
+Plan-cost: 1844 .
+Total-time: 16s
+Initial state h value: 236/665.
+Expanded 1134 state(s).
+Reopened 0 state(s).
+Evaluated 1304 state(s).
+Evaluations: 2608
+Generated 6365 state(s).
+Best solution cost so far: 1844
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=5)
+Conducting lazy best first search, (real) bound = 1844
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=0.1s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=0.1s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=0.1s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=0.1s]
+Best heuristic value: 181/421 [g=103, 13 evaluated, 12 expanded, t=0.1s]
+Best heuristic value: 180/421 [g=158, 17 evaluated, 16 expanded, t=0.1s]
+Best heuristic value: 170/421 [g=225, 39 evaluated, 38 expanded, 6 reopened, t=0.1s]
+Best heuristic value: 152/335 [g=331, 40 evaluated, 39 expanded, 6 reopened, t=0.1s]
+Best heuristic value: 134/335 [g=158, 51 evaluated, 50 expanded, 10 reopened, t=0.1s]
+Best heuristic value: 123/335 [g=330, 76 evaluated, 75 expanded, 17 reopened, t=0.11s]
+Best heuristic value: 113/335 [g=471, 83 evaluated, 82 expanded, 17 reopened, t=0.11s]
+Best heuristic value: 95/298 [g=548, 90 evaluated, 89 expanded, 18 reopened, t=0.11s]
+Best heuristic value: 91/298 [g=531, 524 evaluated, 498 expanded, 147 reopened, t=0.15s]
+Best heuristic value: 73/276 [g=647, 529 evaluated, 501 expanded, 147 reopened, t=0.15s]
+Best heuristic value: 73/264 [g=716, 636 evaluated, 590 expanded, 158 reopened, t=0.15s]
+Best heuristic value: 62/253 [g=907, 640 evaluated, 594 expanded, 159 reopened, t=0.15s]
+Best heuristic value: 34/148 [g=1009, 793 evaluated, 736 expanded, 206 reopened, t=0.16s]
+Best heuristic value: 34/137 [g=1133, 795 evaluated, 738 expanded, 206 reopened, t=0.16s]
+Best heuristic value: 23/137 [g=1247, 797 evaluated, 740 expanded, 207 reopened, t=0.16s]
+Best heuristic value: 23/126 [g=1381, 806 evaluated, 749 expanded, 211 reopened, t=0.16s]
+Best heuristic value: 12/126 [g=1495, 808 evaluated, 751 expanded, 211 reopened, t=0.16s]
+Best heuristic value: 1/115 [g=1505, 810 evaluated, 753 expanded, 211 reopened, t=0.16s]
+Solution found!
+Actual search time: 0.06s [t=0.16s]
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+fly_carrier uav1 loc1 loc2 carrier1 (116)
+take_crate_from_carrier uav1 carrier1 loc2 crate1 num2 num3 (10)
+deliver uav1 person5 loc2 crate1 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num3 num4 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 loc4 (27)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate2 food (10)
+fly_to uav1 loc4 loc1 (104)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate4 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 29 step(s).
+Plan cost: 1619.
+888; 457;401
+cmd: pwd; ulimit -v 2000000;ulimit -t 401;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1349 19
+[t=0.16]
+Plan-cost: 1619 .
+Total-time: 19s
+aras_plan_bound: 1346 19
+[t=0.16]
+Plan-cost: 1619 .
+Total-time: 19s
+aras_plan_bound: 1023 19
+[t=0.16]
+Plan-cost: 1619 .
+Total-time: 19s
+aras_plan_bound: 865 20
+[t=0.16]
+Plan-cost: 1619 .
+Total-time: 20s
+Initial state h value: 236/665.
+Expanded 755 state(s).
+Reopened 212 state(s).
+Evaluated 812 state(s).
+Evaluations: 1624
+Generated 4412 state(s).
+Best solution cost so far: 1619
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=3)
+Conducting lazy best first search, (real) bound = 1619
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=0.16s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=0.16s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=0.16s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=0.16s]
+Best heuristic value: 181/421 [g=103, 13 evaluated, 12 expanded, t=0.16s]
+Best heuristic value: 180/421 [g=158, 17 evaluated, 16 expanded, t=0.16s]
+Best heuristic value: 180/410 [g=103, 28 evaluated, 27 expanded, t=0.17s]
+Best heuristic value: 134/410 [g=158, 31 evaluated, 30 expanded, t=0.17s]
+Best heuristic value: 134/382 [g=262, 32 evaluated, 31 expanded, t=0.17s]
+Best heuristic value: 123/382 [g=330, 331 evaluated, 330 expanded, 94 reopened, t=0.19s]
+Best heuristic value: 123/371 [g=434, 337 evaluated, 336 expanded, 94 reopened, t=0.19s]
+Best heuristic value: 113/371 [g=471, 341 evaluated, 340 expanded, 94 reopened, t=0.19s]
+Best heuristic value: 95/298 [g=528, 355 evaluated, 354 expanded, 98 reopened, t=0.19s]
+Best heuristic value: 95/292 [g=391, 1232 evaluated, 1217 expanded, 456 reopened, t=0.23s]
+Best heuristic value: 84/287 [g=634, 1529 evaluated, 1509 expanded, 568 reopened, t=0.24s]
+Best heuristic value: 73/276 [g=647, 1763 evaluated, 1728 expanded, 656 reopened, t=0.25s]
+Best heuristic value: 73/264 [g=647, 2337 evaluated, 2274 expanded, 977 reopened, t=0.27s]
+Best heuristic value: 73/255 [g=570, 2384 evaluated, 2319 expanded, 986 reopened, t=0.27s]
+Best heuristic value: 62/253 [g=806, 3251 evaluated, 3165 expanded, 1476 reopened, t=0.3s]
+Best heuristic value: 62/244 [g=768, 3875 evaluated, 3778 expanded, 1874 reopened, t=0.32s]
+Best heuristic value: 45/240 [g=805, 3880 evaluated, 3781 expanded, 1874 reopened, t=0.32s]
+Best heuristic value: 45/233 [g=832, 3900 evaluated, 3799 expanded, 1875 reopened, t=0.32s]
+Best heuristic value: 34/148 [g=971, 7708 evaluated, 7525 expanded, 3425 reopened, t=0.43s]
+Best heuristic value: 34/137 [g=1095, 7710 evaluated, 7527 expanded, 3425 reopened, t=0.43s]
+Best heuristic value: 23/137 [g=1209, 7711 evaluated, 7528 expanded, 3425 reopened, t=0.43s]
+Best heuristic value: 23/126 [g=1343, 7716 evaluated, 7533 expanded, 3425 reopened, t=0.43s]
+Best heuristic value: 12/126 [g=1457, 7718 evaluated, 7535 expanded, 3425 reopened, t=0.43s]
+Best heuristic value: 1/115 [g=1467, 7720 evaluated, 7537 expanded, 3425 reopened, t=0.43s]
+Solution found!
+Actual search time: 0.36s [t=0.52s]
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+fly_carrier uav1 depot loc2 carrier1 (195)
+take_crate_from_carrier uav1 carrier1 loc2 crate1 num2 num3 (10)
+deliver uav1 person5 loc2 crate1 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num3 num4 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate2 food (10)
+fly_to uav1 loc4 loc1 (104)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate4 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 27 step(s).
+Plan cost: 1581.
+888; 473;385
+cmd: pwd; ulimit -v 2000000;ulimit -t 385;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1349 35
+[t=0.52]
+Plan-cost: 1581 .
+Total-time: 35s
+aras_plan_bound: 1346 35
+[t=0.52]
+Plan-cost: 1581 .
+Total-time: 35s
+aras_plan_bound: 1023 35
+[t=0.52]
+Plan-cost: 1581 .
+Total-time: 35s
+aras_plan_bound: 865 37
+[t=0.52]
+Plan-cost: 1581 .
+Total-time: 37s
+Initial state h value: 236/665.
+Expanded 10396 state(s).
+Reopened 4882 state(s).
+Evaluated 10653 state(s).
+Evaluations: 21306
+Generated 58798 state(s).
+Best solution cost so far: 1581
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=2)
+Conducting lazy best first search, (real) bound = 1581
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=0.52s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=0.52s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=0.52s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=0.52s]
+Best heuristic value: 181/421 [g=103, 11 evaluated, 10 expanded, t=0.52s]
+Best heuristic value: 180/421 [g=158, 15 evaluated, 14 expanded, t=0.52s]
+Best heuristic value: 180/410 [g=103, 19 evaluated, 18 expanded, t=0.52s]
+Best heuristic value: 134/410 [g=158, 22 evaluated, 21 expanded, t=0.52s]
+Best heuristic value: 134/382 [g=262, 25 evaluated, 24 expanded, t=0.52s]
+Best heuristic value: 123/382 [g=208, 222 evaluated, 221 expanded, 35 reopened, t=0.53s]
+Best heuristic value: 123/371 [g=312, 235 evaluated, 234 expanded, 35 reopened, t=0.53s]
+Best heuristic value: 113/371 [g=285, 248 evaluated, 247 expanded, 35 reopened, t=0.53s]
+Best heuristic value: 95/298 [g=362, 336 evaluated, 335 expanded, 47 reopened, t=0.54s]
+Best heuristic value: 95/292 [g=390, 1150 evaluated, 1141 expanded, 416 reopened, t=0.58s]
+Best heuristic value: 91/292 [g=531, 1777 evaluated, 1747 expanded, 639 reopened, t=0.61s]
+Best heuristic value: 84/292 [g=598, 2485 evaluated, 2436 expanded, 919 reopened, t=0.64s]
+Best heuristic value: 73/264 [g=647, 2576 evaluated, 2518 expanded, 950 reopened, t=0.64s]
+Best heuristic value: 73/255 [g=570, 3372 evaluated, 3295 expanded, 1207 reopened, t=0.67s]
+Best heuristic value: 62/253 [g=803, 6730 evaluated, 6595 expanded, 2690 reopened, t=0.77s]
+Best heuristic value: 62/244 [g=768, 7381 evaluated, 7223 expanded, 2989 reopened, t=0.79s]
+Best heuristic value: 45/240 [g=805, 7386 evaluated, 7228 expanded, 2991 reopened, t=0.79s]
+Best heuristic value: 45/233 [g=832, 7401 evaluated, 7241 expanded, 2993 reopened, t=0.79s]
+Best heuristic value: 34/148 [g=496, 35318 evaluated, 34831 expanded, 9583 reopened, t=1.64s]
+Best heuristic value: 34/137 [g=620, 35321 evaluated, 34834 expanded, 9583 reopened, t=1.64s]
+Best heuristic value: 23/137 [g=734, 35323 evaluated, 34836 expanded, 9583 reopened, t=1.64s]
+Best heuristic value: 23/126 [g=862, 35849 evaluated, 35326 expanded, 9667 reopened, t=1.65s]
+Best heuristic value: 12/126 [g=779, 42051 evaluated, 41319 expanded, 10597 reopened, t=1.84s]
+Best heuristic value: 1/115 [g=789, 42053 evaluated, 41321 expanded, 10597 reopened, t=1.84s]
+Solution found!
+Actual search time: 1.33s [t=1.85s]
+pickup_crate uav1 crate3 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate3 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num2 num1 (10)
+pickup_crate uav1 crate5 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate5 num1 num0 (10)
+fly_carrier uav1 depot loc3 carrier1 (93)
+take_crate_from_carrier uav1 carrier1 loc3 crate5 num0 num1 (10)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_carrier uav1 loc3 loc4 carrier1 (85)
+take_crate_from_carrier uav1 carrier1 loc4 crate1 num1 num2 (10)
+deliver uav1 person6 loc4 crate1 food (10)
+fly_carrier uav1 loc4 loc2 carrier1 (27)
+take_crate_from_carrier uav1 carrier1 loc2 crate3 num2 num3 (10)
+deliver uav1 person5 loc2 crate3 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num3 num4 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_carrier uav1 loc2 loc1 carrier1 (116)
+fly_carrier uav1 loc1 depot carrier1 (114)
+pickup_crate uav1 crate4 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate4 num4 num3 (10)
+pickup_crate uav1 crate2 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate2 num3 num2 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+take_crate_from_carrier uav1 carrier1 loc1 crate4 num2 num3 (10)
+deliver uav1 person4 loc1 crate4 food (10)
+take_crate_from_carrier uav1 carrier1 loc1 crate2 num3 num4 (10)
+deliver uav1 person2 loc1 crate2 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 31 step(s).
+Plan cost: 903.
+888; 481;377
+cmd: pwd; ulimit -v 2000000;ulimit -t 377;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 868 43
+[t=1.85]
+Plan-cost: 903 .
+Total-time: 43s
+aras_plan_bound: 865 43
+[t=1.85]
+Plan-cost: 903 .
+Total-time: 43s
+Initial state h value: 236/665.
+Expanded 41850 state(s).
+Reopened 10767 state(s).
+Evaluated 42609 state(s).
+Evaluations: 85218
+Generated 241497 state(s).
+Best solution cost so far: 903
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=1)
+Conducting lazy best first search, (real) bound = 903
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=1.85s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=1.85s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=1.85s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=1.85s]
+Best heuristic value: 181/421 [g=103, 13 evaluated, 12 expanded, t=1.85s]
+Best heuristic value: 181/410 [g=103, 16 evaluated, 15 expanded, t=1.85s]
+Best heuristic value: 180/410 [g=113, 17 evaluated, 16 expanded, t=1.85s]
+Best heuristic value: 134/410 [g=158, 19 evaluated, 18 expanded, t=1.85s]
+Best heuristic value: 134/382 [g=198, 23 evaluated, 22 expanded, t=1.85s]
+Best heuristic value: 123/382 [g=208, 118 evaluated, 117 expanded, 13 reopened, t=1.86s]
+Best heuristic value: 123/371 [g=248, 190 evaluated, 189 expanded, 22 reopened, t=1.86s]
+Best heuristic value: 113/371 [g=285, 227 evaluated, 226 expanded, 33 reopened, t=1.86s]
+Best heuristic value: 95/298 [g=362, 614 evaluated, 613 expanded, 155 reopened, t=1.88s]
+Best heuristic value: 95/292 [g=387, 1187 evaluated, 1179 expanded, 305 reopened, t=1.91s]
+Best heuristic value: 91/292 [g=491, 2176 evaluated, 2138 expanded, 569 reopened, t=1.94s]
+Best heuristic value: 84/292 [g=551, 3257 evaluated, 3190 expanded, 859 reopened, t=1.98s]
+Best heuristic value: 84/255 [g=572, 3289 evaluated, 3220 expanded, 864 reopened, t=1.98s]
+Best heuristic value: 73/255 [g=612, 3771 evaluated, 3690 expanded, 988 reopened, t=2s]
+Best heuristic value: 73/244 [g=394, 37919 evaluated, 37248 expanded, 6373 reopened, t=2.97s]
+Best heuristic value: 45/240 [g=431, 37924 evaluated, 37253 expanded, 6373 reopened, t=2.97s]
+Best heuristic value: 45/233 [g=458, 37960 evaluated, 37286 expanded, 6373 reopened, t=2.98s]
+Best heuristic value: 34/148 [g=490, 106071 evaluated, 104291 expanded, 21884 reopened, t=5.04s]
+Best heuristic value: 34/137 [g=614, 106073 evaluated, 104293 expanded, 21884 reopened, t=5.04s]
+Best heuristic value: 23/137 [g=688, 148578 evaluated, 145986 expanded, 32221 reopened, t=6.34s]
+Best heuristic value: 12/126 [g=741, 269438 evaluated, 264647 expanded, 69252 reopened, t=10.11s]
+Best heuristic value: 1/115 [g=751, 269439 evaluated, 264648 expanded, 69252 reopened, t=10.11s]
+Best heuristic value: 1/94 [g=796, 424159 evaluated, 416001 expanded, 123646 reopened, t=15.14s]
+Solution found!
+Actual search time: 15.54s [t=17.39s]
+pickup_crate uav1 crate3 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate3 num4 num3 (10)
+pickup_crate uav1 crate5 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate5 num3 num2 (10)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num2 num1 (10)
+fly_carrier uav1 depot loc4 carrier1 (171)
+take_crate_from_carrier uav1 carrier1 loc4 crate1 num1 num2 (10)
+deliver uav1 person6 loc4 crate1 food (10)
+fly_carrier uav1 loc4 loc2 carrier1 (27)
+take_crate_from_carrier uav1 carrier1 loc2 crate3 num2 num3 (10)
+deliver uav1 person5 loc2 crate3 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate5 num3 num4 (10)
+deliver uav1 person5 loc2 crate5 medicine (10)
+fly_carrier uav1 loc2 depot carrier1 (195)
+pickup_crate uav1 crate4 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate4 num4 num3 (10)
+pickup_crate uav1 crate2 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate2 num3 num2 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num2 num1 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+take_crate_from_carrier uav1 carrier1 loc1 crate2 num1 num2 (10)
+deliver uav1 person4 loc1 crate2 food (10)
+take_crate_from_carrier uav1 carrier1 loc1 crate4 num2 num3 (10)
+deliver uav1 person2 loc1 crate4 food (10)
+take_crate_from_carrier uav1 carrier1 loc1 crate6 num3 num4 (10)
+fly_to uav1 loc1 loc3 (45)
+deliver uav1 person1 loc3 crate6 medicine (10)
+fly_to uav1 loc3 depot (93)
+Plan length: 30 step(s).
+Plan cost: 885.
+888; 500;358
+cmd: pwd; ulimit -v 2000000;ulimit -t 358;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 868 64
+[t=17.39]
+Plan-cost: 885 .
+Total-time: 64s
+aras_plan_bound: 865 66
+[t=17.39]
+Plan-cost: 885 .
+Total-time: 66s
+Initial state h value: 236/665.
+Expanded 479147 state(s).
+Reopened 147396 state(s).
+Evaluated 488980 state(s).
+Evaluations: 977960
+Generated 2646158 state(s).
+Best solution cost so far: 885
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=1)
+Conducting lazy best first search, (real) bound = 885
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=17.39s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=17.39s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=17.39s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=17.39s]
+Best heuristic value: 181/421 [g=103, 13 evaluated, 12 expanded, t=17.39s]
+Best heuristic value: 181/410 [g=103, 16 evaluated, 15 expanded, t=17.39s]
+Best heuristic value: 180/410 [g=113, 17 evaluated, 16 expanded, t=17.39s]
+Best heuristic value: 134/410 [g=158, 19 evaluated, 18 expanded, t=17.39s]
+Best heuristic value: 134/382 [g=198, 23 evaluated, 22 expanded, t=17.39s]
+Best heuristic value: 123/382 [g=208, 118 evaluated, 117 expanded, 13 reopened, t=17.4s]
+Best heuristic value: 123/371 [g=248, 190 evaluated, 189 expanded, 22 reopened, t=17.41s]
+Best heuristic value: 113/371 [g=285, 227 evaluated, 226 expanded, 33 reopened, t=17.41s]
+Best heuristic value: 95/298 [g=362, 614 evaluated, 613 expanded, 155 reopened, t=17.44s]
+Best heuristic value: 95/292 [g=387, 1187 evaluated, 1179 expanded, 305 reopened, t=17.48s]
+Best heuristic value: 91/292 [g=491, 2176 evaluated, 2138 expanded, 569 reopened, t=17.51s]
+Best heuristic value: 84/292 [g=551, 3257 evaluated, 3190 expanded, 859 reopened, t=17.55s]
+Best heuristic value: 84/255 [g=572, 3289 evaluated, 3220 expanded, 864 reopened, t=17.55s]
+Best heuristic value: 73/255 [g=612, 3771 evaluated, 3690 expanded, 988 reopened, t=17.56s]
+Best heuristic value: 73/244 [g=394, 37907 evaluated, 37236 expanded, 6374 reopened, t=18.6s]
+Best heuristic value: 45/240 [g=431, 37912 evaluated, 37241 expanded, 6374 reopened, t=18.6s]
+Best heuristic value: 45/233 [g=458, 37948 evaluated, 37274 expanded, 6374 reopened, t=18.6s]
+Best heuristic value: 34/148 [g=490, 106152 evaluated, 104368 expanded, 21938 reopened, t=20.71s]
+Best heuristic value: 34/137 [g=614, 106154 evaluated, 104370 expanded, 21938 reopened, t=20.71s]
+Best heuristic value: 23/137 [g=688, 148785 evaluated, 146193 expanded, 32258 reopened, t=22.03s]
+Best heuristic value: 12/126 [g=741, 269462 evaluated, 264659 expanded, 69060 reopened, t=25.76s]
+Best heuristic value: 1/115 [g=751, 269463 evaluated, 264660 expanded, 69060 reopened, t=25.76s]
+Best heuristic value: 1/94 [g=796, 423426 evaluated, 415307 expanded, 123285 reopened, t=30.93s]
+Solution found!
+Actual search time: 15.9s [t=33.29s]
+pickup_crate uav1 crate3 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate3 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num2 num1 (10)
+pickup_crate uav1 crate5 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate5 num1 num0 (10)
+fly_carrier uav1 depot loc4 carrier1 (171)
+take_crate_from_carrier uav1 carrier1 loc4 crate1 num0 num1 (10)
+deliver uav1 person6 loc4 crate1 food (10)
+fly_carrier uav1 loc4 loc2 carrier1 (27)
+take_crate_from_carrier uav1 carrier1 loc2 crate3 num1 num2 (10)
+deliver uav1 person5 loc2 crate3 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate5 num2 num3 (10)
+deliver uav1 person5 loc2 crate5 medicine (10)
+fly_carrier uav1 loc2 loc3 carrier1 (106)
+take_crate_from_carrier uav1 carrier1 loc3 crate6 num3 num4 (10)
+deliver uav1 person1 loc3 crate6 medicine (10)
+fly_carrier uav1 loc3 depot carrier1 (93)
+pickup_crate uav1 crate4 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate4 num4 num3 (10)
+pickup_crate uav1 crate2 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate2 num3 num2 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+take_crate_from_carrier uav1 carrier1 loc1 crate4 num2 num3 (10)
+deliver uav1 person4 loc1 crate4 food (10)
+take_crate_from_carrier uav1 carrier1 loc1 crate2 num3 num4 (10)
+deliver uav1 person2 loc1 crate2 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 30 step(s).
+Plan cost: 865.
+888; 521;337
+cmd: pwd; ulimit -v 2000000;ulimit -t 337;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+Initial state h value: 236/665.
+Expanded 480242 state(s).
+Reopened 148051 state(s).
+Evaluated 490099 state(s).
+Evaluations: 980198
+Generated 2650901 state(s).
+Best solution cost so far: 865
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=1)
+Conducting lazy best first search, (real) bound = 865
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=33.29s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=33.29s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=33.29s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=33.29s]
+Best heuristic value: 181/421 [g=103, 13 evaluated, 12 expanded, t=33.29s]
+Best heuristic value: 181/410 [g=103, 16 evaluated, 15 expanded, t=33.29s]
+Best heuristic value: 180/410 [g=113, 17 evaluated, 16 expanded, t=33.29s]
+Best heuristic value: 134/410 [g=158, 19 evaluated, 18 expanded, t=33.29s]
+Best heuristic value: 134/382 [g=198, 23 evaluated, 22 expanded, t=33.29s]
+Best heuristic value: 123/382 [g=208, 118 evaluated, 117 expanded, 13 reopened, t=33.3s]
+Best heuristic value: 123/371 [g=248, 190 evaluated, 189 expanded, 22 reopened, t=33.31s]
+Best heuristic value: 113/371 [g=285, 227 evaluated, 226 expanded, 33 reopened, t=33.32s]
+Best heuristic value: 95/298 [g=362, 614 evaluated, 613 expanded, 155 reopened, t=33.35s]
+Best heuristic value: 95/292 [g=387, 1187 evaluated, 1179 expanded, 305 reopened, t=33.38s]
+Best heuristic value: 91/292 [g=491, 2176 evaluated, 2138 expanded, 569 reopened, t=33.42s]
+Best heuristic value: 84/292 [g=551, 3257 evaluated, 3190 expanded, 859 reopened, t=33.45s]
+Best heuristic value: 84/255 [g=572, 3289 evaluated, 3220 expanded, 864 reopened, t=33.45s]
+Best heuristic value: 73/255 [g=612, 3771 evaluated, 3690 expanded, 988 reopened, t=33.47s]
+Best heuristic value: 73/244 [g=394, 37907 evaluated, 37236 expanded, 6374 reopened, t=34.45s]
+Best heuristic value: 45/240 [g=431, 37912 evaluated, 37241 expanded, 6374 reopened, t=34.45s]
+Best heuristic value: 45/233 [g=458, 37948 evaluated, 37274 expanded, 6374 reopened, t=34.45s]
+Best heuristic value: 34/148 [g=490, 106152 evaluated, 104368 expanded, 21938 reopened, t=36.72s]
+Best heuristic value: 34/137 [g=614, 106154 evaluated, 104370 expanded, 21938 reopened, t=36.72s]
+Best heuristic value: 23/137 [g=688, 148785 evaluated, 146193 expanded, 32258 reopened, t=38.17s]
+Best heuristic value: 12/126 [g=741, 269462 evaluated, 264659 expanded, 69060 reopened, t=41.83s]
+Best heuristic value: 1/115 [g=751, 269463 evaluated, 264660 expanded, 69060 reopened, t=41.83s]
+Best heuristic value: 1/94 [g=796, 423426 evaluated, 415307 expanded, 123285 reopened, t=46.98s]
+Completely explored state space -- no solution!
+Actual search time: 46.4s [t=79.69s]
+Initial state h value: 236/665.
+Expanded 1069708 state(s).
+Reopened 441628 state(s).
+Evaluated 1101619 state(s).
+Evaluations: 2203238
+Generated 5798005 state(s).
+Best solution cost so far: 865
+No solution found - keep searching
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff1,hlm1,preferred=(hff1,hlm1))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 12/12 [g=0, 1 evaluated, 0 expanded, t=79.69s]
+Best heuristic value: 12/11 [g=103, 13 evaluated, 12 expanded, t=79.69s]
+Best heuristic value: 11/11 [g=113, 16 evaluated, 15 expanded, t=79.69s]
+Best heuristic value: 10/10 [g=219, 17 evaluated, 16 expanded, t=79.69s]
+Best heuristic value: 9/10 [g=424, 24 evaluated, 23 expanded, t=79.69s]
+Best heuristic value: 9/9 [g=595, 27 evaluated, 26 expanded, t=79.69s]
+Best heuristic value: 8/8 [g=776, 35 evaluated, 34 expanded, t=79.69s]
+Best heuristic value: 7/8 [g=786, 36 evaluated, 35 expanded, t=79.69s]
+Best heuristic value: 6/6 [g=991, 46 evaluated, 43 expanded, t=79.69s]
+Best heuristic value: 5/5 [g=1196, 49 evaluated, 46 expanded, t=79.69s]
+Best heuristic value: 4/4 [g=1517, 55 evaluated, 52 expanded, t=79.69s]
+Best heuristic value: 3/3 [g=1641, 57 evaluated, 54 expanded, t=79.69s]
+Best heuristic value: 2/2 [g=1889, 63 evaluated, 60 expanded, t=79.69s]
+Best heuristic value: 1/1 [g=2013, 65 evaluated, 62 expanded, t=79.69s]
+Solution found!
+Actual search time: 0s [t=79.69s]
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 loc2 (106)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate1 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate1 food (10)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate6 depot medicine (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc2 (195)
+deliver uav1 person5 loc2 crate2 food (10)
+fly_to uav1 loc2 loc1 (116)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate4 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 26 step(s).
+Plan cost: 2127.
+1338; 580;728
+cmd: pwd; ulimit -v 2000000;ulimit -t 728;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1696 143
+[t=79.69]
+Plan-cost: 2127 .
+Total-time: 143s
+aras_plan_bound: 1523 143
+[t=79.69]
+Plan-cost: 2127 .
+Total-time: 143s
+aras_plan_bound: 1065 143
+[t=79.69]
+Plan-cost: 2127 .
+Total-time: 143s
+aras_plan_bound: 868 144
+[t=79.69]
+Plan-cost: 2127 .
+Total-time: 144s
+aras_plan_bound: 865 144
+[t=79.69]
+Plan-cost: 2127 .
+Total-time: 144s
+Initial state h value: 12/12.
+Expanded 63 state(s).
+Reopened 0 state(s).
+Evaluated 66 state(s).
+Evaluations: 132
+Generated 379 state(s).
+Best solution cost so far: 2127
+Solution found - keep searching
+insert bound
+Starting search: lazy_greedy(hff2,hlm2,preferred=(hff2,hlm2),reopen_closed=false)
+Conducting lazy best first search, (real) bound = 2127
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=79.69s]
+Best heuristic value: 209/479 [g=171, 2 evaluated, 1 expanded, t=79.69s]
+Best heuristic value: 191/471 [g=275, 3 evaluated, 2 expanded, t=79.69s]
+Best heuristic value: 191/432 [g=320, 4 evaluated, 3 expanded, t=79.69s]
+Best heuristic value: 191/421 [g=346, 15 evaluated, 14 expanded, t=79.69s]
+Best heuristic value: 181/421 [g=103, 27 evaluated, 26 expanded, t=79.69s]
+Best heuristic value: 180/421 [g=158, 34 evaluated, 33 expanded, t=79.7s]
+Best heuristic value: 152/355 [g=302, 49 evaluated, 48 expanded, t=79.7s]
+Best heuristic value: 152/335 [g=347, 50 evaluated, 49 expanded, t=79.7s]
+Best heuristic value: 142/335 [g=493, 52 evaluated, 51 expanded, t=79.7s]
+Best heuristic value: 142/324 [g=538, 53 evaluated, 52 expanded, t=79.7s]
+Best heuristic value: 141/324 [g=503, 55 evaluated, 54 expanded, t=79.7s]
+Best heuristic value: 141/313 [g=548, 58 evaluated, 57 expanded, t=79.7s]
+Best heuristic value: 131/313 [g=720, 89 evaluated, 88 expanded, t=79.7s]
+Best heuristic value: 130/313 [g=775, 95 evaluated, 94 expanded, t=79.7s]
+Best heuristic value: 84/267 [g=820, 97 evaluated, 96 expanded, t=79.7s]
+Best heuristic value: 73/245 [g=1224, 108 evaluated, 107 expanded, t=79.7s]
+Best heuristic value: 45/240 [g=1340, 110 evaluated, 109 expanded, t=79.7s]
+Best heuristic value: 34/240 [g=1740, 116 evaluated, 115 expanded, t=79.7s]
+Best heuristic value: 23/218 [g=1750, 118 evaluated, 117 expanded, t=79.7s]
+Best heuristic value: 23/207 [g=1955, 120 evaluated, 119 expanded, t=79.7s]
+Best heuristic value: 12/207 [g=1800, 167 evaluated, 158 expanded, t=79.7s]
+Best heuristic value: 1/196 [g=1810, 168 evaluated, 159 expanded, t=79.7s]
+Solution found!
+Actual search time: 0.01s [t=79.7s]
+pickup_crate uav1 crate1 depot food (10)
+fly_to uav1 depot loc3 (93)
+fly_to uav1 loc3 loc4 (85)
+deliver uav1 person6 loc4 crate1 food (10)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate2 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc3 (93)
+fly_to uav1 loc3 loc1 (45)
+deliver uav1 person4 loc1 crate3 food (10)
+fly_to uav1 loc1 loc3 (45)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc2 (195)
+fly_to uav1 loc2 loc3 (106)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 loc2 (106)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate4 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate4 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+fly_carrier uav1 depot loc2 carrier1 (195)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num2 num3 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate4 num3 num4 (10)
+deliver uav1 person5 loc2 crate4 food (10)
+fly_to uav1 loc2 depot (195)
+Plan length: 31 step(s).
+Plan cost: 2005.
+1338; 595;713
+cmd: pwd; ulimit -v 2000000;ulimit -t 713;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1372 157
+[t=79.7]
+Plan-cost: 2005 .
+Total-time: 157s
+aras_plan_bound: 1184 157
+[t=79.7]
+Plan-cost: 2005 .
+Total-time: 157s
+aras_plan_bound: 1153 158
+[t=79.7]
+Plan-cost: 2005 .
+Total-time: 158s
+aras_plan_bound: 1058 158
+[t=79.7]
+Plan-cost: 2005 .
+Total-time: 158s
+aras_plan_bound: 1023 159
+[t=79.7]
+Plan-cost: 2005 .
+Total-time: 159s
+aras_plan_bound: 885 161
+[t=79.7]
+Plan-cost: 2005 .
+Total-time: 161s
+Initial state h value: 236/665.
+Expanded 160 state(s).
+Reopened 0 state(s).
+Evaluated 169 state(s).
+Evaluations: 338
+Generated 952 state(s).
+Best solution cost so far: 2005
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=5)
+Conducting lazy best first search, (real) bound = 2005
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=79.7s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=79.7s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=79.7s]
+Best heuristic value: 191/443 [g=93, 9 evaluated, 8 expanded, t=79.7s]
+Best heuristic value: 191/421 [g=183, 16 evaluated, 15 expanded, t=79.7s]
+Best heuristic value: 181/421 [g=103, 25 evaluated, 24 expanded, 3 reopened, t=79.7s]
+Best heuristic value: 180/421 [g=158, 29 evaluated, 28 expanded, 3 reopened, t=79.7s]
+Best heuristic value: 170/421 [g=225, 51 evaluated, 50 expanded, 9 reopened, t=79.71s]
+Best heuristic value: 152/335 [g=331, 52 evaluated, 51 expanded, 9 reopened, t=79.71s]
+Best heuristic value: 134/335 [g=158, 60 evaluated, 59 expanded, 10 reopened, t=79.71s]
+Best heuristic value: 123/335 [g=330, 85 evaluated, 84 expanded, 17 reopened, t=79.71s]
+Best heuristic value: 113/335 [g=471, 92 evaluated, 91 expanded, 17 reopened, t=79.71s]
+Best heuristic value: 95/298 [g=548, 99 evaluated, 98 expanded, 18 reopened, t=79.71s]
+Best heuristic value: 91/298 [g=531, 528 evaluated, 502 expanded, 147 reopened, t=79.73s]
+Best heuristic value: 73/276 [g=647, 534 evaluated, 506 expanded, 147 reopened, t=79.73s]
+Best heuristic value: 73/264 [g=716, 643 evaluated, 597 expanded, 158 reopened, t=79.74s]
+Best heuristic value: 62/253 [g=907, 652 evaluated, 606 expanded, 159 reopened, t=79.74s]
+Best heuristic value: 34/148 [g=1009, 844 evaluated, 787 expanded, 225 reopened, t=79.75s]
+Best heuristic value: 34/137 [g=1133, 846 evaluated, 789 expanded, 225 reopened, t=79.75s]
+Best heuristic value: 23/137 [g=1247, 847 evaluated, 790 expanded, 225 reopened, t=79.75s]
+Best heuristic value: 23/126 [g=1381, 855 evaluated, 797 expanded, 225 reopened, t=79.75s]
+Best heuristic value: 12/126 [g=1495, 859 evaluated, 801 expanded, 225 reopened, t=79.75s]
+Best heuristic value: 1/115 [g=1505, 862 evaluated, 804 expanded, 225 reopened, t=79.75s]
+Solution found!
+Actual search time: 0.05s [t=79.75s]
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num4 num3 (10)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num3 num2 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+fly_carrier uav1 loc1 loc2 carrier1 (116)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num2 num3 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate1 num3 num4 (10)
+deliver uav1 person5 loc2 crate1 food (10)
+fly_carrier uav1 loc2 loc4 carrier1 (27)
+fly_to uav1 loc4 depot (171)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate2 food (10)
+fly_to uav1 loc4 loc1 (104)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate4 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 29 step(s).
+Plan cost: 1619.
+1338; 602;706
+cmd: pwd; ulimit -v 2000000;ulimit -t 706;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1349 164
+[t=79.75]
+Plan-cost: 1619 .
+Total-time: 164s
+aras_plan_bound: 1346 164
+[t=79.75]
+Plan-cost: 1619 .
+Total-time: 164s
+Initial state h value: 236/665.
+Expanded 806 state(s).
+Reopened 225 state(s).
+Evaluated 865 state(s).
+Evaluations: 1730
+Generated 4714 state(s).
+Best solution cost so far: 1619
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=3)
+Conducting lazy best first search, (real) bound = 1619
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=79.75s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=79.75s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=79.75s]
+Best heuristic value: 191/443 [g=93, 9 evaluated, 8 expanded, t=79.75s]
+Best heuristic value: 191/421 [g=183, 16 evaluated, 15 expanded, t=79.75s]
+Best heuristic value: 181/410 [g=103, 20 evaluated, 19 expanded, t=79.75s]
+Best heuristic value: 180/410 [g=113, 21 evaluated, 20 expanded, t=79.75s]
+Best heuristic value: 134/410 [g=158, 23 evaluated, 22 expanded, t=79.75s]
+Best heuristic value: 134/382 [g=262, 24 evaluated, 23 expanded, t=79.75s]
+Best heuristic value: 123/382 [g=330, 331 evaluated, 330 expanded, 94 reopened, t=79.77s]
+Best heuristic value: 123/371 [g=434, 337 evaluated, 336 expanded, 94 reopened, t=79.77s]
+Best heuristic value: 113/371 [g=471, 341 evaluated, 340 expanded, 94 reopened, t=79.77s]
+Best heuristic value: 95/298 [g=528, 355 evaluated, 354 expanded, 98 reopened, t=79.77s]
+Best heuristic value: 95/292 [g=391, 1251 evaluated, 1236 expanded, 470 reopened, t=79.82s]
+Best heuristic value: 91/292 [g=531, 1632 evaluated, 1601 expanded, 599 reopened, t=79.83s]
+Best heuristic value: 84/292 [g=598, 1650 evaluated, 1618 expanded, 599 reopened, t=79.83s]
+Best heuristic value: 84/287 [g=634, 1755 evaluated, 1720 expanded, 671 reopened, t=79.84s]
+Best heuristic value: 73/276 [g=647, 1811 evaluated, 1774 expanded, 690 reopened, t=79.84s]
+Best heuristic value: 73/264 [g=647, 2377 evaluated, 2314 expanded, 1006 reopened, t=79.86s]
+Best heuristic value: 73/255 [g=570, 2402 evaluated, 2339 expanded, 1011 reopened, t=79.86s]
+Best heuristic value: 62/253 [g=806, 3273 evaluated, 3187 expanded, 1500 reopened, t=79.9s]
+Best heuristic value: 62/233 [g=832, 3904 evaluated, 3803 expanded, 1896 reopened, t=79.92s]
+Best heuristic value: 45/233 [g=805, 3914 evaluated, 3813 expanded, 1898 reopened, t=79.92s]
+Best heuristic value: 34/148 [g=971, 7805 evaluated, 7621 expanded, 3503 reopened, t=80.04s]
+Best heuristic value: 34/137 [g=1095, 7808 evaluated, 7624 expanded, 3504 reopened, t=80.04s]
+Best heuristic value: 23/137 [g=1209, 7809 evaluated, 7625 expanded, 3504 reopened, t=80.04s]
+Best heuristic value: 23/126 [g=1343, 7814 evaluated, 7630 expanded, 3504 reopened, t=80.05s]
+Best heuristic value: 12/126 [g=1457, 7816 evaluated, 7632 expanded, 3504 reopened, t=80.05s]
+Best heuristic value: 1/115 [g=1467, 7818 evaluated, 7634 expanded, 3504 reopened, t=80.05s]
+Solution found!
+Actual search time: 0.4s [t=80.15s]
+pickup_crate uav1 crate5 depot medicine (10)
+fly_to uav1 depot loc3 (93)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_to uav1 loc3 depot (93)
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num4 num3 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num3 num2 (10)
+fly_carrier uav1 depot loc2 carrier1 (195)
+take_crate_from_carrier uav1 carrier1 loc2 crate1 num2 num3 (10)
+deliver uav1 person5 loc2 crate1 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num3 num4 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+fly_to uav1 loc2 depot (195)
+pickup_crate uav1 crate2 depot food (10)
+fly_to uav1 depot loc4 (171)
+deliver uav1 person6 loc4 crate2 food (10)
+fly_to uav1 loc4 loc1 (104)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate3 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person2 loc1 crate3 food (10)
+fly_to uav1 loc1 depot (114)
+pickup_crate uav1 crate4 depot food (10)
+fly_to uav1 depot loc1 (114)
+deliver uav1 person4 loc1 crate4 food (10)
+fly_to uav1 loc1 depot (114)
+Plan length: 27 step(s).
+Plan cost: 1581.
+1338; 603;705
+cmd: pwd; ulimit -v 2000000;ulimit -t 705;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_lab2.2--1 output_jasper_lab2.2-output_bound -o output_jasper_lab2.2-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_lab2.2_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+run system error or terminated by time or memory!
+**************end aras***************
+aras_plan_bound: 1349 165
+[t=80.15]
+Plan-cost: 1581 .
+Total-time: 165s
+aras_plan_bound: 1346 165
+[t=80.15]
+Plan-cost: 1581 .
+Total-time: 165s
+aras_plan_bound: 1023 165
+[t=80.15]
+Plan-cost: 1581 .
+Total-time: 165s
+aras_plan_bound: 865 167
+[t=80.15]
+Plan-cost: 1581 .
+Total-time: 167s
+Initial state h value: 236/665.
+Expanded 10518 state(s).
+Reopened 4962 state(s).
+Evaluated 10776 state(s).
+Evaluations: 21552
+Generated 59535 state(s).
+Best solution cost so far: 1581
+Solution found - keep searching
+insert bound
+Starting search: lazy_wastar(hff2,hlm2,preferred=(hff2,hlm2),w=2)
+Conducting lazy best first search, (real) bound = 1581
+Best heuristic value: 236/665 [g=0, 1 evaluated, 0 expanded, t=80.15s]
+Best heuristic value: 226/665 [g=10, 2 evaluated, 1 expanded, t=80.15s]
+Best heuristic value: 225/665 [g=30, 6 evaluated, 5 expanded, t=80.15s]
+Best heuristic value: 191/432 [g=93, 9 evaluated, 8 expanded, t=80.15s]
+Best heuristic value: 181/410 [g=103, 11 evaluated, 10 expanded, t=80.16s]
+Best heuristic value: 180/410 [g=113, 12 evaluated, 11 expanded, t=80.16s]
+Best heuristic value: 134/410 [g=158, 14 evaluated, 13 expanded, t=80.16s]
+Best heuristic value: 134/382 [g=262, 17 evaluated, 16 expanded, t=80.16s]
+Best heuristic value: 123/382 [g=208, 222 evaluated, 221 expanded, 35 reopened, t=80.17s]
+Best heuristic value: 123/371 [g=312, 235 evaluated, 234 expanded, 35 reopened, t=80.17s]
+Best heuristic value: 113/371 [g=285, 247 evaluated, 246 expanded, 35 reopened, t=80.17s]
+Best heuristic value: 95/298 [g=362, 336 evaluated, 335 expanded, 47 reopened, t=80.18s]
+Best heuristic value: 95/292 [g=390, 1150 evaluated, 1141 expanded, 416 reopened, t=80.23s]
+Best heuristic value: 91/292 [g=531, 1775 evaluated, 1745 expanded, 639 reopened, t=80.25s]
+Best heuristic value: 84/292 [g=598, 2485 evaluated, 2436 expanded, 919 reopened, t=80.28s]
+Best heuristic value: 73/264 [g=647, 2578 evaluated, 2520 expanded, 950 reopened, t=80.29s]
+Best heuristic value: 73/255 [g=570, 3373 evaluated, 3296 expanded, 1208 reopened, t=80.32s]
+Best heuristic value: 62/253 [g=803, 6730 evaluated, 6595 expanded, 2686 reopened, t=80.43s]
+Best heuristic value: 62/244 [g=768, 7426 evaluated, 7260 expanded, 3002 reopened, t=80.46s]
+Best heuristic value: 45/240 [g=805, 7429 evaluated, 7263 expanded, 3002 reopened, t=80.46s]
+Best heuristic value: 45/233 [g=832, 7446 evaluated, 7278 expanded, 3004 reopened, t=80.46s]
+Peak memory: -1 KB
+caught signal 2 -- exiting

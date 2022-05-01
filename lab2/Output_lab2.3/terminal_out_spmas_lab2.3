@@ -1,0 +1,1116 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.010s CPU, 0.008s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.014s wall-clock]
+Preparing model... [0.000s CPU, 0.005s wall-clock]
+Generated 61 rules.
+Computing model... [0.020s CPU, 0.020s wall-clock]
+481 relevant atoms
+361 auxiliary atoms
+842 final queue length
+1608 total queue pushes
+Completing instantiation... [0.020s CPU, 0.028s wall-clock]
+Instantiating: [0.050s CPU, 0.068s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.020s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+38 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.009s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.020s CPU, 0.016s wall-clock]
+0 implied effects removed
+408 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+15 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.003s wall-clock]
+Translator variables: 35
+Translator derived variables: 0
+Translator facts: 79
+Translator mutex groups: 3
+Translator total mutex groups size: 15
+Translator operators: 327
+Translator task size: 2899
+Translator peak memory: 24080 KB
+Writing output... [0.000s CPU, 0.005s wall-clock]
+Done! [0.100s CPU, 0.113s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+28 variables of 35 necessary
+0 of 3 mutex groups necessary.
+322 of 327 operators necessary.
+0 of 0 axiom rules necessary.
+Initializing mutex computation...
+Mutex computation initialized with 65 fluents.
+iteration for mutex detection and operator pruning
+Initialize m_index fw
+Initialized mvalues forward: reached=784, notReached=3331, spurious=110
+Initialize m_ops fw
+Computing mutexes...
+Mutex computation finished with reached=4037, notReached=78, spurious=110
+0 operators are spurious because were not triggered
+H^2 mutexes added fw: 78, unreachable: 0
+0 of 322 operators detected as spurious
+iteration for mutex detection and operator pruning
+Initialize m_index bw
+Init values regression
+Initialized mvalues backward: reached=2869, notReached=1168, spurious=188
+Initialize m_ops bw
+Computing mutexes...
+Mutex computation finished with reached=4037, notReached=0, spurious=188
+0 operators are spurious because were not triggered
+H^2 mutexes added bw: 0, unreachable: 0
+0 of 322 operators detected as spurious
+Total mutex and disambiguation time: 0.017485
+39 of 39 mutex groups necessary.
+322 of 322 operators necessary.
+0 of 0 axiom rules necessary.
+Change id of operators: 322
+Change id of axioms: 0
+Change id of mutexes
+Change id of goals
+Change id of initial state
+Remove unreachable facts from variables: 28
+39 of 39 mutex groups necessary.
+322 of 322 operators necessary.
+0 of 0 axiom rules necessary.
+Updating causal graph and pruning unnecessary facts
+28 variables of 28 of 35 necessary
+The causal graph is not acyclic.
+39 of 39 mutex groups necessary.
+322 of 322 operators necessary.
+0 of 0 axiom rules necessary.
+Ordering: 28
+previous variable order: var16 - var17 - var18 - var19 - var20 - var21 - var15 - var0 - var8 - var1 - var9 - var2 - var10 - var3 - var11 - var4 - var12 - var5 - var13 - var6 - var14 - var22 - var32 - var24 - var33 - var31 - var29 - var25 - : 12155
+New value: 5138
+new variable order: var17 - var18 - var19 - var16 - var33 - var31 - var25 - var9 - var29 - var10 - var11 - var8 - var1 - var14 - var22 - var2 - var15 - var6 - var3 - var0 - var5 - var4 - var13 - var12 - var24 - var32 - var21 - var20 - : 5138
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 65
+Preprocessor derived variables: 0
+Preprocessor task size: 2880
+Writing output...
+Number of vars: 28
+weighted 28
+done
+
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Simplifying transitions... done!
+  Max num abstractions: 1
+   Abs TRs Strategy: shrink_after_img
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Initializing Symbolic Variables
+Num variables: 28 => 34
+Initialize Symbolic Manager(68, 235294, 16000000, 0)
+Generating binary variables
+Generating predicate BDDs
+Symbolic Variables... Done.
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Initializing smas heuristic...
+  Max num abstractions: 1
+   Abs TRs Strategy: shrink_after_img
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+Merge strategy: linear CG/GOAL, tie breaking on level (main)
+Shrink strategy: bisimulation
+Abstraction size limit: 10000
+Abstraction size limit right before merge: 10000
+Bisimulation type: exact
+Bisimulation threshold: 10000
+Group by h: yes
+At limit: return
+Label reduction: enabled
+Expensive statistics: disabled
+Operator cost: 0
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+   Relax Strategy: binary_search, level
+Selection of Variables: 1
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+   Relax Strategy: binary_search, level
+Selection of Variables: 2
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+   Relax Strategy: binary_search, level
+Selection of Variables: 6
+  Max num abstractions: 100
+   Abs TRs Strategy: ind_tr_shrink
+   PH time: 500, memory: 3e+09
+   Relax time: 10000, nodes: 100000000
+   Ratio relax time: 0.75, nodes: 0.75
+   Perimeter Abstractions: yes
+   Relax dir: bd
+   ShouldAbstract ratio: 0
+CUDD Init: nodes=16000000 cache=16000000 max_memory=0
+TR(time=60000, nodes=100000)
+Mutex(time=60000, nodes=100000, type=edeletion)
+Disj(nodes=2147483647)
+Estimation: min_time(1000) time_penalty +(1000)*(2) nodes_penalty +(1000)*(2)
+Pop(time=2000, nodes=1000000)
+MaxStep(time=30000, nodes=10000000)
+Ratio useful: 0
+   Min alloted time: 60000 nodes: 10000000
+   Max alloted time: 60000 nodes: 15000000
+   Mult alloted time: 2 nodes: 2
+   Ratio after relax: 0.8
+   Relax Strategy: binary_search, level
+Selection of Variables: 1
+Generation time: 1200
+Generation memory: 3e+09
+Initialize original search
+Mutex BDD BW Size(100000): 182
+Mutex BDD FW Size(100000):
+TRs cost=10 (1):  2053
+TRs cost=27 (1):  38
+TRs cost=45 (1):  35
+TRs cost=85 (1):  42
+TRs cost=93 (1):  39
+TRs cost=104 (1):  42
+TRs cost=106 (1):  35
+TRs cost=114 (1):  35
+TRs cost=116 (1):  39
+TRs cost=171 (1):  34
+TRs cost=195 (1):  35
+>> Step: original bw f=10, g=0
+>> Step: original bw f=103, g=93
+>> Step: original bw f=113, g=103
+>> Step: original bw f=123, g=113
+>> Step: original bw f=124, g=114
+>> Step: original bw f=133, g=123
+>> Step: original bw f=134, g=124
+>> Step: original bw f=144, g=134
+>> Step: original bw f=154, g=144
+>> Step: original bw f=158, g=148
+>> Step: original bw f=164, g=154
+>> Step: original bw f=168, g=158
+>> Step: original bw f=174, g=164
+>> Step: original bw f=178, g=168
+>> Step: original bw f=179, g=169
+>> Step: original bw f=181, g=171
+>> Step: original bw f=188, g=178
+>> Step: original bw f=189, g=179
+>> Step: original bw f=191, g=181
+>> Step: original bw f=198, g=188
+>> Step: original bw f=199, g=189
+>> Step: original bw f=201, g=191
+>> Step: original bw f=205, g=195
+>> Step: original bw f=206, g=196
+>> Step: original bw f=208, g=198
+>> Step: original bw f=209, g=199
+>> Step: original bw f=211, g=201
+>> Step: original bw f=213, g=203
+>> Step: original bw f=215, g=205
+>> Step: original bw f=216, g=206
+>> Step: original bw f=218, g=208
+>> Step: original bw f=219, g=209
+>> Step: original bw f=223, g=213
+>> Step: original bw f=225, g=215
+>> Step: original bw f=226, g=216
+>> Step: original bw f=228, g=218
+>> Step: original bw f=229, g=219
+>> Step: original bw f=233, g=223
+>> Step: original bw f=234, g=224
+>> Step: original bw f=235, g=225
+>> Step: original bw f=236, g=226
+>> Step: original bw f=238, g=228
+>> Step: original bw f=239, g=229
+>> Step: original bw f=242, g=232
+>> Step: original bw f=243, g=233
+>> Step: original bw f=244, g=234
+>> Step: original bw f=245, g=235
+>> Step: original bw f=248, g=238
+>> Step: original bw f=249, g=239
+>> Step: original bw f=250, g=240
+>> Step: original bw f=252, g=242
+>> Step: original bw f=253, g=243
+>> Step: original bw f=254, g=244
+>> Step: original bw f=255, g=245
+>> Step: original bw f=256, g=246
+>> Step: original bw f=258, g=248
+>> Step: original bw f=259, g=249
+>> Step: original bw f=260, g=250
+>> Step: original bw f=262, g=252
+>> Step: original bw f=264, g=254
+>> Step: original bw f=265, g=255
+>> Step: original bw f=266, g=256
+>> Step: original bw f=268, g=258
+>> Step: original bw f=269, g=259
+>> Step: original bw f=270, g=260
+>> Step: original bw f=272, g=262
+>> Step: original bw f=274, g=264
+>> Step: original bw f=275, g=265
+>> Step: original bw f=276, g=266
+>> Step: original bw f=278, g=268
+>> Step: original bw f=279, g=269
+>> Step: original bw f=280, g=270
+>> Step: original bw f=282, g=272
+>> Step: original bw f=284, g=274
+>> Step: original bw f=285, g=275
+>> Step: original bw f=286, g=276
+>> Step: original bw f=287, g=277
+>> Step: original bw f=288, g=278
+>> Step: original bw f=289, g=279
+>> Step: original bw f=290, g=280
+>> Step: original bw f=292, g=282
+>> Step: original bw f=293, g=283
+>> Step: original bw f=294, g=284
+>> Step: original bw f=295, g=285
+>> Step: original bw f=296, g=286
+>> Step: original bw f=297, g=287
+>> Step: original bw f=298, g=288
+>> Step: original bw f=299, g=289
+>> Step: original bw f=300, g=290
+>> Step: original bw f=302, g=292
+>> Step: original bw f=303, g=293
+>> Step: original bw f=304, g=294
+>> Step: original bw f=305, g=295
+>> Step: original bw f=306, g=296
+>> Step: original bw f=307, g=297
+>> Step: original bw f=308, g=298
+>> Step: original bw f=309, g=299
+>> Step: original bw f=310, g=300
+>> Step: original bw f=311, g=301
+>> Step: original bw f=312, g=302
+>> Step: original bw f=313, g=303
+>> Step: original bw f=314, g=304
+>> Step: original bw f=315, g=305
+>> Step: original bw f=316, g=306
+>> Step: original bw f=317, g=307
+>> Step: original bw f=318, g=308
+>> Step: original bw f=319, g=309
+>> Step: original bw f=320, g=310
+>> Step: original bw f=321, g=311
+>> Step: original bw f=322, g=312
+>> Step: original bw f=323, g=313
+>> Step: original bw f=324, g=314
+>> Step: original bw f=325, g=315
+>> Step: original bw f=326, g=316
+>> Step: original bw f=327, g=317
+>> Step: original bw f=328, g=318
+>> Step: original bw f=329, g=319
+>> Step: original bw f=330, g=320
+>> Step: original bw f=331, g=321
+>> Step: original bw f=332, g=322
+>> Step: original bw f=333, g=323
+>> Step: original bw f=334, g=324
+>> Step: original bw f=335, g=325
+>> Step: original bw f=336, g=326
+>> Step: original bw f=337, g=327
+>> Step: original bw f=339, g=329
+>> Step: original bw f=340, g=330
+>> Step: original bw f=341, g=331
+>> Step: original bw f=342, g=332
+>> Step: original bw f=343, g=333
+>> Step: original bw f=344, g=334
+>> Step: original bw f=345, g=335
+>> Step: original bw f=347, g=337
+>> Step: original bw f=348, g=338
+>> Step: original bw f=349, g=339
+>> Step: original bw f=350, g=340
+>> Step: original bw f=351, g=341
+>> Step: original bw f=352, g=342
+>> Step: original bw f=353, g=343
+>> Step: original bw f=354, g=344
+>> Step: original bw f=355, g=345
+>> Step: original bw f=356, g=346
+>> Step: original bw f=357, g=347
+>> Step: original bw f=358, g=348
+>> Step: original bw f=359, g=349
+>> Step: original bw f=360, g=350
+>> Step: original bw f=361, g=351
+>> Step: original bw f=362, g=352
+>> Step: original bw f=363, g=353
+>> Step: original bw f=364, g=354
+>> Step: original bw f=365, g=355
+>> Step: original bw f=366, g=356
+>> Step: original bw f=367, g=357
+>> Step: original bw f=368, g=358
+>> Step: original bw f=369, g=359
+>> Step: original bw f=370, g=360
+>> Step: original bw f=371, g=361
+>> Step: original bw f=372, g=362
+>> Step: original bw f=373, g=363
+>> Step: original bw f=374, g=364
+>> Step: original bw f=375, g=365
+>> Step: original bw f=376, g=366
+>> Step: original bw f=377, g=367
+>> Step: original bw f=378, g=368
+>> Step: original bw f=379, g=369
+>> Step: original bw f=380, g=370
+>> Step: original bw f=381, g=371
+>> Step: original bw f=382, g=372
+>> Step: original bw f=383, g=373
+>> Step: original bw f=384, g=374
+>> Step: original bw f=385, g=375
+>> Step: original bw f=386, g=376
+>> Step: original bw f=387, g=377
+>> Step: original bw f=388, g=378
+>> Step: original bw f=389, g=379
+>> Step: original bw f=390, g=380
+>> Step: original bw f=391, g=381
+>> Step: original bw f=392, g=382
+>> Step: original bw f=393, g=383
+>> Step: original bw f=394, g=384
+>> Step: original bw f=395, g=385
+>> Step: original bw f=396, g=386
+>> Step: original bw f=397, g=387
+>> Step: original bw f=398, g=388
+>> Step: original bw f=399, g=389
+>> Step: original bw f=400, g=390
+>> Step: original bw f=401, g=391
+>> Step: original bw f=402, g=392
+>> Step: original bw f=403, g=393
+>> Step: original bw f=404, g=394
+>> Step: original bw f=405, g=395
+>> Step: original bw f=406, g=396
+>> Step: original bw f=407, g=397
+>> Step: original bw f=408, g=398
+>> Step: original bw f=409, g=399
+>> Step: original bw f=410, g=400
+>> Step: original bw f=411, g=401
+>> Step: original bw f=412, g=402
+>> Step: original bw f=414, g=404
+>> Step: original bw f=415, g=405
+>> Step: original bw f=416, g=406
+>> Step: original bw f=417, g=407
+>> Step: original bw f=418, g=408
+>> Step: original bw f=419, g=409
+>> Step: original bw f=420, g=410
+>> Step: original bw f=421, g=411
+>> Step: original bw f=422, g=412
+>> Step: original bw f=423, g=413
+>> Step: original bw f=424, g=414
+>> Step: original bw f=425, g=415
+>> Step: original bw f=426, g=416
+>> Step: original bw f=427, g=417
+>> Step: original bw f=428, g=418
+>> Step: original bw f=429, g=419
+>> Step: original bw f=430, g=420
+>> Step: original bw f=431, g=421
+>> Step: original bw f=432, g=422
+>> Step: original bw f=433, g=423
+>> Step: original bw f=434, g=424
+>> Step: original bw f=435, g=425
+>> Step: original bw f=436, g=426
+>> Step: original bw f=437, g=427
+>> Step: original bw f=438, g=428
+>> Step: original bw f=439, g=429
+>> Step: original bw f=440, g=430
+>> Step: original bw f=441, g=431
+>> Step: original bw f=442, g=432
+>> Step: original bw f=443, g=433
+>> Step: original bw f=444, g=434
+>> Step: original bw f=445, g=435
+>> Step: original bw f=446, g=436
+>> Step: original bw f=447, g=437
+>> Step: original bw f=448, g=438
+>> Step: original bw f=449, g=439
+>> Step: original bw f=450, g=440
+>> Step: original bw f=451, g=441
+>> Step: original bw f=452, g=442
+>> Step: original bw f=453, g=443
+>> Step: original bw f=454, g=444
+>> Step: original bw f=455, g=445
+>> Step: original bw f=456, g=446
+>> Step: original bw f=457, g=447
+>> Step: original bw f=458, g=448
+>> Step: original bw f=459, g=449
+>> Step: original bw f=460, g=450
+>> Step: original bw f=461, g=451
+>> Step: original bw f=462, g=452
+>> Step: original bw f=463, g=453
+>> Step: original bw f=464, g=454
+>> Step: original bw f=465, g=455
+>> Step: original bw f=466, g=456
+>> Step: original bw f=467, g=457
+>> Step: original bw f=468, g=458
+>> Step: original bw f=469, g=459
+>> Step: original bw f=470, g=460
+>> Step: original bw f=471, g=461
+>> Step: original bw f=472, g=462
+>> Step: original bw f=473, g=463
+>> Step: original bw f=474, g=464
+>> Step: original bw f=475, g=465
+>> Step: original bw f=476, g=466
+>> Step: original bw f=477, g=467
+>> Step: original bw f=478, g=468
+>> Step: original bw f=479, g=469
+>> Step: original bw f=480, g=470
+>> Step: original bw f=481, g=471
+>> Step: original bw f=482, g=472
+>> Step: original bw f=483, g=473
+>> Step: original bw f=484, g=474
+>> Step: original bw f=485, g=475
+>> Step: original bw f=486, g=476
+>> Step: original bw f=487, g=477
+>> Step: original bw f=488, g=478
+>> Step: original bw f=489, g=479
+>> Step: original bw f=490, g=480
+>> Step: original bw f=491, g=481
+>> Step: original bw f=492, g=482
+>> Step: original bw f=493, g=483
+>> Step: original bw f=494, g=484
+>> Step: original bw f=495, g=485
+>> Step: original bw f=496, g=486
+>> Step: original bw f=497, g=487
+>> Step: original bw f=498, g=488
+>> Step: original bw f=499, g=489
+>> Step: original bw f=500, g=490
+>> Step: original bw f=501, g=491
+>> Step: original bw f=502, g=492
+>> Step: original bw f=503, g=493
+>> Step: original bw f=504, g=494
+>> Step: original bw f=505, g=495
+>> Step: original bw f=506, g=496
+>> Step: original bw f=507, g=497
+>> Step: original bw f=508, g=498
+>> Step: original bw f=509, g=499
+>> Step: original bw f=510, g=500
+>> Step: original bw f=511, g=501
+>> Step: original bw f=512, g=502
+>> Step: original bw f=513, g=503
+>> Step: original bw f=514, g=504
+>> Step: original bw f=515, g=505
+>> Step: original bw f=516, g=506
+>> Step: original bw f=517, g=507
+>> Step: original bw f=518, g=508
+>> Step: original bw f=519, g=509
+>> Step: original bw f=520, g=510
+>> Step: original bw f=521, g=511
+>> Step: original bw f=522, g=512
+>> Step: original bw f=523, g=513
+>> Step: original bw f=524, g=514
+>> Step: original bw f=525, g=515
+>> Step: original bw f=526, g=516
+>> Step: original bw f=527, g=517
+>> Step: original bw f=528, g=518
+>> Step: original bw f=529, g=519
+>> Step: original bw f=530, g=520
+>> Step: original bw f=531, g=521
+>> Step: original bw f=532, g=522
+>> Step: original bw f=533, g=523
+>> Step: original bw f=534, g=524
+>> Step: original bw f=535, g=525
+>> Step: original bw f=536, g=526
+>> Step: original bw f=537, g=527
+>> Step: original bw f=538, g=528
+>> Step: original bw f=539, g=529
+>> Step: original bw f=540, g=530
+>> Step: original bw f=541, g=531
+>> Step: original bw f=542, g=532
+>> Step: original bw f=543, g=533
+>> Step: original bw f=544, g=534
+>> Step: original bw f=545, g=535
+>> Step: original bw f=546, g=536
+>> Step: original bw f=547, g=537
+>> Step: original bw f=548, g=538
+>> Step: original bw f=549, g=539
+>> Step: original bw f=550, g=540
+>> Step: original bw f=551, g=541
+>> Step: original bw f=552, g=542
+>> Step: original bw f=553, g=543
+>> Step: original bw f=554, g=544
+>> Step: original bw f=555, g=545
+>> Step: original bw f=556, g=546
+>> Step: original bw f=557, g=547
+>> Step: original bw f=558, g=548
+>> Step: original bw f=559, g=549
+>> Step: original bw f=560, g=550
+>> Step: original bw f=561, g=551
+>> Step: original bw f=562, g=552
+>> Step: original bw f=563, g=553
+>> Step: original bw f=564, g=554
+>> Step: original bw f=565, g=555
+>> Step: original bw f=566, g=556
+>> Step: original bw f=567, g=557
+>> Step: original bw f=568, g=558
+>> Step: original bw f=569, g=559
+>> Step: original bw f=570, g=560
+>> Step: original bw f=571, g=561
+>> Step: original bw f=572, g=562
+>> Step: original bw f=573, g=563
+>> Step: original bw f=574, g=564
+>> Step: original bw f=575, g=565
+>> Step: original bw f=576, g=566
+>> Step: original bw f=577, g=567
+>> Step: original bw f=578, g=568
+>> Step: original bw f=579, g=569
+>> Step: original bw f=580, g=570
+>> Step: original bw f=581, g=571
+>> Step: original bw f=582, g=572
+>> Step: original bw f=583, g=573
+>> Step: original bw f=584, g=574
+>> Step: original bw f=585, g=575
+>> Step: original bw f=586, g=576
+>> Step: original bw f=587, g=577
+>> Step: original bw f=588, g=578
+>> Step: original bw f=589, g=579
+>> Step: original bw f=590, g=580
+>> Step: original bw f=591, g=581
+>> Step: original bw f=592, g=582
+>> Step: original bw f=593, g=583
+>> Step: original bw f=594, g=584
+>> Step: original bw f=595, g=585
+>> Step: original bw f=596, g=586
+>> Step: original bw f=597, g=587
+>> Step: original bw f=598, g=588
+>> Step: original bw f=599, g=589
+>> Step: original bw f=600, g=590
+>> Step: original bw f=601, g=591
+>> Step: original bw f=602, g=592
+>> Step: original bw f=603, g=593
+>> Step: original bw f=604, g=594
+>> Step: original bw f=605, g=595
+>> Step: original bw f=606, g=596
+>> Step: original bw f=607, g=597
+>> Step: original bw f=608, g=598
+>> Step: original bw f=609, g=599
+>> Step: original bw f=610, g=600
+>> Step: original bw f=611, g=601
+>> Step: original bw f=612, g=602
+>> Step: original bw f=613, g=603
+>> Step: original bw f=614, g=604
+>> Step: original bw f=615, g=605
+>> Step: original bw f=616, g=606
+>> Step: original bw f=617, g=607
+>> Step: original bw f=618, g=608
+>> Step: original bw f=619, g=609
+>> Step: original bw f=620, g=610
+>> Step: original bw f=621, g=611
+>> Step: original bw f=622, g=612
+>> Step: original bw f=623, g=613
+>> Step: original bw f=624, g=614
+>> Step: original bw f=625, g=615
+>> Step: original bw f=626, g=616
+>> Step: original bw f=627, g=617
+>> Step: original bw f=628, g=618
+>> Step: original bw f=629, g=619
+>> Step: original bw f=630, g=620
+>> Step: original bw f=631, g=621
+>> Step: original bw f=632, g=622
+>> Step: original bw f=633, g=623
+>> Step: original bw f=634, g=624
+>> Step: original bw f=635, g=625
+>> Step: original bw f=636, g=626
+>> Step: original bw f=637, g=627
+>> Step: original bw f=638, g=628
+>> Step: original bw f=639, g=629
+>> Step: original bw f=640, g=630
+>> Step: original bw f=641, g=631
+>> Step: original bw f=642, g=632
+>> Step: original bw f=643, g=633
+>> Step: original bw f=644, g=634
+>> Step: original bw f=645, g=635
+>> Step: original bw f=646, g=636
+>> Step: original bw f=647, g=637
+>> Step: original bw f=648, g=638
+>> Step: original bw f=649, g=639
+>> Step: original bw f=650, g=640
+>> Step: original bw f=651, g=641
+>> Step: original bw f=652, g=642
+>> Step: original bw f=653, g=643
+>> Step: original bw f=654, g=644
+>> Step: original bw f=655, g=645
+>> Step: original bw f=656, g=646
+>> Step: original bw f=657, g=647
+>> Step: original bw f=658, g=648
+>> Step: original bw f=659, g=649
+>> Step: original bw f=660, g=650
+>> Step: original bw f=661, g=651
+>> Step: original bw f=662, g=652
+>> Step: original bw f=663, g=653
+>> Step: original bw f=664, g=654
+>> Step: original bw f=665, g=655
+>> Step: original bw f=666, g=656
+>> Step: original bw f=667, g=657
+>> Step: original bw f=668, g=658
+>> Step: original bw f=669, g=659
+>> Step: original bw f=670, g=660
+>> Step: original bw f=671, g=661
+>> Step: original bw f=672, g=662
+>> Step: original bw f=673, g=663
+>> Step: original bw f=674, g=664
+>> Step: original bw f=675, g=665
+>> Step: original bw f=676, g=666
+>> Step: original bw f=677, g=667
+>> Step: original bw f=678, g=668
+>> Step: original bw f=679, g=669
+>> Step: original bw f=680, g=670
+>> Step: original bw f=681, g=671
+>> Step: original bw f=682, g=672
+>> Step: original bw f=683, g=673
+>> Step: original bw f=684, g=674
+>> Step: original bw f=685, g=675
+>> Step: original bw f=686, g=676
+>> Step: original bw f=687, g=677
+>> Step: original bw f=688, g=678
+>> Step: original bw f=689, g=679
+>> Step: original bw f=690, g=680
+>> Step: original bw f=691, g=681
+>> Step: original bw f=692, g=682
+>> Step: original bw f=693, g=683
+>> Step: original bw f=694, g=684
+>> Step: original bw f=695, g=685
+>> Step: original bw f=696, g=686
+>> Step: original bw f=697, g=687
+>> Step: original bw f=698, g=688
+>> Step: original bw f=699, g=689
+>> Step: original bw f=700, g=690
+>> Step: original bw f=701, g=691
+>> Step: original bw f=702, g=692
+>> Step: original bw f=703, g=693
+>> Step: original bw f=704, g=694
+>> Step: original bw f=705, g=695
+>> Step: original bw f=706, g=696
+>> Step: original bw f=707, g=697
+>> Step: original bw f=708, g=698
+>> Step: original bw f=709, g=699
+>> Step: original bw f=710, g=700
+>> Step: original bw f=711, g=701
+>> Step: original bw f=712, g=702
+>> Step: original bw f=713, g=703
+>> Step: original bw f=714, g=704
+>> Step: original bw f=715, g=705
+>> Step: original bw f=716, g=706
+>> Step: original bw f=717, g=707
+>> Step: original bw f=718, g=708
+>> Step: original bw f=719, g=709
+>> Step: original bw f=720, g=710
+>> Step: original bw f=721, g=711
+>> Step: original bw f=722, g=712
+>> Step: original bw f=723, g=713
+>> Step: original bw f=724, g=714
+>> Step: original bw f=725, g=715
+>> Step: original bw f=726, g=716
+>> Step: original bw f=727, g=717
+>> Step: original bw f=728, g=718
+>> Step: original bw f=729, g=719
+>> Step: original bw f=730, g=720
+>> Step: original bw f=731, g=721
+>> Step: original bw f=732, g=722
+>> Step: original bw f=733, g=723
+>> Step: original bw f=734, g=724
+>> Step: original bw f=735, g=725
+>> Step: original bw f=736, g=726
+>> Step: original bw f=737, g=727
+>> Step: original bw f=738, g=728
+>> Step: original bw f=739, g=729
+>> Step: original bw f=740, g=730
+>> Step: original bw f=741, g=731
+>> Step: original bw f=742, g=732
+>> Step: original bw f=743, g=733
+>> Step: original bw f=744, g=734
+>> Step: original bw f=745, g=735
+>> Step: original bw f=746, g=736
+>> Step: original bw f=747, g=737
+>> Step: original bw f=748, g=738
+>> Step: original bw f=749, g=739
+>> Step: original bw f=750, g=740
+>> Step: original bw f=751, g=741
+>> Step: original bw f=752, g=742
+>> Step: original bw f=753, g=743
+>> Step: original bw f=754, g=744
+>> Step: original bw f=755, g=745
+>> Step: original bw f=756, g=746
+>> Step: original bw f=757, g=747
+>> Step: original bw f=758, g=748
+>> Step: original bw f=759, g=749
+>> Step: original bw f=760, g=750
+>> Step: original bw f=761, g=751
+>> Step: original bw f=762, g=752
+>> Step: original bw f=763, g=753
+>> Step: original bw f=764, g=754
+>> Step: original bw f=765, g=755
+>> Step: original bw f=766, g=756
+>> Step: original bw f=767, g=757
+>> Step: original bw f=768, g=758
+>> Step: original bw f=769, g=759
+>> Step: original bw f=770, g=760
+>> Step: original bw f=771, g=761
+>> Step: original bw f=772, g=762
+>> Step: original bw f=773, g=763
+>> Step: original bw f=774, g=764
+>> Step: original bw f=775, g=765
+>> Step: original bw f=776, g=766
+>> Step: original bw f=777, g=767
+>> Step: original bw f=778, g=768
+>> Step: original bw f=779, g=769
+>> Step: original bw f=780, g=770
+>> Step: original bw f=781, g=771
+>> Step: original bw f=782, g=772
+>> Step: original bw f=783, g=773
+>> Step: original bw f=784, g=774
+>> Step: original bw f=785, g=775
+>> Step: original bw f=786, g=776
+>> Step: original bw f=787, g=777
+>> Step: original bw f=788, g=778
+>> Step: original bw f=789, g=779
+>> Step: original bw f=790, g=780
+>> Step: original bw f=791, g=781
+>> Step: original bw f=792, g=782
+>> Step: original bw f=793, g=783
+>> Step: original bw f=794, g=784
+>> Step: original bw f=795, g=785
+>> Step: original bw f=796, g=786
+>> Step: original bw f=797, g=787
+>> Step: original bw f=798, g=788
+>> Step: original bw f=799, g=789
+>> Step: original bw f=800, g=790
+>> Step: original bw f=801, g=791
+>> Step: original bw f=802, g=792
+>> Step: original bw f=803, g=793
+>> Step: original bw f=804, g=794
+>> Step: original bw f=805, g=795
+>> Step: original bw f=806, g=796
+>> Step: original bw f=807, g=797
+>> Step: original bw f=808, g=798
+>> Step: original bw f=809, g=799
+>> Step: original bw f=810, g=800
+>> Step: original bw f=811, g=801
+>> Step: original bw f=812, g=802
+>> Step: original bw f=813, g=803
+>> Step: original bw f=814, g=804
+>> Step: original bw f=815, g=805
+>> Step: original bw f=816, g=806
+>> Step: original bw f=817, g=807
+>> Step: original bw f=818, g=808
+>> Step: original bw f=819, g=809
+>> Step: original bw f=820, g=810
+>> Step: original bw f=821, g=811
+>> Step: original bw f=822, g=812
+>> Step: original bw f=823, g=813
+>> Step: original bw f=824, g=814
+>> Step: original bw f=825, g=815
+>> Step: original bw f=826, g=816
+>> Step: original bw f=827, g=817
+>> Step: original bw f=828, g=818
+>> Step: original bw f=829, g=819
+>> Step: original bw f=830, g=820
+>> Step: original bw f=831, g=821
+>> Step: original bw f=832, g=822
+>> Step: original bw f=833, g=823
+>> Step: original bw f=834, g=824
+>> Step: original bw f=835, g=825
+>> Step: original bw f=836, g=826
+>> Step: original bw f=837, g=827
+>> Step: original bw f=838, g=828
+>> Step: original bw f=839, g=829
+>> Step: original bw f=840, g=830
+>> Step: original bw f=841, g=831
+>> Step: original bw f=842, g=832
+>> Step: original bw f=843, g=833
+>> Step: original bw f=844, g=834
+>> Step: original bw f=845, g=835
+>> Step: original bw f=846, g=836
+>> Step: original bw f=847, g=837
+>> Step: original bw f=848, g=838
+>> Step: original bw f=849, g=839
+>> Step: original bw f=850, g=840
+>> Step: original bw f=851, g=841
+>> Step: original bw f=852, g=842
+>> Step: original bw f=853, g=843
+>> Step: original bw f=854, g=844
+>> Step: original bw f=855, g=845
+>> Step: original bw f=856, g=846
+>> Step: original bw f=857, g=847
+>> Step: original bw f=858, g=848
+>> Step: original bw f=859, g=849
+>> Step: original bw f=860, g=850
+>> Step: original bw f=861, g=851
+>> Step: original bw f=862, g=852
+>> Step: original bw f=863, g=853
+>> Step: original bw f=864, g=854
+>> Step: original bw f=865, g=855
+Solution found with cost 865 total time: 12.92s
+Done initializing symbolic perimeter merge-and-shrink heuristic [12.74s] total memory: 394807468
+initial h value: 865
+f = 865 [1 evaluated, 0 expanded, t=12.98s]
+Best heuristic value: 865 [g=0, 1 evaluated, 0 expanded, t=12.98s]
+Best heuristic value: 855 [g=10, 6 evaluated, 1 expanded, t=12.98s]
+Best heuristic value: 845 [g=20, 16 evaluated, 2 expanded, t=12.98s]
+Best heuristic value: 835 [g=30, 25 evaluated, 3 expanded, t=12.98s]
+Best heuristic value: 825 [g=40, 34 evaluated, 4 expanded, t=12.98s]
+Best heuristic value: 815 [g=50, 44 evaluated, 5 expanded, t=12.98s]
+Best heuristic value: 805 [g=60, 52 evaluated, 6 expanded, t=12.98s]
+Best heuristic value: 795 [g=70, 63 evaluated, 7 expanded, t=12.98s]
+Best heuristic value: 785 [g=80, 70 evaluated, 8 expanded, t=12.98s]
+Best heuristic value: 671 [g=194, 78 evaluated, 9 expanded, t=12.98s]
+Best heuristic value: 661 [g=204, 88 evaluated, 10 expanded, t=12.98s]
+Best heuristic value: 651 [g=214, 96 evaluated, 11 expanded, t=12.98s]
+Best heuristic value: 641 [g=224, 102 evaluated, 12 expanded, t=12.98s]
+Best heuristic value: 631 [g=234, 114 evaluated, 13 expanded, t=12.98s]
+Best heuristic value: 517 [g=348, 121 evaluated, 14 expanded, t=12.98s]
+Best heuristic value: 507 [g=358, 131 evaluated, 15 expanded, t=12.98s]
+Best heuristic value: 497 [g=368, 137 evaluated, 16 expanded, t=12.98s]
+Best heuristic value: 487 [g=378, 148 evaluated, 17 expanded, t=12.98s]
+Best heuristic value: 477 [g=388, 153 evaluated, 18 expanded, t=12.98s]
+Best heuristic value: 384 [g=481, 163 evaluated, 19 expanded, t=12.98s]
+Best heuristic value: 374 [g=491, 171 evaluated, 20 expanded, t=12.98s]
+Best heuristic value: 364 [g=501, 177 evaluated, 21 expanded, t=12.98s]
+Best heuristic value: 258 [g=607, 187 evaluated, 22 expanded, t=12.98s]
+Best heuristic value: 248 [g=617, 193 evaluated, 23 expanded, t=12.98s]
+Best heuristic value: 238 [g=627, 201 evaluated, 24 expanded, t=12.98s]
+Best heuristic value: 228 [g=637, 207 evaluated, 25 expanded, t=12.98s]
+Best heuristic value: 218 [g=647, 217 evaluated, 26 expanded, t=12.98s]
+Best heuristic value: 208 [g=657, 222 evaluated, 27 expanded, t=12.98s]
+Best heuristic value: 181 [g=684, 235 evaluated, 28 expanded, t=12.98s]
+Best heuristic value: 171 [g=694, 236 evaluated, 29 expanded, t=12.98s]
+Best heuristic value: 0 [g=865, 237 evaluated, 30 expanded, t=12.98s]
+Solution found!
+Actual search time: 0s [t=12.98s]
+pickup_crate uav1 crate1 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate1 num4 num3 (10)
+pickup_crate uav1 crate2 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate2 num3 num2 (10)
+pickup_crate uav1 crate3 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate3 num2 num1 (10)
+pickup_crate uav1 crate4 depot food (10)
+load_crate_on_carrier uav1 carrier1 depot crate4 num1 num0 (10)
+fly_carrier uav1 depot loc1 carrier1 (114)
+take_crate_from_carrier uav1 carrier1 loc1 crate1 num0 num1 (10)
+deliver uav1 person2 loc1 crate1 food (10)
+take_crate_from_carrier uav1 carrier1 loc1 crate2 num1 num2 (10)
+deliver uav1 person4 loc1 crate2 food (10)
+fly_carrier uav1 loc1 depot carrier1 (114)
+pickup_crate uav1 crate5 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate5 num2 num1 (10)
+pickup_crate uav1 crate6 depot medicine (10)
+load_crate_on_carrier uav1 carrier1 depot crate6 num1 num0 (10)
+fly_carrier uav1 depot loc3 carrier1 (93)
+take_crate_from_carrier uav1 carrier1 loc3 crate5 num0 num1 (10)
+deliver uav1 person1 loc3 crate5 medicine (10)
+fly_carrier uav1 loc3 loc2 carrier1 (106)
+take_crate_from_carrier uav1 carrier1 loc2 crate3 num1 num2 (10)
+deliver uav1 person5 loc2 crate3 food (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate6 num2 num3 (10)
+deliver uav1 person5 loc2 crate6 medicine (10)
+take_crate_from_carrier uav1 carrier1 loc2 crate4 num3 num4 (10)
+fly_to uav1 loc2 loc4 (27)
+deliver uav1 person6 loc4 crate4 food (10)
+fly_to uav1 loc4 depot (171)
+Plan length: 30 step(s).
+Plan cost: 865
+Initial state h value: 865.
+Expanded 31 state(s).
+Reopened 0 state(s).
+Evaluated 240 state(s).
+Evaluations: 240
+Generated 272 state(s).
+Dead ends: 209 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Search space hash size: 240
+Search space hash bucket count: 389
+Search time: 12.74s
+Total time: 12.98s
+Solution found.
+Peak memory: 392388 KB
+

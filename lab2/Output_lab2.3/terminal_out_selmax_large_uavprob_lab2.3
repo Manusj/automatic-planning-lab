@@ -1,0 +1,236 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.007s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.010s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
+Generated 61 rules.
+Computing model... [0.010s CPU, 0.012s wall-clock]
+765 relevant atoms
+510 auxiliary atoms
+1275 final queue length
+2557 total queue pushes
+Completing instantiation... [0.030s CPU, 0.026s wall-clock]
+Instantiating: [0.050s CPU, 0.054s wall-clock]
+Computing fact groups...
+Finding invariants... 17 initial candidates
+[0.000s CPU, 0.004s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+62 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.010s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.017s wall-clock]
+40 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+5 operators removed
+23 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.004s wall-clock]
+Writing translation key... [0.000s CPU, 0.003s wall-clock]
+Writing mutex key... [0.000s CPU, 0.002s wall-clock]
+Writing output... [0.000s CPU, 0.005s wall-clock]
+Done! [0.090s CPU, 0.102s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+44 variables of 55 necessary
+550 of 555 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Simplifying transitions... done!
+Initializing Exploration...
+H_m_Landmarks(1)
+Reading invariants from file...
+done
+Using 97 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.00333647s
+Discovered 16 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+24 edges
+Initializing Exploration...
+Reading invariants from file...
+done
+Generating landmarks using the RPG/SAS+ approach
+Switch from bucket-based to heap-based queue at key = 110, num_pushes = 45
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00651665s
+Discovered 27 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+28 edges
+Initializing Exploration...
+Reading invariants from file...
+done
+Merging 2 landmark graphs
+Adding simple landmarks
+Adding disjunctive landmarks
+Adding orderings
+Removed 0 reasonable or obedient reasonable orders
+Switch from bucket-based to heap-based queue at key = 110, num_pushes = 45
+Landmarks generation time: 0.00329104s
+Discovered 27 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+38 edges
+Initializing landmarks count heuristic...
+12 initial landmarks, 11 goal landmarks
+insert bound
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Using multi-path dependence (LM-A*)
+Initializing Selective Max
+Number of features: 44
+Done Initializing Selective Max
+Beginning Training
+Initializing landmark cut heuristic...
+Switch from bucket-based to heap-based queue at key = 110, num_pushes = 46
+Starting Training Example Collection
+Probe state space sample
+Training Example Collection Finished
+Branching Factor: 6.3907
+Training Set Size: 1000
+Time 0 - 8.15417e+08
+Time 1 - 5.59224e+07
+Beginning Training Classifier
+Thresholds
+Training pair: 0, 1
+0 <=> 0 - 1 > 1.44472
+Finished Training Classifier
+12 initial landmarks, 11 goal landmarks
+f = 311 [1 evaluated, 0 expanded, t=0.96s]
+Best heuristic value: 311 [g=0, 1 evaluated, 0 expanded, t=0.96s]
+Best heuristic value: 301 [g=10, 10 evaluated, 1 expanded, t=0.96s]
+f = 331 [69 evaluated, 11 expanded, t=0.97s]
+f = 351 [644 evaluated, 111 expanded, t=1.09s]
+Best heuristic value: 291 [g=122, 758 evaluated, 130 expanded, t=1.12s]
+f = 371 [2924 evaluated, 516 expanded, t=1.58s]
+f = 385 [8294 evaluated, 1476 expanded, t=2.93s]
+Best heuristic value: 247 [g=112, 8324 evaluated, 1487 expanded, t=2.94s]
+f = 391 [8326 evaluated, 1489 expanded, t=2.94s]
+f = 393 [16306 evaluated, 2959 expanded, t=4.5s]
+f = 395 [16320 evaluated, 2971 expanded, t=4.5s]
+f = 403 [16432 evaluated, 3005 expanded, t=4.53s]
+Best heuristic value: 226 [g=184, 16483 evaluated, 3016 expanded, t=4.54s]
+f = 405 [16514 evaluated, 3031 expanded, t=4.55s]
+f = 408 [16924 evaluated, 3175 expanded, t=4.63s]
+f = 409 [16968 evaluated, 3187 expanded, t=4.64s]
+f = 410 [16968 evaluated, 3188 expanded, t=4.64s]
+Best heuristic value: 216 [g=194, 16973 evaluated, 3189 expanded, t=4.64s]
+f = 413 [17432 evaluated, 3268 expanded, t=4.73s]
+f = 415 [17660 evaluated, 3396 expanded, t=4.81s]
+f = 416 [18794 evaluated, 3682 expanded, t=5.05s]
+f = 418 [18794 evaluated, 3698 expanded, t=5.05s]
+f = 419 [18994 evaluated, 3746 expanded, t=5.09s]
+f = 421 [18994 evaluated, 3764 expanded, t=5.09s]
+f = 423 [19000 evaluated, 3776 expanded, t=5.1s]
+f = 425 [19608 evaluated, 4004 expanded, t=5.22s]
+f = 426 [22770 evaluated, 4957 expanded, t=5.86s]
+f = 428 [22770 evaluated, 4958 expanded, t=5.86s]
+f = 429 [23268 evaluated, 5080 expanded, t=5.97s]
+f = 430 [23308 evaluated, 5108 expanded, t=5.98s]
+Best heuristic value: 212 [g=324, 26759 evaluated, 5758 expanded, t=6.61s]
+f = 431 [27108 evaluated, 5836 expanded, t=6.69s]
+f = 432 [27156 evaluated, 5848 expanded, t=6.7s]
+f = 433 [27156 evaluated, 5849 expanded, t=6.7s]
+f = 435 [28444 evaluated, 6479 expanded, t=7.08s]
+f = 436 [34154 evaluated, 7945 expanded, t=8.36s]
+f = 438 [34218 evaluated, 8161 expanded, t=8.4s]
+f = 439 [36218 evaluated, 8613 expanded, t=8.83s]
+f = 441 [36410 evaluated, 8892 expanded, t=8.87s]
+f = 442 [36480 evaluated, 9012 expanded, t=8.91s]
+f = 443 [36480 evaluated, 9060 expanded, t=8.91s]
+Best heuristic value: 206 [g=250, 37291 evaluated, 9284 expanded, t=9.09s]
+f = 445 [40724 evaluated, 10374 expanded, t=9.78s]
+f = 446 [55594 evaluated, 13554 expanded, t=12.42s]
+Best heuristic value: 176 [g=240, 55675 evaluated, 13571 expanded, t=12.44s]
+f = 447 [56714 evaluated, 13824 expanded, t=12.64s]
+f = 448 [56714 evaluated, 13832 expanded, t=12.64s]
+f = 449 [61120 evaluated, 14668 expanded, t=13.43s]
+f = 450 [62154 evaluated, 15023 expanded, t=13.66s]
+f = 451 [76266 evaluated, 17975 expanded, t=16.25s]
+f = 452 [76835 evaluated, 18119 expanded, 1 reopened, t=16.36s]
+f = 453 [76863 evaluated, 18187 expanded, 1 reopened, t=16.38s]
+f = 454 [81090 evaluated, 20246 expanded, 1 reopened, t=17.66s]
+f = 455 [81090 evaluated, 20263 expanded, 1 reopened, t=17.66s]
+f = 456 [103062 evaluated, 24937 expanded, 1 reopened, t=21.83s]
+f = 457 [103816 evaluated, 26278 expanded, 1 reopened, t=22.11s]
+f = 458 [103816 evaluated, 26296 expanded, 1 reopened, t=22.11s]
+f = 459 [115044 evaluated, 28720 expanded, 1 reopened, t=24.1s]
+f = 460 [117881 evaluated, 30335 expanded, 1 reopened, t=24.68s]
+f = 461 [117881 evaluated, 30344 expanded, 1 reopened, t=24.68s]
+f = 462 [118364 evaluated, 30907 expanded, 1 reopened, t=24.86s]
+f = 463 [118364 evaluated, 31425 expanded, 1 reopened, t=24.94s]
+f = 464 [134746 evaluated, 36274 expanded, 1 reopened, t=28.6s]
+f = 465 [134746 evaluated, 36346 expanded, 1 reopened, t=28.6s]
+f = 466 [180017 evaluated, 45028 expanded, 1 reopened, t=36.22s]
+f = 467 [188996 evaluated, 47275 expanded, 1 reopened, t=37.81s]
+f = 468 [189136 evaluated, 47943 expanded, 1 reopened, t=37.85s]
+f = 469 [211659 evaluated, 51395 expanded, 1 reopened, t=41.95s]
+f = 470 [223096 evaluated, 54782 expanded, 1 reopened, t=44.2s]
+f = 471 [258448 evaluated, 62546 expanded, 1 reopened, t=50.62s]
+f = 472 [260184 evaluated, 62977 expanded, 2 reopened, t=50.96s]
+f = 473 [260464 evaluated, 63750 expanded, 2 reopened, t=51.15s]
+f = 474 [277818 evaluated, 70263 expanded, 2 reopened, t=55.28s]
+f = 475 [277979 evaluated, 70451 expanded, 2 reopened, t=55.31s]
+f = 476 [344623 evaluated, 84206 expanded, 2 reopened, t=67.44s]
+f = 477 [363483 evaluated, 92085 expanded, 2 reopened, t=71.15s]
+f = 478 [364294 evaluated, 92603 expanded, 2 reopened, t=71.31s]
+f = 479 [415224 evaluated, 103075 expanded, 2 reopened, t=79.52s]
+f = 480 [456283 evaluated, 114184 expanded, 2 reopened, t=86.06s]
+f = 481 [456283 evaluated, 114362 expanded, 2 reopened, t=86.09s]
+f = 482 [460122 evaluated, 116537 expanded, 2 reopened, t=87.15s]
+f = 483 [461962 evaluated, 119595 expanded, 2 reopened, t=87.94s]
+f = 484 [500400 evaluated, 132894 expanded, 2 reopened, t=96.4s]
+f = 485 [500898 evaluated, 133888 expanded, 2 reopened, t=96.56s]
+f = 486 [569106 evaluated, 146665 expanded, 2 reopened, t=108.67s]
+f = 487 [614024 evaluated, 158369 expanded, 2 reopened, t=116.51s]
+f = 488 [619479 evaluated, 162158 expanded, 2 reopened, t=117.45s]
+f = 489 [700674 evaluated, 174935 expanded, 2 reopened, t=131.15s]
+f = 490 [764161 evaluated, 191310 expanded, 2 reopened, t=143.2s]
+f = 491 [837585 evaluated, 207948 expanded, 2 reopened, t=158.51s]
+f = 492 [850517 evaluated, 210690 expanded, 2 reopened, t=160.66s]
+f = 493 [856734 evaluated, 217238 expanded, 2 reopened, t=162.86s]
+Best heuristic value: 171 [g=325, 882170 evaluated, 221552 expanded, 2 reopened, t=167.15s]
+f = 494 [923663 evaluated, 234263 expanded, 2 reopened, t=175.48s]
+f = 495 [929741 evaluated, 238356 expanded, 2 reopened, t=176.71s]
+f = 496 [980842 evaluated, 249609 expanded, 2 reopened, t=185.3s]
+f = 497 [1089660 evaluated, 284046 expanded, 2 reopened, t=205.67s]
+f = 498 [1111562 evaluated, 298298 expanded, 2 reopened, t=210.25s]
+f = 499 [1287369 evaluated, 329350 expanded, 2 reopened, t=237.62s]
+f = 500 [1506244 evaluated, 374436 expanded, 2 reopened, t=273.76s]
+f = 501 [1507044 evaluated, 375941 expanded, 2 reopened, t=274.22s]
+f = 502 [1525240 evaluated, 383699 expanded, 2 reopened, t=278.55s]
+f = 503 [1545344 evaluated, 402685 expanded, 2 reopened, t=285.15s]
+Best heuristic value: 156 [g=331, 1555997 evaluated, 404255 expanded, 2 reopened, t=286.89s]
+f = 504 [1606362 evaluated, 425193 expanded, 2 reopened, t=298.9s]
+f = 505 [1611984 evaluated, 431911 expanded, 2 reopened, t=300.3s]
+f = 506 [1646886 evaluated, 441746 expanded, 2 reopened, t=306.48s]
+f = 507 [1826667 evaluated, 487510 expanded, 2 reopened, t=335.27s]
+Peak memory: 510980 KB
+caught signal 2 -- exiting

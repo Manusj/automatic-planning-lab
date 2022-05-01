@@ -1,8 +1,0 @@
-0 : (pickup_crate h1 c1 depot medicine)
-1 : (fly_to h1 depot l1)
-2 : (deliver h1 p2 l1 c1 medicine)
-3 : (fly_to h1 l1 depot)
-4 : (pickup_crate h1 c2 depot medicine)
-5 : (fly_to h1 depot l1)
-6 : (deliver h1 p1 l1 c2 medicine)
-7 : (fly_to h1 l1 depot)

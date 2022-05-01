@@ -1,0 +1,65 @@
+
+ff: parsing domain file
+domain 'UAV_DOMAIN' defined
+ ... done.
+ff: parsing problem file
+problem 'UAV_PROBLEM_U1_R1_L4_P6_C6_G6_CT2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   11 into depth [1]
+                                  10            [1][2]
+                                   9            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PICKUP_CRATE UAV1 CRATE1 DEPOT FOOD
+        1: FLY_TO UAV1 DEPOT LOC1
+        2: DELIVER UAV1 PERSON4 LOC1 CRATE1 FOOD
+        3: FLY_TO UAV1 LOC1 DEPOT
+        4: PICKUP_CRATE UAV1 CRATE2 DEPOT MEDICINE
+        5: FLY_TO UAV1 DEPOT LOC3
+        6: DELIVER UAV1 PERSON1 LOC3 CRATE2 MEDICINE
+        7: FLY_TO UAV1 LOC3 DEPOT
+        8: PICKUP_CRATE UAV1 CRATE3 DEPOT MEDICINE
+        9: FLY_TO UAV1 DEPOT LOC2
+       10: DELIVER UAV1 PERSON3 LOC2 CRATE3 MEDICINE
+       11: FLY_TO UAV1 LOC2 DEPOT
+       12: PICKUP_CRATE UAV1 CRATE4 DEPOT MEDICINE
+       13: FLY_TO UAV1 DEPOT LOC1
+       14: DELIVER UAV1 PERSON6 LOC1 CRATE4 MEDICINE
+       15: FLY_TO UAV1 LOC1 DEPOT
+       16: PICKUP_CRATE UAV1 CRATE5 DEPOT MEDICINE
+       17: FLY_TO UAV1 DEPOT LOC1
+       18: DELIVER UAV1 PERSON4 LOC1 CRATE5 MEDICINE
+       19: FLY_TO UAV1 LOC1 DEPOT
+       20: PICKUP_CRATE UAV1 CRATE6 DEPOT MEDICINE
+       21: FLY_TO UAV1 DEPOT LOC1
+       22: DELIVER UAV1 PERSON2 LOC1 CRATE6 MEDICINE
+       23: FLY_TO UAV1 LOC1 DEPOT
+     
+
+time spent:    0.00 seconds instantiating 500 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 52 facts and 332 actions
+               0.00 seconds creating final representation with 46 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 309 states, to a max depth of 2
+               0.00 seconds total time
+

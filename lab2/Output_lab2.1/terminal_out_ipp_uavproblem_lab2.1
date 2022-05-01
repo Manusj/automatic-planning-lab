@@ -1,0 +1,109 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'UAV_DOMAIN' defined
+ ... done.
+ipp: parsing problem file
+problem 'UAV_PROBLEM_U1_R1_L4_P6_C6_G6_CT2' defined
+ ... done.
+
+
+instantiated 322 actions
+
+
+time:   0,    46 facts and       0 exclusive pairs (   10,       0 positives)
+              60 ops   and     133 exclusive pairs
+time:   1,    69 facts and     255 exclusive pairs (   24,     111 positives)
+             121 ops   and    2884 exclusive pairs
+time:   2,    77 facts and     358 exclusive pairs (   31,     197 positives)
+             171 ops   and    7430 exclusive pairs
+time:   3,    89 facts and     496 exclusive pairs (   43,     405 positives)
+             261 ops   and   21175 exclusive pairs
+time:   4,    90 facts and     249 exclusive pairs (   44,     236 positives)
+             292 ops   and   26842 exclusive pairs
+time:   5,    90 facts and     158 exclusive pairs (   44,     158 positives)
+             322 ops   and   33204 exclusive pairs
+time:   6,    91 facts and     117 exclusive pairs (   45,     116 positives)
+
+goals first reachable in 6 time steps
+
+             353 ops   and   41285 exclusive pairs
+time:   7,    91 facts and      98 exclusive pairs (   45,      98 positives)
+             383 ops   and   50065 exclusive pairs
+time:   8,    92 facts and     109 exclusive pairs (   46,     108 positives)
+             414 ops   and   60418 exclusive pairs
+time:   9,    92 facts and     102 exclusive pairs (   46,     102 positives)
+
+graph has leveled off at time step 10
+
+             414 ops   and   60375 exclusive pairs
+time:  10,    92 facts and     102 exclusive pairs (   46,     102 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+expanding wave front to level   21
+expanding wave front to level   22
+expanding wave front to level   23
+expanding wave front to level   24
+
+
+found plan as follows:
+
+time step    0: PICKUP_CRATE UAV1 CRATE6 DEPOT MEDICINE
+time step    1: FLY_TO UAV1 DEPOT LOC3
+time step    2: DELIVER UAV1 PERSON1 LOC3 CRATE6 MEDICINE
+time step    3: FLY_TO UAV1 LOC3 DEPOT
+time step    4: PICKUP_CRATE UAV1 CRATE5 DEPOT MEDICINE
+time step    5: FLY_TO UAV1 DEPOT LOC2
+time step    6: DELIVER UAV1 PERSON3 LOC2 CRATE5 MEDICINE
+time step    7: FLY_TO UAV1 LOC2 DEPOT
+time step    8: PICKUP_CRATE UAV1 CRATE4 DEPOT MEDICINE
+time step    9: FLY_TO UAV1 DEPOT LOC1
+time step   10: DELIVER UAV1 PERSON2 LOC1 CRATE4 MEDICINE
+time step   11: FLY_TO UAV1 LOC1 DEPOT
+time step   12: PICKUP_CRATE UAV1 CRATE1 DEPOT FOOD
+time step   13: FLY_TO UAV1 DEPOT LOC1
+time step   14: DELIVER UAV1 PERSON4 LOC1 CRATE1 FOOD
+time step   15: FLY_TO UAV1 LOC1 DEPOT
+time step   16: PICKUP_CRATE UAV1 CRATE3 DEPOT MEDICINE
+time step   17: FLY_TO UAV1 DEPOT LOC1
+time step   18: DELIVER UAV1 PERSON4 LOC1 CRATE3 MEDICINE
+time step   19: FLY_TO UAV1 LOC1 DEPOT
+time step   20: PICKUP_CRATE UAV1 CRATE2 DEPOT MEDICINE
+time step   21: FLY_TO UAV1 DEPOT LOC1
+time step   22: DELIVER UAV1 PERSON6 LOC1 CRATE2 MEDICINE
+time step   23: FLY_TO UAV1 LOC1 DEPOT
+
+
+
+number of actions tried:   15725586
+number of noops tried  :   97490159
+
+had 13149464 simple memoizing hits
+had   61759 partial memoizing hits
+had  572648 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 322 operators
+               0.01 seconds building graph
+               0.01 seconds calculating exclusions
+              83.35 seconds searching graph
+              83.37 seconds total time
+
+Memory used:   0.30 MBytes for domain representation
+               4.17 MBytes for graph
+               0.51 MBytes for exclusions
+             194.01 MBytes for memoization
+             -1620.48 MBytes for wave front
+
+
+

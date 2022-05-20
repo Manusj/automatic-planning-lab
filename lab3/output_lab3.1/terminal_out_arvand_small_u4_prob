@@ -1,0 +1,179 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.008s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.018s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 59 rules.
+Computing model... [0.010s CPU, 0.016s wall-clock]
+305 relevant atoms
+458 auxiliary atoms
+763 final queue length
+967 total queue pushes
+Completing instantiation... [0.010s CPU, 0.009s wall-clock]
+Instantiating: [0.040s CPU, 0.050s wall-clock]
+Computing fact groups...
+Finding invariants... 17 initial candidates
+[0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+16 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.004s wall-clock]
+20 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information... [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+20 operators removed
+12 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Writing translation key... [0.000s CPU, 0.002s wall-clock]
+Writing mutex key... [0.000s CPU, 0.002s wall-clock]
+Writing output... [0.000s CPU, 0.003s wall-clock]
+Done! [0.060s CPU, 0.074s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+16 variables of 20 necessary
+160 of 160 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+MRW Param 0:
+Walk Type: MHA
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 10
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 10
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: g_prunning
+Length STDev: 0
+
+
+MRW Param 1:
+Walk Type: MDA
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 2
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 0.5
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: g_prunning
+Length STDev: 0
+
+
+MRW Param 2:
+Walk Type: MHA
+Heuristic: FD FF
+Step Type: STATE
+Extending Rate: 1.5
+Length Walk: 1
+Alpha: 0.9
+Extending Period: 0.1
+Walk Bias Temp: 10
+Num Walks: 2000
+Jump Length: 1
+Max Steps: 7
+Bounding Factor: 0.9
+Deepening: true
+Tie-breaking: false
+Conservative Steps: false
+solution_bounding: g_prunning
+Length STDev: 0
+
+
+Shared MRW Parameters: SMART
+	Pool Size: 50
+	Activation Level: 50
+Iterative search: true
+UCB Constant Value: 0.5
+Use Aras: true
+regression graph: true
+	Aras Memory Limit: 2000000
+	Aras Time Limit: NONE
+seed: 2011
+Simplifying transitions... done!
+UCB Constant: 0.5
+Initializing HSP/FF heuristic...
+Simplifying 280 unary operators... done! [216 unary operators]
+MRW ...
+Initial heuristic value from heuristic FD FF: 8
+Selecting config 0
+h: 7 walk#: 6
+h: 6 walk#: 21
+h: 5 walk#: 44
+h: 4 walk#: 52
+h: 3 walk#: 93
+Plan Validated
+Total time: 0.04s
+cost: 18819.
+build regression graph: true
+Initial plan size: 121 Initial plan cost: 18819
+After action elimination Plan size: 17 plan cost: 1613
+Plan Validated
+Total time: 0.04s
+cost: 1613.
+Plan Validated
+Total time: 0.06s
+cost: 1370.
+Step: 0 n: 1000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 0.02s Total_Time: 0.06s Size: 9703 Number_goals: 1 Memory usage: 2275
+Plan Validated
+Plan Validated
+Step: 1 n: 2000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 0.06s Total_Time: 0.12s Size: 19499 Number_goals: 1 Memory usage: 4634
+Plan Validated
+Step: 2 n: 4000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 0.1s Total_Time: 0.22s Size: 31528 Number_goals: 1 Memory usage: 7647
+Plan Validated
+Step: 3 n: 8000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 0.18s Total_Time: 0.4s Size: 63462 Number_goals: 1 Memory usage: 15920
+Plan Validated
+Step: 4 n: 16000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 0.36s Total_Time: 0.76s Size: 126015 Number_goals: 1 Memory usage: 32920
+Plan Validated
+Step: 5 n: 32000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 0.76s Total_Time: 1.52s Size: 213086 Number_goals: 1 Memory usage: 59655
+Plan Validated
+Step: 6 n: 64000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 1.34s Total_Time: 2.86s Size: 319094 Number_goals: 1 Memory usage: 93417
+Plan Validated
+Step: 7 n: 128000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 2.6s Total_Time: 5.46s Size: 446206 Number_goals: 1 Memory usage: 144234
+Plan Validated
+Step: 8 n: 256000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 4.72s Total_Time: 10.18s Size: 750708 Number_goals: 1 Memory usage: 254381
+Plan Validated
+Step: 9 n: 512000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 8.72s Total_Time: 18.9s Size: 1117135 Number_goals: 1 Memory usage: 420967
+Plan Validated
+Step: 10 n: 1024000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 14.44s Total_Time: 33.34s Size: 1552295 Number_goals: 1 Memory usage: 657711
+Plan Validated
+Step: 11 n: 2048000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 23.44s Total_Time: 56.78s Size: 1956355 Number_goals: 1 Memory usage: 950375
+Plan Validated
+Step: 12 n: 4096000 Plan_size: 16 Plan_cost: 1370 Iteration_Time: 37.76s Total_Time: 94.54s Size: 2391689 Number_goals: 1 Memory usage: 1328127

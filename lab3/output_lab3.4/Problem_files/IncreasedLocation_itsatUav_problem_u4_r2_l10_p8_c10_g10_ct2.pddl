@@ -1,0 +1,250 @@
+(define (problem uav_problem_u4_r2_l10_p8_c10_g10_ct2)
+(:domain uav_domain)
+(:objects
+	uav1 - helicopter
+	uav2 - helicopter
+	uav3 - helicopter
+	uav4 - helicopter
+	depot - location
+	loc1 - location
+	loc2 - location
+	loc3 - location
+	loc4 - location
+	loc5 - location
+	loc6 - location
+	loc7 - location
+	loc8 - location
+	loc9 - location
+	loc10 - location
+	crate1 - crate
+	crate2 - crate
+	crate3 - crate
+	crate4 - crate
+	crate5 - crate
+	crate6 - crate
+	crate7 - crate
+	crate8 - crate
+	crate9 - crate
+	crate10 - crate
+	food - content
+	medicine - content
+	person1 - person
+	person2 - person
+	person3 - person
+	person4 - person
+	person5 - person
+	person6 - person
+	person7 - person
+	person8 - person
+	carrier1 - carrier
+	carrier2 - carrier
+	num0 - num
+	num1 - num
+	num2 - num
+	num3 - num
+	num4 - num
+)
+(:init
+	(obj_at uav1 depot)
+	(heli_free_to_carry uav1)
+	(heli_not_busy uav1)
+	(obj_at uav2 depot)
+	(heli_free_to_carry uav2)
+	(heli_not_busy uav2)
+	(obj_at uav3 depot)
+	(heli_free_to_carry uav3)
+	(heli_not_busy uav3)
+	(obj_at uav4 depot)
+	(heli_free_to_carry uav4)
+	(heli_not_busy uav4)
+	(obj_at crate1 depot)
+	(crate_content crate1 food)
+	(obj_at crate2 depot)
+	(crate_content crate2 food)
+	(obj_at crate3 depot)
+	(crate_content crate3 food)
+	(obj_at crate4 depot)
+	(crate_content crate4 food)
+	(obj_at crate5 depot)
+	(crate_content crate5 food)
+	(obj_at crate6 depot)
+	(crate_content crate6 medicine)
+	(obj_at crate7 depot)
+	(crate_content crate7 medicine)
+	(obj_at crate8 depot)
+	(crate_content crate8 medicine)
+	(obj_at crate9 depot)
+	(crate_content crate9 medicine)
+	(obj_at crate10 depot)
+	(crate_content crate10 medicine)
+	(obj_at person1 loc6)
+	(obj_at person2 loc5)
+	(obj_at person3 loc7)
+	(obj_at person4 loc2)
+	(obj_at person5 loc10)
+	(obj_at person6 loc2)
+	(obj_at person7 loc2)
+	(obj_at person8 loc4)
+	(obj_at carrier1 depot)
+	(carrier_freespace carrier1 num4)
+	(obj_at carrier2 depot)
+	(carrier_freespace carrier2 num4)
+	(next_num num0 num1)
+	(next_num num1 num2)
+	(next_num num2 num3)
+	(next_num num3 num4)
+	(= (fly-cost depot depot)0 )
+	(= (fly-cost depot loc1)127 )
+	(= (fly-cost depot loc2)145 )
+	(= (fly-cost depot loc3)74 )
+	(= (fly-cost depot loc4)106 )
+	(= (fly-cost depot loc5)255 )
+	(= (fly-cost depot loc6)191 )
+	(= (fly-cost depot loc7)161 )
+	(= (fly-cost depot loc8)134 )
+	(= (fly-cost depot loc9)168 )
+	(= (fly-cost depot loc10)267 )
+	(= (fly-cost loc1 depot)127 )
+	(= (fly-cost loc1 loc1)0 )
+	(= (fly-cost loc1 loc2)137 )
+	(= (fly-cost loc1 loc3)68 )
+	(= (fly-cost loc1 loc4)124 )
+	(= (fly-cost loc1 loc5)180 )
+	(= (fly-cost loc1 loc6)183 )
+	(= (fly-cost loc1 loc7)102 )
+	(= (fly-cost loc1 loc8)82 )
+	(= (fly-cost loc1 loc9)63 )
+	(= (fly-cost loc1 loc10)180 )
+	(= (fly-cost loc2 depot)145 )
+	(= (fly-cost loc2 loc1)137 )
+	(= (fly-cost loc2 loc2)0 )
+	(= (fly-cost loc2 loc3)95 )
+	(= (fly-cost loc2 loc4)41 )
+	(= (fly-cost loc2 loc5)127 )
+	(= (fly-cost loc2 loc6)51 )
+	(= (fly-cost loc2 loc7)58 )
+	(= (fly-cost loc2 loc8)58 )
+	(= (fly-cost loc2 loc9)113 )
+	(= (fly-cost loc2 loc10)148 )
+	(= (fly-cost loc3 depot)74 )
+	(= (fly-cost loc3 loc1)68 )
+	(= (fly-cost loc3 loc2)95 )
+	(= (fly-cost loc3 loc3)0 )
+	(= (fly-cost loc3 loc4)67 )
+	(= (fly-cost loc3 loc5)185 )
+	(= (fly-cost loc3 loc6)145 )
+	(= (fly-cost loc3 loc7)91 )
+	(= (fly-cost loc3 loc8)63 )
+	(= (fly-cost loc3 loc9)95 )
+	(= (fly-cost loc3 loc10)195 )
+	(= (fly-cost loc4 depot)106 )
+	(= (fly-cost loc4 loc1)124 )
+	(= (fly-cost loc4 loc2)41 )
+	(= (fly-cost loc4 loc3)67 )
+	(= (fly-cost loc4 loc4)0 )
+	(= (fly-cost loc4 loc5)163 )
+	(= (fly-cost loc4 loc6)86 )
+	(= (fly-cost loc4 loc7)79 )
+	(= (fly-cost loc4 loc8)64 )
+	(= (fly-cost loc4 loc9)120 )
+	(= (fly-cost loc4 loc10)182 )
+	(= (fly-cost loc5 depot)255 )
+	(= (fly-cost loc5 loc1)180 )
+	(= (fly-cost loc5 loc2)127 )
+	(= (fly-cost loc5 loc3)185 )
+	(= (fly-cost loc5 loc4)163 )
+	(= (fly-cost loc5 loc5)0 )
+	(= (fly-cost loc5 loc6)118 )
+	(= (fly-cost loc5 loc7)95 )
+	(= (fly-cost loc5 loc8)122 )
+	(= (fly-cost loc5 loc9)119 )
+	(= (fly-cost loc5 loc10)28 )
+	(= (fly-cost loc6 depot)191 )
+	(= (fly-cost loc6 loc1)183 )
+	(= (fly-cost loc6 loc2)51 )
+	(= (fly-cost loc6 loc3)145 )
+	(= (fly-cost loc6 loc4)86 )
+	(= (fly-cost loc6 loc5)118 )
+	(= (fly-cost loc6 loc6)0 )
+	(= (fly-cost loc6 loc7)90 )
+	(= (fly-cost loc6 loc8)102 )
+	(= (fly-cost loc6 loc9)148 )
+	(= (fly-cost loc6 loc10)144 )
+	(= (fly-cost loc7 depot)161 )
+	(= (fly-cost loc7 loc1)102 )
+	(= (fly-cost loc7 loc2)58 )
+	(= (fly-cost loc7 loc3)91 )
+	(= (fly-cost loc7 loc4)79 )
+	(= (fly-cost loc7 loc5)95 )
+	(= (fly-cost loc7 loc6)90 )
+	(= (fly-cost loc7 loc7)0 )
+	(= (fly-cost loc7 loc8)28 )
+	(= (fly-cost loc7 loc9)59 )
+	(= (fly-cost loc7 loc10)107 )
+	(= (fly-cost loc8 depot)134 )
+	(= (fly-cost loc8 loc1)82 )
+	(= (fly-cost loc8 loc2)58 )
+	(= (fly-cost loc8 loc3)63 )
+	(= (fly-cost loc8 loc4)64 )
+	(= (fly-cost loc8 loc5)122 )
+	(= (fly-cost loc8 loc6)102 )
+	(= (fly-cost loc8 loc7)28 )
+	(= (fly-cost loc8 loc8)0 )
+	(= (fly-cost loc8 loc9)58 )
+	(= (fly-cost loc8 loc10)134 )
+	(= (fly-cost loc9 depot)168 )
+	(= (fly-cost loc9 loc1)63 )
+	(= (fly-cost loc9 loc2)113 )
+	(= (fly-cost loc9 loc3)95 )
+	(= (fly-cost loc9 loc4)120 )
+	(= (fly-cost loc9 loc5)119 )
+	(= (fly-cost loc9 loc6)148 )
+	(= (fly-cost loc9 loc7)59 )
+	(= (fly-cost loc9 loc8)58 )
+	(= (fly-cost loc9 loc9)0 )
+	(= (fly-cost loc9 loc10)118 )
+	(= (fly-cost loc10 depot)267 )
+	(= (fly-cost loc10 loc1)180 )
+	(= (fly-cost loc10 loc2)148 )
+	(= (fly-cost loc10 loc3)195 )
+	(= (fly-cost loc10 loc4)182 )
+	(= (fly-cost loc10 loc5)28 )
+	(= (fly-cost loc10 loc6)144 )
+	(= (fly-cost loc10 loc7)107 )
+	(= (fly-cost loc10 loc8)134 )
+	(= (fly-cost loc10 loc9)118 )
+	(= (fly-cost loc10 loc10)0 )
+)
+(:goal (and
+
+	(obj_at uav1 depot)
+	(obj_at uav2 depot)
+	(obj_at uav3 depot)
+	(obj_at uav4 depot)
+
+	(obj_at uav1 depot)
+	(obj_at uav2 depot)
+	(obj_at uav3 depot)
+	(obj_at uav4 depot)
+
+	(obj_at uav1 depot)
+	(obj_at uav2 depot)
+	(obj_at uav3 depot)
+	(obj_at uav4 depot)
+
+	(obj_at uav1 depot)
+	(obj_at uav2 depot)
+	(obj_at uav3 depot)
+	(obj_at uav4 depot)
+	(preson_crate person1 food )
+	(preson_crate person1 medicine )
+	(preson_crate person3 food )
+	(preson_crate person3 medicine )
+	(preson_crate person4 food )
+	(preson_crate person4 medicine )
+	(preson_crate person6 medicine )
+	(preson_crate person7 food )
+	(preson_crate person7 medicine )
+	(preson_crate person8 food )
+	))
+)

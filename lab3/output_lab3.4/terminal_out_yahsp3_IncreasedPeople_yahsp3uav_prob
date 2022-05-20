@@ -1,0 +1,21 @@
+suboptimal yahsp search, threads : 1, teams : 1, strategy : 0
+anytime behavior
+temporal precision : 0.01,0.01
+domain file : domain.pddl
+problem file : uav_problem_u25_r5_l20_p35_c50_g50_ct2.pddl
+output file : output_yahsp3_IncreasedPeople_yahsp3uav_prob
+
+Parsing domain.................... done : 0.001          
+Parsing problem................... done : 0.003          
+domain : uav_domain
+problem : uav_problem_u25_r5_l20_p35_c50_g50_ct2
+Instantiating operators........... done : 10.387          
+Creating initial structures....... done : 5.721          
+Computing bound................... done : 0.013          
+Refreshing structures............. done : 0.933          
+Finalizing structures............. done : 0.010          
+plan found : makespan 45703 -- search time 46.817 -- total time 63.885
+
+
+User interruption...
+

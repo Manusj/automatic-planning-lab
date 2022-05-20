@@ -1,0 +1,191 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.009s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.019s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 59 rules.
+Computing model... [0.010s CPU, 0.016s wall-clock]
+305 relevant atoms
+450 auxiliary atoms
+755 final queue length
+959 total queue pushes
+Completing instantiation... [0.010s CPU, 0.009s wall-clock]
+Instantiating: [0.030s CPU, 0.049s wall-clock]
+Computing fact groups...
+Finding invariants... 17 initial candidates
+[0.010s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+16 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.007s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.004s wall-clock]
+20 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+20 operators removed
+12 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Writing translation key... [0.000s CPU, 0.002s wall-clock]
+Writing mutex key... [0.000s CPU, 0.002s wall-clock]
+Writing output... [0.000s CPU, 0.003s wall-clock]
+Done! [0.060s CPU, 0.079s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+16 variables of 20 necessary
+160 of 160 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Simplifying transitions... done!
+path_all_groups: all.groups
+Initializing Exploration...
+Reading invariants from file...
+all.groups: all.groups
+done
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.000929124s
+Discovered 16 landmarks, of which 3 are disjunctive and 0 are conjunctive 
+10 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+9 initial landmarks, 8 goal landmarks
+Initializing Exploration...
+Reading invariants from file...
+all.groups: all.groups
+done
+Generating landmarks using the RPG/SAS+ approach
+Switch from bucket-based to heap-based queue at key = 179, num_pushes = 16
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.000943813s
+Discovered 16 landmarks, of which 3 are disjunctive and 0 are conjunctive 
+10 edges
+Initializing LAMA-FF Synergy Object
+Initializing landmarks count heuristic...
+9 initial landmarks, 8 goal landmarks
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+open inner_list size: 6
+open local_inner_list size: 6
+Starting search: lazy_two_level_macro_type_greedy(hff1,hlm1,preferred=(hff1,hlm1))
+Conducting lazy best first search, (real) bound = 2147483647
+Best heuristic value: 7/8 [g=0, 1 evaluated, 0 expanded, t=0s]
+Best heuristic value: 6/8 [g=10, 5 evaluated, 4 expanded, t=0s]
+Best heuristic value: 6/7 [g=20, 8 evaluated, 7 expanded, t=0s]
+Best heuristic value: 5/7 [g=164, 25 evaluated, 24 expanded, t=0s]
+Best heuristic value: 5/6 [g=308, 38 evaluated, 37 expanded, t=0s]
+Best heuristic value: 4/6 [g=561, 49 evaluated, 48 expanded, t=0s]
+Best heuristic value: 3/5 [g=804, 50 evaluated, 49 expanded, t=0s]
+Best heuristic value: 3/4 [g=814, 52 evaluated, 51 expanded, t=0s]
+Best heuristic value: 2/3 [g=958, 57 evaluated, 56 expanded, t=0s]
+Best heuristic value: 2/2 [g=1092, 58 evaluated, 57 expanded, t=0s]
+Best heuristic value: 1/1 [g=1236, 61 evaluated, 60 expanded, t=0s]
+Solution found!
+Actual search time: 0s [t=0s]
+Real Plan cost: 1370.
+Real Total time: 0s
+pickup_crate uav4 crate1 depot food (10)
+pickup_crate uav2 crate2 depot medicine (10)
+fly_to uav2 depot loc2 (134)
+deliver uav2 person3 loc2 crate2 medicine (10)
+fly_to uav2 loc2 depot (134)
+pickup_crate uav2 crate3 depot medicine (10)
+fly_to uav2 depot loc4 (243)
+deliver uav2 person1 loc4 crate3 medicine (10)
+fly_to uav2 loc4 depot (243)
+pickup_crate uav2 crate4 depot medicine (10)
+fly_to uav2 depot loc2 (134)
+deliver uav2 person4 loc2 crate4 medicine (10)
+fly_to uav2 loc2 depot (134)
+fly_to uav4 depot loc2 (134)
+deliver uav4 person3 loc2 crate1 food (10)
+fly_to uav4 loc2 depot (134)
+Plan length: 16 step(s).
+Plan cost: 1370.
+plan_id: 1
+pickup_crate uav4 crate1 depot food (10)
+pickup_crate uav2 crate2 depot medicine (10)
+fly_to uav2 depot loc2 (134)
+deliver uav2 person3 loc2 crate2 medicine (10)
+fly_to uav2 loc2 depot (134)
+pickup_crate uav2 crate3 depot medicine (10)
+fly_to uav2 depot loc4 (243)
+deliver uav2 person1 loc4 crate3 medicine (10)
+fly_to uav2 loc4 depot (243)
+pickup_crate uav2 crate4 depot medicine (10)
+fly_to uav2 depot loc2 (134)
+deliver uav2 person4 loc2 crate4 medicine (10)
+fly_to uav2 loc2 depot (134)
+fly_to uav4 depot loc2 (134)
+deliver uav4 person3 loc2 crate1 food (10)
+fly_to uav4 loc2 depot (134)
+Plan length: 16 step(s).
+Plan cost: 1370.
+2458; 2008;420
+cmd: pwd; ulimit -v 2000000;ulimit -t 420;/courses/TDDD48/planners/ipc2014/seq-sat/seq-sat-jasper/one_run_aras -run_one_plan_aras output_jasper_small_u4_prob--1 output_jasper_small_u4_prob-output_bound -o output_jasper_small_u4_prob-aras -mrw_shared "-iterative -run_aras -aras_time -1  -aras_mem -1" < output >> output_jasper_small_u4_prob_aras_tmp_output **************start aras***************
+/home/mansj125/TDDD48/tddd48-2022-labs-all-13/lab2
+**************end aras***************
+aras_plan_bound: 1370 66
+ARAS is disabled by FIRST_RUN_CHECK!!
+Initial state h value: 7/8.
+Expanded 61 state(s).
+Reopened 0 state(s).
+Evaluated 62 state(s).
+Evaluations: 124
+Generated 1265 state(s).
+Best solution cost so far: 1370
+Solution found - keep searching
+insert bound
+Starting search: lazy_greedy(hff2,hlm2,preferred=(hff2,hlm2),reopen_closed=false)
+Conducting lazy best first search, (real) bound = 1370
+Best heuristic value: 248/456 [g=0, 1 evaluated, 0 expanded, t=0s]
+Best heuristic value: 126/456 [g=134, 2 evaluated, 1 expanded, t=0s]
+Best heuristic value: 57/456 [g=377, 8 evaluated, 7 expanded, t=0s]
+Best heuristic value: 46/456 [g=387, 20 evaluated, 19 expanded, t=0s]
+Best heuristic value: 46/449 [g=154, 38 evaluated, 37 expanded, t=0s]
+Best heuristic value: 46/438 [g=298, 56 evaluated, 55 expanded, t=0s]
+Best heuristic value: 46/303 [g=432, 60 evaluated, 59 expanded, t=0s]
+Best heuristic value: 35/303 [g=432, 67 evaluated, 66 expanded, t=0s]
+Best heuristic value: 34/303 [g=675, 68 evaluated, 67 expanded, t=0s]
+Best heuristic value: 23/303 [g=685, 73 evaluated, 72 expanded, t=0s]
+Best heuristic value: 23/168 [g=819, 75 evaluated, 74 expanded, t=0s]
+Best heuristic value: 23/157 [g=829, 78 evaluated, 77 expanded, t=0s]
+Best heuristic value: 12/157 [g=973, 82 evaluated, 81 expanded, t=0s]
+Best heuristic value: 12/146 [g=1117, 87 evaluated, 86 expanded, t=0s]
+Best heuristic value: 1/135 [g=1261, 91 evaluated, 90 expanded, t=0s]
+Peak memory: -1 KB
+caught signal 2 -- exiting

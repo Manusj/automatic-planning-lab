@@ -1,0 +1,475 @@
+Parsing...
+Contains quantified condition(s): False
+Instantiating...
+Trivial rules: Converted to facts.
+Starting instantiation [71 rules]...
+Finding invariants...
+Finding invariants... 19 initial candidates
+[0.040s CPU, 0.034s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups...
+Choosing groups...
+166 uncovered facts (before using the results from the invariant synthesis)
+102 uncovered facts
+Building translation key...
+Building STRIPS to SAS dictionary...
+Translating task...
+Processing axioms...
+Found 0 axioms that are always true and 0 that are always false
+constrained 7380 conditions
+Writing output...
+Done!
+contains_quantified_conditions: 0
+Building causal graph...
+The causal graph is not acyclic.
+147 variables of 147 necessary
+7092 of 7092 operators necessary.
+0 of 0 Axiom_relational rules necessary.
+0 of 0 Axiom_functional rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+all_operator_indices.size(): 7092
+Writing output...
+printing SG 
+147
+done
+
+
+Planner Paramters:
+Anytime Search: Enabled
+Timeout if plan was found: 0 seconds (no timeout)
+Timeout while no plan was found: 0 seconds (no timeout)
+Greedy Search: Disabled
+Verbose: Enabled
+Lazy Heuristic Evaluation: Enabled
+Use caching in heuristic.
+Cyclic CG heuristic: Enabled 	Preferred Operators: Enabled
+Makespan heuristic: Disabled 	Preferred Operators: Disabled
+No Heuristic: Disabled
+Cg Heuristic Zero Cost Waiting Transitions: Enabled
+Cg Heuristic Fire Waiting Transitions Only If Local Problems Matches State: Disabled
+PrefOpsOrderedMode: Enabled with 1 goals
+PrefOpsCheapestMode: Enabled with 1 goals
+PrefOpsMostExpensiveMode: Disabled with 1000 goals
+PrefOpsRandMode: Disabled with 1000 goals
+PrefOpsConcurrentMode: Disabled
+Reset after solution was found: Enabled
+Reward only preferred operators queue: Disabled
+GValues by: Timestamp
+Queue management mode: Priority based
+Known by logical state only filtering: Disabled
+use_subgoals_to_break_makespan_ties: Disabled
+Reschedule plans: Enabled
+Epsilonize internally: Enabled
+Epsilonize externally: Disabled
+Keep original plans: Enabled
+Plan name: "output_fastdownward_itsatUav_prob"
+Plan monitor file: "" (no monitoring)
+Monitoring verify timestamps: Disabled
+
+Contains universal conditions: 0
+Giving prior boost to open list 0
+INIT
+Open list sizes (priorities): 0 (-5000),  0 (0),  0 (0),  0 (0), 
+Initializing cyclic causal graph heuristic...done.
+Best heuristic values of queues: 1748/-1/-1/-1 [expanded 1 state(s)]
+Best heuristic values of queues: 1687.98/-1/-1/-1 [expanded 3 state(s)]
+Best heuristic values of queues: 1678/-1/-1/-1 [expanded 4 state(s)]
+Best heuristic values of queues: 1282.98/-1/-1/-1 [expanded 5 state(s)]
+Best heuristic values of queues: 1152/-1/-1/-1 [expanded 6 state(s)]
+Best heuristic values of queues: 1152/-1/1481.98/-1 [expanded 10 state(s)]
+Best heuristic values of queues: 1152/-1/1252.97/-1 [expanded 18 state(s)]
+Best heuristic values of queues: 1122/-1/1252.97/-1 [expanded 20 state(s)]
+Best heuristic values of queues: 1122/-1/956.98/-1 [expanded 24 state(s)]
+Best heuristic values of queues: 836/-1/956.98/-1 [expanded 25 state(s)]
+Best heuristic values of queues: 792/-1/956.98/-1 [expanded 27 state(s)]
+Best heuristic values of queues: 792/-1/825.98/-1 [expanded 66 state(s)]
+Best heuristic values of queues: 781.97/-1/825.98/-1 [expanded 67 state(s)]
+Best heuristic values of queues: 727/-1/825.98/-1 [expanded 68 state(s)]
+Best heuristic values of queues: 717/-1/825.98/-1 [expanded 849 state(s)]
+Best heuristic values of queues: 717/-1/815.98/-1 [expanded 1008 state(s)]
+Best heuristic values of queues: 673/-1/815.98/-1 [expanded 1293 state(s)]
+Best heuristic values of queues: 663/-1/815.98/-1 [expanded 1376 state(s)]
+
+Search Time: 10 sec.
+Expanded Nodes: 1448 state(s).
+Rate: 144.8 Nodes/s (over 10.0s) 144.8 Nodes/s (total average)
+Generated Nodes: 125145 state(s).
+Rate: 12514.5 Nodes/s (over 10.0s) 12514.5 Nodes/s (total average)
+Overall branching factor by list sizes: 86.4261
+Averaged overall branching factor: Mean 86.43 Std: 18.28 (Num: 1448)
+Branching factors by open list:
+Open List 0: Mean 1.38 Std: 0.55 (Num: 1448)
+Open List 1: Mean 1.32 Std: 0.56 (Num: 1448)
+Open List 2: Mean 4.59 Std: 2.24 (Num: 1448)
+Open List 3: Mean 79.14 Std: 16.80 (Num: 1448)
+OpenList sizes: 3 1905 6304 114588
+Heuristic Computations (per heuristic): 2282 Total: 2282
+Number of cache hits in heuristic (per heuristic): 1037 Total: 1037
+Best heuristic values of queues: [0: 663] [1: -1] [2: 815.98] [3: -1]
+
+Best heuristic values of queues: 663/-1/706.98/-1 [expanded 1571 state(s)]
+Best heuristic values of queues: 597/-1/706.98/-1 [expanded 1580 state(s)]
+Best heuristic values of queues: 488/-1/706.98/-1 [expanded 1595 state(s)]
+Best heuristic values of queues: 488/-1/696.98/-1 [expanded 1643 state(s)]
+Best heuristic values of queues: 488/-1/695.98/-1 [expanded 1724 state(s)]
+
+Search Time: 20 sec.
+Expanded Nodes: 2992 state(s).
+Rate: 154.4 Nodes/s (over 10.0s) 149.6 Nodes/s (total average)
+Generated Nodes: 247197 state(s).
+Rate: 12205.2 Nodes/s (over 10.0s) 12359.9 Nodes/s (total average)
+Overall branching factor by list sizes: 82.6193
+Averaged overall branching factor: Mean 82.62 Std: 21.65 (Num: 2992)
+Branching factors by open list:
+Open List 0: Mean 1.37 Std: 0.54 (Num: 2992)
+Open List 1: Mean 1.32 Std: 0.58 (Num: 2992)
+Open List 2: Mean 4.41 Std: 2.23 (Num: 2992)
+Open List 3: Mean 75.52 Std: 20.29 (Num: 2992)
+OpenList sizes: 2 3934 12409 225954
+Heuristic Computations (per heuristic): 4711 Total: 4711
+Number of cache hits in heuristic (per heuristic): 2129 Total: 2129
+Best heuristic values of queues: [0: 488] [1: -1] [2: 695.98] [3: -1]
+
+
+Search Time: 30 sec.
+Expanded Nodes: 4410 state(s).
+Rate: 141.8 Nodes/s (over 10.0s) 147.0 Nodes/s (total average)
+Generated Nodes: 345872 state(s).
+Rate: 9867.5 Nodes/s (over 10.0s) 11529.1 Nodes/s (total average)
+Overall branching factor by list sizes: 78.429
+Averaged overall branching factor: Mean 78.43 Std: 23.99 (Num: 4410)
+Branching factors by open list:
+Open List 0: Mean 1.37 Std: 0.53 (Num: 4410)
+Open List 1: Mean 1.29 Std: 0.56 (Num: 4410)
+Open List 2: Mean 4.32 Std: 2.22 (Num: 4410)
+Open List 3: Mean 71.46 Std: 22.67 (Num: 4410)
+OpenList sizes: 2 5673 17922 315131
+Heuristic Computations (per heuristic): 6837 Total: 6837
+Number of cache hits in heuristic (per heuristic): 3183 Total: 3183
+Best heuristic values of queues: [0: 488] [1: -1] [2: 695.98] [3: -1]
+
+Best heuristic values of queues: 488/-1/630.98/-1 [expanded 4437 state(s)]
+
+Search Time: 40 sec.
+Expanded Nodes: 6072 state(s).
+Rate: 166.2 Nodes/s (over 10.0s) 151.8 Nodes/s (total average)
+Generated Nodes: 478168 state(s).
+Rate: 13229.6 Nodes/s (over 10.0s) 11954.2 Nodes/s (total average)
+Overall branching factor by list sizes: 78.7497
+Averaged overall branching factor: Mean 78.75 Std: 23.65 (Num: 6072)
+Branching factors by open list:
+Open List 0: Mean 1.37 Std: 0.54 (Num: 6072)
+Open List 1: Mean 1.29 Std: 0.56 (Num: 6072)
+Open List 2: Mean 4.28 Std: 2.23 (Num: 6072)
+Open List 3: Mean 71.81 Std: 22.31 (Num: 6072)
+OpenList sizes: 1 7833 24446 436033
+Heuristic Computations (per heuristic): 9431 Total: 9431
+Number of cache hits in heuristic (per heuristic): 4331 Total: 4331
+Best heuristic values of queues: [0: 488] [1: -1] [2: 630.98] [3: -1]
+
+No progress since 7188, now at 12188
+RESET!
+Giving prior boost to open list 1
+Open list sizes (priorities): 0 (0),  0 (-5000),  0 (0),  0 (0), 
+Best heuristic values of queues: 1898.04/-1/-1/-1 [expanded 1 state(s)]
+Best heuristic values of queues: 1898.04/2029.04/-1/-1 [expanded 2 state(s)]
+Best heuristic values of queues: 1898.04/1828.04/-1/-1 [expanded 3 state(s)]
+Best heuristic values of queues: 1898.04/1302.04/-1/-1 [expanded 5 state(s)]
+Best heuristic values of queues: 1898.04/1292.04/-1/-1 [expanded 15 state(s)]
+Best heuristic values of queues: 1898.04/1262.98/-1/-1 [expanded 23 state(s)]
+Best heuristic values of queues: 1898.04/1132/-1/-1 [expanded 24 state(s)]
+Best heuristic values of queues: 1898.04/924.98/-1/-1 [expanded 33 state(s)]
+Best heuristic values of queues: 1898.04/760/-1/-1 [expanded 34 state(s)]
+Best heuristic values of queues: 1898.04/750/-1/-1 [expanded 46 state(s)]
+Best heuristic values of queues: 1898.04/729.98/-1/-1 [expanded 54 state(s)]
+Best heuristic values of queues: 1898.04/565/-1/-1 [expanded 55 state(s)]
+Best heuristic values of queues: 1898.04/555/-1/-1 [expanded 66 state(s)]
+Best heuristic values of queues: 1898.04/544.98/-1/-1 [expanded 74 state(s)]
+Best heuristic values of queues: 1898.04/535/-1/-1 [expanded 75 state(s)]
+Best heuristic values of queues: 1898.04/534.98/-1/-1 [expanded 76 state(s)]
+Best heuristic values of queues: 1898.04/370/-1/-1 [expanded 77 state(s)]
+Best heuristic values of queues: 1898.04/369.98/-1/-1 [expanded 83 state(s)]
+Best heuristic values of queues: 1898.04/360/-1/-1 [expanded 84 state(s)]
+Best heuristic values of queues: 1898.04/359.98/-1/-1 [expanded 87 state(s)]
+Best heuristic values of queues: 1898.04/350/-1/-1 [expanded 88 state(s)]
+Best heuristic values of queues: 1898.04/349.98/-1/-1 [expanded 89 state(s)]
+Best heuristic values of queues: 1898.04/185/-1/-1 [expanded 90 state(s)]
+Best heuristic values of queues: 1898.04/184.98/-1/-1 [expanded 92 state(s)]
+Best heuristic values of queues: 1898.04/175/-1/-1 [expanded 93 state(s)]
+Best heuristic values of queues: 1898.04/174.98/-1/-1 [expanded 98 state(s)]
+Best heuristic values of queues: 1898.04/165/-1/-1 [expanded 99 state(s)]
+Best heuristic values of queues: 1898.04/0/-1/-1 [expanded 101 state(s)]
+New solution has been found.
+
+Found new plan:
+0.00000000: (pickup_crate uav1 crate4 depot medicine) [10.00000000]
+10.01000000: (fly_to uav1 depot loc8) [131.00000000]
+141.02000000: (deliver uav1 person1 loc8 crate4 medicine) [10.00000000]
+151.03000000: (fly_to uav1 loc8 depot) [131.00000000]
+282.04000000: (pickup_crate uav2 crate10 depot medicine) [10.00000000]
+292.05000000: (fly_to uav2 depot loc8) [131.00000000]
+423.06000000: (deliver uav2 person2 loc8 crate10 medicine) [10.00000000]
+433.07000000: (fly_to uav2 loc8 depot) [131.00000000]
+564.08000000: (pickup_crate uav2 crate5 depot medicine) [10.00000000]
+574.09000000: (fly_to uav2 depot loc8) [131.00000000]
+705.10000000: (deliver uav2 person7 loc8 crate5 medicine) [10.00000000]
+715.11000000: (fly_to uav2 loc8 depot) [131.00000000]
+846.12000000: (pickup_crate uav4 crate6 depot medicine) [10.00000000]
+856.13000000: (fly_to uav4 depot loc6) [165.00000000]
+1021.14000000: (deliver uav4 person3 loc6 crate6 medicine) [10.00000000]
+1031.15000000: (fly_to uav4 loc6 depot) [165.00000000]
+1196.16000000: (pickup_crate uav4 crate3 depot food) [10.00000000]
+1206.17000000: (fly_to uav4 depot loc6) [165.00000000]
+1371.18000000: (deliver uav4 person4 loc6 crate3 food) [10.00000000]
+1381.19000000: (fly_to uav4 loc6 depot) [165.00000000]
+1546.20000000: (pickup_crate uav3 crate7 depot medicine) [10.00000000]
+1556.21000000: (fly_to uav3 depot loc6) [165.00000000]
+1721.22000000: (deliver uav3 person4 loc6 crate7 medicine) [10.00000000]
+1731.23000000: (fly_to uav3 loc6 depot) [165.00000000]
+1896.24000000: (pickup_crate uav3 crate2 depot food) [10.00000000]
+1906.25000000: (fly_to uav3 depot loc6) [165.00000000]
+2071.26000000: (deliver uav3 person6 loc6 crate2 food) [10.00000000]
+2081.27000000: (fly_to uav3 loc6 depot) [165.00000000]
+2246.28000000: (pickup_crate uav3 crate8 depot medicine) [10.00000000]
+2256.29000000: (fly_to uav3 depot loc6) [165.00000000]
+2421.30000000: (deliver uav3 person6 loc6 crate8 medicine) [10.00000000]
+2431.31000000: (fly_to uav3 loc6 depot) [165.00000000]
+2596.32000000: (pickup_crate uav1 crate1 depot food) [10.00000000]
+2606.33000000: (fly_to uav1 depot loc6) [165.00000000]
+2771.34000000: (deliver uav1 person8 loc6 crate1 food) [10.00000000]
+2781.35000000: (fly_to uav1 loc6 depot) [165.00000000]
+2946.36000000: (pickup_crate uav4 crate9 depot medicine) [10.00000000]
+2956.37000000: (fly_to uav4 depot loc6) [165.00000000]
+3121.38000000: (deliver uav4 person8 loc6 crate9 medicine) [10.00000000]
+3131.39000000: (fly_to uav4 loc6 depot) [165.00000000]
+Rescheduled Plan:
+0.00100000: (pickup_crate uav1 crate4 depot medicine) [10.00000000]
+10.01100000: (fly_to uav1 depot loc8) [131.00000000]
+141.02200000: (deliver uav1 person1 loc8 crate4 medicine) [10.00000000]
+151.03300000: (fly_to uav1 loc8 depot) [131.00000000]
+0.00100000: (pickup_crate uav2 crate10 depot medicine) [10.00000000]
+10.01200000: (fly_to uav2 depot loc8) [131.00000000]
+141.02300000: (deliver uav2 person2 loc8 crate10 medicine) [10.00000000]
+151.03400000: (fly_to uav2 loc8 depot) [131.00000000]
+282.04500000: (pickup_crate uav2 crate5 depot medicine) [10.00000000]
+292.05500000: (fly_to uav2 depot loc8) [131.00000000]
+423.06700000: (deliver uav2 person7 loc8 crate5 medicine) [10.00000000]
+433.07700000: (fly_to uav2 loc8 depot) [131.00000000]
+0.00100000: (pickup_crate uav4 crate6 depot medicine) [10.00000000]
+10.01200000: (fly_to uav4 depot loc6) [165.00000000]
+175.02400000: (deliver uav4 person3 loc6 crate6 medicine) [10.00000000]
+185.03400000: (fly_to uav4 loc6 depot) [165.00000000]
+350.04600000: (pickup_crate uav4 crate3 depot food) [10.00000000]
+360.05600000: (fly_to uav4 depot loc6) [165.00000000]
+525.06700000: (deliver uav4 person4 loc6 crate3 food) [10.00000000]
+535.07800000: (fly_to uav4 loc6 depot) [165.00000000]
+0.00100000: (pickup_crate uav3 crate7 depot medicine) [10.00000000]
+10.01200000: (fly_to uav3 depot loc6) [165.00000000]
+175.02400000: (deliver uav3 person4 loc6 crate7 medicine) [10.00000000]
+185.03500000: (fly_to uav3 loc6 depot) [165.00000000]
+350.04600000: (pickup_crate uav3 crate2 depot food) [10.00000000]
+360.05700000: (fly_to uav3 depot loc6) [165.00000000]
+525.06800000: (deliver uav3 person6 loc6 crate2 food) [10.00000000]
+535.07900000: (fly_to uav3 loc6 depot) [165.00000000]
+700.08900000: (pickup_crate uav3 crate8 depot medicine) [10.00000000]
+710.09900000: (fly_to uav3 depot loc6) [165.00000000]
+875.11000000: (deliver uav3 person6 loc6 crate8 medicine) [10.00000000]
+885.12100000: (fly_to uav3 loc6 depot) [165.00000000]
+282.04500000: (pickup_crate uav1 crate1 depot food) [10.00000000]
+292.05600000: (fly_to uav1 depot loc6) [165.00000000]
+457.06700000: (deliver uav1 person8 loc6 crate1 food) [10.00000000]
+467.07700000: (fly_to uav1 loc6 depot) [165.00000000]
+700.08900000: (pickup_crate uav4 crate9 depot medicine) [10.00000000]
+710.10000000: (fly_to uav4 depot loc6) [165.00000000]
+875.11100000: (deliver uav4 person8 loc6 crate9 medicine) [10.00000000]
+885.12200000: (fly_to uav4 loc6 depot) [165.00000000]
+Solution with original makespan 3296.39 found (ignoring no-moving-targets-rule).
+Plan length: 40 step(s).
+Makespan   : 1050.12
+Rescheduled Makespan   : 1050.12
+INIT
+Open list sizes (priorities): 155 (-1000),  1 (-31846),  424 (0),  10061 (0), 
+Best heuristic values of queues: 1842.98/0/-1/-1 [expanded 102 state(s)]
+Best heuristic values of queues: 1701.98/0/-1/-1 [expanded 103 state(s)]
+Best heuristic values of queues: 1526.98/0/-1/-1 [expanded 104 state(s)]
+
+Search Time: 50 sec.
+Expanded Nodes: 7600 state(s).
+Rate: 152.8 Nodes/s (over 10.0s) 152.0 Nodes/s (total average)
+Generated Nodes: 580501 state(s).
+Rate: 10233.3 Nodes/s (over 10.0s) 11610.0 Nodes/s (total average)
+Overall branching factor by list sizes: 76.3817
+Averaged overall branching factor: Mean 76.39 Std: 24.16 (Num: 7599)
+Branching factors by open list:
+Open List 0: Mean 1.36 Std: 0.53 (Num: 7599)
+Open List 1: Mean 1.26 Std: 0.54 (Num: 7599)
+Open List 2: Mean 4.20 Std: 2.24 (Num: 7599)
+Open List 3: Mean 69.58 Std: 22.88 (Num: 7599)
+OpenList sizes: 146 1 433 10373
+Heuristic Computations (per heuristic): 11666 Total: 11666
+Number of cache hits in heuristic (per heuristic): 5246 Total: 5246
+Best heuristic values of queues: [0: 1526.98] [1: 0] [2: -1] [3: -1]
+
+Best heuristic values of queues: 1033.98/0/-1/-1 [expanded 105 state(s)]
+Best heuristic values of queues: 1033.98/0/1447.98/-1 [expanded 254 state(s)]
+Best heuristic values of queues: 1033.98/0/1122/-1 [expanded 415 state(s)]
+Best heuristic values of queues: 1003.98/0/1122/-1 [expanded 451 state(s)]
+Best heuristic values of queues: 1003.98/0/825.99/-1 [expanded 607 state(s)]
+Best heuristic values of queues: 848.98/0/825.99/-1 [expanded 745 state(s)]
+
+Search Time: 60 sec.
+Expanded Nodes: 8854 state(s).
+Rate: 125.4 Nodes/s (over 10.0s) 147.6 Nodes/s (total average)
+Generated Nodes: 682665 state(s).
+Rate: 10216.4 Nodes/s (over 10.0s) 11377.8 Nodes/s (total average)
+Overall branching factor by list sizes: 77.1024
+Averaged overall branching factor: Mean 77.11 Std: 24.42 (Num: 8853)
+Branching factors by open list:
+Open List 0: Mean 1.35 Std: 0.53 (Num: 8853)
+Open List 1: Mean 1.28 Std: 0.55 (Num: 8853)
+Open List 2: Mean 4.25 Std: 2.20 (Num: 8853)
+Open List 3: Mean 70.23 Std: 23.13 (Num: 8853)
+OpenList sizes: 49 4 6106 103445
+Heuristic Computations (per heuristic): 14768 Total: 14768
+Number of cache hits in heuristic (per heuristic): 7349 Total: 7349
+Best heuristic values of queues: [0: 848.98] [1: 0] [2: 825.99] [3: -1]
+
+No progress since 1774, now at 6774
+RESET!
+Giving prior boost to open list 2
+Open list sizes (priorities): 0 (0),  0 (0),  0 (-5000),  0 (0), 
+Best heuristic values of queues: 1912.98/-1/-1/-1 [expanded 1 state(s)]
+Best heuristic values of queues: 1912.98/-1/2043.98/-1 [expanded 2 state(s)]
+Best heuristic values of queues: 1912.98/-1/1842.98/-1 [expanded 4 state(s)]
+Best heuristic values of queues: 1912.98/-1/1657.98/-1 [expanded 6 state(s)]
+Best heuristic values of queues: 1912.98/-1/1648/-1 [expanded 7 state(s)]
+Best heuristic values of queues: 1912.98/-1/1252.98/-1 [expanded 8 state(s)]
+Best heuristic values of queues: 1912.98/-1/956.98/-1 [expanded 9 state(s)]
+Best heuristic values of queues: 1912.98/-1/825.99/-1 [expanded 10 state(s)]
+Best heuristic values of queues: 1912.98/-1/792/-1 [expanded 13 state(s)]
+Best heuristic values of queues: 1912.98/-1/791.98/-1 [expanded 16 state(s)]
+Best heuristic values of queues: 1912.98/-1/727/-1 [expanded 18 state(s)]
+
+Search Time: 70 sec.
+Expanded Nodes: 10336 state(s).
+Rate: 148.2 Nodes/s (over 10.0s) 147.7 Nodes/s (total average)
+Generated Nodes: 793068 state(s).
+Rate: 11040.3 Nodes/s (over 10.0s) 11329.5 Nodes/s (total average)
+Overall branching factor by list sizes: 76.7287
+Averaged overall branching factor: Mean 76.74 Std: 24.72 (Num: 10335)
+Branching factors by open list:
+Open List 0: Mean 1.35 Std: 0.52 (Num: 10335)
+Open List 1: Mean 1.28 Std: 0.55 (Num: 10335)
+Open List 2: Mean 4.30 Std: 2.20 (Num: 10335)
+Open List 3: Mean 69.81 Std: 23.45 (Num: 10335)
+OpenList sizes: 348 312 893 17289
+Heuristic Computations (per heuristic): 18059 Total: 18059
+Number of cache hits in heuristic (per heuristic): 9532 Total: 9532
+Best heuristic values of queues: [0: 1912.98] [1: -1] [2: 727] [3: -1]
+
+Best heuristic values of queues: 1912.98/-1/717/-1 [expanded 522 state(s)]
+Best heuristic values of queues: 1912.98/-1/696.98/-1 [expanded 676 state(s)]
+Best heuristic values of queues: 1912.98/-1/673.98/-1 [expanded 677 state(s)]
+Best heuristic values of queues: 1912.98/-1/673.97/-1 [expanded 684 state(s)]
+Best heuristic values of queues: 1912.98/-1/639.97/-1 [expanded 686 state(s)]
+Best heuristic values of queues: 1912.98/-1/639.96/-1 [expanded 689 state(s)]
+Best heuristic values of queues: 1912.98/-1/630.98/-1 [expanded 691 state(s)]
+Best heuristic values of queues: 1912.98/-1/587.98/-1 [expanded 755 state(s)]
+Best heuristic values of queues: 1912.98/-1/577.99/-1 [expanded 983 state(s)]
+
+Search Time: 80 sec.
+Expanded Nodes: 11136 state(s).
+Rate: 80.0 Nodes/s (over 10.0s) 139.2 Nodes/s (total average)
+Generated Nodes: 833902 state(s).
+Rate: 4083.4 Nodes/s (over 10.0s) 10423.8 Nodes/s (total average)
+Overall branching factor by list sizes: 74.8834
+Averaged overall branching factor: Mean 74.89 Std: 25.43 (Num: 11135)
+Branching factors by open list:
+Open List 0: Mean 1.34 Std: 0.52 (Num: 11135)
+Open List 1: Mean 1.26 Std: 0.53 (Num: 11135)
+Open List 2: Mean 4.23 Std: 2.23 (Num: 11135)
+Open List 3: Mean 68.06 Std: 24.12 (Num: 11135)
+OpenList sizes: 1304 1151 2725 53628
+Heuristic Computations (per heuristic): 18915 Total: 18915
+Number of cache hits in heuristic (per heuristic): 9622 Total: 9622
+Best heuristic values of queues: [0: 1912.98] [1: -1] [2: 577.99] [3: -1]
+
+
+Search Time: 90 sec.
+Expanded Nodes: 12056 state(s).
+Rate: 92.0 Nodes/s (over 10.0s) 134.0 Nodes/s (total average)
+Generated Nodes: 880051 state(s).
+Rate: 4614.9 Nodes/s (over 10.0s) 9778.3 Nodes/s (total average)
+Overall branching factor by list sizes: 72.9969
+Averaged overall branching factor: Mean 73.00 Std: 25.99 (Num: 12055)
+Branching factors by open list:
+Open List 0: Mean 1.33 Std: 0.51 (Num: 12055)
+Open List 1: Mean 1.25 Std: 0.52 (Num: 12055)
+Open List 2: Mean 4.20 Std: 2.25 (Num: 12055)
+Open List 3: Mean 66.23 Std: 24.68 (Num: 12055)
+OpenList sizes: 2394 2123 5274 94166
+Heuristic Computations (per heuristic): 19905 Total: 19905
+Number of cache hits in heuristic (per heuristic): 9723 Total: 9723
+Best heuristic values of queues: [0: 1912.98] [1: -1] [2: 577.99] [3: -1]
+
+Best heuristic values of queues: 1912.98/-1/564.99/-1 [expanded 2154 state(s)]
+
+Search Time: 100 sec.
+Expanded Nodes: 13274 state(s).
+Rate: 121.8 Nodes/s (over 10.0s) 132.7 Nodes/s (total average)
+Generated Nodes: 952534 state(s).
+Rate: 7248.3 Nodes/s (over 10.0s) 9525.3 Nodes/s (total average)
+Overall branching factor by list sizes: 71.7594
+Averaged overall branching factor: Mean 71.76 Std: 25.74 (Num: 13273)
+Branching factors by open list:
+Open List 0: Mean 1.31 Std: 0.50 (Num: 13273)
+Open List 1: Mean 1.23 Std: 0.50 (Num: 13273)
+Open List 2: Mean 4.13 Std: 2.26 (Num: 13273)
+Open List 3: Mean 65.10 Std: 24.44 (Num: 13273)
+OpenList sizes: 3811 3398 8029 159805
+Heuristic Computations (per heuristic): 21256 Total: 21256
+Number of cache hits in heuristic (per heuristic): 9930 Total: 9930
+Best heuristic values of queues: [0: 1912.98] [1: -1] [2: 564.99] [3: -1]
+
+
+Search Time: 110 sec.
+Expanded Nodes: 14621 state(s).
+Rate: 134.7 Nodes/s (over 10.0s) 132.9 Nodes/s (total average)
+Generated Nodes: 1021372 state(s).
+Rate: 6883.8 Nodes/s (over 10.0s) 9285.2 Nodes/s (total average)
+Overall branching factor by list sizes: 69.8565
+Averaged overall branching factor: Mean 69.86 Std: 25.96 (Num: 14620)
+Branching factors by open list:
+Open List 0: Mean 1.30 Std: 0.49 (Num: 14620)
+Open List 1: Mean 1.21 Std: 0.49 (Num: 14620)
+Open List 2: Mean 4.07 Std: 2.28 (Num: 14620)
+Open List 3: Mean 63.28 Std: 24.65 (Num: 14620)
+OpenList sizes: 5406 4801 11278 220907
+Heuristic Computations (per heuristic): 22711 Total: 22711
+Number of cache hits in heuristic (per heuristic): 10149 Total: 10149
+Best heuristic values of queues: [0: 1912.98] [1: -1] [2: 564.99] [3: -1]
+
+Best heuristic values of queues: 1912.98/-1/541.98/-1 [expanded 4646 state(s)]
+
+Search Time: 120 sec.
+Expanded Nodes: 16011 state(s).
+Rate: 139.0 Nodes/s (over 10.0s) 133.4 Nodes/s (total average)
+Generated Nodes: 1098314 state(s).
+Rate: 7694.2 Nodes/s (over 10.0s) 9152.6 Nodes/s (total average)
+Overall branching factor by list sizes: 68.5975
+Averaged overall branching factor: Mean 68.60 Std: 25.78 (Num: 16010)
+Branching factors by open list:
+Open List 0: Mean 1.29 Std: 0.48 (Num: 16010)
+Open List 1: Mean 1.20 Std: 0.47 (Num: 16010)
+Open List 2: Mean 4.04 Std: 2.29 (Num: 16010)
+Open List 3: Mean 62.07 Std: 24.49 (Num: 16010)
+OpenList sizes: 7035 6255 14882 289603
+Heuristic Computations (per heuristic): 24230 Total: 24230
+Number of cache hits in heuristic (per heuristic): 10420 Total: 10420
+Best heuristic values of queues: [0: 1912.98] [1: -1] [2: 541.98] [3: -1]
+
+('/courses/TDDD48/planners/ipc2014/tempo-sat/tempo-sat-temporal-fast-downward/translate/translate.py', 'domain.pddl', 'itsatUav_problem_u4_r2_l8_p8_c10_g10_ct2.pddl') {}
+('/courses/TDDD48/planners/ipc2014/tempo-sat/tempo-sat-temporal-fast-downward/preprocess/preprocess',) {'stdin': <open file 'output.sas', mode 'r' at 0x7fcfe562e1e0>}
+('/courses/TDDD48/planners/ipc2014/tempo-sat/tempo-sat-temporal-fast-downward/search/search', 'y+Y+a+e+r+O+1+C+1+b', 'p', 'output_fastdownward_itsatUav_prob') {'stdin': <open file 'output', mode 'r' at 0x7fcfe562e030>}

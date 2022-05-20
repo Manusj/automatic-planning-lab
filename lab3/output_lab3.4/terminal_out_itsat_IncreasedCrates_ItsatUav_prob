@@ -1,0 +1,143 @@
+TOPSAT: Temporal Optimal Planner using SATisfiability
+        for PDDL 2.1 level 3 durative actions
+Copyright 2011-2012, Sharif University of Technology.
+Part of this work is based on VAL: PDDL Plan Validator.
+
+Using SAT Solver : precosat
+Parsing input file: domain.pddl
+Parsing input file: uav_problem_u4_r2_l8_p8_c12_g10_ct2.pddl
+Input files parsed successfully.
+Grounding operator: pickup_crate  10  4
+Grounding operator: fly_to  -1  3
+Grounding operator: deliver  10  5
+Grounding operator: load_crate_on_carrier  10  6
+Grounding operator: fly_carrier  -1  4
+Grounding operator: take_crate_from_carrier  10  6
+Domain: uav_domain Objects: 42
+Predicates: 9 Operators: 6
+Propositions: 364 Actions: 11772
+Time taken : 0.121363 secs
+
+Process started:
+
+
+Ration of Relevant Actions: 1
+
+Number of Actons: 11772    Number of Propositions: 364
+
+Number of Relevant Actons: 11772    Number of Relevant Propositions: 326
+
+COMPRESSION STARTED
+Ratio of Compressed Actions:  1Trying with T=1... 
+Variables: total=35968	prop=652	action= 35316
+Total Mutex Clauses=192976	ratio=0.650005
+Total Event Clauses=23652	Total Clauses=296884
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    0.5   57747  152674  11791      0      0       0      0    0.0  0   33
+c   0    0.5   38366  152674  31172      0      0       1      0    0.0  0   33
+Instance Unsatisfiable
+Time: 36.8638 secs
+
+
+Trying with T=4... 
+Variables: total=142894	prop=1630	action= 141264
+Total Mutex Clauses=771904	ratio=0.723689
+Total Event Clauses=94608	Total Clauses=1066624
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    0.7  252843  714070  24331      0      0       0      0    0.0  0  138
+c   s    8.4   35544  191160  83446  74359  83824       0      0    0.0  0  117
+c   l    8.4   35544  191160  83446  74359  83824       0   5000    0.0  0  117
+c   R    8.4   35544  191230  83446  74359  83824      11     11   82.1  1  118c  2R    8.4   35544  191243  83446  74359  83824      21     17  344.3  3  118c  3R    8.5   35544  191257  83446  74359  83824      83     71  393.4  1  118c  4R    8.6   35544  191273  83446  74359  83824     254    232  465.4  6  119c  5R    9.0   35544  191334  83446  74359  83824     665    620  392.3  7  120
+c   B    9.4   35544  191372  83446  74359  83824    1000    940  387.6  2  121
+c   R    9.9   35544  191428  83446  74359  83824    1656   1560  375.3  4  122
+c   B   10.2   35544  191445  83446  74359  83824    2000   1900  377.4  1  122
+c   R   11.6   35544  191503  83446  74359  83824    3945   3798  390.2  5  125
+c   +   12.6   35544  191162  83446  74359  83824    5199   7000  405.1  5  120
+c   B   14.8   35544  191241  83446  74359  83824    8003   5252  415.0  7  125
+c   R   15.4   35544  191249  83446  74359  83824    9149   6373  409.9  5  126
+c   +   16.1   35544  191164  83446  74359  83824    9777   9000  412.8  2  121c  2+   20.2   35544  191167  83446  74359  83824   15341  11000  399.7  6  123
+c   R   24.3   35544  191258  83446  74359  83824   20858   9946  400.9  4  133
+c   +   25.5   35544  191169  83446  74359  83824   21921  13000  406.0  3  124
+c   B   27.2   35544  191187  83446  74359  83824   24005   7625  408.9  4  128
+c   +   32.0   35544  191170  83446  74359  83824   29454  15000  413.1 10  126c  2+   39.1   35544  191171  83446  74359  83824   38047  17000  405.7  4  128
+c   R   45.6   35544  191248  83446  74359  83824   46878  16351  405.9  3  144
+c   +   46.5   35544  191178  83446  74359  83824   47528  19000  406.5  2  129c  2+   55.6   35544  191180  83446  74359  83824   58115  21000  407.9  6  131
+c   B   60.3   35544  191223  83446  74359  83824   64016  15401  408.8  3  141
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   +   65.5   35544  191181  83446  74359  83824   69659  23000  404.3  6  133c  2+   76.8   35544  191182  83446  74359  83824   82109  25000  403.6  6  134c  3+   89.8   35544  191189  83446  74359  83824   95591  27000  399.5  2  136
+c   R   97.0   35544  191235  83446  74359  83824  104103  21095  401.9  1  157
+c   +  101.2   35544  191189  83446  74359  83824  110016  29000  403.1  4  137c  2+  114.8   35544  191190  83446  74359  83824  125450  31000  397.7  1  139c  3+  130.3   35544  191190  83446  74359  83824  141970  33000  392.4  2  141c  4+  147.1   35544  191190  83446  74359  83824  159504  35000  389.2  2  143
+c   B  147.5   35544  191190  83446  74359  83824  160053  17043  389.4  4  144
+c   +  163.8   35544  191190  83446  74359  83824  178050  37000  386.6  5  145
+c   0  179.0   35544  191212  83446  74359  83824  193947  33354  386.7  4  180
+Timeout, Assuming: Instance Unsatisfiable
+Time: 176.922 secs
+
+
+Trying with T=7... 
+Variables: total=249820	prop=2608	action= 247212
+Total Mutex Clauses=1350832	ratio=0.735601
+Total Event Clauses=165564	Total Clauses=1836364
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    0.8  447939 1275466  36871      0      0       0      0    0.0  0  172
+c   s   10.4   85956  471319 106678 125359 166817       0      0    0.0  0  141
+c   l   10.4   85956  471319 106678 125359 166817       0   5000    0.0  0  141
+c   R   10.4   85956  471449 106678 125359 166817      11     11  142.7  1  143c  2R   10.4   85956  471449 106678 125359 166817      21     19  638.7  2  144c  3R   10.6   85956  471470 106678 125359 166817      82     72  725.5  3  145c  4R   11.1   85956  471499 106678 125359 166817     251    227  627.2  5  146c  5R   11.8   85956  471578 106678 125359 166817     664    611  747.5  5  147
+c   B   12.3   85956  471614 106678 125359 166817    1003    933  803.0  2  148
+c   R   13.1   85956  471672 106678 125359 166817    1642   1554  754.9 14  150
+c   B   13.4   85956  471688 106678 125359 166817    2006   1910  764.2  5  150
+c   R   15.6   85956  471787 106678 125359 166817    3957   3700  806.9  6  154
+c   +   17.7   85956  471319 106678 125359 166817    5312   7000  821.3  7  148
+c   B   21.7   85956  471454 106678 125359 166817    8017   5049  793.7  8  155
+c   R   23.1   85956  471474 106678 125359 166817    9189   6207  802.7 12  159
+c   +   24.5   85956  471319 106678 125359 166817    9986   9000  813.6  4  151c  2+   32.7   85956  471321 106678 125359 166817   15724  11000  809.7  2  156
+c   R   38.9   85956  471495 106678 125359 166817   20891   9530  804.0 10  169
+c   +   40.7   85956  471321 106678 125359 166817   22381  13000  803.2  3  159
+c   B   42.8   85956  471367 106678 125359 166817   24020   7168  808.8  7  164
+c   +   51.7   85956  471322 106678 125359 166817   30019  15000  805.0  2  163
+c   1   55.3   85956  471375 106678 125359 166817   32549   8951  809.9  0  171
+Satisfied!
+A plan found with layers = 7
+Trying to find a satisfying timed plan:
+Valid Timed Plan found!
+======================
+Writing final plan to file: output_itsat_IncreasedUav_istatCrates_prob.1 , makespan = 3243.33 , elapsed time = 268.392
+Time: 54.705 secs
+
+
+Trying with T=8... 
+Variables: total=285462	prop=2934	action= 282528
+Total Mutex Clauses=1543808	ratio=0.737625
+Total Event Clauses=189216	Total Clauses=2092944
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    0.9  512971 1462598  41051      0      0       0      0    0.0  0  278
+c   s   11.8  102761  564709 114422 143851 192987       0      0    0.0  0  245
+c   l   11.8  102761  564709 114422 143851 192987       0   5000    0.0  0  245
+c   R   11.9  102761  564859 114422 143851 192987      11     11  162.8  1  248c  2R   11.9  102761  564859 114422 143851 192987      22     21  801.5  0  248c  3R   12.0  102761  564867 114422 143851 192987      85     74  981.0  6  249c  4R   12.5  102761  564912 114422 143851 192987     249    235  776.5  9  250c  5R   13.3  102761  564993 114422 143851 192987     655    607  726.8  1  252
+c   B   14.2  102761  565045 114422 143851 192987    1000    935  795.7  7  253
+c   R   15.0  102761  565089 114422 143851 192987    1625   1529  781.0  8  255
+c   B   15.3  102761  565101 114422 143851 192987    2001   1899  765.9  3  255
+c   R   17.8  102761  565189 114422 143851 192987    3914   3733  731.5  1  259
+c   +   20.1  102761  564709 114422 143851 192987    5226   7000  809.7  2  254
+c   B   24.8  102761  564855 114422 143851 192987    8001   5135  851.6  8  260
+c   R   26.3  102761  564892 114422 143851 192987    9130   6235  911.5 14  263
+c   +   27.5  102761  564713 114422 143851 192987    9926   9000  899.6  7  257

@@ -1,0 +1,24 @@
+Madagascar v0.998 16/02/2012 11:52:16
+Options: file:domain.pddl file:uav_problem_u4_r0_l4_p4_c4_g4_ct2.pddl -o output_madagascar_small_u4_prob
+Special no-VSIDS version.
+Domain: uav_domain
+Problem: uav_problem_u4_r0_l4_p4_c4_g4_ct2
+WARNING: type carrier is empty
+Parser: 500 ground actions and 92 state variables
+Invariants: 0 1 2  0.00 secs
+Goal: conjunctive
+Simplified: 160 ground actions and 52 state variables
+Actions: STRIPS
+Disabling graph:  0.00 secs
+Plan type: E-step
+Horizon 0
+0 UNSAT (0 decisions 0 conflicts)
+Horizon 5
+SAT (20 decisions 0 conflicts)
+PLAN FOUND: 5 steps
+16 actions in the plan.
+total time 0.00 preprocess 0.00 
+total size 204.00 MB
+t val conflicts decisions
+0 0 0 0
+5 1 0 20

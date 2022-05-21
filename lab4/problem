@@ -1,0 +1,25 @@
+(defproblem problem domain
+  ;; Initial State
+  (
+  ;; Type predicates
+  (uav u1)
+  (location depot)
+  (location l1)
+  (content food)
+  (content medicine)
+  (crate c1)
+  (crate c1)
+
+  ;; Initial state predicates
+  (at u1 depot)
+  (heli-free u1)
+  (at c1 depot)
+  (at c2 depot)
+  (crate-content c1 food)
+  (crate-content c1 medicine)
+  )
+
+  ;; Initial task list
+  ((pickup-crate u1 food depot)
+  )
+)

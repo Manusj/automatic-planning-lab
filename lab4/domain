@@ -1,0 +1,16 @@
+; This extremely simple example shows some of the most essential
+; features of SHOP2.
+
+(defdomain domain (
+  (:operator (!pickup ?a) () () ((have ?a)))
+  (:operator (!drop ?a) ((have ?a)) ((have ?a)) ())
+
+  (:method (deliver-all)
+    ; Preconditions
+    ((have ?x) (not (have ?y)))
+    ; task list
+    ((!drop ?x) (!pickup ?y))
+    ; Preconditions
+    ((have ?y) (not (have ?x)))
+    ; Task list
+    ((!drop ?y) (!pickup ?x)))))

@@ -1,23 +1,25 @@
 (defdomain domain (
+
   (:operator (!pickup-crate ?heli ?cratetype ?loc)
-	  ;; Precondition
-	  (and (at ?heli ?loc)
-         (at ?crate ?loc) ;; helicopter and crate must be in same location for task to be applicable
-         (crate-content ?crate ?cratetype) ;; crate must have the content need for action to be applicable
-         (heli-free ?heli)  ;; helicopter must be free for it to be able to pickup a crate
-         ;; specifying type predicate
-         (uav ?heli)
-         (content ?cratetype)
-         (crate ?crate)
-         (location ?loc)
-    )
-	  ;; Delete effects
-	  (and (at ?crate ?loc) ;; remove assocation between crate and location as it has been pickedup
-         (heli-free ?heli)     ;; make helicopter not free as it has pickedup a crate
-    )
-	  ;; Add effects
-	  (and (in ?heli ?crate))    ;; make crate assocaited with helicopter
-	)
+  ;; Precondition
+  (and (at ?heli ?loc)
+       (at ?crate ?loc) ;; helicopter and crate must be in same location for task to be applicable
+       (crate-content ?crate ?cratetype) ;; crate must have the content need for action to be applicable
+       (heli-free ?heli)  ;; helicopter must be free for it to be able to pickup a crate
+       ;; specifying type predicate
+       (uav ?heli)
+       (content ?cratetype)
+       (crate ?crate)
+       (location ?loc)
+  )
+  ;; Delete effects
+  ((at ?crate ?loc) ;; remove assocation between crate and location as it has been pickedup
+   (heli-free ?heli)   ;; make helicopter not free as it has pickedup a crate
+  )
+  ;; Add effects
+  ((in ?heli ?crate)) ;; make crate assocaited with helicopter
+  )
+
 
   (:operator (!fly-to ?heli ?from ?to)
 	  ;; Precondition
@@ -28,10 +30,10 @@
          (location ?to)
     )
 	  ;; Delete effects
-	  (and (at ?heli ?from)  ;; remove helicopter from current location
+	  ( (at ?heli ?from)  ;; remove helicopter from current location
     )
 	  ;; Add effects
-	  (and (at ?heli ?to))  ;; make helicopter move to new location
+	  ( (at ?heli ?to))  ;; make helicopter move to new location
 	)
 
   (:operator (!deliver-crate ?heli ?person ?cratetype ?loc)
@@ -45,13 +47,14 @@
          (location ?loc)
          (crate ?crate)
          (content ?cratetype)
+         (person ?person)
     )
 	  ;; Delete effects
-	  (and (in ?heli ?crate)  ;; remove crate from helicopter
+	  ( (in ?heli ?crate)  ;; remove crate from helicopter
          (needs ?person ?cratetype) ;; removed need as person has got the crate
     )
 	  ;; Add effects
-	  (and (heli-free ?heli) ;; make helicopter move to new location
+	  ( (heli-free ?heli) ;; make helicopter move to new location
          (has ?person ?cratetype) ;; associate crate with person
     )
 	)
@@ -61,6 +64,7 @@
     (needs ?person ?cratetype)
     ;; task list
     (
+      (pickup-crate ?heli ?food ?depot)
       ;;(pickup ?heli ?crate)
       ;;(deliver-all)
     )
@@ -69,5 +73,7 @@
     ;; Task list
     ()
    )
+
+)
 
 )

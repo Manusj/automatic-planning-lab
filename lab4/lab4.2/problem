@@ -5,23 +5,27 @@
   (uav u1)
   (location depot)
   (location l1)
+  (location l2)
   (content food)
   (content medicine)
   (crate c1)
-  (crate c1)
+  (crate c2)
   (person p1)
+  (person p2)
 
   ;; Initial state predicates
-  (at u1 l1)
+  (at u1 depot)
   (at p1 l1)
+  (at p2 l2)
   (heli-free u1)
   (at c1 depot)
   (at c2 depot)
   (crate-content c1 food)
-  (crate-content c1 medicine)
+  (crate-content c2 medicine)
 
   ;; pseudo goals
   (needs p1 food)
+  (needs p2 medicine)
 
   )
   ((deliver-all))

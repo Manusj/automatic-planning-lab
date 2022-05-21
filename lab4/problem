@@ -12,7 +12,8 @@
   (person p1)
 
   ;; Initial state predicates
-  (at u1 depot)
+  (at u1 l1)
+  (at p1 l1)
   (heli-free u1)
   (at c1 depot)
   (at c2 depot)

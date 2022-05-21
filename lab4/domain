@@ -40,7 +40,7 @@
 	  ;; Precondition
 	  (and (at ?heli ?loc) ;; check if heli is in correct location
          (at ?person ?loc) ;; check if person is in correct location
-         (crate-content ?crate ?cratetype) ;; check if content assocaited with crate
+         (crate-content ?crate ?cratetype) ;; check if content associated with crate
          (in ?heli ?crate) ;; check if crate in helicopter
          ;; specifying type predicates
          (uav ?heli)
@@ -64,15 +64,90 @@
     (needs ?person ?cratetype)
     ;; task list
     (
-      (pickup-crate ?heli ?food ?depot)
-      ;;(pickup ?heli ?crate)
-      ;;(deliver-all)
+      (pickup ?cratetype)
+      (deliver ?person ?cratetype)
     )
     ;; Preconditions
     ()
     ;; Task list
     ()
    )
+
+   ;; methord to pickup a crate to in a heli
+   (:method (pickup ?cratetype)
+     ;; Precondition 1 check if heli and crate are in same location then pick it up
+     (and (crate-content ?crate ?cratetype) ;; find crate associated with content
+          (at ?heli ?loc)
+          (at ?crate ?loc) ;; helicopter and crate must be in same location for task to be applicable
+          ;; specifying type predicates
+          (uav ?heli)
+          (location ?loc)
+          (crate ?crate)
+          (content ?cratetype)
+     )
+     ;; task list 1
+     (
+      (!pickup-crate ?heli ?cratetype ?loc)
+     )
+
+     ;; Precondition 2 if heli and crate not in same location the fly a free heli and then pickup crate
+     (and (crate-content ?crate ?cratetype) ;; find crate associated with content
+          (at ?heli ?loc1)  ;; get location of heli
+          (at ?crate ?loc2) ;; get location of crate
+          (heli-free ?heli) ;; check if heli is free no point in flying an non free heli
+          ;; specifying type predicates
+          (uav ?heli)
+          (location ?loc1)
+          (location ?loc2)
+          (crate ?crate)
+          (content ?cratetype)
+     )
+     ;; task list 2
+     (
+      (!fly-to ?heli ?loc1 ?loc2)
+      (!pickup-crate ?heli ?cratetype ?loc2)
+     )
+    )
+
+    (:method (deliver ?person ?cratetype)
+      ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+      (and (needs ?person ?cratetype) ; find the cratetype the person needs
+           (at ?heli ?loc)
+           (at ?person ?loc)  ; check if person and heli at the same location
+           (crate-content ?crate ?cratetype) ;; check if content associated with crate is the required one
+           (in ?heli ?crate) ;; check if crate is in helicopter
+           ;; specifying type predicates
+           (uav ?heli)
+           (location ?loc)
+           (crate ?crate)
+           (content ?cratetype)
+           (person ?person)
+      )
+      ;; task list
+      (
+        (!deliver-crate ?heli ?person ?cratetype ?loc)
+      )
+      ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
+      ;; Then call fly to persons locations and then the deliver crate action
+      (and (needs ?person ?cratetype) ; find the cratetype the person needs
+           (in ?heli ?crate) ;; check if crate is in helicopter
+           (crate-content ?crate ?cratetype) ;; check if content associated with crate is the required one
+           (at ?heli ?loc1)  ;; get the location of heli
+           (at ?person ?loc2) ;; get the location of person that requires the crate
+           ;; specifying type predicates
+           (uav ?heli)
+           (location ?loc1)
+           (location ?loc2)
+           (crate ?crate)
+           (content ?cratetype)
+           (person ?person)
+      )
+      ;; Task list
+      (
+        (!fly-to ?heli ?loc1 ?loc2)
+        (!deliver-crate ?heli ?person ?cratetype ?loc2)
+      )
+     )
 
 )
 

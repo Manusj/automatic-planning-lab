@@ -1,0 +1,17 @@
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 7.0
+
+(!pickup-crate u1 food depot)
+(!fly-to u1 depot l1)
+(!deliver-crate u1 p1 food l1)
+(!fly-to u1 l1 depot)
+(!pickup-crate u1 medicine depot)
+(!fly-to u1 depot l2)
+(!deliver-crate u1 p2 medicine l2)
+--------------------
+
+Time Used = 0.023
+

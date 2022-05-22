@@ -1,0 +1,56 @@
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 46.0
+
+(!pickup-crate u1 food depot)
+(!load-crate-on-carrier u1 cr1 food)
+(!pickup-crate u1 food depot)
+(!load-crate-on-carrier u1 cr1 food)
+(!pickup-crate u1 food depot)
+(!load-crate-on-carrier u1 cr1 food)
+(!pickup-crate u1 food depot)
+(!load-crate-on-carrier u1 cr1 food)
+(!fly-to u1 depot depot)
+(!fly-carrier u1 cr1 depot l1)
+(!take-crate-from-carrier u1 cr1 food)
+(!deliver-crate u1 food l1)
+(!take-crate-from-carrier u1 cr1 food)
+(!deliver-crate u1 food l1)
+(!take-crate-from-carrier u1 cr1 food)
+(!deliver-crate u1 food l1)
+(!take-crate-from-carrier u1 cr1 food)
+(!deliver-crate u1 food l1)
+(!fly-to u1 l1 l1)
+(!fly-carrier u1 cr1 l1 depot)
+(!pickup-crate u1 medicine depot)
+(!load-crate-on-carrier u1 cr1 medicine)
+(!pickup-crate u1 medicine depot)
+(!load-crate-on-carrier u1 cr1 medicine)
+(!pickup-crate u1 medicine depot)
+(!load-crate-on-carrier u1 cr1 medicine)
+(!pickup-crate u1 medicine depot)
+(!load-crate-on-carrier u1 cr1 medicine)
+(!fly-to u1 depot depot)
+(!fly-carrier u1 cr1 depot l2)
+(!take-crate-from-carrier u1 cr1 medicine)
+(!deliver-crate u1 medicine l2)
+(!take-crate-from-carrier u1 cr1 medicine)
+(!deliver-crate u1 medicine l2)
+(!take-crate-from-carrier u1 cr1 medicine)
+(!deliver-crate u1 medicine l2)
+(!take-crate-from-carrier u1 cr1 medicine)
+(!deliver-crate u1 medicine l2)
+(!fly-to u1 l2 depot)
+(!pickup-crate u1 food depot)
+(!fly-to u1 depot l1)
+(!deliver-crate u1 food l1)
+(!fly-to u1 l1 depot)
+(!pickup-crate u1 medicine depot)
+(!fly-to u1 depot l2)
+(!deliver-crate u1 medicine l2)
+--------------------
+
+Time Used = 0.041
+

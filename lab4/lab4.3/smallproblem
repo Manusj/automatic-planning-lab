@@ -9,8 +9,6 @@
   (location l2)
   (content food)
   (content medicine)
-  (person p1)
-  (person p2)
   (crates food 6 depot)
   (crates medicine 6 depot)
 

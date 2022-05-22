@@ -17,8 +17,6 @@
   (location l8)
   (content food)
   (content medicine)
-  (person p1)
-  (person p2)
   (crates food 40 depot)
   (crates medicine 40 depot)
 

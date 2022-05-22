@@ -1,12 +1,12 @@
 (defdomain domain (
 
-  ;; primitive task to pick up one crate
+  ;; PRIMITIVE TASK - to pick up a crate of sepcific type using an UAV
   (:operator (!pickup-crate ?heli ?cratetype ?loc)
   ;; Precondition
   (and (at ?heli ?loc)  ;; check if heli at correct location
        (crates ?cratetype ?quantity ?location) ;; get the number of crates of a type available at a location
        (heli-free ?heli)  ;; helicopter must be free for it to be able to pickup a crate
-       (call > ?quantity 0)
+       (call > ?quantity 0) ;; check if the quantity of crates in the location is greater than 0
        ;; specifying type predicate
        (uav ?heli)
        (content ?cratetype)
@@ -22,7 +22,7 @@
     (in ?heli ?cratetype)) ;; make crate assocaited with helicopter
   )
 
-
+  ;; PRIMITIVE TASK - fly uav from one location to another
   (:operator (!fly-to ?heli ?from ?to)
 	  ;; Precondition
 	  (and (at ?heli ?from) ;; check if heli is in correct location
@@ -38,6 +38,7 @@
 	  ( (at ?heli ?to))  ;; make helicopter move to new location
 	)
 
+  ;; PRIMITIVE TASK - to deliver a crate of particular type to a location
   (:operator (!deliver-crate ?heli ?cratetype ?loc)
 	  ;; Precondition
 	  (and (at ?heli ?loc) ;; check if heli is in correct location
@@ -59,6 +60,7 @@
     )
 	)
 
+  ;; PRIMITIVE TASK - load crate in a uav into a carrier
   (:operator (!load-crate-on-carrier ?heli ?carrier ?cratetype)
 	  ;; Precondition
 	  (and (at ?heli ?loc)
@@ -85,6 +87,7 @@
     )
 	)
 
+  ;; PRIMITIVE TASK - fly a carrier form one location to another
   (:operator (!fly-carrier ?heli ?carrier ?from ?to)
 	  ;; Precondition
 	  (and (at ?heli ?from)
@@ -105,6 +108,8 @@
     )
 	)
 
+
+  ;; PRIMITIVE TASK - take a crate from a carrier into an uav
   (:operator (!take-crate-from-carrier ?heli ?carrier ?cratetype)
 	  ;; Precondition
 	  (and (at ?heli ?loc)
@@ -131,7 +136,7 @@
     )
 	)
 
-   ;; methord to pickup a crate to in a heli
+   ;; METHORD : Pickup a single crate using a uav when a uav is in the same location as crate or in differnt location
    (:method (pickup-single ?cratetype)
      ;; Precondition 1 check if heli and crate are in same location then pick it up
      (and (crates ?cratetype ?quantity ?loc) ;; get the number of crates of a type available at a location
@@ -141,7 +146,7 @@
           (location ?loc)
           (content ?cratetype)
      )
-     ;; task list 1
+     ;; task list 1 - pickup crate if heli and crates are in same location
      (
       (!pickup-crate ?heli ?cratetype ?loc)
      )
@@ -156,14 +161,14 @@
           (location ?loc2)
           (content ?cratetype)
      )
-     ;; task list 2
+     ;; task list 2 - fly heli to crate location and then pick it up
      (
       (!fly-to ?heli ?loc1 ?loc2)
       (!pickup-crate ?heli ?cratetype ?loc2)
      )
     )
 
-    ;; methord to pickup a crate to in a heli
+    ; METHORD : Pickup a muliple crate using a uav and place them into a carrier
     (:method (pickup-multiple ?cratetype ?required-quantity ?carrier)
       ;; Precondition 1 check if heli, crates and carrier are in same location then pick it up
       (and (crates ?cratetype ?number ?loc) ;; get the number of crates of a type available at a location
@@ -180,7 +185,7 @@
            (location ?loc)
            (content ?cratetype)
       )
-      ;; task list 1
+      ;; task list 1 - if carrier, crates and uav in same location then pick them up and place them in the carrier
       (
        (!pickup-crate ?heli ?cratetype ?loc)
        (!load-crate-on-carrier ?heli ?carrier ?cratetype)
@@ -204,7 +209,7 @@
            (location ?loc3)
            (content ?cratetype)
       )
-      ;; task list 2
+      ;; task list 2 - if uav, crates and carrier in differnt location then fly them to the lcoation of the crates and load them into carrier
       (
        (!fly-to ?heli ?loc1 ?loc3)
        (!fly-carrier ?heli ?carrier ?loc3 ?loc2)
@@ -217,8 +222,9 @@
       ()
      )
 
+     ;; METHORD - deliver a crate to location
     (:method (deliver-single ?loc ?cratetype)
-      ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+      ;; Preconditions 1 if heli with required cratetype at corret location then call the primitive task deliver-crate
       (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
            (at ?heli ?loc)
            (in ?heli ?cratetype) ;; check if crate of requied type is in helicopter
@@ -228,12 +234,12 @@
            (location ?loc)
            (content ?cratetype)
       )
-      ;; task list
+      ;; task list - deliver the crate to the location if the uav is in the correct location
       (
         (!deliver-crate ?heli ?cratetype ?loc)
       )
-      ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
-      ;; Then call fly to persons locations and then the deliver crate action
+      ;; Preconditions 2 check if heli has the required crate type is in diffent location
+      ;; Then call fly to correct locations and then the deliver crate
       (and (need ?cratetype ?required-quantity ?loc2)  ;; check how much quantity current location needs
            (in ?heli ?cratetype) ;; check if crate is in helicopter
            (at ?heli ?loc1)  ;; get the location of heli
@@ -244,15 +250,16 @@
            (location ?loc2)
            (content ?cratetype)
       )
-      ;; Task list
+      ;; Task list - fky uav to correct location and then deliver the crates
       (
         (!fly-to ?heli ?loc1 ?loc2)
         (!deliver-crate ?heli ?cratetype ?loc2)
       )
      )
 
+      ;; METHORD - deliver multiple crates to location
      (:method (deliver-mulitple ?loc ?cratetype)
-       ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+       ;; Preconditions 1 if heli with required cratetype and carrier at correct location
        (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
             (at ?heli ?loc) ;; check if heli in same location
             (at ?carrier ?loc) ;; check if carrier in same location
@@ -266,14 +273,13 @@
             (location ?loc)
             (content ?cratetype)
        )
-       ;; task list
+       ;; task list take crates fron carruer and deliver crate
        (
          (!take-crate-from-carrier ?heli ?carrier ?cratetype)
          (!deliver-crate ?heli ?cratetype ?loc)
          (deliver-mulitple ?loc ?cratetype)
        )
-       ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
-       ;; Then call fly to persons locations and then the deliver crate action
+       ;; Preconditions 2 check if heli has the required crate type and if carrier and heli in diffent locations
        (and (need ?cratetype ?required-quantity ?loc2)  ;; check how much quantity current location needs
             (at ?carrier ?loc3) ;; get location of carrier
             (at ?heli ?loc1)  ;; get the location of heli
@@ -289,7 +295,7 @@
             (location ?loc3)
             (content ?cratetype)
        )
-       ;; Task list
+       ;; Task list - fly carrier and uav to correct location and take crates from carrier and deliver it
        (
          (!fly-to ?heli ?loc1 ?loc3)
          (!fly-carrier ?heli ?carrier ?loc3 ?loc2)
@@ -323,17 +329,17 @@
 
        ;; methord to pickup a crate to in a heli
        (:method (pickup ?cratetype ?required-quantity)
-         ;; Precondition 1 check if heli and crate are in same location then pick it up
+         ;; Precondition 1 required quantity is equal to 1
          (and (call = ?required-quantity 1)
               ;; specifying type predicates
               (content ?cratetype)
          )
-         ;; task list 1
+         ;; task list 1 - call pickup-single
          (
             (pickup-single ?cratetype)
          )
 
-         ;; Precondition 2 if heli and crate not in same location the fly a free heli and then pickup crate
+         ;; Precondition 2 check if required quantity is greater than 1
          (and (call > ?required-quantity 1)
               ;; specifying type predicates
               (content ?cratetype)
@@ -345,7 +351,7 @@
         )
 
         (:method (deliver ?loc ?cratetype ?required-quantity)
-          ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+          ;; Precondition 1 required quantity is equal to 1
           (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
                (call = ?required-quantity 1)
                ;; specifying type predicates
@@ -356,8 +362,7 @@
           (
             (deliver-single ?loc ?cratetype)
           )
-          ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
-          ;; Then call fly to persons locations and then the deliver crate action
+          ;; Precondition 2 check if required quantity is greater than 1
           (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
                (call > ?required-quantity 1)
                ;; specifying type predicates

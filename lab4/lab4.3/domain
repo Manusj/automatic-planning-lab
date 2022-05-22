@@ -1,0 +1,375 @@
+(defdomain domain (
+
+  ;; primitive task to pick up one crate
+  (:operator (!pickup-crate ?heli ?cratetype ?loc)
+  ;; Precondition
+  (and (at ?heli ?loc)  ;; check if heli at correct location
+       (crates ?cratetype ?quantity ?location) ;; get the number of crates of a type available at a location
+       (heli-free ?heli)  ;; helicopter must be free for it to be able to pickup a crate
+       (call > ?quantity 0)
+       ;; specifying type predicate
+       (uav ?heli)
+       (content ?cratetype)
+       (location ?loc)
+  )
+  ;; Delete effects
+  ((crates ?cratetype ?quantity ?location) ;; remove the current information about number of crates at a location
+   (heli-free ?heli)   ;; make helicopter not free as it has pickedup a crate
+  )
+  ;; Add effects
+  (
+    (crates ?cratetype (call - ?quantity 1) ?location) ;; add back updated information about number of crates required at a location
+    (in ?heli ?cratetype)) ;; make crate assocaited with helicopter
+  )
+
+
+  (:operator (!fly-to ?heli ?from ?to)
+	  ;; Precondition
+	  (and (at ?heli ?from) ;; check if heli is in correct location
+         ;; specifying type predicates
+         (uav ?heli)
+         (location ?from)
+         (location ?to)
+    )
+	  ;; Delete effects
+	  ( (at ?heli ?from)  ;; remove helicopter from current location
+    )
+	  ;; Add effects
+	  ( (at ?heli ?to))  ;; make helicopter move to new location
+	)
+
+  (:operator (!deliver-crate ?heli ?cratetype ?loc)
+	  ;; Precondition
+	  (and (at ?heli ?loc) ;; check if heli is in correct location
+         (need ?cratetype ?quantity ?loc)  ;; check how much quantity current location needs
+         (in ?heli ?cratetype) ;; check if crate in helicopter
+         (call > ?quantity 0) ;; check if required quantity of creates is greater than 0
+         ;; specifying type predicates
+         (uav ?heli)
+         (location ?loc)
+         (content ?cratetype)
+    )
+	  ;; Delete effects
+	  ( (in ?heli ?cratetype)  ;; remove crate from helicopter
+         (need ?cratetype ?quantity ?loc) ;; removed current information about number of crates required at location
+    )
+	  ;; Add effects
+	  ( (heli-free ?heli) ;; make helicopter free
+         (need ?cratetype (call - ?quantity 1) ?loc) ;; update information about number of crate required at the location
+    )
+	)
+
+  (:operator (!load-crate-on-carrier ?heli ?carrier ?cratetype)
+	  ;; Precondition
+	  (and (at ?heli ?loc)
+         (at ?carrier ?loc) ;; check if heli and carrier in the same location
+         (space ?carrier ?remaining)  ;; get the remaning space in the carrier
+         (in ?heli ?cratetype) ;; check if heli contains the required crate type
+         (contains ?carrier ?cratetype ?quantity) ;; get how many crates of the  cratetype is present in the carrier
+         (call > ?remaining 0) ;; check if remaning space is > 0
+         ;; specifying type predicates
+         (uav ?heli)
+         (location ?loc)
+         (carrier ?carrier)
+         (content ?cratetype)
+    )
+	  ;; Delete effects
+	  ( (in ?heli ?cratetype) ;; remove the required crate from the helicopter
+      (space ?carrier ?remaining)  ;; remove current information about the remaining space in the carrier
+      (contains ?carrier ?cratetype ?quantity) ;; remove current information about quantity of crate types in a carrier
+    )
+	  ;; Add effects
+	  ( (heli-free ?heli) ;; make helicopter free
+      (space ?carrier (call - ?remaining 1))  ;; update current information about the remaining space in the carrier
+      (contains ?carrier ?cratetype (call + ?quantity 1)) ;; update current information about quantity of crate types in a carrier
+    )
+	)
+
+  (:operator (!fly-carrier ?heli ?carrier ?from ?to)
+	  ;; Precondition
+	  (and (at ?heli ?from)
+         (at ?carrier ?from) ;; check if heli and carrier at the same location
+         ;; specifying type predicates
+         (uav ?heli)
+         (location ?from)
+         (location ?to)
+         (carrier ?carrier)
+    )
+	  ;; Delete effects
+	  ( (at ?heli ?from)  ;; remove helicopter from current location
+      (at ?carrier ?from) ;; remove carrier from current location
+    )
+	  ;; Add effects
+	  ( (at ?heli ?to) ;; make helicopter move to new location
+      (at ?carrier ?to)   ;; make carrier move to new location
+    )
+	)
+
+  (:operator (!take-crate-from-carrier ?heli ?carrier ?cratetype)
+	  ;; Precondition
+	  (and (at ?heli ?loc)
+         (at ?carrier ?loc) ;; check if heli and carrier at the same location
+         (heli-free ?heli) ;; check if heli is free
+         (contains ?carrier ?cratetype ?quantity) ;; check the quantity of crates of required type present in carrier
+         (space ?carrier ?remaining)  ;; get the remaning space in the carrier
+         (call > ?quantity 0) ;; check if remaning space is > 0
+         ;; specifying type predicates
+         (uav ?heli)
+         (location ?loc)
+         (carrier ?carrier)
+         (content ?cratetype)
+    )
+	  ;; Delete effects
+	  ( (heli-free ?heli) ;; make the heli busy as it has to carry the crate from the carrier
+      (space ?carrier ?remaining)  ;; remove current information about the remaining space in the carrier
+      (contains ?carrier ?cratetype ?quantity) ;; remove current information about quantity of crate types in a carrier
+    )
+	  ;; Add effects
+	  ( (in ?heli ?cratetype) ;; add the required crate type to the helicopter
+      (space ?carrier (call + ?remaining 1))  ;; update current information about the remaining space in the carrier
+      (contains ?carrier ?cratetype (call - ?quantity 1)) ;; update current information about quantity of crate types in a carrier
+    )
+	)
+
+   ;; methord to pickup a crate to in a heli
+   (:method (pickup-single ?cratetype)
+     ;; Precondition 1 check if heli and crate are in same location then pick it up
+     (and (crates ?cratetype ?quantity ?loc) ;; get the number of crates of a type available at a location
+          (at ?heli ?loc) ;; check if heli at the same location
+          ;; specifying type predicates
+          (uav ?heli)
+          (location ?loc)
+          (content ?cratetype)
+     )
+     ;; task list 1
+     (
+      (!pickup-crate ?heli ?cratetype ?loc)
+     )
+
+     ;; Precondition 2 if heli and crate not in same location the fly a free heli and then pickup crate
+     (and (crates ?cratetype ?quantity ?loc2) ;; get the number of crates of a type available at a location
+          (at ?heli ?loc1)  ;; get location of heli
+          (heli-free ?heli) ;; check if heli is free no point in flying an non free heli
+          ;; specifying type predicates
+          (uav ?heli)
+          (location ?loc1)
+          (location ?loc2)
+          (content ?cratetype)
+     )
+     ;; task list 2
+     (
+      (!fly-to ?heli ?loc1 ?loc2)
+      (!pickup-crate ?heli ?cratetype ?loc2)
+     )
+    )
+
+    ;; methord to pickup a crate to in a heli
+    (:method (pickup-multiple ?cratetype ?required-quantity ?carrier)
+      ;; Precondition 1 check if heli, crates and carrier are in same location then pick it up
+      (and (crates ?cratetype ?number ?loc) ;; get the number of crates of a type available at a location
+           (at ?heli ?loc) ;; check if heli at the same location
+           (at ?carrier ?loc) ;; check if carrier in same location
+           (heli-free ?heli) ;; check if heli is free
+           (contains ?carrier ?cratetype ?quantity) ;; check the quantity of crates of required type present in carrier
+           (space ?carrier ?remaining)  ;; get the remaining space in the carrier
+           (call > ?remaining 0) ;; check if remaning space is > 0
+           (call > ?required-quantity ?quantity) ;; check if current quantity in carrier is less than required quantity otherwise stop
+           ;; specifying type predicates
+           (uav ?heli)
+           (carrier ?carrier)
+           (location ?loc)
+           (content ?cratetype)
+      )
+      ;; task list 1
+      (
+       (!pickup-crate ?heli ?cratetype ?loc)
+       (!load-crate-on-carrier ?heli ?carrier ?cratetype)
+       (pickup-multiple ?cratetype ?required-quantity ?carrier)
+      )
+
+      ;; Precondition 2 if heli, carrier and crates in different locations (This would also handle the cases where 2 of them are in the same place)
+      (and (crates ?cratetype ?number ?loc2) ;; get the number of crates of a type available at a location
+           (at ?heli ?loc1)  ;; get location of heli
+           (at ?carrier ?loc3) ;; check if carrier in same location
+           (heli-free ?heli) ;; check if heli is free no point in flying an non free heli
+           (contains ?carrier ?cratetype ?quantity) ;; check the quantity of crates of required type present in carrier
+           (space ?carrier ?remaining)  ;; get the remaining space in the carrier
+           (call > ?remaining 0) ;; check if remaning space is > 0
+           (call > ?required-quantity ?quantity) ;; check if current quantity in carrier is less than required quantity otherwise stop
+           ;; specifying type predicates
+           (uav ?heli)
+           (carrier ?carrier)
+           (location ?loc1)
+           (location ?loc2)
+           (location ?loc3)
+           (content ?cratetype)
+      )
+      ;; task list 2
+      (
+       (!fly-to ?heli ?loc1 ?loc3)
+       (!fly-carrier ?heli ?carrier ?loc3 ?loc2)
+       (!pickup-crate ?heli ?cratetype ?loc2)
+       (!load-crate-on-carrier ?heli ?carrier ?cratetype)
+       (pickup-multiple ?cratetype ?required-quantity ?carrier)
+      )
+      ;; Empty Precondition and task to go out of recursion
+      ()
+      ()
+     )
+
+    (:method (deliver-single ?loc ?cratetype)
+      ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+      (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
+           (at ?heli ?loc)
+           (in ?heli ?cratetype) ;; check if crate of requied type is in helicopter
+           (call > ?required-quantity 0) ;; check if quantity remaining is > 0
+           ;; specifying type predicates
+           (uav ?heli)
+           (location ?loc)
+           (content ?cratetype)
+      )
+      ;; task list
+      (
+        (!deliver-crate ?heli ?cratetype ?loc)
+      )
+      ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
+      ;; Then call fly to persons locations and then the deliver crate action
+      (and (need ?cratetype ?required-quantity ?loc2)  ;; check how much quantity current location needs
+           (in ?heli ?cratetype) ;; check if crate is in helicopter
+           (at ?heli ?loc1)  ;; get the location of heli
+           (call > ?required-quantity 0) ;; check if quantity remaining is > 0
+           ;; specifying type predicates
+           (uav ?heli)
+           (location ?loc1)
+           (location ?loc2)
+           (content ?cratetype)
+      )
+      ;; Task list
+      (
+        (!fly-to ?heli ?loc1 ?loc2)
+        (!deliver-crate ?heli ?cratetype ?loc2)
+      )
+     )
+
+     (:method (deliver-mulitple ?loc ?cratetype)
+       ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+       (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
+            (at ?heli ?loc) ;; check if heli in same location
+            (at ?carrier ?loc) ;; check if carrier in same location
+            (heli-free ?heli) ;; check if there is a free heli at that location
+            (contains ?carrier ?cratetype ?quantity) ;; check the quantity of crates of required type present in carrier
+            (call > ?required-quantity 0) ;; check if required quantity remaining is > 0
+            (call > ?quantity 0) ;; check if quantity of required crates in carrier is > 0
+            ;; specifying type predicates
+            (uav ?heli)
+            (carrier ?carrier)
+            (location ?loc)
+            (content ?cratetype)
+       )
+       ;; task list
+       (
+         (!take-crate-from-carrier ?heli ?carrier ?cratetype)
+         (!deliver-crate ?heli ?cratetype ?loc)
+         (deliver-mulitple ?loc ?cratetype)
+       )
+       ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
+       ;; Then call fly to persons locations and then the deliver crate action
+       (and (need ?cratetype ?required-quantity ?loc2)  ;; check how much quantity current location needs
+            (at ?carrier ?loc3) ;; get location of carrier
+            (at ?heli ?loc1)  ;; get the location of heli
+            (heli-free ?heli) ;; check if there is a free heli at that location
+            (contains ?carrier ?cratetype ?quantity) ;; check the quantity of crates of required type present in carrier
+            (call > ?required-quantity 0) ;; check if required quantity remaining is > 0
+            (call > ?quantity 0) ;; check if quantity of required crates in carrier is > 0
+            ;; specifying type predicates
+            (uav ?heli)
+            (carrier ?carrier)
+            (location ?loc1)
+            (location ?loc2)
+            (location ?loc3)
+            (content ?cratetype)
+       )
+       ;; Task list
+       (
+         (!fly-to ?heli ?loc1 ?loc3)
+         (!fly-carrier ?heli ?carrier ?loc3 ?loc2)
+         (!take-crate-from-carrier ?heli ?carrier ?cratetype)
+         (!deliver-crate ?heli ?cratetype ?loc2)
+         (deliver-mulitple ?loc2 ?cratetype)
+       )
+       ;; Empty Precondition and task to go out of recursion
+       ()
+       ()
+      )
+
+
+
+      (:method (deliver-all)
+        ;; Preconditions
+        (and (need ?cratetype ?required-quantity ?loc)
+             (call > ?required-quantity 0)
+        )
+        ;; task list
+        (
+          (pickup ?cratetype ?required-quantity)
+          (deliver ?loc ?cratetype ?required-quantity)
+          (deliver-all)
+        )
+        ;; Preconditions
+        ()
+        ;; Task list
+        ()
+       )
+
+       ;; methord to pickup a crate to in a heli
+       (:method (pickup ?cratetype ?required-quantity)
+         ;; Precondition 1 check if heli and crate are in same location then pick it up
+         (and (call = ?required-quantity 1)
+              ;; specifying type predicates
+              (content ?cratetype)
+         )
+         ;; task list 1
+         (
+            (pickup-single ?cratetype)
+         )
+
+         ;; Precondition 2 if heli and crate not in same location the fly a free heli and then pickup crate
+         (and (call > ?required-quantity 1)
+              ;; specifying type predicates
+              (content ?cratetype)
+         )
+         ;; task list 2
+         (
+            (pickup-multiple ?cratetype ?required-quantity ?carrier)
+         )
+        )
+
+        (:method (deliver ?loc ?cratetype ?required-quantity)
+          ;; Preconditions 1 if heli with required cratetype and person at same location then call the primitive task deliver-crate
+          (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
+               (call = ?required-quantity 1)
+               ;; specifying type predicates
+               (location ?loc)
+               (content ?cratetype)
+          )
+          ;; task list
+          (
+            (deliver-single ?loc ?cratetype)
+          )
+          ;; Preconditions 2 check if heli has the required crate type and if person and heli in diffent locations
+          ;; Then call fly to persons locations and then the deliver crate action
+          (and (need ?cratetype ?required-quantity ?loc)  ;; check how much quantity current location needs
+               (call > ?required-quantity 1)
+               ;; specifying type predicates
+               (location ?loc)
+               (content ?cratetype)
+          )
+          ;; Task list
+          (
+            (deliver-mulitple ?loc ?cratetype)
+          )
+         )
+
+)
+
+)

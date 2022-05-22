@@ -54,7 +54,7 @@
          (needs ?person ?cratetype) ;; removed need as person has got the crate
     )
 	  ;; Add effects
-	  ( (heli-free ?heli) ;; make helicopter move to new location
+	  ( (heli-free ?heli) ;; make helicopter free
          (has ?person ?cratetype) ;; associate crate with person
     )
 	)

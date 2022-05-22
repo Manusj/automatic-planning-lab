@@ -1,0 +1,30 @@
+(defproblem problem domain
+  ;; Initial State
+  (
+  ;; Type predicates
+  (uav u1)
+  (carrier cr1)
+  (location depot)
+  (location l1)
+  (location l2)
+  (content food)
+  (content medicine)
+  (person p1)
+  (person p2)
+  (crates food 6 depot)
+  (crates medicine 6 depot)
+
+  ;; Initial state predicates
+  (at u1 depot)
+  (at cr1 depot)
+  (contains cr1 food 0)
+  (contains cr1 medicine 0)
+  (space cr1 4)
+  (heli-free u1)
+
+  ;; pseudo goals
+  (need food 5 l1)
+  (need medicine 5 l2)
+  )
+  ((deliver-all))
+)
